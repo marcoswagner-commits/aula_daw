@@ -139,5 +139,5 @@ Passos:
 
 9. Integração com uma API usando AXIOS
 
-![Integração Backend-Frontend]()
+![Integração Backend-Frontend](https://raw.githubusercontent.com/marcoswagner-commits/gestao_obras_aula_daw/Documentos/Captura%20de%20Tela%202021-05-17%20às%2019.33.50.png)
 
