@@ -73,7 +73,7 @@ Draw.IO - https://app.diagrams.net
 ## 3 - Modelo Conceitual:
 Descrição: O sistema (mini sistema com poucas classes) terá como premissa permitir que seja cadastrado históricos relacionados a obras de engenharia civil. Tendo resumidamente o seguinte contexto: Um proprietário possui uma obra que possui uma descrição e localização. Para esta obra vários lançamentos são efetuados, separando estes fluxos em dois níveis de históricos. O objetivo do sistema é permitir depois de vários lançamento conhecer o gasto com obra de acordo com cada um dos tipos de lançamento.
 
-![Modelo Conceitual Gestão de Obras]()
+![Modelo Conceitual Gestão de Obras](https://raw.githubusercontent.com/marcoswagner-commits/gestao_obras_aula_daw/Documentos/GESTAO_OBRAS.png)
 
 ## 4 – Síntese do Curso
 Passos:
