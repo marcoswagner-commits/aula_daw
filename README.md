@@ -1,7 +1,7 @@
 # Aula de Desenvolvimento de Aplicações WEB 
-#Roteiro – Desenvolvimento de Aplicações para WEB – 2020/2 (2021)
+# Roteiro – Desenvolvimento de Aplicações para WEB – 2020/2 (2021)
 
-##1 - Apresentação da disciplina: Plano de Ensino – Conteúdos – Metodologia – Avaliações
+## 1 - Apresentação da disciplina: Plano de Ensino – Conteúdos – Metodologia – Avaliações
 	* Vide Plano de Ensino; Planejamento da Disciplina; documento Conteúdos
 
 1.1 Conteúdos
@@ -42,9 +42,9 @@
 
 1.3.2. Dois projetos de práticas (um sobre o Backend e outro sobre o FrontEnd).
 
-##2  - Ferramentas e recursos
+## 2  - Ferramentas e recursos
 
-###Ferramentas:
+### Ferramentas:
 Java – https://www.oracle.com/technetwork/java/javase/downloads 
 
 Maven  - https://maven.apache.org 
@@ -61,7 +61,7 @@ Visual Studio Code - https://code.visualstudio.com/download
 
 Outras instalações necessárias: node, npm, yarn e outros...
 
-###Contas:
+### Contas:
 Github – http://www.github.com 
 
 Heroku – www.heroku.com 
@@ -70,10 +70,10 @@ Netlify – http://www.netlify.com
 
 Draw.IO - https://app.diagrams.net 
 
-##3 - Modelo Conceitual:
+## 3 - Modelo Conceitual:
 Descrição: O sistema (mini sistema com poucas classes) terá como premissa permitir que seja cadastrado históricos relacionados a obras de engenharia civil. Tendo resumidamente o seguinte contexto: Um proprietário possui uma obra que possui uma descrição e localização. Para esta obra vários lançamentos são efetuados, separando estes fluxos em dois níveis de históricos. O objetivo do sistema é permitir depois de vários lançamento conhecer o gasto com obra de acordo com cada um dos tipos de lançamento.
 
-##4 – Síntese do Curso
+## 4 – Síntese do Curso
 Passos:
 1. Instalar ferramentas (backend)
 
@@ -94,7 +94,7 @@ Passos:
 9. Implementar o Frontend (React - Seguir check-list próprio)
 
 
-##5 – Síntese do Backend
+## 5 – Síntese do Backend
 Passos:
 1. Instalar o STS, Postman e MySQL Workbench
 
@@ -119,7 +119,7 @@ Passos:
 11. Criar os POSTS, GETS, PUTS, DELETES
 
 
-##6 – Síntese do FrontEnd
+## 6 – Síntese do FrontEnd
 Passos:
 1. Instalando o Node.JS, Visual Studio Code, Yarn, React CLI, 
 
