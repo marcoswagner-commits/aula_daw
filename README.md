@@ -4,7 +4,7 @@
 ## 1 - Apresentação da disciplina: Plano de Ensino – Conteúdos – Metodologia – Avaliações
 	* Vide Plano de Ensino; Planejamento da Disciplina; documento Conteúdos
 
-1.1 Conteúdos
+### 1.1 Conteúdos
 
 1.1.1. API 
 
@@ -30,13 +30,13 @@
 
 1.1.12. Aplicação e repositórios na nuvem
 
-1.2 Metodologia
+### 1.2 Metodologia
 
 1.2.1. Conceito vs Prática vs Conceito
 
 1.2.2. Implementação sequencial e incremental
 
-1.3 Avaliações
+### 1.3 Avaliações
 
 1.3.1. Um único projeto (incluindo modelo conceitual; backend fase 1 e 2; fronend e integração)
 
@@ -72,6 +72,8 @@ Draw.IO - https://app.diagrams.net
 
 ## 3 - Modelo Conceitual:
 Descrição: O sistema (mini sistema com poucas classes) terá como premissa permitir que seja cadastrado históricos relacionados a obras de engenharia civil. Tendo resumidamente o seguinte contexto: Um proprietário possui uma obra que possui uma descrição e localização. Para esta obra vários lançamentos são efetuados, separando estes fluxos em dois níveis de históricos. O objetivo do sistema é permitir depois de vários lançamento conhecer o gasto com obra de acordo com cada um dos tipos de lançamento.
+
+![Modelo Conceitual Gestão de Obras]()
 
 ## 4 – Síntese do Curso
 Passos:
