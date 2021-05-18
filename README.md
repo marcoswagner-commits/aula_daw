@@ -38,7 +38,7 @@
 
 ### 1.3 Avaliações
 
-1.3.1. Um único projeto (incluindo modelo conceitual; backend fase 1 e 2; fronend e integração)
+1.3.1. Um único projeto (incluindo modelo conceitual; backend fase 1 e 2; frontend e integração)
 
 1.3.2. Dois projetos de práticas (um sobre o Backend e outro sobre o FrontEnd).
 
