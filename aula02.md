@@ -60,7 +60,7 @@ public class TesteAula1Application {
 }
 ```
 
-### Conceituar API, REST, HTTP, 
+### Conceituar API, REST, HTTP...
 
 
 
