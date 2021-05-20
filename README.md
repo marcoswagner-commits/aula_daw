@@ -4,5 +4,6 @@ Estudo de caso para a disciplina de Desenvolvimento de Aplicações WEB - Curso 
 
 - [Roteiro do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/Aula_DSW_Módulo_I.pdf)
 - [Roteiro do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/main/Aula_DSW_Módulo_I.pdf)
-- - [Roteiro do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/documentos/Aula_DSW_Módulo_I.pdf)
+- [Roteiro do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/documentos/Aula_DSW_Módulo_I.pdf)
+- - [Roteiro do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/main/documentos/Aula_DSW_Módulo_I.pdf)
 
