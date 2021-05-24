@@ -68,7 +68,7 @@ public class AlunoController {
 		return String.format("Olá turma de DAW, meu nome é %s",nome);
 	}
 }
-
+```
 
 - Verificar se o H2 está nas dependências MAVEVN, caso afirmativo é necessário configurar o H2 adicionando as seguintes propriedades no arquivo de configurações application.properties.
 
@@ -87,6 +87,7 @@ spring.h2.console.path=/h2-console
 # JPA
 spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 spring.jpa.hibernate.ddl-auto=update
+```
 
 :shipit: Código 2
 ```
