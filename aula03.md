@@ -51,6 +51,21 @@
 - [x] Retomar conceito de JSON ([Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/main/Conteúdo_Aula_DSW_Módulo_I.pdf))
 
 
+### Uso do repositório Github
+- [X] Criar um repositório novo "AulaTesteDAW"
+- [x] Owner " " / Repository name " "
+- [x] Description " " - Public/Private - Add README file - 
+- [x] Inicializar um repositório na própria máquina (computador)
+```
+echo "# AulaTeste" >> README.md
+git init
+git add README.md
+git commit -m "primeira versão"
+git branch -M main
+git remote add origin https://github.com/marcoswagner-commits/AulaTeste.git
+git push -u origin main
+```
+
 :shipit: Código 1
 ```
 @RequestMapping("/auladaw)
