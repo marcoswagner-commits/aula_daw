@@ -1,7 +1,7 @@
 # Aula 20/05/2021 - Desenvolvimento de Aplicações WEB
 ## Atividades da aula - roteiro
 
-- Conceituar Ecossistema SPRING ([Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/main/Conteúdo_Aula_DSW_Módulo_I.pdf))
+- Conceituar Ecossistema SPRING - [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
 - Importância do Spring Boot 
 - Acessar o site Spring.io (https://spring.io) e verificar outros projetos existentes
 
