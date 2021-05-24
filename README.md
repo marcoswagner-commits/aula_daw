@@ -145,6 +145,9 @@ Passos:
 
 ![Integração Backend-Frontend](https://raw.githubusercontent.com/marcoswagner-commits/gestao_obras_aula_daw/Documentos/Captura%20de%20Tela%202021-05-17%20às%2019.33.50.png)
 
+![Integração Backend-Frontend](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/Documentos/back_front_end.jpg)
+
+
 ### Trabalhos
 - [Trabalho1 - Modelo Conceitual](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/Documentos/Trabalho1%20-%20DAW.pdf)
 
