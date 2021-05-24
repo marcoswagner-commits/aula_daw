@@ -65,6 +65,12 @@ git branch -M main
 git remote add origin https://github.com/marcoswagner-commits/AulaTeste.git
 git push -u origin main
 ```
+ou
+```
+git remote add origin https://github.com/marcoswagner-commits/AulaTeste.git
+git branch -M main
+git push -u origin main
+```
 
 :shipit: Código 1
 ```
