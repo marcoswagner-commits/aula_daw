@@ -46,4 +46,13 @@ O sistema terá como premissa armazenar/gravar o proprietario de uma obra, regis
   - [ ] Agregação
   - [ ] Composição
   - [ ] Herança (Generalização/Especialização)
+  - [ ] Cada uma destas relações podem ter:
+    - [ ] Verbos que estabelecem a relação (usa, cadastra, aluga...)
+    - [ ] Multiplicidade (aspecto que estabelece na relação de uma classe com outra as possibilidades quantitativas - 1 para 1, 1 para muitos, muitos para muitos)
+    - [ ] Navegabilidade (aspecto que estabelece o direcionamento entre as classes)
+    - [ ] Símbolos (retas) que representam o tipo de relacionamento conforme a figura abaixo:
 
+![Relacionamentos](https://raw.githubusercontent.com/marcoswagner-commits/gestao_obras_aula_daw/Documentos/relações_classes.png)
+
+Um artigo que apresenta com detalhes os conceitos de Diagrama de Classes UML pode ser acessado em:
+https://www.devmedia.com.br/orientacoes-basicas-na-elaboracao-de-um-diagrama-de-classes/37224
