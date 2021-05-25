@@ -29,7 +29,7 @@
 ### Modificação do código (modelo) - código 2
 - [x] Configurar o banco de dados em memória H2
 - [X] Criar um pacote model
-- [x] Criar uma classe TesteAula1Model
+- [x] Criar uma classe Alunos (código, nome e e-mail)
 - [x] Acessar a tabela criada 
 - [x] Conceituar ORM/JAKARTA - [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
 - [x] Acessar site:[JAKARTA Persistence] (https://jakarta.ee/specifications/persistence/3.0/)
@@ -83,7 +83,7 @@ public class AlunoController {
 	
 	@GetMapping
 	public String auladaw() {
-		return "Olá turma de DAW!;
+		return "Olá turma de DAW!";
 	}
 	
 	@GetMapping("/{nome}")
@@ -116,7 +116,7 @@ spring.jpa.hibernate.ddl-auto=update
 ```
 @Entity
 @Table(name = "ALUNOS")
-public class Aluno {
+public class Alunos {
 	
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -124,14 +124,17 @@ public class Aluno {
     private Integer codigo;
 
     @Column(name = "NOME_ALUNO", length = 50, nullable = false)
-	private String nome;
+    private String nome;
+    
+    @Column(name = "EMAIL_ALUNO", length = 40, nullable = false)
+    private String email;
 	
 	....
 ```
 
 :shipit: Código 3
 ```
-public interface PersonRepository extends JpaRepository<Aluno, Integer> {
+public interface PersonRepository extends JpaRepository<Alunos, Integer> {
 }
 ```
 
