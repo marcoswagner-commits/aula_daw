@@ -20,8 +20,8 @@
 
 ### Modificação do código (controle) - código 1
 - [x] Criar um pacote Controller
-- [x] Criar uma classe TesteAula1Controller
-- [x] Criar dois endpoints (
+- [x] Criar uma classe AlunoController
+- [x] Criar dois endpoints (geral e específico)
 - [x] Conceituar endpoint e JSON [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
 - [x] Testar a aplicação
 
