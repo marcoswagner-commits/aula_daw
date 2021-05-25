@@ -12,6 +12,6 @@
 
 
 - Para suporte a criação dos diagramas segue um conteúdo resumido: 
-![Modelo Conceitual]((https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/modeloConceitual.md)
+![Modelo Conceitual](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/modeloConceitual.md)
 
 
