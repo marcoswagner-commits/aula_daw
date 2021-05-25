@@ -1,4 +1,4 @@
-:EMOJICODE:
+:+2::+3::+4::+5::+6::+7::+8::+9::+10::+11::+12::+13::+14:
 # Aula de Desenvolvimento de Aplicações WEB 
 # Desenvolvimento de Aplicações para WEB – 2020/2 (2021)
 
@@ -8,7 +8,7 @@
 
 
 ### Níveis de Abstração
-- Conceitual/Análise : Independente de Tecnologia/Paradigma //// Diagrama de Classes //// Analista/Arquiteto
+- Conceitual/Análise :+2: Independente de Tecnologia/Paradigma //// Diagrama de Classes //// Analista/Arquiteto
 - Lógico/Design //// Informações do Paradigma //// Diagrama de Classes //// Projetista
 - Físico/Implementação //// Detalhes da Tecnologia //// Java/SQL //// Implementador
 
