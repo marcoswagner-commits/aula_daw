@@ -1,4 +1,4 @@
-:+2::+3::+4::+5::+6::+7::+8::+9::+10::+11::+12::+13::+14:
+
 # Aula de Desenvolvimento de Aplicações WEB 
 # Desenvolvimento de Aplicações para WEB – 2020/2 (2021)
 
@@ -8,9 +8,9 @@
 
 
 ### Níveis de Abstração
-- Conceitual/Análise :+2: Independente de Tecnologia/Paradigma //// Diagrama de Classes //// Analista/Arquiteto
-- Lógico/Design //// Informações do Paradigma //// Diagrama de Classes //// Projetista
-- Físico/Implementação //// Detalhes da Tecnologia //// Java/SQL //// Implementador
+- Conceitual/Análise :dart: Independente de Tecnologia/Paradigma :dart: Diagrama de Classes :dart: Analista/Arquiteto
+- Lógico/Design :dart: Informações do Paradigma :dart: Diagrama de Classes :dart: Projetista
+- Físico/Implementação :dart: Detalhes da Tecnologia :dart: Java/SQL :dart: Implementador
 
 ### Exemplos:
 - Diagrama de Classes Conceitual - sem detalhes da tecnologia
@@ -31,3 +31,19 @@
 - Mercado: Todos os gerenciadores de obras 
 - Descrição: 
 O sistema terá como premissa armazenar/gravar o proprietario de uma obra, registrando nome, cpf e e-mail. A obra ou seja uma construção civil que terá uma descrição (por exemplo casa geminada), localização e um complemento. O proprietário pode ter várias obras, no entanto uma obra estará ligada apenas a um proprietário. Para fazer os lançamentos de gastos com a obra - incluindo o valor, descrição, documento, observações - haverá uma classificação em dois níveis (item e subitem) com descrição e complemento. Desta forma será possível, por exemplo, conhecer todos os gastos com mão-de-obra e especificamente com pintura.
+
+### Conceitos Básicos para criação de um Diagrama de Classes UML 
+** existem características relacionadas às classes, atributos, métodos e suas relações que não serão abordadas aqui **
+- [x] A classe é composta de três partes (nome - atributos - métodos)
+  - [ ] Os atributos podem ser privados (private "-"), públicos (public "+") e protegidos (protected "#")
+    - [ ] Os atributos representam o comportamento da classe (em um modelo conceitual simples são suficientes, não necessitando dos métodos, para representar uma classe)
+  - [ ] Os métodos podem ser privados (private "-") ou públicos (public "+")
+    - [ ] Os métodos representam o conjunto de ações que a classe pode realizar
+
+- [x] Relacionamentos entre as classes
+  - [ ] Dependência
+  - [ ] Associação
+  - [ ] Agregação
+  - [ ] Composição
+  - [ ] Herança (Generalização/Especialização)
+
