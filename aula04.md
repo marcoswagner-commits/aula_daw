@@ -10,7 +10,7 @@
 - :fire: O vídeo abaixo apresenta como material complementar a criação de um Diagrama de Classes UML para o estudo de caso deste curso (Gestão de Obras).
 
 
-[![material complementar aula04](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/Capa_Video_Mod1.png)](https://youtu.be/6mX0522HGjE)
+![material complementar aula04](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/Capa_Video_Mod1.png)](https://youtu.be/6mX0522HGjE)
 
 - Para suporte a criação dos diagramas segue um conteúdo resumido: 
 [Modelo Conceitual](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/modeloConceitual.md)
