@@ -10,7 +10,7 @@
   - Name/Artifact: GestaoObra-Api 
   - Group/Package: net.ufjnet.gestaobra
   - Description: API de Gestão de Obras
-  - Dependências (segunda página)
+  - Dependências (aba direita)
     - Web (JSON/TOMACAT/WEB/WEB/MVC)
     - Data (DATA_JPA/HIBERNATE/JAKARTA
     - H2 (Banco de Dados em memória)
