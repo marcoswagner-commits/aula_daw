@@ -22,5 +22,5 @@
 - Baixar arquivo gerado e descompactar dentro da pasta Gestao_Obras/BackEnd.
 
 ### Passo 2: criar estruturas de pastas no projeto seguindo o modelo de arquitetura abaixo:
-![Modelo de Arquitetura](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/tree/documentos/modelo_camadas.png)
+![Modelo de Arquitetura](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/947bf8022b213bb7fe183c39dae8c607a6d60212/modelo_camadas.png)
 
