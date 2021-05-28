@@ -47,7 +47,7 @@
 - [x] Criar um objeto/registro de aluno
 
 
-### Modificação do código (retornar alunos) - código 5
+### Modificação do código (retornar alunos) - código final
 - [X] Alterar a classe AlunoController
 - [x] Criar um método findAll
 - [x] Retomar conceito de JSON [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
@@ -58,6 +58,9 @@
 - [x] Owner " " / Repository name " "
 - [x] Description " " - Public/Private - Add README file - 
 - [x] Inicializar um repositório na própria máquina (computador)
+
+#### Para acesso específico a este conjunto de códigos, acesse o repositório: https://github.com/marcoswagner-commits/testeAula1
+
 ```
 echo "# AulaTeste" >> README.md
 git init
@@ -116,7 +119,7 @@ spring.jpa.hibernate.ddl-auto=update
 ```
 @Entity
 @Table(name = "ALUNOS")
-public class Alunos {
+public class Aluno {
 	
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -134,7 +137,7 @@ public class Alunos {
 
 :shipit: Código 3
 ```
-public interface PersonRepository extends JpaRepository<Alunos, Integer> {
+public interface AlunoDAO extends JpaRepository<Aluno, Integer> {
 }
 ```
 
@@ -143,18 +146,39 @@ public interface PersonRepository extends JpaRepository<Alunos, Integer> {
 public class TesteAula1Application implements CommandLineRunner {
 
 	@AutoWired
-	AlunoRepository alunoRepository;
+	AlunoDAO alunoDAO;
 	
 	...
 	
 	@Override
 	public void run(String... args) throws Exception {
-		Aluno aluno = new Aluno(1,"Arthur");
-		alunoRepository.save(aluno);
+		Aluno aluno = new Aluno(1,"Arthur","arthur@email.com");
+		alunoDAO.save(aluno);
 		
 	}
 	
 }
 ```
 
+:shipit: Código Final
+```
+@RestController
+@RequestMapping("/auladaw")
+public class AlunoController {
+	
+	@Autowired
+	AlunoDAO dao;
+	
+	@GetMapping
+	public List<Aluno> auladaw() {
+		return dao.findAll();
+	}
+	
+	@GetMapping("/{nome}")
+	public String auladaw(@PathVariable(value = "nome") String nome) {
+		return String.format("Olá turma de DAW, meu nome é %s",nome);
+	}
+	
 
+}
+```
