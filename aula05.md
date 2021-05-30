@@ -6,7 +6,7 @@
 ### Passo 1: criar projeto
 #### Criar pasta Gestao_Obras_Projeto dentro do Workspace STS - Criar duas subpastas: backend (bckend_gto) e frontend (frtend_gto):
 
-![Modelo de Arquitetura](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/947bf8022b213bb7fe183c39dae8c607a6d60212/pastas_projeto.png)
+![Pastas do Projeto](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/fe5c2cc8a99cd618a16d1f43c0a6d133d321c865/pastas_projeto.png)
 
 
 - Acessar página http://start.spring.io e criar projeto Spring Boot no `Spring Initializr` com as seguintes informações:
@@ -14,9 +14,9 @@
   - Group/Package: net.ufjnet.gestaobra
   - Description: API de Gestão de Obras
   - Dependências (aba direita)
-    - Web (JSON/TOMACAT/WEB/WEB/MVC)
-    - Data (DATA_JPA/HIBERNATE/JAKARTA
-    - H2 (Banco de Dados em memória)
+    - Web (JSON/TOMACAT/WEB/MVC)
+    - Data (DATA_JPA/HIBERNATE/JAKARTA)
+
 
 - Caso o arquivo pom.xml tenha algum erro::
   - Botão direito no projeto -> Maven -> Update project (force update)
