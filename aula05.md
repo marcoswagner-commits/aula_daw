@@ -28,3 +28,47 @@
 ### Passo 2: criar estruturas de pastas no projeto seguindo o modelo de arquitetura abaixo:
 ![Modelo de Arquitetura](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/947bf8022b213bb7fe183c39dae8c607a6d60212/modelo_camadas.png)
 
+- Veja o vídeo abaixo que mostra a execução destes dois primeiros passos
+[![material complementar aula05](https://raw.githubusercontent.com/marcoswagner-commits/gestao_obras_aula_daw/Documentos/Capa_aula05_mod2.png)](https://youtu.be/S58DL42UaUw)
+
+:shipit: Código 1
+```
+@Entity
+@Table(name = "PROPRIETARIOS")
+public class Proprietario implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "codigo_prop")
+	private Integer codigo ;
+	
+	@Column(name = "nome_prop", nullable = false)
+	private String nome;
+	
+	@Column(name = "cpf_prop", nullable = false)
+	private String cpf;
+	
+	@Column(name = "email_prop", nullable = false)
+	private String email;
+	
+	....
+```
+
+
+### Passo 3: criar as estruturas necessárias para criar o banco de dados e inserir a dependêcia LOMBOK
+
+
+
+:shipit: Configuração do MySQL no arquivo application.properties
+```
+# MYSQL
+spring.datasource.url= jdbc:mysql://localhost:3306/gestao_obra?createDatabaseIfNotExist=true&serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=
+
+#JPA
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql= true
+spring.jpa.open-in-view= true
+```
