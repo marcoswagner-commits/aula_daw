@@ -76,5 +76,5 @@ spring.jpa.open-in-view= true
 - Veja o vídeo abaixo que mostra a execução do terceiro passo
 [![material complementar aula05](https://raw.githubusercontent.com/marcoswagner-commits/gestao_obras_aula_daw/Documentos/Capa_aula05_mod2.png)](https://youtu.be/gDDe2jvv3fk)
 
-### Passo 4: Atualizar o github com a criação de um branch "codigos"
+### Passo 4: Atualizar o github com os primeiros códigos
 
