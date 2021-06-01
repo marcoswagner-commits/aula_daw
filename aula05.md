@@ -33,11 +33,17 @@
 
 :shipit: Código 1
 ```
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
 @Table(name = "PROPRIETARIOS")
 public class Proprietario implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	@EqualsAndHashCode.Include
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "codigo_prop")
@@ -52,7 +58,7 @@ public class Proprietario implements Serializable {
 	@Column(name = "email_prop", nullable = false)
 	private String email;
 	
-	....
+}
 ```
 
 
