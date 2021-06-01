@@ -84,3 +84,10 @@ spring.jpa.open-in-view= true
 
 ### Passo 4: Atualizar o github com os primeiros códigos
 
+- Obs.: 
+	- Instalar o LOMBOK: Acessar a pasta na sua pasta de usuários as seguintes pastas em sequência: .m2 = repository = org = projectlombok = lombok 
+	- abrir o arquivo "lombok-1.??.??.jar" - terminal: java -jar "lombok-1.??.??.jar"
+	- caso não detecte automaticamente a IDE (STS4) fazer a localização manual
+	- fechar e abrir novamente a IDE
+	- testar uma classe verificando se os métodos getters e setters estão presentes na instância do objeto
+	
