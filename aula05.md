@@ -29,7 +29,7 @@
 ![Modelo de Arquitetura](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/947bf8022b213bb7fe183c39dae8c607a6d60212/modelo_camadas.png)
 
 - Veja o vídeo abaixo que mostra a execução destes dois primeiros passos
-[![material complementar aula05](https://raw.githubusercontent.com/marcoswagner-commits/gestao_obras_aula_daw/Documentos/Capa_aula05_mod2.png)](https://youtu.be/S58DL42UaUw)
+[![material complementar aula05](https://raw.githubusercontent.com/marcoswagner-commits/gestao_obras_aula_daw/Documentos/Capa_aula05_mod1.png)](https://youtu.be/S58DL42UaUw)
 
 :shipit: Código 1
 ```
@@ -72,3 +72,9 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql= true
 spring.jpa.open-in-view= true
 ```
+
+- Veja o vídeo abaixo que mostra a execução do terceiro passo
+[![material complementar aula05](https://raw.githubusercontent.com/marcoswagner-commits/gestao_obras_aula_daw/Documentos/Capa_aula05_mod2.png)](https://youtu.be/gDDe2jvv3fk)
+
+### Passo 4: Atualizar o github com a criação de um branch "codigos"
+
