@@ -26,7 +26,7 @@
 -
 🥈:[![material complementar aula06](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/f12b022c5b71942326118f1ea9881b9ed3f1b471/Capa_aula05_mod1.png)](https://www.youtube.com/watch?v=R9_oUikVjAE)
 -
-🥉:[![material complementar aula06](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/f12b022c5b71942326118f1ea9881b9ed3f1b471/Capa_aula05_mod1.png)](https://www.youtube.com/watch?v=R9_oUikVjAE)
+🥉:[![material complementar aula06](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/f12b022c5b71942326118f1ea9881b9ed3f1b471/Capa_aula05_mod1.png)](https://www.youtube.com/watch?v=tbziAnjO-34)
 
 
 
@@ -51,35 +51,25 @@ public class ProprietarioController {
 		return propDAO.findAll();
 		
 	}
+	
+	//@GetMapping("/{id}")
+	//public Proprietario buscarUm(@PathVariable Integer id) {
+	//	Optional<Proprietario> obj = propDAO.findById(id);
+	//	return obj.orElse(null); 
+	//}
+	
+	@GetMapping("/{id}")
+	public ResponseEntity<Proprietario> buscarUm(@PathVariable Integer id) {
+		Optional<Proprietario> objOpt = propDAO.findById(id);
+		Proprietario obj = objOpt.orElse(null);
+		return ResponseEntity.ok(obj);
+	}
+
+
+}
 ```
 
+### Passo 4: Atualizar o github com os códigos atuais
 
 
-
-
-
-:shipit: Configuração do MySQL no arquivo application.properties
-```
-# MYSQL
-spring.datasource.url= jdbc:mysql://localhost:3306/gestao_obra?createDatabaseIfNotExist=true&serverTimezone=UTC
-spring.datasource.username=root
-spring.datasource.password=
-
-#JPA
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql= true
-spring.jpa.open-in-view= true
-```
-
-- Veja o vídeo abaixo que mostra a execução do terceiro passo
-[![material complementar aula05](https://raw.githubusercontent.com/marcoswagner-commits/gestao_obras_aula_daw/Documentos/Capa_aula05_mod2.png)](https://youtu.be/gDDe2jvv3fk)
-
-### Passo 4: Atualizar o github com os primeiros códigos
-
-- Obs.: 
-	- Instalar o LOMBOK: Acessar a pasta na sua pasta de usuários as seguintes pastas em sequência: .m2 = repository = org = projectlombok = lombok 
-	- abrir o arquivo "lombok-1.??.??.jar" - terminal: java -jar "lombok-1.??.??.jar"
-	- caso não detecte automaticamente a IDE (STS4) fazer a localização manual
-	- fechar e abrir novamente a IDE
-	- testar uma classe verificando se os métodos getters e setters estão presentes na instância do objeto
 	
