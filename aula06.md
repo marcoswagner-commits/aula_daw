@@ -16,7 +16,7 @@
 - Vide Código 2
 
 ### Passo 3: Criar uma consulta específica para o ID do proprietário
-- Criar um outro "endpoint" de consulta com passagem de parâmentros pelo caminho (path) "/{id}
+- Criar um outro "endpoint" de consulta com passagem de parâmentros pelo caminho (path) "/{id}"
 - Usar inicialmente a classe Optional para retorno
 - Mudar para ResponseEntity o retorno
 
