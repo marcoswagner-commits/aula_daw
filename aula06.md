@@ -16,12 +16,16 @@
 - Vide Código 2
 
 
-- Veja o vídeo abaixo que mostra a execução destes dois primeiros passos
-[![material complementar aula06](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/f12b022c5b71942326118f1ea9881b9ed3f1b471/Capa_aula05_mod1.png)](https://youtu.be/S58DL42UaUw)
+- Os vídeo abaixo mostram a execução destes dois primeiros passos
+[![material complementar aula06](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/f12b022c5b71942326118f1ea9881b9ed3f1b471/Capa_aula05_mod1.png)](https://www.youtube.com/watch?v=VHhqVr3YLpM)
+-
+[![material complementar aula06](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/f12b022c5b71942326118f1ea9881b9ed3f1b471/Capa_aula05_mod1.png)](https://www.youtube.com/watch?v=VHhqVr3YLpM)
 
 :shipit: Código 1
 ```
+public interface ProprietarioDAO extends JpaRepository<Proprietario, Integer> {
 
+}
 ```
 
 :shipit: Código 2
