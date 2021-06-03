@@ -10,16 +10,25 @@
 
 ### Passo 2: Criar controlador de Proprietarios 
 - Fazer anotações de @RestController, @RequestMapping
-- Criar um "endpoint" de consulta para proprietário com URI: /gto/proprietarios
+- Criar um "endpoint" de consulta (@GetMapping) para proprietário com URI: /gto/proprietarios
 - Usar inicialmente ProprietárioDAO para acesso aos dados
 - Preencher a tabela de proprietarios (usar o método RUN do CommandLineRunner em BckendGtoApplication) com três registros e fazer novamente a consulta
 - Vide Código 2
 
+### Passo 3: Criar uma consulta específica para o ID do proprietário
+- Criar um outro "endpoint" de consulta com passagem de parâmentros pelo caminho (path) "/{id}
+- Usar inicialmente a classe Optional para retorno
+- Mudar para ResponseEntity o retorno
 
-- Os vídeo abaixo mostram a execução destes dois primeiros passos
-[![material complementar aula06](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/f12b022c5b71942326118f1ea9881b9ed3f1b471/Capa_aula05_mod1.png)](https://www.youtube.com/watch?v=VHhqVr3YLpM)
+####  Os vídeos abaixo mostram a execução destes dois primeiros passos
+
+🥇:[![material complementar aula06](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/f12b022c5b71942326118f1ea9881b9ed3f1b471/Capa_aula05_mod1.png)](https://www.youtube.com/watch?v=VHhqVr3YLpM)
 -
-[![material complementar aula06](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/f12b022c5b71942326118f1ea9881b9ed3f1b471/Capa_aula05_mod1.png)](https://www.youtube.com/watch?v=VHhqVr3YLpM)
+🥈:[![material complementar aula06](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/f12b022c5b71942326118f1ea9881b9ed3f1b471/Capa_aula05_mod1.png)](https://www.youtube.com/watch?v=R9_oUikVjAE)
+-
+🥉:[![material complementar aula06](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/f12b022c5b71942326118f1ea9881b9ed3f1b471/Capa_aula05_mod1.png)](https://www.youtube.com/watch?v=R9_oUikVjAE)
+
+
 
 :shipit: Código 1
 ```
@@ -30,11 +39,22 @@ public interface ProprietarioDAO extends JpaRepository<Proprietario, Integer> {
 
 :shipit: Código 2
 ```
-
+@RestController
+@RequestMapping("/gto/proprietarios")
+public class ProprietarioController {
+	
+	@Autowired
+	private ProprietarioDAO propDAO;
+	
+	@GetMapping
+	public List<Proprietario> buscarTodos() {
+		return propDAO.findAll();
+		
+	}
 ```
 
 
-### Passo 3: criar as estruturas necessárias para criar o banco de dados e inserir a dependêcia LOMBOK
+
 
 
 
