@@ -23,7 +23,7 @@
 
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
 
-🥇:[![material complementar aula06](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/200468edba69a88b063abe444459fa9e09a8d41e/Capa_aula06.png)](https://www.youtube.com/watch?v=VHhqVr3YLpM)
+🥇:[![material complementar aula06](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/200468edba69a88b063abe444459fa9e09a8d41e/Capa_aula06.png)](https://www.youtube.com/watch?v=zoL877ckzeU)
 -
 🥈:[![material complementar aula06](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/200468edba69a88b063abe444459fa9e09a8d41e/Capa_aula06.png)](https://www.youtube.com/watch?v=R9_oUikVjAE)
 -
@@ -33,9 +33,36 @@
 
 :shipit: Código 1
 ```
-public interface ProprietarioDAO extends JpaRepository<Proprietario, Integer> {
-
+@AllArgsConstructor
+@Service
+public class GestaoProprietario {
+	
+	private ProprietarioDAO dao;
+	
+	@Transactional
+	public List<Proprietario> findAll() {
+		return dao.findAll();
+		
+	}
+	
+	@Transactional
+	public Optional<Proprietario> findById(Integer id) {
+			return dao.findById(id);
+	}
+	
+	@Transactional
+	public Proprietario save(Proprietario obj) {
+			return dao.save(obj);
+	}
+	
+	@Transactional
+	public void deleteById(Integer id) {
+			dao.deleteById(id);
+	}
+	
+	
 }
+
 ```
 
 :shipit: Código 2
