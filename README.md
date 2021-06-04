@@ -156,7 +156,7 @@ Passos:
 - [Roteiro específico da Aula03 - 25/05/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula03.md)
 - [Roteiro específico da Aula04 - 27/05/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula04.md)
 - [Roteiro específico da Aula05 - 08/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula05.md)
-- [Roteiro específico da Aula05 - 10/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula06.md)
-- [Roteiro específico da Aula05 - 15/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula07.md)
-- [Roteiro específico da Aula05 - 17/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula08.md)
+- [Roteiro específico da Aula06 - 10/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula06.md)
+- [Roteiro específico da Aula07 - 15/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula07.md)
+- [Roteiro específico da Aula08 - 17/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula08.md)
 
