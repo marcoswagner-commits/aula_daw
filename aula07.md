@@ -29,7 +29,7 @@
 -
 🥉:[![material complementar aula07](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/200468edba69a88b063abe444459fa9e09a8d41e/Capa_aula06.png)](https://www.youtube.com/watch?v=c3BEXOIWSEQ)
 -
-🥉:[![material complementar aula07](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/200468edba69a88b063abe444459fa9e09a8d41e/Capa_aula06.png)](https://www.youtube.com/watch?v=c3BEXOIWSEQ)
+🥉:[![material complementar aula07](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/200468edba69a88b063abe444459fa9e09a8d41e/Capa_aula06.png)](https://www.youtube.com/watch?v=26GoufnXRPM)
 
 
 
@@ -75,32 +75,58 @@ public class GestaoProprietario {
 public class ProprietarioController {
 	
 	@Autowired
-	private ProprietarioDAO propDAO;
+	private GestaoProprietario service;
 	
 	@GetMapping
 	public List<Proprietario> buscarTodos() {
-		return propDAO.findAll();
+		return service.findAll();
 		
 	}
 	
-	//@GetMapping("/{id}")
-	//public Proprietario buscarUm(@PathVariable Integer id) {
-	//	Optional<Proprietario> obj = propDAO.findById(id);
-	//	return obj.orElse(null); 
-	//}
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<Proprietario> buscarUm(@PathVariable Integer id) {
-		Optional<Proprietario> objOpt = propDAO.findById(id);
-		Proprietario obj = objOpt.orElse(null);
-		return ResponseEntity.ok(obj);
+		return service.findById(id)
+				.map(ResponseEntity::ok)
+				.orElse(ResponseEntity.notFound().build());
 	}
+	
+	@PostMapping
+	public ResponseEntity<Proprietario> incluir(@RequestBody Proprietario obj) {
+		obj = service.save(obj);
+		return ResponseEntity.created(null).body(obj);
+		
+	}
+	
+	@PutMapping("/{id}")
+	public ResponseEntity<Proprietario> atualizar(@PathVariable Integer id, @RequestBody Proprietario obj ) {
+		if (!service.existById(id)) {
+			return ResponseEntity.notFound().build();
+		}
+		obj.setCodigo(id);
+		obj = service.save(obj);
+		return ResponseEntity.ok(obj);
+		
+	}
+	
+	@DeleteMapping("/{id}")
+	public ResponseEntity<Void> excluir(@PathVariable Integer id) {
+		if (!service.existById(id)) {
+			return ResponseEntity.notFound().build();
+		}
+		
+		service.deleteById(id);
+		return ResponseEntity.noContent().build();
+		
+	}
+	
+	
 
 
 }
 ```
 
-### Passo 4: Atualizar o github com os códigos atuais
+### Passo 3: Atualizar o github com os códigos atuais
 
 
 	
