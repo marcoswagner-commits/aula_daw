@@ -7,7 +7,7 @@
 - Adicionar o pacote Spring Validation
 - Fazer anotações na classe Proprietario (Model) - @NotBlank - @Size - @Email
 - Criar o pacote exceptionhandler
-- Criar a classe ExceptionHandler
+- Criar a classe ExceptionHandler (@ControllerAdvice)
 - Vide Códigos 1 e 2
 
 ### Passo 2: Melhorar o tratamento de mensagens
@@ -25,7 +25,7 @@
 -
 🥈:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ba294e3ae0ee3da2378b3c9d5be18c7df419fb2c/Capa_aula07.png)](https://www.youtube.com/watch?v=qThJM6UPSqE)
 -
-🥉:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ba294e3ae0ee3da2378b3c9d5be18c7df419fb2c/Capa_aula07.png)](https://www.youtube.com/watch?v=c3BEXOIWSEQ)
+🥉:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ba294e3ae0ee3da2378b3c9d5be18c7df419fb2c/Capa_aula07.png)](https://www.youtube.com/watch?v=qGMNf2p6zrk)
 -
 🥉:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ba294e3ae0ee3da2378b3c9d5be18c7df419fb2c/Capa_aula07.png)](https://www.youtube.com/watch?v=26GoufnXRPM)
 
