@@ -27,7 +27,7 @@
 -
 🥉:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ba294e3ae0ee3da2378b3c9d5be18c7df419fb2c/Capa_aula07.png)](https://www.youtube.com/watch?v=qGMNf2p6zrk)
 -
-🥉:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ba294e3ae0ee3da2378b3c9d5be18c7df419fb2c/Capa_aula07.png)](https://www.youtube.com/watch?v=26GoufnXRPM)
+🥉:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ba294e3ae0ee3da2378b3c9d5be18c7df419fb2c/Capa_aula07.png)](https://www.youtube.com/watch?v=4qkG2kMqmhc)
 
 
 
@@ -110,6 +110,34 @@ public class StandardError {
 
 :shipit: Código 4
 ```
+@ControllerAdvice
+public class ExceptionHandler extends ResponseEntityExceptionHandler {
+	
+	@Autowired
+	private MessageSource msg;
+	
+	@Override
+	protected ResponseEntity<Object> handleMethodArgumentNotValid(
+			MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
+
+		List<StandardError.Fields> erro_campos = new ArrayList<>();
+		
+		for (ObjectError error : ex.getBindingResult().getAllErrors()) {
+			String nome = ((FieldError) error).getField();
+			String mensagem = msg.getMessage(error, LocaleContextHolder.getLocale());
+			
+			erro_campos.add(new StandardError.Fields(nome, mensagem));
+		}
+		
+		
+		StandardError erro = new StandardError(status.value(),LocalDateTime.now(),"Verifique o preenchimento dos campos!",erro_campos);
+		
+		return handleExceptionInternal(ex, erro, headers, status, request);
+	}
+	
+	
+
+}
 
 
 ```
