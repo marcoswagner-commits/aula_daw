@@ -6,24 +6,24 @@
 ### Passo 1: Criar funcionalidades (starters e classes) para tratamento de erros
 - Adicionar o pacote Spring Validation
 - Fazer anotações na classe Proprietario (Model) - @NotBlank - @Size - @Email
-- Criar um pacote exceptionHandler
+- Criar o pacote exceptionhandler
 - Criar a classe ExceptionHandler
-- Vide Código 1
+- Vide Código 1 e 2
 
 ### Passo 2: Melhorar o tratamento de mensagens
-- Criar uma classe StandardError
 - Sobrescrever o método handleMethodArgumentNotValid
-- Vincular a classe StandardErro ao método
+- Criar uma classe StandardError
+- Vincular a classe StandardError ao método
 - Verificar os retornos de erros
 - Atualizar mensagens criando o arquivo messages.properties na pasta "Resources"
-- Vide Código 2
+- Vide Código 3 e 4
 
 
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
 
 🥇:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ba294e3ae0ee3da2378b3c9d5be18c7df419fb2c/Capa_aula07.png)](https://www.youtube.com/watch?v=kwyntQNaGn0)
 -
-🥈:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ba294e3ae0ee3da2378b3c9d5be18c7df419fb2c/Capa_aula07.png)](https://www.youtube.com/watch?v=i6brsofWuew)
+🥈:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ba294e3ae0ee3da2378b3c9d5be18c7df419fb2c/Capa_aula07.png)](https://www.youtube.com/watch?v=qThJM6UPSqE)
 -
 🥉:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ba294e3ae0ee3da2378b3c9d5be18c7df419fb2c/Capa_aula07.png)](https://www.youtube.com/watch?v=c3BEXOIWSEQ)
 -
@@ -34,33 +34,35 @@
 
 :shipit: Código 1
 ```
+@NoArgsConstructor
 @AllArgsConstructor
-@Service
-public class GestaoProprietario {
-	
-	private ProprietarioDAO dao;
-	
+@Getter
+@Setter
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Entity
+@Table(name = "PROPRIETARIOS")
+public class Proprietario implements Serializable {
+	private static final long serialVersionUID = 1L;
 
-	public List<Proprietario> findAll() {
-		return dao.findAll();
-		
-	}
+	@EqualsAndHashCode.Include
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "codigo_prop")
+	private Integer codigo ;
 	
-
-	public Optional<Proprietario> findById(Integer id) {
-			return dao.findById(id);
-	}
+	@NotBlank
+	@Size(max=60)
+	@Column(name = "nome_prop", nullable = false)
+	private String nome;
 	
-	@Transactional
-	public Proprietario save(Proprietario obj) {
-			return dao.save(obj);
-	}
+	@NotBlank
+	@Size(max=14)
+	@Column(name = "cpf_prop", nullable = false)
+	private String cpf;
 	
-	@Transactional
-	public void deleteById(Integer id) {
-			dao.deleteById(id);
-	}
-	
+	@Email
+	@Column(name = "email_prop", nullable = false)
+	private String email;
 	
 }
 
@@ -68,60 +70,47 @@ public class GestaoProprietario {
 
 :shipit: Código 2
 ```
-@RestController
-@RequestMapping("/gto/proprietarios")
-public class ProprietarioController {
-	
-	@Autowired
-	private GestaoProprietario service;
-	
-	@GetMapping
-	public List<Proprietario> buscarTodos() {
-		return service.findAll();
-		
-	}
+@ControllerAdvice
+public class ExceptionHandler extends ResponseEntityExceptionHandler {
 	
 	
-	@GetMapping("/{id}")
-	public ResponseEntity<Proprietario> buscarUm(@PathVariable Integer id) {
-		return service.findById(id)
-				.map(ResponseEntity::ok)
-				.orElse(ResponseEntity.notFound().build());
-	}
-	
-	@PostMapping
-	public ResponseEntity<Proprietario> incluir(@RequestBody Proprietario obj) {
-		obj = service.save(obj);
-		return ResponseEntity.created(null).body(obj);
-		
-	}
-	
-	@PutMapping("/{id}")
-	public ResponseEntity<Proprietario> atualizar(@PathVariable Integer id, @RequestBody Proprietario obj ) {
-		if (!service.existById(id)) {
-			return ResponseEntity.notFound().build();
-		}
-		obj.setCodigo(id);
-		obj = service.save(obj);
-		return ResponseEntity.ok(obj);
-		
-	}
-	
-	@DeleteMapping("/{id}")
-	public ResponseEntity<Void> excluir(@PathVariable Integer id) {
-		if (!service.existById(id)) {
-			return ResponseEntity.notFound().build();
-		}
-		
-		service.deleteById(id);
-		return ResponseEntity.noContent().build();
-		
-	}
-	
-	
+	@Override
+	protected ResponseEntity<Object> handleMethodArgumentNotValid(
+			MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
 
-
+		return handleExceptionInternal(ex, "Erro em Gestão de Obras", headers, status, request);
+	}
 }
 ```
 
+:shipit: Código 3
+```
+@AllArgsConstructor
+@Getter
+@Setter
+public class StandardError {
+	
+	private Integer codigo;
+	private LocalDateTime momento;
+	private String decricao;
+	private List<Fields> campos;
+
+
+	@AllArgsConstructor
+	@Setter
+	@Getter
+	public static class Fields {
+	private String nome;
+	private String mensagem;
+}
+	
+}
+
+```
+
+:shipit: Código 4
+```
+
+
+```
 ### Passo 3: Atualizar o github com os códigos atuais
