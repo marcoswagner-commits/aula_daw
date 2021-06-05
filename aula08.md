@@ -21,13 +21,13 @@
 
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
 
-🥇:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ba294e3ae0ee3da2378b3c9d5be18c7df419fb2c/Capa_aula07.png)](https://www.youtube.com/watch?v=kwyntQNaGn0)
+🥇:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ecbe27da469ec69308caf228b1f5a2d0e4b863a3/Capa_aula08.png)](https://www.youtube.com/watch?v=kwyntQNaGn0)
 -
-🥈:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ba294e3ae0ee3da2378b3c9d5be18c7df419fb2c/Capa_aula07.png)](https://www.youtube.com/watch?v=qThJM6UPSqE)
+🥈:[![material complementar aula08]https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ecbe27da469ec69308caf228b1f5a2d0e4b863a3/Capa_aula08.png)](https://www.youtube.com/watch?v=qThJM6UPSqE)
 -
-🥉:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ba294e3ae0ee3da2378b3c9d5be18c7df419fb2c/Capa_aula07.png)](https://www.youtube.com/watch?v=qGMNf2p6zrk)
+🥉:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ecbe27da469ec69308caf228b1f5a2d0e4b863a3/Capa_aula08.png)](https://www.youtube.com/watch?v=qGMNf2p6zrk)
 -
-🥉:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ba294e3ae0ee3da2378b3c9d5be18c7df419fb2c/Capa_aula07.png)](https://www.youtube.com/watch?v=4qkG2kMqmhc)
+🥉:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ecbe27da469ec69308caf228b1f5a2d0e4b863a3/Capa_aula08.png)](https://www.youtube.com/watch?v=4qkG2kMqmhc)
 
 
 
