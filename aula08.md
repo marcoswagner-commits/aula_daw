@@ -8,7 +8,7 @@
 - Fazer anotações na classe Proprietario (Model) - @NotBlank - @Size - @Email
 - Criar o pacote exceptionhandler
 - Criar a classe ExceptionHandler
-- Vide Código 1 e 2
+- Vide Códigos 1 e 2
 
 ### Passo 2: Melhorar o tratamento de mensagens
 - Sobrescrever o método handleMethodArgumentNotValid
@@ -16,7 +16,7 @@
 - Vincular a classe StandardError ao método
 - Verificar os retornos de erros
 - Atualizar mensagens criando o arquivo messages.properties na pasta "Resources"
-- Vide Código 3 e 4
+- Vide Códigos 3 e 4
 
 
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
