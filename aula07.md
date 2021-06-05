@@ -42,13 +42,13 @@ public class GestaoProprietario {
 	
 	private ProprietarioDAO dao;
 	
-	@Transactional
+
 	public List<Proprietario> findAll() {
 		return dao.findAll();
 		
 	}
 	
-	@Transactional
+
 	public Optional<Proprietario> findById(Integer id) {
 			return dao.findById(id);
 	}
