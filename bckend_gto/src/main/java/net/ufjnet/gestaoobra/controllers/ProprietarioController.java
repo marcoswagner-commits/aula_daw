@@ -2,6 +2,8 @@ package net.ufjnet.gestaoobra.controllers;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -38,7 +40,7 @@ public class ProprietarioController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<Proprietario> incluir(@RequestBody Proprietario obj) {
+	public ResponseEntity<Proprietario> incluir(@Valid @RequestBody Proprietario obj) {
 		obj = service.save(obj);
 		return ResponseEntity.created(null).body(obj);
 		
