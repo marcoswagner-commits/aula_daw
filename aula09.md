@@ -4,10 +4,12 @@
 ## Implementação do Modelo Conceitual
 
 ### Passo 1: Ampliar as regras de negócio relacionadas a classe (entidade) proprietários
-- Busca de registros por nome
-- Busca de registros por cpf
-- Não permissão de cadastro de cpfs iguais
-- Não permissão de cadastro de e-mails iguais
+- Incluir no repositório ProprietarioDAO outros tipos de acesso a dados
+  - Busca de registros por nome
+  - Busca de registros por cpf
+- Ajustar os serviços GestaoProprietario para não permitir inclusão de dados incoerentes (dataIntegrity)
+  - Não permissão de cadastro de cpfs iguais
+  - Não permissão de cadastro de e-mails iguais
 - Vide Códigos 1, 2 e 3 (Repositório, Serviço e Controlador)
 
 ### Passo 2: Ampliar e melhorar o tratamento de mensagens de erros
