@@ -39,6 +39,21 @@ public class ProprietarioController {
 				.orElse(ResponseEntity.notFound().build());
 	}
 	
+	@GetMapping("/nome/{nome}")
+	public ResponseEntity<Proprietario> buscarNome(@PathVariable String nome) {
+		return service.findByName(nome)
+				.map(ResponseEntity::ok)
+				.orElse(ResponseEntity.notFound().build());
+	}
+	
+	@GetMapping("/cpf/{cpf}")
+	public ResponseEntity<Proprietario> buscarCpf(@PathVariable String cpf) {
+		return service.findByCPF(cpf)
+				.map(ResponseEntity::ok)
+				.orElse(ResponseEntity.notFound().build());
+	}
+	
+	
 	@PostMapping
 	public ResponseEntity<Proprietario> incluir(@Valid @RequestBody Proprietario obj) {
 		obj = service.save(obj);

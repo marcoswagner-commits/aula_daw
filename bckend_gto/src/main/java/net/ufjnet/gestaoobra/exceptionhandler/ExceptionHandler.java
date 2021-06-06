@@ -1,5 +1,7 @@
 package net.ufjnet.gestaoobra.exceptionhandler;
 
+
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +18,8 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+
+import net.ufjnet.gestaoobra.services.exceptions.BusinessException;
 
 @ControllerAdvice
 public class ExceptionHandler extends ResponseEntityExceptionHandler {
@@ -42,6 +46,15 @@ public class ExceptionHandler extends ResponseEntityExceptionHandler {
 		return handleExceptionInternal(ex, erro, headers, status, request);
 	}
 	
+	@org.springframework.web.bind.annotation.ExceptionHandler(BusinessException.class)
+	public ResponseEntity<StandardError> dataIntegrity (BusinessException ex) {
+		StandardError erro = new StandardError(HttpStatus.BAD_REQUEST.value(),
+			LocalDateTime.now(),ex.getMessage(),null);
+		
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(erro);
+	}
+	
+		
 	
 
 }
