@@ -7,6 +7,7 @@
 - Incluir no repositório ProprietarioDAO outros tipos de acesso a dados
   - Busca de registros por nome
   - Busca de registros por cpf
+  - Busca de registros por e-mail
 - Ajustar os serviços GestaoProprietario para não permitir inclusão de dados incoerentes (dataIntegrity)
   - Não permissão de cadastro de cpfs iguais
   - Não permissão de cadastro de e-mails iguais
@@ -22,7 +23,7 @@
 
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
 
-🥇:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ecbe27da469ec69308caf228b1f5a2d0e4b863a3/Capa_aula08.png)](https://www.youtube.com/watch?v=kwyntQNaGn0)
+🥇:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ecbe27da469ec69308caf228b1f5a2d0e4b863a3/Capa_aula08.png)](https://www.youtube.com/watch?v=CncYHx2x-xI)
 -
 🥈:[![material complementar aula08]https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ecbe27da469ec69308caf228b1f5a2d0e4b863a3/Capa_aula08.png)](https://www.youtube.com/watch?v=qThJM6UPSqE)
 -
