@@ -1,4 +1,15 @@
-# Aula 25/05/2021 - Desenvolvimento de Aplicações WEB
+# Aula 03 - Desenvolvimento de Aplicações WEB
+
+> Aula 25/05/2021
+> 
+>  *Estudo de caso: Gestão de Obras*
+
+# Aula 03 - Desenvolvimento de Aplicações WEB
+
+> Aula 24/06/2021
+> 
+>  *Estudo de caso: Gestão de Obras*
+
 ## Atividades da aula - roteiro
 
 - Acessar o site Spring.io :+1: (https://spring.io) e demonstrar a geração da estrutura de códigos usando a página: https://start.spring.io
