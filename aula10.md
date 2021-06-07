@@ -16,6 +16,9 @@
 - Verificar o consumo da API com as alterações
 - Vide Códigos 1, 2 e 3
 
+
+![Modelo de Arquitetura](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/947bf8022b213bb7fe183c39dae8c607a6d60212/modelo_camadas.png)
+
 ### Passo 2: Implantar a consulta paginada
   
 - Pageable
