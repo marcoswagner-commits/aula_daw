@@ -7,23 +7,23 @@
 
 ## Atividades da aula - roteiro
 
-## Implementação do Modelo Conceitual
+## :+1: Implementação do Modelo Conceitual
 
 ### Passo 1: Incluir a camada de DTO's
-[x] Implementar a classe ProprietarioDTO
-- Atualizar a classe serviços
-- Atualizar a classe  controladores
-- Verificar o consumo da API com as alterações
-- Vide Códigos 1, 2 e 3
+- [x] Implementar a classe ProprietarioDTO
+- [x] Atualizar a classe serviços
+- [x] Atualizar a classe  controladores
+- [x] Verificar o consumo da API com as alterações
+- [x] Vide Códigos 1, 2 e 3
 
 
 ![Modelo de Arquitetura](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/947bf8022b213bb7fe183c39dae8c607a6d60212/modelo_camadas.png)
 
 ### Passo 2: Implantar a consulta paginada
   
-- Pageable
-- page, size, sort
-- Vide Códigos 1, 2 e 3 
+- [x] Pageable
+- [x] page, size, sort
+- [x] Vide Códigos 1, 2 e 3 
 
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
