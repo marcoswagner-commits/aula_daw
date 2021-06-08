@@ -2,11 +2,15 @@ package net.ufjnet.gestaoobra.services;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import lombok.AllArgsConstructor;
+import net.ufjnet.gestaoobra.dtos.ProprietarioDTO;
 import net.ufjnet.gestaoobra.models.Proprietario;
 import net.ufjnet.gestaoobra.repositories.ProprietarioDAO;
 import net.ufjnet.gestaoobra.services.exceptions.BusinessException;
@@ -18,30 +22,46 @@ public class GestaoProprietario {
 	private ProprietarioDAO dao;
 	
 	
-	public List<Proprietario> findAll() {
-		return dao.findAll();
+	@Transactional(readOnly = true)
+	public Page<ProprietarioDTO> findAll(Pageable pageable) {
+		Page<Proprietario> result = dao.findAll(pageable);
+		return result.map(obj -> new ProprietarioDTO(obj));
+				
 		
 	}
 	
 	
-	public Optional<Proprietario> findById(Integer id) {
-			return dao.findById(id);
+	@Transactional(readOnly = true)
+	public Optional<ProprietarioDTO> findById(Integer id) {
+		Optional<Proprietario> result = dao.findById(id);
+		return result.map(obj -> new ProprietarioDTO(obj));
+				
+			
 	}
 	
-	public Optional<Proprietario> findByName(String nome) {
-		return dao.findByNome(nome);
+	@Transactional(readOnly = true)
+	public Optional<ProprietarioDTO> findByName(String nome) {
+		Optional<Proprietario> result = dao.findByNome(nome);
+		return result.map(obj -> new ProprietarioDTO(obj));
+		
     }
 	
-	public Optional<Proprietario> findByCPF(String cpf) {
-		return dao.findByCpf(cpf);
+	@Transactional(readOnly = true)
+	public Optional<ProprietarioDTO> findByCPF(String cpf) {
+		Optional<Proprietario> result = dao.findByCpf(cpf);
+		return result.map(obj -> new ProprietarioDTO(obj));
+		
     }
 	
-	public Optional<Proprietario> findByEmail(String email) {
-		return dao.findByEmail(email);
+	@Transactional(readOnly = true)
+	public Optional<ProprietarioDTO> findByEmail(String email) {
+		Optional<Proprietario> result = dao.findByEmail(email);
+		return result.map(obj -> new ProprietarioDTO(obj));
+		
 }
 	
 	@Transactional
-	public Proprietario save(Proprietario obj) {
+	public ProprietarioDTO save(Proprietario obj) {
 		boolean cpfExists = dao.findByCpf(obj.getCpf())
 				.stream()
 				.anyMatch(objResult -> !objResult.equals(obj));
@@ -58,7 +78,7 @@ public class GestaoProprietario {
 			throw new BusinessException("E-mail já existente!");
 		}
 		
-			return dao.save(obj);
+			return new ProprietarioDTO(dao.save(obj));
 	}
 	
 	@Transactional
