@@ -19,17 +19,17 @@
 - [x] Segunda janela: 
 (Versão do Spring Boot: 2.4.5 - Starters: Spring WEB; Spring Data)
 
-### Verificar a estrutura de arquivos do projeto
+### Passo 1: Verificar a estrutura de arquivos do projeto
 
-### Compilar (run) a aplicação 
+### Passo 2: Compilar (run) a aplicação 
 
-### Adicionar a dependência H2 para resolver o problema apresentado, pois já foi informada a dependência Spring Data
+### Passo 3: Adicionar a dependência H2 para resolver o problema apresentado, pois já foi informada a dependência Spring Data
 
-### Analisar primariamente o Project Object Model (pom.xml)
+### Passo 4: Analisar primariamente o Project Object Model (pom.xml)
 
-### Fazer os primeiros testes com dois clientes (navegador e PostMan) ([Roteiro - Ferramentas](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/README.md))
+### Passo 5: Fazer os primeiros testes com dois clientes (navegador e PostMan) ([Roteiro - Ferramentas](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/README.md))
 
-### Incluir os primeiros códigos, :+1: ainda sem criar nenhuma classe ou pacote, usando o arquivo principal:
+### Passo 6: Incluir os primeiros códigos, :+1: ainda sem criar nenhuma classe ou pacote, usando o arquivo principal:
 
 :shipit:
 ```
