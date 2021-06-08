@@ -10,7 +10,7 @@
 ## Implementação do Modelo Conceitual
 
 ### Passo 1: Incluir a camada de DTO's
-- Implementar a classe ProprietarioDTO
+-[x] Implementar a classe ProprietarioDTO
 - Atualizar a classe serviços
 - Atualizar a classe  controladores
 - Verificar o consumo da API com as alterações
