@@ -17,7 +17,7 @@
   - [x] Atualizar a classe  controladores
     - [x] Colocar suporte ao Hateoas (link de autorelacionamento) e sofisticação final - Vide Códigos
   - [x] Verificar o consumo da API com as alterações
-- [x] Vide Códigos 1, 2 e 3
+
 
 ✏️ Dependência necessária para uso do HATEOAS
 ```
