@@ -22,9 +22,9 @@
 ✏️ Dependência necessária para uso do HATEOAS
 ```
 <dependency>
-			<groupId>org.springframework.hateoas</groupId>
-			<artifactId>spring-hateoas</artifactId>
-		</dependency>
+	<groupId>org.springframework.hateoas</groupId>
+	<artifactId>spring-hateoas</artifactId>
+</dependency>
 ```
 
 ✏️ Imports necessários para uso do HATEOAS
@@ -34,14 +34,13 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 ```
 
 
-
-![Modelo de Arquitetura](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/947bf8022b213bb7fe183c39dae8c607a6d60212/modelo_camadas.png)
-
-### Passo 2: Implantar a consulta paginada
+### Passo 2: Versionamento e Serialização
   
-- [x] Pageable
-- [x] page, size, sort
-- [x] Vide Códigos 1, 2 e 3 
+- [x] Incluir versão no Path (v1)
+- [x] Serialização
+- [x] Organização do JSON na classe DTO (JsonPropertyOrder())
+- [x] Definição de nomes de campos com o JsonProperty()
+- [x] Ocultação de campos com JsonIgnore
 
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
