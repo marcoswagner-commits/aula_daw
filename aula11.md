@@ -149,4 +149,4 @@ public ResponseEntity<ProprietarioDTO> buscarEmail(@PathVariable String email) {
 
 ```
 
-### Passo 3: Atualizar o github com os códigos atuais (dtos)
+### Passo 3: Atualizar o github com os códigos atuais (hateoas)
