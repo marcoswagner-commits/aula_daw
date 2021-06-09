@@ -161,4 +161,6 @@ Passos:
 - [Roteiro específico da Aula08 - 17/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula08.md)
 - [Roteiro específico da Aula09 - 22/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula09.md)
 - [Roteiro específico da Aula10 - 24/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula10.md)
+- [Roteiro específico da Aula11 - 29/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula11.md)
+- [Roteiro específico da Aula12 - 01/07/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula12.md)
 
