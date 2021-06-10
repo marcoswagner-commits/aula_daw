@@ -2,28 +2,28 @@
 
 > Aula 10/06/2021
 > 
->  *Estudo de caso: Gestão de Obras*
+>  *Estudo de caso: Gestão de Obras* - Criação do Repositório e do Controlador
 
 ## Atividades da aula - roteiro
 
 ## Implementação do Modelo Conceitual
 
 ### Passo 1: Criar repositório de Proprietarios (DAO)
-- Criar interface ProprietárioDAO
-- Vincular herança com JPA
-- Vide Código 1
+- [x] Criar interface ProprietárioDAO
+- [x] Vincular herança com JPA
+- [x] Vide Código 1
 
 ### Passo 2: Criar controlador de Proprietarios 
-- Fazer anotações de @RestController, @RequestMapping
-- Criar um "endpoint" de consulta (@GetMapping) para proprietário com URI: /gto/proprietarios
-- Usar inicialmente ProprietárioDAO para acesso aos dados
-- Preencher a tabela de proprietarios (usar o método RUN do CommandLineRunner em BckendGtoApplication) com três registros e fazer novamente a consulta
-- Vide Código 2
+- [x] Fazer anotações de @RestController, @RequestMapping
+- [x] Criar um "endpoint" de consulta (@GetMapping) para proprietário com URI: /gto/proprietarios
+- [x] Usar inicialmente ProprietárioDAO para acesso aos dados
+- [x] Preencher a tabela de proprietarios (usar o método RUN do CommandLineRunner em BckendGtoApplication) com três registros e fazer novamente a consulta
+- [x] Vide Código 2
 
 ### Passo 3: Criar uma consulta específica para o ID do proprietário
-- Criar um outro "endpoint" de consulta com passagem de parâmentros pelo caminho (path) "/{id}"
-- Usar inicialmente a classe Optional para retorno
-- Mudar para ResponseEntity o retorno
+- [x] Criar um outro "endpoint" de consulta com passagem de parâmentros pelo caminho (path) "/{id}"
+- [x] Usar inicialmente a classe Optional para retorno
+- [x] Mudar para ResponseEntity o retorno
 
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
 
