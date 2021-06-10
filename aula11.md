@@ -1,6 +1,6 @@
 # Aula 11 - Desenvolvimento de Aplicações WEB
 
-> 
+> Aula 29/06/2021
 > 
 >  *Estudo de caso: Gestão de Obras* Níveis de Maturidade de Richardson - HATEOAS
 
