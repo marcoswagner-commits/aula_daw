@@ -112,15 +112,25 @@ Passos:
 
 6. Configurar o arquivo application.properties
 
-7. Criar os modelos (Anotações de entidade)
+7. Criar os modelos (Anotações de entidade) - com as regras de negócio específicas
 
 8. Criar os repositórios (Interfaces – JpaRepository)
 
-9. Criar os serviços
+9. Criar os serviços (Anotações de Service) - com as regras de negócio específicas
 
-10. Criar os respectivos “controllers” com todos os “endpoints” necessários
+10. Criar os respectivos “controllers” com todos os “endpoints” necessários e com o CRUD necessário
 
-11. Criar os POSTS, GETS, PUTS, DELETES
+11. Criar e fazer adequação para criação de DTOs
+
+12. Adequar para o nível de maturidade 3 (HATEOAS) com os respectivos links
+
+13. Adequar para uso do Swagger
+
+14. Criar funcionalidades para upload de arquivos e envio de e-mails
+
+15. Criar funcionalidades de segurança (autenticação e autorização) com Spring Security e Token JWT
+
+16. Testar API e disponibiliza-la no Heroku
 
 
 ## 6 – Síntese do FrontEnd
