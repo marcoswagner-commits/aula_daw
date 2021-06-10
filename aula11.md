@@ -116,36 +116,36 @@ public ResponseEntity<ProprietarioDTO> buscarEmail(@PathVariable String email) {
 
 :shipit: Código 3 - ProprietarioController (inclusão, atualização e exclusão)
 ```
-  @PostMapping
-  @ResponseStatus(HttpStatus.CREATE)
-	public ResponseEntity<ProprietarioDTO> incluir(@RequestBody AlunoVO objBody) {
-		ProprietarioDTO objDTO = service.create(objBody);
-		objDTO.add(linkTo(methodOn(AlunoController.class).findById(objVO.getCodigo())).withSelfRel());
-		return ResponseEntity.ok(objDTO);
+ @PostMapping
+@ResponseStatus(HttpStatus.CREATED)
+public ResponseEntity<ProprietarioDTO> incluir(@RequestBody Proprietario objBody) {
+	ProprietarioDTO objDTO = service.save(objBody);
+	objDTO.add(linkTo(methodOn(ProprietarioController.class).buscarUm(objDTO.getCodigo())).withSelfRel());
+	return ResponseEntity.ok(objDTO);
+}
+
+@PutMapping
+public ResponseEntity<ProprietarioDTO> atualizar(@PathVariable Integer id, @RequestBody Proprietario objBody ) {
+	if (!service.existById(id)) {
+		return ResponseEntity.notFound().build();
 	}
-	
-	@PutMapping
-	public ResponseEntity<ProprietarioDTO> atualizar(@PathVariable Integer id, @RequestBody Proprietario obj ) {
-		if (!service.existById(id)) {
-			return ResponseEntity.notFound().build();
-		}
-		obj.setCodigo(id);
-    		ProprietarioDTO objDTO = service.save(objBody);
-		objDTO.add(linkTo(methodOn(ProprietarioController.class).findById(objDTO.getCodigo())).withSelfRel());
-		return ResponseEntity.ok(objDTO);
-	}	
-	
-	@DeleteMapping("/{id}")
-	public ResponseEntity<Void> excluir(@PathVariable Integer id) {
-		if (!service.existById(id)) {
-			return ResponseEntity.notFound().build();
-		}
-		
-    ProprietarioDTO objDTO = service.deleteById(id);
-		objDTO.add(linkTo(methodOn(ProprietarioController.class).findById(objDTO.getCodigo())).withSelfRel());
-		return ResponseEntity.noContent().build();
-		
+	objBody.setCodigo(id);
+	ProprietarioDTO objDTO = service.save(objBody);
+	objDTO.add(linkTo(methodOn(ProprietarioController.class).buscarUm(objDTO.getCodigo())).withSelfRel());
+	return ResponseEntity.ok(objDTO);
+}	
+
+@DeleteMapping("/{id}")
+public ResponseEntity<Void> excluir(@PathVariable Integer id) {
+	if (!service.existById(id)) {
+		return ResponseEntity.notFound().build();
 	}
+
+	service.deleteById(id);
+
+	return ResponseEntity.noContent().build();
+
+}
 
 ```
 :shipit: Código 4 - GestaoProprietario
@@ -186,5 +186,6 @@ public ResponseEntity<ProprietarioDTO> buscarEmail(@PathVariable String email) {
 		return new ProprietarioDTO(result);
 		
 	}
+```
 
 ### Passo 3: Atualizar o github com os códigos atuais (hateoas)
