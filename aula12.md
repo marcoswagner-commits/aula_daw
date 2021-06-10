@@ -19,10 +19,7 @@
 - [x] Customizar as informações da classe OpenApiConfig - Vide Código 1
 - [x] Colocar a anotação @Tag para a classe Controlador
 - [x] Colocar as anotações @Operation(summary = "Busca todos os proprietários")
-- [x] Atualizar a classe  controladores
-    - [x] Colocar suporte ao Hateoas (link de autorelacionamento) e sofisticação final - Vide Códigos
-  - [x] Verificar o consumo da API com as alterações
-
+- [x] Testar a API - com http://locahost:8080/swagger-ui.html
 
 ✏️ Dependência necessária para uso do SWAGGER
 ```
