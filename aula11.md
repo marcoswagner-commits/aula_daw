@@ -2,12 +2,12 @@
 
 > Aula 29/06/2021
 > 
->  *Estudo de caso: Gestão de Obras* Níveis de Maturidade de Richardson - HATEOAS
+>  *Estudo de caso: Gestão de Obras* 
 
 
 ## Atividades da aula - roteiro
 
-## :+1: Implementação do Modelo Conceitual
+## :+1: Implementação do Modelo Conceitual - Níveis de Maturidade de Richardson - HATEOAS
 
 ### Passo 1: Analisar e adequar a arquitetura REST
 - [x] Verificar os níveis de maturidade da API em relação ao REST
