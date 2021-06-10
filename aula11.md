@@ -87,36 +87,36 @@ public ResponseEntity<CollectionModel<ProprietarioDTO>> buscarTodos(
 @GetMapping("/{id}")
 public ResponseEntity<ProprietarioDTO> buscarUm(@PathVariable Integer id) {
 		ProprietarioDTO objDTO = service.findById(id);
-		objDTO.add(linkTo(methodOn(ProprietarioController.class).findById(id)).withSelfRel());
+		objDTO.add(linkTo(methodOn(ProprietarioController.class).buscarUm(id)).withSelfRel());
 		return ResponseEntity.ok(objDTO);
 	}	
-  
+
 @GetMapping("/{nome}")
 public ResponseEntity<ProprietarioDTO> buscarNome(@PathVariable String nome) {
 		ProprietarioDTO objDTO = service.findByNome(nome);
-		objDTO.add(linkTo(methodOn(ProprietarioController.class).findByName(nome)).withSelfRel());
+		objDTO.add(linkTo(methodOn(ProprietarioController.class).buscarNome(nome)).withSelfRel());
 		return ResponseEntity.ok(objDTO);
 	}	
-  
+
 @GetMapping("/{cpf}")
 public ResponseEntity<ProprietarioDTO> buscarCpf(@PathVariable String cpf) {
-		ProprietarioDTO objDTO = service.findByCPF(nome);
-		objDTO.add(linkTo(methodOn(ProprietarioController.class).findByCPF(cpf)).withSelfRel());
+		ProprietarioDTO objDTO = service.findByCPF(cpf);
+		objDTO.add(linkTo(methodOn(ProprietarioController.class).buscarCpf(cpf)).withSelfRel());
 		return ResponseEntity.ok(objDTO);
 	}	
-  
+
 @GetMapping("/{email}")
 public ResponseEntity<ProprietarioDTO> buscarEmail(@PathVariable String email) {
 		ProprietarioDTO objDTO = service.findByEmail(email);
-		objDTO.add(linkTo(methodOn(ProprietarioController.class).findByEmail(email)).withSelfRel());
+		objDTO.add(linkTo(methodOn(ProprietarioController.class).buscarEmail(email)).withSelfRel());
 		return ResponseEntity.ok(objDTO);
-	}	
+}		
   
 ```
 
 :shipit: Código 3 - ProprietarioController (inclusão, atualização e exclusão)
 ```
- @PostMapping
+@PostMapping
 @ResponseStatus(HttpStatus.CREATED)
 public ResponseEntity<ProprietarioDTO> incluir(@RequestBody Proprietario objBody) {
 	ProprietarioDTO objDTO = service.save(objBody);
