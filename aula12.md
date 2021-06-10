@@ -10,31 +10,44 @@
 ## :+1: Implementação do Modelo Conceitual Gestão de Obras
 
 ### 📖 O que é o SWAGGER: 
-- Swagger é uma linguagem de descrição de interface para descrever APIs RESTful expressas usando JSON. 
+- Swagger é uma especificação de descrição de interface para descrever APIs RESTful expressas usando JSON. 
 - O Swagger é usado junto com um conjunto de ferramentas de software de código aberto para projetar, construir, documentar e usar serviços da Web RESTful.
 
 ### Passo 1: Analisar e adequar a arquitetura REST
-- [x] Verificar os níveis de maturidade da API em relação ao REST
-- [x] Implantar o modelo (nível 3) HATEOAS
-  - [x] Atualizar a classe de DTO (classe extends RepresentationModel<>)
-  - [x] Colocar as anotações @EnableAutoConfiguration e @ComponentScan (springframework.context.annotation) na classe principal 
-  - [x] Atualizar a classe  controladores
+- [x] Instalar a dependência
+- [x] Criar a classe OpenApiConfig dentro de um pacote "config"
+- [x] Customizar as informações da classe OpenApiConfig - Vide Código 1
+- [x] Colocar a anotação @Tag para a classe Controlador
+- [x] Colocar as anotações @Operation(summary = "Busca todos os proprietários")
+- [x] Atualizar a classe  controladores
     - [x] Colocar suporte ao Hateoas (link de autorelacionamento) e sofisticação final - Vide Códigos
   - [x] Verificar o consumo da API com as alterações
 
 
 ✏️ Dependência necessária para uso do SWAGGER
 ```
+<!-- Spring Doc Open API -->
 <dependency>
-	<groupId>org.springframework.hateoas</groupId>
-	<artifactId>spring-hateoas</artifactId>
+	<groupId>org.springdoc</groupId>
+	<artifactId>springdoc-openapi-ui</artifactId>
+	<version>1.4.6</version>
 </dependency>
+
 ```
 
-✏️ Imports necessários para uso do HATEOAS
+✏️ Anotações necessários para descrição dos endpoints e controladores
 ```
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
+@Tag(name = "Aluno Endpoint") 
+
+@Operation(summary = "Busca todos os proprietários")
+@Operation(summary = "Busca um proprietário por nome")
+@Operation(summary = "Busca um proprietário por id")
+@Operation(summary = "Busca um proprietário por cpf")
+@Operation(summary = "Busca um proprietário por email")
+@Operation(summary = "Insere um novo proprietário")
+@Operation(summary = "Atualiza um proprietário por id")
+@Operation(summary = "Exclui um proprietário por id")
+
 ```
 
 
@@ -62,27 +75,23 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 :shipit: Código 1 - ProprietarioController (busca)
 ```
-@GetMapping
-public ResponseEntity<CollectionModel<ProprietarioDTO>> buscarTodos(
-			@RequestParam(value="page", defaultValue = "0") int page,
-			@RequestParam(value="limit", defaultValue = "12") int limit,
-			@RequestParam(value="direction", defaultValue = "asc") String direction) {
+@Configuration
+public class OpenApiConfig {
 
-
-		Direction sortDirection = "desc".equalsIgnoreCase(direction) ? Direction.DESC : Direction.ASC;
-		
-		Pageable pageable = PageRequest.of(page, limit, Sort.by(sortDirection, "nome"));
-		
-		Page<ProprietarioDTO> pages = service.findAll(pageable);
-		pages
-			.stream()
-			.forEach(p -> p.add(
-					linkTo(methodOn(ProprietarioController.class).buscarUm(p.getCodigo())).withSelfRel()
-				)
-			);
-	  	
-		return ResponseEntity.ok(CollectionModel.of(pages));
+	@Bean
+	public OpenAPI customOpenApi() {
+		return new OpenAPI()
+				.info(new Info()
+				.title("API RESTful Gestão de Obras construída com Spring Boot 2.5.0")
+				.version("V1")
+				.description("Sistema de Gerenciamento de Obras de Construção Civil")
+				.termsOfService("http://swagger.io/terms")
+				.license(new License().name("Apache 2.0").url("http://springdoc.org")));
+			
 	}
+
+	
+}
 
 ```
 
