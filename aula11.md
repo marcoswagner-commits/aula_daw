@@ -130,7 +130,7 @@ public ResponseEntity<ProprietarioDTO> buscarEmail(@PathVariable String email) {
 			return ResponseEntity.notFound().build();
 		}
 		obj.setCodigo(id);
-    ProprietarioDTO objDTO = service.save(objBody);
+    		ProprietarioDTO objDTO = service.save(objBody);
 		objDTO.add(linkTo(methodOn(ProprietarioController.class).findById(objDTO.getCodigo())).withSelfRel());
 		return ResponseEntity.ok(objDTO);
 	}	
@@ -148,5 +148,43 @@ public ResponseEntity<ProprietarioDTO> buscarEmail(@PathVariable String email) {
 	}
 
 ```
+:shipit: Código 4 - GestaoProprietario
+```
+
+	@Transactional(readOnly = true)
+	public ProprietarioDTO findById(Integer id) {
+		Proprietario result = dao.findById(id).
+				orElseThrow(() -> new BusinessException("Registros não encontrados!!!"));
+		
+		return new ProprietarioDTO(result);
+			
+	}
+	
+	@Transactional(readOnly = true)
+	public ProprietarioDTO findByNome(String nome) {
+		Proprietario result = dao.findByNome(nome).
+				orElseThrow(() -> new BusinessException("Registros não encontrados!!!"));
+		
+		return new ProprietarioDTO(result);
+		
+    	}
+	
+	@Transactional(readOnly = true)
+	public ProprietarioDTO findByCPF(String cpf) {
+		Proprietario result = dao.findByCpf(cpf).
+				orElseThrow(() -> new BusinessException("Registros não encontrados!!!"));
+		
+		return new ProprietarioDTO(result);
+		
+    }
+	
+	@Transactional(readOnly = true)
+	public ProprietarioDTO findByEmail(String email) {
+		Proprietario result = dao.findByEmail(email).
+				orElseThrow(() -> new BusinessException("Registros não encontrados!!!"));
+		
+		return new ProprietarioDTO(result);
+		
+	}
 
 ### Passo 3: Atualizar o github com os códigos atuais (hateoas)
