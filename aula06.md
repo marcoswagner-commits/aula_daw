@@ -2,11 +2,11 @@
 
 > Aula 10/06/2021
 > 
->  *Estudo de caso: Gestão de Obras* - Criação do Repositório e do Controlador
+>  *Estudo de caso: Gestão de Obras* 
 
 ## Atividades da aula - roteiro
 
-## Implementação do Modelo Conceitual
+## :+1: Implementação do Modelo Conceitual - Criação do Repositório e do Controlador
 
 ### Passo 1: Criar repositório de Proprietarios (DAO)
 - [x] Criar interface ProprietárioDAO
@@ -25,6 +25,8 @@
 - [x] Usar inicialmente a classe Optional para retorno
 - [x] Mudar para ResponseEntity o retorno
 
+
+[![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
 
 🥇:[![material complementar aula06](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/200468edba69a88b063abe444459fa9e09a8d41e/Capa_aula06.png)](https://www.youtube.com/watch?v=VHhqVr3YLpM)
