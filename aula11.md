@@ -118,22 +118,19 @@ public ResponseEntity<ProprietarioDTO> buscarEmail(@PathVariable String email) {
 ```
 @PostMapping
 @ResponseStatus(HttpStatus.CREATED)
-public ResponseEntity<ProprietarioDTO> incluir(@RequestBody Proprietario objBody) {
+public ResponseEntity<ProprietarioDTO> incluir(@RequestBody ProprietarioDTO objBody) {
 	ProprietarioDTO objDTO = service.save(objBody);
 	objDTO.add(linkTo(methodOn(ProprietarioController.class).buscarUm(objDTO.getCodigo())).withSelfRel());
 	return ResponseEntity.ok(objDTO);
 }
 
 @PutMapping
-public ResponseEntity<ProprietarioDTO> atualizar(@PathVariable Integer id, @RequestBody Proprietario objBody ) {
-	if (!service.existById(id)) {
-		return ResponseEntity.notFound().build();
-	}
-	objBody.setCodigo(id);
-	ProprietarioDTO objDTO = service.save(objBody);
+public ResponseEntity<ProprietarioDTO> atualizar(@RequestBody ProprietarioDTO objBody) {
+
+	ProprietarioDTO objDTO = service.update(objBody);
 	objDTO.add(linkTo(methodOn(ProprietarioController.class).buscarUm(objDTO.getCodigo())).withSelfRel());
 	return ResponseEntity.ok(objDTO);
-}	
+}		
 
 @DeleteMapping("/{id}")
 public ResponseEntity<Void> excluir(@PathVariable Integer id) {
@@ -187,5 +184,70 @@ public ResponseEntity<Void> excluir(@PathVariable Integer id) {
 		
 	}
 ```
+🍁 - Observações
+
+```
+	//Alterações necessárias no ProprietarioController
+	
+	@PostMapping
+	@ResponseStatus(HttpStatus.CREATED)
+	public ResponseEntity<ProprietarioDTO> incluir(@RequestBody ProprietarioDTO objBody) {
+		ProprietarioDTO objDTO = service.save(objBody);
+		objDTO.add(linkTo(methodOn(ProprietarioController.class).buscarUm(objDTO.getCodigo())).withSelfRel());
+		return ResponseEntity.ok(objDTO);
+	}
+
+	@PutMapping
+	public ResponseEntity<ProprietarioDTO> atualizar(@RequestBody ProprietarioDTO objBody) {
+		
+		ProprietarioDTO objDTO = service.update(objBody);
+		objDTO.add(linkTo(methodOn(ProprietarioController.class).buscarUm(objDTO.getCodigo())).withSelfRel());
+		return ResponseEntity.ok(objDTO);
+	}	
+	
+	//Alterações necessárias no GestaoProprietarios
+	@Transactional
+	public ProprietarioDTO update(ProprietarioDTO obj) {
+		Proprietario entity = dao.findById(obj.getCodigo())
+				.orElseThrow(() -> new BusinessException("Registros não encontrados!!!"));
+		
+		entity.setNome(obj.getNome());
+		entity.setCpf(obj.getCpf());
+		entity.setEmail(obj.getEmail());
+		
+		return new ProprietarioDTO(dao.save(entity));
+		
+		
+	}	
+	
+	
+	@Transactional
+	public ProprietarioDTO save(ProprietarioDTO obj) {
+	Proprietario entity = new Proprietario(obj.getCodigo(), obj.getNome(), obj.getCpf(), obj.getEmail());
+
+	boolean cpfExists = dao.findByCpf(entity.getCpf())
+			.stream()
+			.anyMatch(objResult -> !objResult.equals(entity));
+
+	if (cpfExists) {
+		throw new BusinessException("CPF já existente!");
+	}
+
+	boolean emailExists = dao.findByEmail(entity.getEmail())
+			.stream()
+			.anyMatch(objResult -> !objResult.equals(entity));
+
+	if (emailExists) {
+		throw new BusinessException("E-mail já existente!");
+	}
+
+
+
+	return new ProprietarioDTO(dao.save(entity));
+	}
+	
+
+
+
 
 ### Passo 3: Atualizar o github com os códigos atuais (hateoas)
