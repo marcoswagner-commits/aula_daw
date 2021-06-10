@@ -53,8 +53,7 @@ public class ExceptionHandler extends ResponseEntityExceptionHandler {
 		
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(erro);
 	}
-	
-		
+			
 	
 
 }

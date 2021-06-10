@@ -1,9 +1,5 @@
 package net.ufjnet.gestaoobra.services;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -31,55 +27,84 @@ public class GestaoProprietario {
 	}
 	
 	
+
 	@Transactional(readOnly = true)
-	public Optional<ProprietarioDTO> findById(Integer id) {
-		Optional<Proprietario> result = dao.findById(id);
-		return result.map(obj -> new ProprietarioDTO(obj));
-				
+	public ProprietarioDTO findById(Integer id) {
+		Proprietario result = dao.findById(id).
+				orElseThrow(() -> new BusinessException("Registros não encontrados!!!"));
+		
+		return new ProprietarioDTO(result);
 			
 	}
 	
 	@Transactional(readOnly = true)
-	public Optional<ProprietarioDTO> findByName(String nome) {
-		Optional<Proprietario> result = dao.findByNome(nome);
-		return result.map(obj -> new ProprietarioDTO(obj));
+	public ProprietarioDTO findByNome(String nome) {
+		Proprietario result = dao.findByNome(nome).
+				orElseThrow(() -> new BusinessException("Registros não encontrados!!!"));
+		
+		return new ProprietarioDTO(result);
+		
+    	}
+	
+	@Transactional(readOnly = true)
+	public ProprietarioDTO findByCPF(String cpf) {
+		Proprietario result = dao.findByCpf(cpf).
+				orElseThrow(() -> new BusinessException("Registros não encontrados!!!"));
+		
+		return new ProprietarioDTO(result);
 		
     }
 	
 	@Transactional(readOnly = true)
-	public Optional<ProprietarioDTO> findByCPF(String cpf) {
-		Optional<Proprietario> result = dao.findByCpf(cpf);
-		return result.map(obj -> new ProprietarioDTO(obj));
+	public ProprietarioDTO findByEmail(String email) {
+		Proprietario result = dao.findByEmail(email).
+				orElseThrow(() -> new BusinessException("Registros não encontrados!!!"));
 		
-    }
+		return new ProprietarioDTO(result);
+		
+	}
+
+	@Transactional
+	public ProprietarioDTO update(ProprietarioDTO obj) {
+		Proprietario entity = dao.findById(obj.getCodigo())
+				.orElseThrow(() -> new BusinessException("Registros não encontrados!!!"));
+		
+		entity.setNome(obj.getNome());
+		entity.setCpf(obj.getCpf());
+		entity.setEmail(obj.getEmail());
+		
+		return new ProprietarioDTO(dao.save(entity));
+		
+		
+	}	
 	
-	@Transactional(readOnly = true)
-	public Optional<ProprietarioDTO> findByEmail(String email) {
-		Optional<Proprietario> result = dao.findByEmail(email);
-		return result.map(obj -> new ProprietarioDTO(obj));
-		
-}
 	
 	@Transactional
-	public ProprietarioDTO save(Proprietario obj) {
-		boolean cpfExists = dao.findByCpf(obj.getCpf())
+	public ProprietarioDTO save(ProprietarioDTO obj) {
+		Proprietario entity = new Proprietario(obj.getCodigo(), obj.getNome(), obj.getCpf(), obj.getEmail());
+		
+		boolean cpfExists = dao.findByCpf(entity.getCpf())
 				.stream()
-				.anyMatch(objResult -> !objResult.equals(obj));
+				.anyMatch(objResult -> !objResult.equals(entity));
 		
 		if (cpfExists) {
 			throw new BusinessException("CPF já existente!");
 		}
 		
-		boolean emailExists = dao.findByEmail(obj.getEmail())
+		boolean emailExists = dao.findByEmail(entity.getEmail())
 				.stream()
-				.anyMatch(objResult -> !objResult.equals(obj));
+				.anyMatch(objResult -> !objResult.equals(entity));
 		
 		if (emailExists) {
 			throw new BusinessException("E-mail já existente!");
 		}
 		
-			return new ProprietarioDTO(dao.save(obj));
+		
+		
+		return new ProprietarioDTO(dao.save(entity));
 	}
+	
+
 	
 	@Transactional
 	public void deleteById(Integer id) {
