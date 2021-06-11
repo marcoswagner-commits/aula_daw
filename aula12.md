@@ -88,6 +88,32 @@ spring.datasource.password=
 spring.jpa.hibernate.ddl-auto=create
 spring.jpa.show-sql= true
 ```
+## Passo 4: Preparando a aplicação para o Deploy no Heroku
+  
+- [x] Criar o arquivo "application-prod.properties"
+- [x] Alterar o arquivo "application.properties" para permitir a adequação de acordo o local da aplicação (local ou remoto)
+- [x] Criar o arquivo system.properties
+- [x] Criar app no Heroku
+- [x] Definir variável APP_PROFILE=prod
+
+
+✏️ Arquivos application.properties e application-prod.properties
+```
+#application.properties
+spring.profiles.active=${APP_PROFILE:dev}
+spring.jpa.open-in-view=false
+
+
+#application-prod.properties
+spring.datasource.url=${DATABASE_URL}
+```
+
+✏️ Arquivo system.properties
+```
+java.runtime.version=11
+
+
+
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
@@ -136,10 +162,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		if (Arrays.asList(env.getActiveProfiles()).contains("test")) {
-			http.headers().frameOptions().disable();
-		}
-		
+			
 		http.cors().and().csrf().disable();
 		http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 		http.authorizeRequests().anyRequest().permitAll();
