@@ -51,9 +51,8 @@
   
 - [x] Clicar no link abaixo do título da aplicação
 - [x] Copiar endereço (http://localhost:8080/v3-api-docs)
-- [x] Organização do JSON na classe DTO (JsonPropertyOrder())
-- [x] Definição de nomes de campos com o JsonProperty()
-- [x] Ocultação de campos com JsonIgnore
+- [x] Criar ambiente no PostMan
+- [x] Realizar os nos dois "clients" - Navegador Swagger / PostMan
 
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
@@ -61,7 +60,7 @@
 
 🥇:[![material complementar aula12](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/de83dfe17ef227404bf91b9dae5666f2ca8ae59a/Capa_aula10.png)](https://www.youtube.com/watch?v=EUlpkjfK4yo)
 -
-🥈:[![material complementar aula12](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/de83dfe17ef227404bf91b9dae5666f2ca8ae59a/Capa_aula10.png)](https://www.youtube.com/watch?v=tC60mjNSJ_w)
+🥈:[![material complementar aula12](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/de83dfe17ef227404bf91b9dae5666f2ca8ae59a/Capa_aula10.png)](https://www.youtube.com/watch?v=rh_-R9-H_2M)
 -
 🥉:[![material complementar aula12](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/de83dfe17ef227404bf91b9dae5666f2ca8ae59a/Capa_aula10.png)](https://www.youtube.com/watch?v=PLzpVCyJyZI)
 
