@@ -88,7 +88,7 @@ public class OpenApiConfig {
 }
 
 ```
-[voltar](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/Documentos/aula12.md#código-1---openapiconfig)
+[voltar](#Passo-1:-Analisar-e-adequar-a-arquitetura-REST)
 
 
 ### Passo 3: Atualizar o github com os códigos atuais (swagger-open-api)
