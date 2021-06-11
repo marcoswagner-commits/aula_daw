@@ -99,7 +99,7 @@ spring.jpa.show-sql= true
 - [x] Criar app no Heroku (gestao_obras_daw_api) - Obs.: Criar conta e baixar CLI do Heroku
 - [x] Provisionar o MySQL no Heroku - Opção Resources - ClearDB MySql
 - [x] Definir variável APP_PROFILE=prod - Opção Settings - Config Var
-- [ ] Executar comandos Heroku CLI - vide linhas abaixo
+- [x] Executar comandos Heroku CLI - vide linhas abaixo
 
 ```
 heroku login
