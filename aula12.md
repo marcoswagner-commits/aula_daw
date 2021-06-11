@@ -171,9 +171,7 @@ public class OpenApiConfig {
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-	@Autowired
-	private Environment env;
-
+	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 			
