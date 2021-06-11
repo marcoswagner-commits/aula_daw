@@ -67,7 +67,7 @@
 
 
 
-:shipit: Código 1 - OpenApiConfig
+### :shipit: Código 1 - OpenApiConfig
 ```
 @Configuration
 public class OpenApiConfig {
