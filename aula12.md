@@ -52,6 +52,7 @@
 - [x] Copiar endereço (http://localhost:8080/v3-api-docs)
 - [x] Criar ambiente no PostMan
 - [x] Realizar os nos dois "clients" - Navegador Swagger / PostMan
+- [x] Commit "swagger"
 
 ## Passo 3: Instalando e configurando o Security
   
@@ -59,6 +60,7 @@
 - [x] Customizar as informações da classe SecurityConfig dentro do pacote Config - [Vide Código 2](#código-2---securityconfig)
 - [x] Criar o arquivo "application-dev.properties"
 - [x] Fazer vínculo do "application.properties" para "application-dev.properties" - Vide detalhes abaixo
+- [x] Commit "security"
 
 ✏️ Dependência necessária para uso do SpringSecurity
 ```
@@ -92,9 +94,19 @@ spring.jpa.show-sql= true
   
 - [x] Criar o arquivo "application-prod.properties"
 - [x] Alterar o arquivo "application.properties" para permitir a adequação de acordo o local da aplicação (local ou remoto)
-- [x] Criar o arquivo system.properties
-- [x] Criar app no Heroku
-- [x] Definir variável APP_PROFILE=prod
+- [x] Criar o arquivo system.properties na raiz do projeto
+- [x] Dar um commit de homologação "homolog"
+- [x] Criar app no Heroku (gestao_obras_daw_api) - Obs.: Criar conta e baixar CLI do Heroku
+- [x] Provisionar o MySQL no Heroku - Opção Resources - ClearDB MySql
+- [x] Definir variável APP_PROFILE=prod - Opção Settings - Config Var
+- [ ] Executar comandos Heroku CLI - vide linhas abaixo
+
+```
+heroku login
+heroku git:remote -a <nome-do-app>
+git remote -v
+git subtree push --prefix backend heroku main
+```
 
 
 ✏️ Arquivos application.properties e application-prod.properties
