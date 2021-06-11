@@ -23,18 +23,21 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import net.ufjnet.gestaoobra.dtos.ProprietarioDTO;
-import net.ufjnet.gestaoobra.models.Proprietario;
 import net.ufjnet.gestaoobra.services.GestaoProprietario;
 
 @RestController
 @RequestMapping("/v1/gto/proprietarios")
+@Tag(name = "Endpoint de Proprietário")
 public class ProprietarioController {
 	
 	@Autowired
 	private GestaoProprietario service;
 	
 	@GetMapping
+	@Operation(summary = "Busca todos os proprietários")
 	public ResponseEntity<CollectionModel<ProprietarioDTO>> buscarTodos(
 				@RequestParam(value="page", defaultValue = "0") int page,
 				@RequestParam(value="limit", defaultValue = "12") int limit,
@@ -61,6 +64,7 @@ public class ProprietarioController {
 	
 	
 	@GetMapping("/{id}")
+	@Operation(summary = "Busca um proprietário por id")
 	public ResponseEntity<ProprietarioDTO> buscarUm(@PathVariable Integer id) {
 			ProprietarioDTO objDTO = service.findById(id);
 			objDTO.add(linkTo(methodOn(ProprietarioController.class).buscarUm(id)).withSelfRel());
@@ -68,6 +72,7 @@ public class ProprietarioController {
 		}	
 
 	@GetMapping("/nome/{nome}")
+	@Operation(summary = "Busca um proprietário por nome")
 	public ResponseEntity<ProprietarioDTO> buscarNome(@PathVariable String nome) {
 			ProprietarioDTO objDTO = service.findByNome(nome);
 			objDTO.add(linkTo(methodOn(ProprietarioController.class).buscarNome(nome)).withSelfRel());
@@ -75,6 +80,7 @@ public class ProprietarioController {
 		}	
 
 	@GetMapping("/cpf/{cpf}")
+	@Operation(summary = "Busca um proprietário por cpf")
 	public ResponseEntity<ProprietarioDTO> buscarCpf(@PathVariable String cpf) {
 			ProprietarioDTO objDTO = service.findByCPF(cpf);
 			objDTO.add(linkTo(methodOn(ProprietarioController.class).buscarCpf(cpf)).withSelfRel());
@@ -82,6 +88,7 @@ public class ProprietarioController {
 		}	
 
 	@GetMapping("/email/{email}")
+	@Operation(summary = "Busca um proprietário por email")
 	public ResponseEntity<ProprietarioDTO> buscarEmail(@PathVariable String email) {
 			ProprietarioDTO objDTO = service.findByEmail(email);
 			objDTO.add(linkTo(methodOn(ProprietarioController.class).buscarEmail(email)).withSelfRel());
@@ -93,6 +100,7 @@ public class ProprietarioController {
 	
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
+	@Operation(summary = "Insere um novo proprietário")
 	public ResponseEntity<ProprietarioDTO> incluir(@RequestBody ProprietarioDTO objBody) {
 		ProprietarioDTO objDTO = service.save(objBody);
 		objDTO.add(linkTo(methodOn(ProprietarioController.class).buscarUm(objDTO.getCodigo())).withSelfRel());
@@ -100,6 +108,7 @@ public class ProprietarioController {
 	}
 
 	@PutMapping
+	@Operation(summary = "Atualiza um proprietário")
 	public ResponseEntity<ProprietarioDTO> atualizar(@RequestBody ProprietarioDTO objBody) {
 		
 		ProprietarioDTO objDTO = service.update(objBody);
@@ -110,6 +119,7 @@ public class ProprietarioController {
 
 
 	@DeleteMapping("/{id}")
+	@Operation(summary = "Exclui um proprietário por id")
 	public ResponseEntity<Void> excluir(@PathVariable Integer id) {
 		if (!service.existById(id)) {
 			return ResponseEntity.notFound().build();
