@@ -16,7 +16,7 @@
 ### Passo 1: Analisar e adequar a arquitetura REST
 - [x] Instalar a dependência
 - [x] Criar a classe OpenApiConfig dentro de um pacote "config"
-- [x] Customizar as informações da classe OpenApiConfig - Vide Código 1
+- [x] Customizar as informações da classe OpenApiConfig - Vide Código 1 (require 
 - [x] Colocar a anotação @Tag para a classe Controlador
 - [x] Colocar as anotações @Operation(summary = "Busca todos os proprietários")
 - [x] Testar a API - com http://localhost:8080/swagger-ui.html
@@ -50,7 +50,7 @@
 ### Passo 2: Importando uma collection no PostMan via Swagger-api-docs
   
 - [x] Clicar no link abaixo do título da aplicação
-- [x] Copiar endereço (http://localhost:8080/v3-api-docs
+- [x] Copiar endereço (http://localhost:8080/v3-api-docs)
 - [x] Organização do JSON na classe DTO (JsonPropertyOrder())
 - [x] Definição de nomes de campos com o JsonProperty()
 - [x] Ocultação de campos com JsonIgnore
