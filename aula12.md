@@ -2,12 +2,12 @@
 
 > 
 > 
->  *Estudo de caso: Gestão de Obras * - Swagger
+>  *Estudo de caso: Gestão de Obras *
 
 
 ## Atividades da aula - roteiro
 
-## :+1: Implementação do Modelo Conceitual Gestão de Obras
+## :+1: Implementação do Modelo Conceitual Gestão de Obras - Swagger / Security / Heroku
 
 ### 📖 O que é o SWAGGER: 
 - Swagger é uma especificação de descrição de interface para descrever APIs RESTful expressas usando JSON. 
