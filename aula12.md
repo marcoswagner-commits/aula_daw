@@ -96,16 +96,18 @@ spring.jpa.show-sql= true
 - [x] Alterar o arquivo "application.properties" para permitir a adequação de acordo o local da aplicação (local ou remoto)
 - [x] Criar o arquivo system.properties na raiz do projeto
 - [x] Dar um commit de homologação "homolog"
-- [x] Criar app no Heroku (gestao_obras_daw_api) - Obs.: Criar conta e baixar CLI do Heroku
+- [x] Criar app no Heroku (gestao_obras_daw) - Obs.: Criar conta e baixar CLI do Heroku
 - [x] Provisionar o MySQL no Heroku - Opção Resources - ClearDB MySql
 - [x] Definir variável APP_PROFILE=prod - Opção Settings - Config Var
 - [x] Executar comandos Heroku CLI - vide linhas abaixo
 
 ```
+heroku -v
 heroku login
-heroku git:remote -a <nome-do-app>
+heroku git:remote -a gestao_obras_daw
 git remote -v
-git subtree push --prefix backend heroku main
+git branch
+git subtree push --prefix bckend_gto heroku codigos
 ```
 
 
