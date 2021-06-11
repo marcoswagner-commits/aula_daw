@@ -16,7 +16,7 @@
 ### Passo 1: Analisar e adequar a arquitetura REST
 - [x] Instalar a dependência
 - [x] Criar a classe OpenApiConfig dentro de um pacote "config"
-- [x] Customizar as informações da classe OpenApiConfig - [Vide Código 1](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/Documentos/aula12.md#código-1---openapiconfig)
+- [x] Customizar as informações da classe OpenApiConfig - [Vide Código 1](#código-1---openapiconfig)
 - [x] Colocar a anotação @Tag para a classe Controlador
 - [x] Colocar as anotações @Operation(summary = "Busca todos os proprietários")
 - [x] Testar a API - com http://localhost:8080/swagger-ui.html
@@ -88,7 +88,7 @@ public class OpenApiConfig {
 }
 
 ```
-
+[voltar](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/Documentos/aula12.md#código-1---openapiconfig)
 
 
 ### Passo 3: Atualizar o github com os códigos atuais (swagger-open-api)
