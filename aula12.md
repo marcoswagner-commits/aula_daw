@@ -88,7 +88,7 @@ public class OpenApiConfig {
 }
 
 ```
-[voltar](#Passo-1:-Analisar-e-adequar-a-arquitetura-REST)
+[voltar](#passo-1-analisar-e-adequar-a-arquitetura-rest)
 
 
 ### Passo 3: Atualizar o github com os códigos atuais (swagger-open-api)
