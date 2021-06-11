@@ -16,7 +16,7 @@
 ### Passo 1: Analisar e adequar a arquitetura REST
 - [x] Instalar a dependência
 - [x] Criar a classe OpenApiConfig dentro de um pacote "config"
-- [x] Customizar as informações da classe OpenApiConfig - [Vide Código 1](Código 1 - OpenApiConfig)
+- [x] Customizar as informações da classe OpenApiConfig - [Vide Código 1](### Código 1 - OpenApiConfig)
 - [x] Colocar a anotação @Tag para a classe Controlador
 - [x] Colocar as anotações @Operation(summary = "Busca todos os proprietários")
 - [x] Testar a API - com http://localhost:8080/swagger-ui.html
@@ -66,8 +66,8 @@
 🥉:[![material complementar aula12](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/de83dfe17ef227404bf91b9dae5666f2ca8ae59a/Capa_aula10.png)](https://www.youtube.com/watch?v=PLzpVCyJyZI)
 
 
-
-### :shipit: Código 1 - OpenApiConfig
+:shipit: 
+### Código 1 - OpenApiConfig
 ```
 @Configuration
 public class OpenApiConfig {
