@@ -44,7 +44,6 @@
 @Operation(summary = "Insere um novo proprietário")
 @Operation(summary = "Atualiza um proprietário por id")
 @Operation(summary = "Exclui um proprietário por id")
-
 ```
 
 ### Passo 2: Importando uma collection no PostMan via Swagger-api-docs
@@ -54,6 +53,41 @@
 - [x] Criar ambiente no PostMan
 - [x] Realizar os nos dois "clients" - Navegador Swagger / PostMan
 
+## Passo 3: Instalando e configurando o Security
+  
+- [x] Instalar a dependência - Vide detalhes abaixo
+- [x] Customizar as informações da classe SecurityConfig dentro do pacote Config - [Vide Código 2](#código-2---securityconfig)
+- [x] Criar o arquivo "application-dev.properties"
+- [x] Fazer vínculo do "application.properties" para "application-dev.properties" - Vide detalhes abaixo
+
+✏️ Dependência necessária para uso do SpringSecurity
+```
+<!-- for Security support -->
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+
+```
+
+✏️ Arquivos application.properties e application-dev.properties
+```
+#application.properties
+spring.jpa.open-in-view= true
+spring.profiles.active=dev
+
+
+
+#application-dev.properties
+# MYSQL
+spring.datasource.url= jdbc:mysql://localhost:3306/gestao_obra?createDatabaseIfNotExist=true&serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=
+
+#JPA
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.show-sql= true
+```
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
@@ -88,6 +122,40 @@ public class OpenApiConfig {
 
 ```
 [voltar](#passo-1-analisar-e-adequar-a-arquitetura-rest)
+
+
+:shipit: 
+### Código 2 - SecurityConfig
+```
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+	@Autowired
+	private Environment env;
+
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		if (Arrays.asList(env.getActiveProfiles()).contains("test")) {
+			http.headers().frameOptions().disable();
+		}
+		
+		http.cors().and().csrf().disable();
+		http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+		http.authorizeRequests().anyRequest().permitAll();
+	}
+
+	@Bean
+	CorsConfigurationSource corsConfigurationSource() {
+		CorsConfiguration configuration = new CorsConfiguration().applyPermitDefaultValues();
+		configuration.setAllowedMethods(Arrays.asList("POST", "GET", "PUT", "DELETE", "OPTIONS"));
+		final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+		source.registerCorsConfiguration("/**", configuration);
+		return source;
+	}
+}
+```
+[voltar](#passo-3-instalando-e-configurando-o-security)
 
 
 ### Passo 3: Atualizar o github com os códigos atuais (swagger-open-api)
