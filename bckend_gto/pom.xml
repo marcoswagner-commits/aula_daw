@@ -64,8 +64,12 @@
 			<artifactId>springdoc-openapi-ui</artifactId>
 			<version>1.4.6</version>
 		</dependency>
-
-		
+		<!-- for Security support -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+	
 	</dependencies>
 
 	<build>
