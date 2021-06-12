@@ -162,9 +162,11 @@ Passos:
 - [Trabalho1 - Modelo Conceitual](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/Documentos/Trabalho1%20-%20DAW.pdf)
 
 ### Aulas
+- Roteiro específico da Aula Inaugural  - 13/07/2021 * (Apresentação do Planejamento - Plano de Ensino - Metodologias) *
 - [Roteiro específico da Aula02 - 20/05/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula02.md)
 - [Roteiro específico da Aula03 - 25/05/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula03.md)
 - [Roteiro específico da Aula04 - 27/05/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula04.md)
+- Roteiro específico da Aula de Apresentação do Modelo Conceitual  - 13/07/2021 * (Apresentação do Backend - fase 1) *
 - [Roteiro específico da Aula05 - 08/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula05.md)
 - [Roteiro específico da Aula06 - 10/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula06.md)
 - [Roteiro específico da Aula07 - 15/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula07.md)
@@ -173,4 +175,8 @@ Passos:
 - [Roteiro específico da Aula10 - 24/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula10.md)
 - [Roteiro específico da Aula11 - 29/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula11.md)
 - [Roteiro específico da Aula12 - 01/07/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula12.md)
+- [Roteiro específico da Aula13 - 06/07/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula13.md)
+- [Roteiro específico da Aula14 - 08/07/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula14.md)
+- Roteiro específico da Aula de Apresentação de Trabalho  - 13/07/2021 * (Avaliação do Backend - fase 1) *
+- Roteiro específico da Aula de Projeto de Prática - 15/07/2021 * (Projeto de Prática em Desenvolvimento de Aplicações WEB) *
 
