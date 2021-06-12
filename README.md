@@ -4,7 +4,7 @@
 ## 1 - Apresentação da disciplina: Plano de Ensino – Conteúdos – Metodologia – Avaliações
 	* Vide Plano de Ensino; Planejamento da Disciplina; documento Conteúdos
 
-- [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
+- [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
 
 ### 1.1 Conteúdos
 
@@ -75,7 +75,7 @@ Draw.IO - https://app.diagrams.net
 ## 3 - Modelo Conceitual:
 Descrição: O sistema (mini sistema com poucas classes) terá como premissa permitir que seja cadastrado históricos relacionados a obras de engenharia civil. Tendo resumidamente o seguinte contexto: Um proprietário possui uma obra que possui uma descrição e localização. Para esta obra vários lançamentos são efetuados, separando estes fluxos em dois níveis de históricos. O objetivo do sistema é permitir depois de vários lançamentos conhecer o gasto com obra de acordo com cada um dos tipos de lançamento.
 
-![Modelo Conceitual Gestão de Obras](https://raw.githubusercontent.com/marcoswagner-commits/gestao_obras_aula_daw/Documentos/GESTAO_OBRAS.png)
+![Modelo Conceitual Gestão de Obras](https://raw.githubusercontent.com/marcoswagner-commits/gestao_obras_aula_daw/documentos/GESTAO_OBRAS.png)
 
 ## 4 – Síntese do Curso
 Passos:
@@ -153,30 +153,30 @@ Passos:
 
 9. Integração com uma API usando AXIOS
 
-![Integração Backend-Frontend](https://raw.githubusercontent.com/marcoswagner-commits/gestao_obras_aula_daw/Documentos/Captura%20de%20Tela%202021-05-17%20às%2019.33.50.png)
+![Integração Backend-Frontend](https://raw.githubusercontent.com/marcoswagner-commits/gestao_obras_aula_daw/documentos/Captura%20de%20Tela%202021-05-17%20às%2019.33.50.png)
 
-![Integração Backend e Frontend](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/Documentos/back_front_end.jpg)
+![Integração Backend e Frontend](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/documentos/back_front_end.jpg)
 
 
 ### Trabalhos
-- [Trabalho1 - Modelo Conceitual](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/Documentos/Trabalho1%20-%20DAW.pdf)
+- [Trabalho1 - Modelo Conceitual](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/documentos/Trabalho1%20-%20DAW.pdf)
 
 ### Aulas
 - Roteiro específico da Aula Inaugural  - 13/07/2021 * (Apresentação do Planejamento - Plano de Ensino - Metodologias) *
-- [Roteiro específico da Aula02 - 20/05/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula02.md)
-- [Roteiro específico da Aula03 - 25/05/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula03.md)
-- [Roteiro específico da Aula04 - 27/05/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula04.md)
+- [Roteiro específico da Aula02 - 20/05/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/aula02.md)
+- [Roteiro específico da Aula03 - 25/05/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/aula03.md)
+- [Roteiro específico da Aula04 - 27/05/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/aula04.md)
 - Roteiro específico da Aula de Apresentação do Modelo Conceitual  - 13/07/2021 * (Apresentação do Backend - fase 1) *
-- [Roteiro específico da Aula05 - 08/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula05.md)
-- [Roteiro específico da Aula06 - 10/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula06.md)
-- [Roteiro específico da Aula07 - 15/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula07.md)
-- [Roteiro específico da Aula08 - 17/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula08.md)
-- [Roteiro específico da Aula09 - 22/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula09.md)
-- [Roteiro específico da Aula10 - 24/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula10.md)
-- [Roteiro específico da Aula11 - 29/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula11.md)
-- [Roteiro específico da Aula12 - 01/07/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula12.md)
-- [Roteiro específico da Aula13 - 06/07/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula13.md)
-- [Roteiro específico da Aula14 - 08/07/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/aula14.md)
+- [Roteiro específico da Aula05 - 08/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/aula05.md)
+- [Roteiro específico da Aula06 - 10/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/aula06.md)
+- [Roteiro específico da Aula07 - 15/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/aula07.md)
+- [Roteiro específico da Aula08 - 17/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/aula08.md)
+- [Roteiro específico da Aula09 - 22/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/aula09.md)
+- [Roteiro específico da Aula10 - 24/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/aula10.md)
+- [Roteiro específico da Aula11 - 29/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/aula11.md)
+- [Roteiro específico da Aula12 - 01/07/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/aula12.md)
+- [Roteiro específico da Aula13 - 06/07/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/aula13.md)
+- [Roteiro específico da Aula14 - 08/07/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/aula14.md)
 - Roteiro específico da Aula de Apresentação de Trabalho  - 13/07/2021 * (Avaliação do Backend - fase 1) *
 - Roteiro específico da Aula de Projeto de Prática - 15/07/2021 * (Projeto de Prática em Desenvolvimento de Aplicações WEB) *
 
