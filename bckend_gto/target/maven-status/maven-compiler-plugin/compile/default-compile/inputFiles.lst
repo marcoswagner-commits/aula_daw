@@ -1,0 +1,11 @@
+/Users/marcos_wagner/Documents/workspace-spring-tool-suite/gestao_obras_projeto/bckend_gto/src/main/java/net/ufjnet/gestaoobra/models/Proprietario.java
+/Users/marcos_wagner/Documents/workspace-spring-tool-suite/gestao_obras_projeto/bckend_gto/src/main/java/net/ufjnet/gestaoobra/BckendGtoApplication.java
+/Users/marcos_wagner/Documents/workspace-spring-tool-suite/gestao_obras_projeto/bckend_gto/src/main/java/net/ufjnet/gestaoobra/dtos/ProprietarioDTO.java
+/Users/marcos_wagner/Documents/workspace-spring-tool-suite/gestao_obras_projeto/bckend_gto/src/main/java/net/ufjnet/gestaoobra/config/OpenApiConfig.java
+/Users/marcos_wagner/Documents/workspace-spring-tool-suite/gestao_obras_projeto/bckend_gto/src/main/java/net/ufjnet/gestaoobra/exceptionhandler/StandardError.java
+/Users/marcos_wagner/Documents/workspace-spring-tool-suite/gestao_obras_projeto/bckend_gto/src/main/java/net/ufjnet/gestaoobra/config/SecurityConfig.java
+/Users/marcos_wagner/Documents/workspace-spring-tool-suite/gestao_obras_projeto/bckend_gto/src/main/java/net/ufjnet/gestaoobra/repositories/ProprietarioDAO.java
+/Users/marcos_wagner/Documents/workspace-spring-tool-suite/gestao_obras_projeto/bckend_gto/src/main/java/net/ufjnet/gestaoobra/services/GestaoProprietario.java
+/Users/marcos_wagner/Documents/workspace-spring-tool-suite/gestao_obras_projeto/bckend_gto/src/main/java/net/ufjnet/gestaoobra/controllers/ProprietarioController.java
+/Users/marcos_wagner/Documents/workspace-spring-tool-suite/gestao_obras_projeto/bckend_gto/src/main/java/net/ufjnet/gestaoobra/exceptionhandler/ExceptionHandler.java
+/Users/marcos_wagner/Documents/workspace-spring-tool-suite/gestao_obras_projeto/bckend_gto/src/main/java/net/ufjnet/gestaoobra/services/exceptions/BusinessException.java

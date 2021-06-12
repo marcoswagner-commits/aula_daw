@@ -1,0 +1,12 @@
+net/ufjnet/gestaoobra/repositories/ProprietarioDAO.class
+net/ufjnet/gestaoobra/services/GestaoProprietario.class
+net/ufjnet/gestaoobra/exceptionhandler/ExceptionHandler.class
+net/ufjnet/gestaoobra/exceptionhandler/StandardError.class
+net/ufjnet/gestaoobra/dtos/ProprietarioDTO.class
+net/ufjnet/gestaoobra/exceptionhandler/StandardError$Fields.class
+net/ufjnet/gestaoobra/config/OpenApiConfig.class
+net/ufjnet/gestaoobra/models/Proprietario.class
+net/ufjnet/gestaoobra/services/exceptions/BusinessException.class
+net/ufjnet/gestaoobra/controllers/ProprietarioController.class
+net/ufjnet/gestaoobra/config/SecurityConfig.class
+net/ufjnet/gestaoobra/BckendGtoApplication.class
