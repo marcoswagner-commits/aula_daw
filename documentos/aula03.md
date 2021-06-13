@@ -13,7 +13,7 @@
 ## Atividades da aula - roteiro
 
 - Acessar o site Spring.io :+1: (https://spring.io) e demonstrar a geração da estrutura de códigos usando a página: https://start.spring.io
-- Conceituar MVC [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
+- Conceituar MVC [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
 - Explorar um pouco mais o arquivo POM (Project Object Model) - NÃO é um arquivo SPRING e sim um arquivo MAVEN...
 - - Verificar "parents"
 - - Hierarquias transitivas 
@@ -33,7 +33,7 @@
 - [x] Criar um pacote Controller
 - [x] Criar uma classe AlunoController
 - [x] Criar dois endpoints (geral e específico)
-- [x] Conceituar endpoint e JSON [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
+- [x] Conceituar endpoint e JSON [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
 - [x] Testar a aplicação
 
 
@@ -42,14 +42,14 @@
 - [X] Criar um pacote model
 - [x] Criar uma classe Alunos (código, nome e e-mail)
 - [x] Acessar a tabela criada 
-- [x] Conceituar ORM/JAKARTA - [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
+- [x] Conceituar ORM/JAKARTA - [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
 - [x] Acessar site:[JAKARTA Persistence] (https://jakarta.ee/specifications/persistence/3.0/)
 
 
 ### Modificação do código (repositório) - código 3
 - [X] Criar um pacote repository
 - [x] Criar uma interface AlunoRepository
-- [x] Conceituar Injeção de Dependências/Inversão de Controle - [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
+- [x] Conceituar Injeção de Dependências/Inversão de Controle - [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
 
 
 ### Modificação do código (cadastrar registros) - código 4
@@ -61,7 +61,7 @@
 ### Modificação do código (retornar alunos) - código final
 - [X] Alterar a classe AlunoController
 - [x] Criar um método findAll
-- [x] Retomar conceito de JSON [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
+- [x] Retomar conceito de JSON [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
 
 
 ### Uso do repositório Github
