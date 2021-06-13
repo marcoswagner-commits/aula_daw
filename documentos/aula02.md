@@ -10,7 +10,7 @@
 - Importância do Spring Boot 
 - Acessar o site Spring.io (https://spring.io) e verificar outros projetos existentes
 
-### Ferramenta de implementação ([Roteiro - Ferramentas](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/README.md))
+### Ferramenta de implementação ([Roteiro - Ferramentas](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/README.md))
 
 - [x] Abrir a Ferramenta STS4 (Spring Tool Suite)
 - [x] Criar um novo Projeto (File - New - Spring Starter Project)
