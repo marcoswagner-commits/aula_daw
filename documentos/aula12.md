@@ -1,6 +1,6 @@
 # Aula 12 - Desenvolvimento de Aplicações WEB
 
-> 
+> Aula 01/07/2021
 > 
 >  *Estudo de caso: Gestão de Obras *
 
@@ -193,4 +193,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 [voltar](#passo-3-instalando-e-configurando-o-security)
 
 
-### Passo 3: Atualizar o github com os códigos atuais (swagger-open-api)
+### Passo 5: Atualizar o github com os códigos atuais (swagger-open-api)
