@@ -6,11 +6,11 @@
 
 ## Atividades da aula - roteiro
 
-- Conceituar Ecossistema SPRING - [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
+- Conceituar Ecossistema SPRING - [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
 - Importância do Spring Boot 
 - Acessar o site Spring.io (https://spring.io) e verificar outros projetos existentes
 
-### Ferramenta de implementação ([Roteiro - Ferramentas](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/README.md))
+### Ferramenta de implementação ([Roteiro - Ferramentas](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/main/README.md))
 
 - [x] Abrir a Ferramenta STS4 (Spring Tool Suite)
 - [x] Criar um novo Projeto (File - New - Spring Starter Project)
@@ -27,7 +27,7 @@
 
 ### Passo 4: Analisar primariamente o Project Object Model (pom.xml)
 
-### Passo 5: Fazer os primeiros testes com dois clientes (navegador e PostMan) ([Roteiro - Ferramentas](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/Documentos/README.md))
+### Passo 5: Fazer os primeiros testes com dois clientes (navegador e PostMan) ([Roteiro - Ferramentas](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/main/README.md))
 
 ### Passo 6: Incluir os primeiros códigos, :+1: ainda sem criar nenhuma classe ou pacote, usando o arquivo principal:
 
