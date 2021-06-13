@@ -14,9 +14,9 @@
 ### Passo 1: Analisar e adequar a arquitetura REST
 - [x] Testar a API na nuvem - com http://gestao-obra-daw.herokuapp.com/swagger-ui.html
 - [x] Método de Produtividade BackEnd
-- [x] Criar a classe Obras em "Models"
+- [x] Criar a classe Obra em "Models"
 - [x] Criar a interface "repositories" ObraDAO
-- [x] Criar a classe "services" GestaoObras
+- [x] Criar a classe "services" GestaoObra
 - [x] Criar a classe "DTOs" ObraDTO
 - [x] Criar a classe "Controllers" ObraController
 
