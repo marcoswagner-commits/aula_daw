@@ -11,7 +11,7 @@
 
 - [Relação entre Obras e Proprietário](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/a07b4badee4940c720a9e62a9fe9e9d3105825c8/documentos/obras_proprietario.png)
 
-### Passo 1: Analisar e adequar a arquitetura REST
+### Passo 1: Criar o contexto Obras
 - [x] Testar a API na nuvem - com http://gestao-obra-daw.herokuapp.com/swagger-ui.html
 - [x] Método de Produtividade BackEnd
 - [x] Criar a classe Obra em "Models" - [código](#codigo-1-obra)
@@ -67,7 +67,7 @@ public class Obra implements Serializable {
 }
 
 ```
-[voltar](#passo-1-analisar-e-adequar-a-arquitetura-rest)
+[voltar](#passo-1-criar-o-contexto-bras)
 
 
 :shipit: 
@@ -76,7 +76,7 @@ public class Obra implements Serializable {
 public interface ObraDAO extends JpaRepository<Obra, Integer> {
 }
 ```
-[voltar](#passo-3-instalando-e-configurando-o-security)
+[voltar](#passo-1-analisar-e-adequar-a-arquitetura-rest)
 
 :shipit: 
 ### Código 3 - GestaoObra
