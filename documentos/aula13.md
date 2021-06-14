@@ -67,7 +67,7 @@ public class Obra implements Serializable {
 }
 
 ```
-[voltar](#passo-1-criar-o-contexto-bras)
+[voltar](#passo-1-criar-o-contexto-obras)
 
 
 :shipit: 
@@ -76,7 +76,7 @@ public class Obra implements Serializable {
 public interface ObraDAO extends JpaRepository<Obra, Integer> {
 }
 ```
-[voltar](#passo-1-analisar-e-adequar-a-arquitetura-rest)
+[voltar](#passo-1-criar-o-contexto-obras)
 
 :shipit: 
 ### Código 3 - GestaoObra
@@ -146,7 +146,7 @@ public class GestaoObra {
 	
 }
 ```
-[voltar](#passo-3-instalando-e-configurando-o-security)
+[voltar](#passo-1-criar-o-contexto-obras)
 
 
 :shipit: 
@@ -185,7 +185,7 @@ public class ObraDTO extends RepresentationModel<ObraDTO> implements Serializabl
 	
 }
 ```
-[voltar](#passo-3-instalando-e-configurando-o-security)
+[voltar](#passo-1-criar-o-contexto-obras)
 
 :shipit: 
 ### Código 5 - ObraController
@@ -269,7 +269,7 @@ public class ObraController {
 
 }
 ```
-[voltar](#passo-3-instalando-e-configurando-o-security)
+[voltar](#passo-1-criar-o-contexto-obras)
 
 ### Passo 2: Atualizar o github com os códigos atuais (camada com obras)
 
