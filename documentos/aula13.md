@@ -9,7 +9,7 @@
 
 ## :+1: Implementação do Modelo Conceitual Gestão de Obras - Implementação de Obras (Model - Repositório - Serviço - DTO - Controller)
 
-- [Relação entre Obras e Proprietário](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/7992c5622dde4f4ecc43003fde6053ddb5b781a7/documentos/prop_obra_relacao.png)
+- [Relação entre Obras e Proprietário](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/a07b4badee4940c720a9e62a9fe9e9d3105825c8/documentos/obras_proprietario.png)
 
 ### Passo 1: Analisar e adequar a arquitetura REST
 - [x] Testar a API na nuvem - com http://gestao-obra-daw.herokuapp.com/swagger-ui.html
