@@ -16,9 +16,9 @@
 - [x] Método de Produtividade BackEnd
 - [x] Criar a classe Obra em "Models" - [código](#código-1---obra)
 - [x] Criar a interface "repositories" ObraDAO - [código](#código-2---obradao)
-- [x] Criar a classe "services" GestaoObra - [código](#codigo-3---gestaoobra)
-- [x] Criar a classe "DTOs" ObraDTO - [código](#codigo-4---obradto)
-- [x] Criar a classe "Controllers" ObraController - [código](#codigo-5---obracontroller)
+- [x] Criar a classe "services" GestaoObra - [código](#código-3---gestaoobra)
+- [x] Criar a classe "DTOs" ObraDTO - [código](#código-4---obradto)
+- [x] Criar a classe "Controllers" ObraController - [código](#código-5---obracontroller)
 
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
