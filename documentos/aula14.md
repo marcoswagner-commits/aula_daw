@@ -14,7 +14,7 @@
 ### Passo 1: Construir as relações entre as classes Proprietario e Obra
 - [x] Criar em obra o vínculo com proprietário - [código](#código-1---obra-proprietario)
 - [x] Criar em proprietário o vínculo com obra - [código](#código-2---proprietario-obra)
-- [x] Adequar as outras camadas a partir da relação (DAO - DTO - Service - Controller) - - [códigos](#código-3---camadas)
+- [x] Adequar as outras camadas a partir da relação (DAO - DTO - Service - Controller) - [códigos](#código-3---camadas)
 - [x] Readequar as validações (inserir validações em grupo) - [códigos](#código-7---validações)
 
 ![Relação entre Item e Sub-Item](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/0c6016346d60abc8fc93f74d83e9e4c0d90fcbee/documentos/item_subitem.png)
