@@ -17,7 +17,7 @@
 - [x] Adequar as outras camadas a partir da relação (DAO - DTO - Service - Controller)
 - [x] Readequar as validações (inserir validações em grupo)
 
-![Relação entre Obras e Proprietário](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/7992c5622dde4f4ecc43003fde6053ddb5b781a7/documentos/prop_obra_relacao.png)
+![Relação entre Item e Sub-Item](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/0c6016346d60abc8fc93f74d83e9e4c0d90fcbee/documentos/item_subitem.png)
 
 ### Passo 2: Criar as classes de item e subitem
 - [x] Método de Produtividade BackEnd
