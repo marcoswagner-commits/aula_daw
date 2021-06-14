@@ -9,14 +9,15 @@
 
 ## :+1: Implementação do Modelo Conceitual Gestão de Obras - Implementação de Obras (Model - Repositório - Serviço - DTO - Controller)
 
-[![Relação entre Obras e Proprietário](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/7992c5622dde4f4ecc43003fde6053ddb5b781a7/documentos/prop_obra_relacao.png)]
+![Relação entre Obras e Proprietário](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/7992c5622dde4f4ecc43003fde6053ddb5b781a7/documentos/prop_obra_relacao.png)
 
 ### Passo 1: Construir as relações entre as classes Proprietario e Obra
 - [x] Criar em obra o vínculo com proprietário
 - [x] Criar em proprietário o vínculo com obra
 - [x] Adequar as outras camadas a partir da relação (DAO - DTO - Service - Controller)
+- [x] Readequar as validações (inserir validações em grupo)
 
-[![Relação entre Obras e Proprietário](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/7992c5622dde4f4ecc43003fde6053ddb5b781a7/documentos/prop_obra_relacao.png)]
+![Relação entre Obras e Proprietário](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/7992c5622dde4f4ecc43003fde6053ddb5b781a7/documentos/prop_obra_relacao.png)
 
 ### Passo 2: Criar as classes de item e subitem
 - [x] Método de Produtividade BackEnd
