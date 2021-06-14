@@ -12,10 +12,10 @@
 ![Relação entre Obras e Proprietário](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/a07b4badee4940c720a9e62a9fe9e9d3105825c8/documentos/obras_proprietario.png)
 
 ### Passo 1: Construir as relações entre as classes Proprietario e Obra
-- [x] Criar em obra o vínculo com proprietário
-- [x] Criar em proprietário o vínculo com obra
-- [x] Adequar as outras camadas a partir da relação (DAO - DTO - Service - Controller)
-- [x] Readequar as validações (inserir validações em grupo)
+- [x] Criar em obra o vínculo com proprietário - [código](#código-1---obra-proprietario)
+- [x] Criar em proprietário o vínculo com obra - [código](#código-2---proprietario-obra)
+- [x] Adequar as outras camadas a partir da relação (DAO - DTO - Service - Controller) - - [códigos](#código-3---camadas)
+- [x] Readequar as validações (inserir validações em grupo) - [códigos](#código-7---validações)
 
 ![Relação entre Item e Sub-Item](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/0c6016346d60abc8fc93f74d83e9e4c0d90fcbee/documentos/item_subitem.png)
 
@@ -31,7 +31,7 @@
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
 
-🥇:[![material complementar aula12](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/de83dfe17ef227404bf91b9dae5666f2ca8ae59a/Capa_aula10.png)](https://www.youtube.com/watch?v=T3IMjyn1OUA)
+🥇:[![material complementar aula12](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/de83dfe17ef227404bf91b9dae5666f2ca8ae59a/Capa_aula10.png)](https://www.youtube.com/watch?v=TCSLJU4TNlo)
 -
 🥈:[![material complementar aula12](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/de83dfe17ef227404bf91b9dae5666f2ca8ae59a/Capa_aula10.png)](https://www.youtube.com/watch?v=XCzhtOriPZc)
 -
