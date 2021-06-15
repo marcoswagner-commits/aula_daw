@@ -68,6 +68,11 @@ public class GestaoProprietario {
 			dao.deleteById(id);
 	}
 	
+	public boolean existById(Integer id) {
+		return dao.existsById(id);
+	}
+	
+	
 	
 }
 
