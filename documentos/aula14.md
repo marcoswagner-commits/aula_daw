@@ -1,6 +1,6 @@
 # Aula 14 - Desenvolvimento de Aplicações WEB
 
-> 
+> Aula 08/07/
 > 
 >  * Estudo de caso: Gestão de Obras *
 
@@ -25,17 +25,19 @@
 - [x] Criar as interfaces "repositories" ItemDAO e SubItemDAO
 - [x] Criar as classes "DTOs" ItemDTO e SubItemDTO
 - [x] Criar as classes "services" GestaoItem e GestaoSubItem
-- [x] Criar as classes "Controllers" ItemController e SubItemController
+- [x] Criar as classes "Controllers" ItemController e SubItemController - [códigos de Item e SubItem](#código-final---item-e-subitem)
 
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
 
-🥇:[![material complementar aula12](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/de83dfe17ef227404bf91b9dae5666f2ca8ae59a/Capa_aula10.png)](https://www.youtube.com/watch?v=TCSLJU4TNlo)
+🥇:[![material complementar aula14](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/de83dfe17ef227404bf91b9dae5666f2ca8ae59a/Capa_aula10.png)](https://www.youtube.com/watch?v=TCSLJU4TNlo)
 -
-🥈:[![material complementar aula12](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/de83dfe17ef227404bf91b9dae5666f2ca8ae59a/Capa_aula10.png)]https://www.youtube.com/watch?v=hLZkcOfJvNc)
+🥈:[![material complementar aula14](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/de83dfe17ef227404bf91b9dae5666f2ca8ae59a/Capa_aula10.png)]https://www.youtube.com/watch?v=hLZkcOfJvNc)
 -
-🥉:[![material complementar aula12](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/de83dfe17ef227404bf91b9dae5666f2ca8ae59a/Capa_aula10.png)](https://www.youtube.com/watch?v=sjmjxv4HqEE)
+🥉:[![material complementar aula14](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/de83dfe17ef227404bf91b9dae5666f2ca8ae59a/Capa_aula10.png)](https://www.youtube.com/watch?v=sjmjxv4HqEE)
+-
+🥉:[![material complementar aula14](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/de83dfe17ef227404bf91b9dae5666f2ca8ae59a/Capa_aula10.png)](https://www.youtube.com/watch?v=jJCiOM1JigM)
 
 
 :shipit: 
@@ -72,9 +74,561 @@
 :shipit: 
 ### Código 5 - ObrasController
 ```
+@RestController
+@RequestMapping("/v1/gto/obras")
+@Tag(name = "Endpoint de Obra")
+public class ObraController {
+	
+	@Autowired
+	private GestaoObra service;
+	
+	@GetMapping
+	@Operation(summary = "Busca todas os obras")
+	public ResponseEntity<CollectionModel<ObraDTO>> buscarTodos(
+				@RequestParam(value="page", defaultValue = "0") int page,
+				@RequestParam(value="limit", defaultValue = "12") int limit,
+				@RequestParam(value="direction", defaultValue = "asc") String direction) {
+
+
+			Direction sortDirection = "desc".equalsIgnoreCase(direction) ? Direction.DESC : Direction.ASC;
+			
+			Pageable pageable = PageRequest.of(page, limit, Sort.by(sortDirection, "descricao"));
+			
+			Page<ObraDTO> pages = service.findAll(pageable);
+			pages
+				.stream()
+				.forEach(p -> p.add(
+						linkTo(methodOn(ObraController.class).buscarUm(p.getCodigo())).withSelfRel()
+					)
+				);
+		  	
+			return ResponseEntity.ok(CollectionModel.of(pages));
+		}
+
+  
+	
+	
+	
+	@GetMapping("/{id}")
+	@Operation(summary = "Busca uma obra por id")
+	public ResponseEntity<ObraDTO> buscarUm(@PathVariable Integer id) {
+			ObraDTO objDTO = service.findById(id);
+			objDTO.add(linkTo(methodOn(ObraController.class).buscarUm(id)).withSelfRel());
+			return ResponseEntity.ok(objDTO);
+		}	
+
+		
+	@PostMapping
+	@ResponseStatus(HttpStatus.CREATED)
+	@Operation(summary = "Insere uma nova obra")
+	public ResponseEntity<ObraDTO> incluir(@Valid @RequestBody ObraDTO objBody) {
+		ObraDTO objDTO = service.save(objBody);
+		objDTO.add(linkTo(methodOn(ObraController.class).buscarUm(objDTO.getCodigo())).withSelfRel());
+		return ResponseEntity.ok(objDTO);
+	}
+
+	@PutMapping
+	@Operation(summary = "Atualiza uma obra")
+	public ResponseEntity<ObraDTO> atualizar(@RequestBody ObraDTO objBody) {
+		
+		ObraDTO objDTO = service.update(objBody);
+		objDTO.add(linkTo(methodOn(ObraController.class).buscarUm(objDTO.getCodigo())).withSelfRel());
+		return ResponseEntity.ok(objDTO);
+	}	
+	
+
+
+	@DeleteMapping("/{id}")
+	@Operation(summary = "Exclui uma obra por id")
+	public ResponseEntity<Void> excluir(@PathVariable Integer id) {
+		if (!service.existById(id)) {
+			return ResponseEntity.notFound().build();
+		}
+
+		service.deleteById(id);
+
+		return ResponseEntity.noContent().build();
+
+	}
+}
 
 ```
-[voltar](#passo-3-instalando-e-configurando-o-security)
+[voltar](#passo-1-construir-as-relações-entre-as-classes-proprietario-e-obra)
+
+
+### Código Final - Item e SubItem
+
+```
+//========================= Item
+
+@NoArgsConstructor
+@Getter
+@Setter
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Entity
+@Table(name = "ITENS")
+public class Item implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@EqualsAndHashCode.Include
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "codigo_item")
+	private Integer codigo ;
+	
+	
+	@Column(name = "descricao_item", nullable = false)
+	private String descricao;
+	
+	
+	@Column(name = "complemento_item")
+	private String complemento;
+	
+
+	@OneToMany(mappedBy = "item")
+	private List<SubItem> subitens = new ArrayList<>();
+	
+	
+	public Item(Integer codigo, String descricao, String complemento) {
+		this.codigo = codigo;
+		this.descricao = descricao;
+		this.complemento = complemento;
+		
+		
+	}
+	
+}
+
+//========================= SubItem
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Entity
+@Table(name = "SUBITENS")
+public class SubItem implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@EqualsAndHashCode.Include
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "codigo_subitem")
+	private Integer codigo ;
+	
+	
+	@Column(name = "descricao_subitem", nullable = false)
+	private String descricao;
+	
+		
+	@Column(name = "complemento_subitem")
+	private String complemento;
+	
+	
+	@ManyToOne()
+	private Item item;
+	
+}
+
+//========================= ItemDTO
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@EqualsAndHashCode(onlyExplicitlyIncluded = true, callSuper=false)
+@JsonPropertyOrder({"codigo_item",  "descricao_item", "complemento_obra"})
+public class ItemDTO extends RepresentationModel<ItemDTO> implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	
+	@EqualsAndHashCode.Include
+	@JsonProperty("codigo_item")
+	private Integer codigo;
+		
+	@NotBlank
+	@Size(max=255)
+	@JsonProperty("descricao_item")
+	private String descricao;
+	
+		
+	@JsonProperty("complemento_item")
+	private String complemento;
+
+	
+	public ItemDTO (Item obj) {
+		codigo = obj.getCodigo();
+		descricao = obj.getDescricao();
+		complemento = obj.getComplemento();
+		
+		
+		
+		
+	}
+	
+}
+
+//========================= SubItemDTO
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@EqualsAndHashCode(onlyExplicitlyIncluded = true, callSuper=false)
+@JsonPropertyOrder({"codigo_subitem", "item",  "descricao_subitem", "complemento_subitem"})
+public class SubItemDTO extends RepresentationModel<SubItemDTO> implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	
+	@EqualsAndHashCode.Include
+	@JsonProperty("codigo_subitem")
+	private Integer codigo;
+		
+	@NotBlank
+	@Size(max=255)
+	@JsonProperty("descricao_subitem")
+	private String descricao;
+	
+			
+	@JsonProperty("complemento_subitem")
+	private String complemento;
+		
+	
+	@NotNull
+	@Valid
+	@ConvertGroup(from = Default.class, to = ValidationsGroups.ProprietarioId.class)
+	private ItemDTO item;
+	
+	public SubItemDTO (SubItem obj) {
+		codigo = obj.getCodigo();
+		descricao = obj.getDescricao();
+		complemento = obj.getComplemento();
+		item = new ItemDTO(obj.getItem());
+		
+		
+		
+	}
+	
+}
+
+//========================= ItemDAO
+
+public interface ItemDAO extends JpaRepository<Item, Integer> {
+}
+
+//========================= SubItemDAO
+
+public interface SubItemDAO extends JpaRepository<SubItem, Integer> {
+}
+
+//========================= GestaoItem
+
+@AllArgsConstructor
+@Service
+public class GestaoItem {
+	
+	private ItemDAO dao;
+	
+	@Transactional(readOnly = true)
+	public Page<ItemDTO> findAll(Pageable pageable) {
+		Page<Item> result = dao.findAll(pageable);
+		return result.map(obj -> new ItemDTO(obj));
+				
+		
+	}
+	
+	
+
+	@Transactional(readOnly = true)
+	public ItemDTO findById(Integer id) {
+		Item result = dao.findById(id).
+				orElseThrow(() -> new BusinessException("Registros não encontrados!!!"));
+		
+		return new ItemDTO(result);
+			
+	}
+	
+	
+
+	@Transactional
+	public ItemDTO update(ItemDTO obj) {
+		Item entity = dao.findById(obj.getCodigo())
+				.orElseThrow(() -> new BusinessException("Registros não encontrados!!!"));
+		
+		
+		entity.setDescricao(obj.getDescricao());
+		entity.setComplemento(obj.getComplemento());
+		
+		return new ItemDTO(dao.save(entity));
+		
+		
+	}	
+	
+	
+	@Transactional
+	public ItemDTO save(ItemDTO obj) {
+		        		
+        Item entity = new Item(obj.getCodigo(), obj.getDescricao(),  obj.getComplemento());
+				
+		return new ItemDTO(dao.save(entity));
+	}
+	
+
+	
+	@Transactional
+	public void deleteById(Integer id) {
+			dao.deleteById(id);
+	}
+	
+	public boolean existById(Integer id) {
+		return dao.existsById(id);
+	}
+	
+	
+}
+
+
+//========================= GestaoSubItem
+
+@AllArgsConstructor
+@Service
+public class GestaoSubItem {
+	
+	private SubItemDAO dao;
+	
+	private ItemDAO itemDAO;
+	
+	
+	@Transactional(readOnly = true)
+	public Page<SubItemDTO> findAll(Pageable pageable) {
+		Page<SubItem> result = dao.findAll(pageable);
+		return result.map(obj -> new SubItemDTO(obj));
+				
+		
+	}
+	
+	
+
+	@Transactional(readOnly = true)
+	public SubItemDTO findById(Integer id) {
+		SubItem result = dao.findById(id).
+				orElseThrow(() -> new BusinessException("Registros não encontrados!!!"));
+		
+		return new SubItemDTO(result);
+			
+	}
+	
+	
+
+	@Transactional
+	public SubItemDTO update(SubItemDTO obj) {
+		SubItem entity = dao.findById(obj.getCodigo())
+				.orElseThrow(() -> new BusinessException("Registros não encontrados!!!"));
+		
+		
+		entity.setDescricao(obj.getDescricao());
+		entity.setComplemento(obj.getComplemento());
+		
+		return new SubItemDTO(dao.save(entity));
+		
+		
+	}	
+	
+	
+	@Transactional
+	public SubItemDTO save(SubItemDTO obj) {
+				
+        Optional<Item> item = itemDAO.findById(obj.getItem().getCodigo());
+        		
+        SubItem entity = new SubItem(obj.getCodigo(), obj.getDescricao(), 
+        		obj.getComplemento(),
+				new Item(item.get().getCodigo(),
+						item.get().getDescricao(),
+						item.get().getComplemento()));
+
+        entity.setItem(item.orElse(null));
+		
+		
+		
+		
+		return new SubItemDTO(dao.save(entity));
+	}
+	
+
+	
+	@Transactional
+	public void deleteById(Integer id) {
+			dao.deleteById(id);
+	}
+	
+	public boolean existById(Integer id) {
+		return dao.existsById(id);
+	}
+	
+	
+}
+
+//========================= ItemController
+@RestController
+@RequestMapping("/v1/gto/itens")
+@Tag(name = "Endpoint de Item")
+public class ItemController {
+	
+	@Autowired
+	private GestaoItem service;
+	
+	@GetMapping
+	@Operation(summary = "Busca todos os itens")
+	public ResponseEntity<CollectionModel<ItemDTO>> buscarTodos(
+				@RequestParam(value="page", defaultValue = "0") int page,
+				@RequestParam(value="limit", defaultValue = "12") int limit,
+				@RequestParam(value="direction", defaultValue = "asc") String direction) {
+
+
+			Direction sortDirection = "desc".equalsIgnoreCase(direction) ? Direction.DESC : Direction.ASC;
+			
+			Pageable pageable = PageRequest.of(page, limit, Sort.by(sortDirection, "descricao"));
+			
+			Page<ItemDTO> pages = service.findAll(pageable);
+			pages
+				.stream()
+				.forEach(p -> p.add(
+						linkTo(methodOn(ItemController.class).buscarUm(p.getCodigo())).withSelfRel()
+					)
+				);
+		  	
+			return ResponseEntity.ok(CollectionModel.of(pages));
+		}
+
+  
+	
+	
+	
+	@GetMapping("/{id}")
+	@Operation(summary = "Busca um item por id")
+	public ResponseEntity<ItemDTO> buscarUm(@PathVariable Integer id) {
+			ItemDTO objDTO = service.findById(id);
+			objDTO.add(linkTo(methodOn(ItemController.class).buscarUm(id)).withSelfRel());
+			return ResponseEntity.ok(objDTO);
+		}	
+
+		
+	@PostMapping
+	@ResponseStatus(HttpStatus.CREATED)
+	@Operation(summary = "Insere um novo item")
+	public ResponseEntity<ItemDTO> incluir(@Valid @RequestBody ItemDTO objBody) {
+		ItemDTO objDTO = service.save(objBody);
+		objDTO.add(linkTo(methodOn(ItemController.class).buscarUm(objDTO.getCodigo())).withSelfRel());
+		return ResponseEntity.ok(objDTO);
+	}
+
+	@PutMapping
+	@Operation(summary = "Atualiza um item")
+	public ResponseEntity<ItemDTO> atualizar(@RequestBody ItemDTO objBody) {
+		
+		ItemDTO objDTO = service.update(objBody);
+		objDTO.add(linkTo(methodOn(ItemController.class).buscarUm(objDTO.getCodigo())).withSelfRel());
+		return ResponseEntity.ok(objDTO);
+	}	
+	
+
+
+	@DeleteMapping("/{id}")
+	@Operation(summary = "Exclui um item por id")
+	public ResponseEntity<Void> excluir(@PathVariable Integer id) {
+		if (!service.existById(id)) {
+			return ResponseEntity.notFound().build();
+		}
+
+		service.deleteById(id);
+
+		return ResponseEntity.noContent().build();
+
+	}
+}
+
+
+//========================= SubItemController
+@RestController
+@RequestMapping("/v1/gto/subsubitens")
+@Tag(name = "Endpoint de subitem")
+public class SubItemController {
+	
+	@Autowired
+	private GestaoSubItem service;
+	
+	@GetMapping
+	@Operation(summary = "Busca todos os subitens")
+	public ResponseEntity<CollectionModel<SubItemDTO>> buscarTodos(
+				@RequestParam(value="page", defaultValue = "0") int page,
+				@RequestParam(value="limit", defaultValue = "12") int limit,
+				@RequestParam(value="direction", defaultValue = "asc") String direction) {
+
+
+			Direction sortDirection = "desc".equalsIgnoreCase(direction) ? Direction.DESC : Direction.ASC;
+			
+			Pageable pageable = PageRequest.of(page, limit, Sort.by(sortDirection, "descricao"));
+			
+			Page<SubItemDTO> pages = service.findAll(pageable);
+			pages
+				.stream()
+				.forEach(p -> p.add(
+						linkTo(methodOn(SubItemController.class).buscarUm(p.getCodigo())).withSelfRel()
+					)
+				);
+		  	
+			return ResponseEntity.ok(CollectionModel.of(pages));
+		}
+
+  
+	
+	
+	
+	@GetMapping("/{id}")
+	@Operation(summary = "Busca um subitem por id")
+	public ResponseEntity<SubItemDTO> buscarUm(@PathVariable Integer id) {
+			SubItemDTO objDTO = service.findById(id);
+			objDTO.add(linkTo(methodOn(SubItemController.class).buscarUm(id)).withSelfRel());
+			return ResponseEntity.ok(objDTO);
+		}	
+
+		
+	@PostMapping
+	@ResponseStatus(HttpStatus.CREATED)
+	@Operation(summary = "Insere um novo subitem")
+	public ResponseEntity<SubItemDTO> incluir(@Valid @RequestBody SubItemDTO objBody) {
+		SubItemDTO objDTO = service.save(objBody);
+		objDTO.add(linkTo(methodOn(SubItemController.class).buscarUm(objDTO.getCodigo())).withSelfRel());
+		return ResponseEntity.ok(objDTO);
+	}
+
+	@PutMapping
+	@Operation(summary = "Atualiza um subitem")
+	public ResponseEntity<SubItemDTO> atualizar(@RequestBody SubItemDTO objBody) {
+		
+		SubItemDTO objDTO = service.update(objBody);
+		objDTO.add(linkTo(methodOn(SubItemController.class).buscarUm(objDTO.getCodigo())).withSelfRel());
+		return ResponseEntity.ok(objDTO);
+	}	
+	
+
+
+	@DeleteMapping("/{id}")
+	@Operation(summary = "Exclui um subitem por id")
+	public ResponseEntity<Void> excluir(@PathVariable Integer id) {
+		if (!service.existById(id)) {
+			return ResponseEntity.notFound().build();
+		}
+
+		service.deleteById(id);
+
+		return ResponseEntity.noContent().build();
+
+	}
+}
+```
+[voltar](#passo-2:-criar-as-classes-de-item-e-subitem)
 
 ### Passo 2: Atualizar o github com os códigos atuais (camada com obras)
 
