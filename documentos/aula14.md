@@ -1,6 +1,6 @@
 # Aula 14 - Desenvolvimento de Aplicações WEB
 
-> Aula 08/07/
+> Aula 08/07/2021
 > 
 >  * Estudo de caso: Gestão de Obras *
 
@@ -41,12 +41,44 @@
 
 
 :shipit: 
-### Código 1 - Obras
+### Código 1 - Obra
 ```
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Entity
+@Table(name = "OBRAS")
+public class Obra implements Serializable {
+	private static final long serialVersionUID = 1L;
 
+	@EqualsAndHashCode.Include
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "codigo_obra")
+	private Integer codigo ;
+	
+	
+	@Column(name = "descricao_obra", nullable = false)
+	private String descricao;
+	
+	
+	@Column(name = "localizacao_obra", nullable = false)
+	private String localizacao;
+	
+	
+	@Column(name = "complemento_obra")
+	private String complemento;
+	
+	
+	@ManyToOne()
+	private Proprietario proprietario;
+	
+}
 
 ```
-[voltar](#passo-1-analisar-e-adequar-a-arquitetura-rest)
+[voltar](#passo-1-construir-as-relações-entre-as-classes-proprietario-e-obra)
 
 
 :shipit: 
@@ -54,14 +86,14 @@
 ```
 
 ```
-[voltar](#passo-3-instalando-e-configurando-o-security)
+[voltar](#passo-1-construir-as-relações-entre-as-classes-proprietario-e-obra)
 
 :shipit: 
 ### Código 3 - GestaoObras
 ```
 
 ```
-[voltar](#passo-3-instalando-e-configurando-o-security)
+[voltar](#passo-1-construir-as-relações-entre-as-classes-proprietario-e-obra)
 
 
 :shipit: 
@@ -69,7 +101,7 @@
 ```
 
 ```
-[voltar](#passo-3-instalando-e-configurando-o-security)
+[voltar](#passo-1-construir-as-relações-entre-as-classes-proprietario-e-obra)
 
 :shipit: 
 ### Código 5 - ObrasController
@@ -628,7 +660,7 @@ public class SubItemController {
 	}
 }
 ```
-[voltar](#passo-2:-criar-as-classes-de-item-e-subitem)
+[voltar](#passo-2-criar-as-classes-de-item-e-subitem)
 
 ### Passo 2: Atualizar o github com os códigos atuais (camada com obras)
 
