@@ -41,7 +41,7 @@
 
 
 :shipit: 
-### Código 1 - Obra
+### Código 1 - obra proprietario
 ```
 @NoArgsConstructor
 @AllArgsConstructor
@@ -82,23 +82,146 @@ public class Obra implements Serializable {
 
 
 :shipit: 
-### Código 2 - ObrasDAO
+### Código 3 - Camadas
 ```
+public interface ObraDAO extends JpaRepository<Obra, Integer> {
+}
 
 ```
 [voltar](#passo-1-construir-as-relações-entre-as-classes-proprietario-e-obra)
 
 :shipit: 
-### Código 3 - GestaoObras
+### Código 3 - Camadas
 ```
+@AllArgsConstructor
+@Service
+public class GestaoObra {
+	
+	private ObraDAO dao;
+	
+	private ProprietarioDAO propDAO;
+	
+	
+	@Transactional(readOnly = true)
+	public Page<ObraDTO> findAll(Pageable pageable) {
+		Page<Obra> result = dao.findAll(pageable);
+		return result.map(obj -> new ObraDTO(obj));
+				
+		
+	}
+	
+	
 
+	@Transactional(readOnly = true)
+	public ObraDTO findById(Integer id) {
+		Obra result = dao.findById(id).
+				orElseThrow(() -> new BusinessException("Registros não encontrados!!!"));
+		
+		return new ObraDTO(result);
+			
+	}
+	
+	
+
+	@Transactional
+	public ObraDTO update(ObraDTO obj) {
+		Obra entity = dao.findById(obj.getCodigo())
+				.orElseThrow(() -> new BusinessException("Registros não encontrados!!!"));
+		
+		
+		entity.setDescricao(obj.getDescricao());
+		entity.setLocalizacao(obj.getLocalizacao());
+		entity.setComplemento(obj.getComplemento());
+		
+		return new ObraDTO(dao.save(entity));
+		
+		
+	}	
+	
+	
+	@Transactional
+	public ObraDTO save(ObraDTO obj) {
+				
+        Optional<Proprietario> prop = propDAO.findById(obj.getProprietario().getCodigo());
+        		
+        Obra entity = new Obra(obj.getCodigo(), obj.getDescricao(), 
+				obj.getLocalizacao(), obj.getComplemento(),
+				new Proprietario(prop.get().getCodigo(),
+						prop.get().getNome(),
+						prop.get().getCpf(),
+						prop.get().getEmail()));
+
+        entity.setProprietario(prop.orElse(null));
+		
+		
+		
+		
+		return new ObraDTO(dao.save(entity));
+	}
+	
+
+	
+	@Transactional
+	public void deleteById(Integer id) {
+			dao.deleteById(id);
+	}
+	
+	public boolean existById(Integer id) {
+		return dao.existsById(id);
+	}
+	
+}
+	
 ```
 [voltar](#passo-1-construir-as-relações-entre-as-classes-proprietario-e-obra)
 
 
 :shipit: 
-### Código 4 - ObrasDTO
+### Código 3 - Camadas
 ```
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@EqualsAndHashCode(onlyExplicitlyIncluded = true, callSuper=false)
+@JsonPropertyOrder({"codigo_obra", "proprietario",  "descricao_obra", "localizacao_obra", "complemento_obra"})
+public class ObraDTO extends RepresentationModel<ObraDTO> implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	
+	@EqualsAndHashCode.Include
+	@JsonProperty("codigo_obra")
+	private Integer codigo;
+		
+	@NotBlank
+	@Size(max=255)
+	@JsonProperty("descricao_obra")
+	private String descricao;
+	
+	@NotBlank
+	@Size(max=255)
+	@JsonProperty("localizacao_obra")
+	private String localizacao;
+		
+	@JsonProperty("complemento_obra")
+	private String complemento;
+	
+	
+	
+	@NotNull
+	@Valid
+	@ConvertGroup(from = Default.class, to = ValidationsGroups.ProprietarioId.class)
+	private ProprietarioDTO proprietario;
+	
+	public ObraDTO (Obra obj) {
+		codigo = obj.getCodigo();
+		descricao = obj.getDescricao();
+		localizacao = obj.getLocalizacao();
+		complemento = obj.getComplemento();
+		proprietario = new ProprietarioDTO(obj.getProprietario());
+	}
+	
+}
 
 ```
 [voltar](#passo-1-construir-as-relações-entre-as-classes-proprietario-e-obra)
