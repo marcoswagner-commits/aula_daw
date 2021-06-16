@@ -40,7 +40,8 @@
 
 
 
-:shipit: Código 1
+:shipit: 
+### Código 1
 ```
 @AllArgsConstructor
 @Service
@@ -80,7 +81,8 @@ public class GestaoProprietario {
 ```
 [voltar](#passo-2-criar-o-crud-para-proprietários)
 
-:shipit: Código 2
+:shipit: 
+### Código 2
 ```
 @RestController
 @RequestMapping("/gto/proprietarios")
