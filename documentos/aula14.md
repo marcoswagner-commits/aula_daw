@@ -7,7 +7,7 @@
 
 ## Atividades da aula - roteiro
 
-## :+1: Implementação do Modelo Conceitual Gestão de Obras - Implementação de Obras (Model - Repositório - Serviço - DTO - Controller)
+## :+1: Implementação do Modelo Conceitual Gestão de Obras - Vínculos entre Classes/Entidades - Criação do Contexto Item/SubItem
 
 ![Relação entre Obras e Proprietário](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/a07b4badee4940c720a9e62a9fe9e9d3105825c8/documentos/obras_proprietario.png)
 
