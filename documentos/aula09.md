@@ -7,7 +7,7 @@
 
 ## Atividades da aula - roteiro
 
-## Implementação do Modelo Conceitual
+## Implementação do Modelo Conceitual - Regras de Negócio e Tratamento de Erros
 
 ### Passo 1: Ampliar as regras de negócio relacionadas a classe (entidade) proprietários
 - [x]  Incluir no repositório ProprietarioDAO outros tipos de acesso a dados
