@@ -15,7 +15,7 @@
 - [x] Criar em obra o vínculo com proprietário - [código](#código-1---obra-proprietario)
 - [x] Criar em proprietário o vínculo com obra - [código](#código-2---proprietario-obra)
 - [x] Adequar as outras camadas a partir da relação (DAO - DTO - Service - Controller) - [códigos](#código-3---camadas)
-- [x] Readequar as validações (inserir validações em grupo) - [códigos](#código-7---validações)
+- [x] Readequar as validações (inserir validações em grupo) 
 
 ![Relação entre Item e Sub-Item](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/0c6016346d60abc8fc93f74d83e9e4c0d90fcbee/documentos/item_subitem.png)
 
@@ -79,6 +79,53 @@ public class Obra implements Serializable {
 
 ```
 [voltar](#passo-1-construir-as-relações-entre-as-classes-proprietario-e-obra)
+
+### Código 2 - Proprietario Obra
+```
+@NoArgsConstructor
+@Getter
+@Setter
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Entity
+@Table(name = "PROPRIETARIOS")
+public class Proprietario implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@EqualsAndHashCode.Include
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "codigo_prop")
+	private Integer codigo ;
+	
+	
+	@Column(name = "nome_prop", nullable = false)
+	private String nome;
+	
+	
+	@Column(name = "cpf_prop", nullable = false)
+	private String cpf;
+	
+	
+	@Column(name = "email_prop", nullable = false)
+	private String email;
+	
+	@OneToMany(mappedBy = "proprietario")
+	private List<Obra> obras = new ArrayList<>();
+	
+	
+	public Proprietario(Integer codigo, String nome, String cpf, String email) {
+		this.codigo = codigo;
+		this.nome = nome;
+		this.cpf = cpf;
+		this.email = email;
+		
+	}
+	
+}
+
+```
+[voltar](#passo-1-construir-as-relações-entre-as-classes-proprietario-e-obra)
+
 
 
 :shipit: 
