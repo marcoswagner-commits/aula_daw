@@ -27,7 +27,7 @@
 - Implementar os endpoints de busca por nome e por cpf
 - Vide Códigos 3, 4 e 5 (BusinessException, ExceptionHandler e Controller)
 
-
+[![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
 
 🥇:[![material complementar aula09](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ae21f550ddb70c1e401baeaf543065f9a8b80283/documentos/Capa_Aula09.png)](https://www.youtube.com/watch?v=CncYHx2x-xI)
