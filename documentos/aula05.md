@@ -33,7 +33,9 @@
 ### Passo 2: criar estruturas de pastas no projeto seguindo o modelo de arquitetura abaixo:
 ![Modelo de Arquitetura](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/947bf8022b213bb7fe183c39dae8c607a6d60212/modelo_camadas.png)
 
-- Veja o vídeo abaixo que mostra a execução destes dois primeiros passos
+[![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
+####  Os vídeos abaixo mostram a execução destes dois primeiros passos
+
 [![material complementar aula05](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/270cd963cbfa4bd6f1da76689bff50957daa9208/documentos/Capa_aula05_mod1.png)](https://youtu.be/S58DL42UaUw)
 
 :shipit: Código 1
