@@ -7,7 +7,7 @@
 
 ## Atividades da aula - roteiro
 
-## :+1: Implementação do Modelo Conceitual
+## :+1: Implementação do Modelo Conceitual - Inclusão dos DTO e Consulta Paginada
 
 ### Passo 1: Incluir a camada de DTO's
 - [x] Implementar a classe ProprietarioDTO
