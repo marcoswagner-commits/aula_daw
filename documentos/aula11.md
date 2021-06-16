@@ -46,11 +46,11 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
 
-🥇:[![material complementar aula11](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/de83dfe17ef227404bf91b9dae5666f2ca8ae59a/Capa_aula10.png)](https://www.youtube.com/watch?v=LyZ5HdkEwqs)
+🥇:[![material complementar aula11](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/06c35f537cfc0f42345bd2c222fa848fe691431c/documentos/Capa_Aula11.png)](https://www.youtube.com/watch?v=LyZ5HdkEwqs)
 -
-🥈:[![material complementar aula11](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/de83dfe17ef227404bf91b9dae5666f2ca8ae59a/Capa_aula10.png)](https://www.youtube.com/watch?v=tC60mjNSJ_w)
+🥈:[![material complementar aula11](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/06c35f537cfc0f42345bd2c222fa848fe691431c/documentos/Capa_Aula11.png)](https://www.youtube.com/watch?v=tC60mjNSJ_w)
 -
-🥉:[![material complementar aula11](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/de83dfe17ef227404bf91b9dae5666f2ca8ae59a/Capa_aula10.png)](https://www.youtube.com/watch?v=PLzpVCyJyZI)
+🥉:[![material complementar aula11](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/06c35f537cfc0f42345bd2c222fa848fe691431c/documentos/Capa_Aula11.png)](https://www.youtube.com/watch?v=PLzpVCyJyZI)
 
 
 
