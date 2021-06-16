@@ -9,30 +9,30 @@
 ## Implementação do Modelo Conceitual
 
 ### Passo 1: Criar funcionalidades (starters e classes) para tratamento de erros
-- Adicionar o pacote Spring Validation
-- Fazer anotações na classe Proprietario (Model) - @NotBlank - @Size - @Email
-- Criar o pacote exceptionhandler
-- Criar a classe ExceptionHandler (@ControllerAdvice)
-- Vide Códigos 1 e 2
+- [x]  Adicionar o pacote Spring Validation
+- [x]  Fazer anotações na classe Proprietario (Model) - @NotBlank - @Size - @Email
+- [x]  Criar o pacote exceptionhandler
+- [x]  Criar a classe ExceptionHandler (@ControllerAdvice)
+- [x]  Vide Códigos 1 e 2
 
 ### Passo 2: Melhorar o tratamento de mensagens
-- Sobrescrever o método handleMethodArgumentNotValid
-- Criar uma classe StandardError
-- Vincular a classe StandardError ao método
-- Verificar os retornos de erros
-- Atualizar mensagens criando o arquivo messages.properties na pasta "Resources"
-- Vide Códigos 3 e 4
+- [x]  Sobrescrever o método handleMethodArgumentNotValid
+- [x]  Criar uma classe StandardError
+- [x]  Vincular a classe StandardError ao método
+- [x]  Verificar os retornos de erros
+- [x]  Atualizar mensagens criando o arquivo messages.properties na pasta "Resources"
+- [x]  Vide Códigos 3 e 4
 
-
+[![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
 
-🥇:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ecbe27da469ec69308caf228b1f5a2d0e4b863a3/Capa_aula08.png)](https://www.youtube.com/watch?v=kwyntQNaGn0)
+🥇:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/b29579d6b8583f49c9b1a044288abcb788643119/documentos/Capa_aula08.png)](https://www.youtube.com/watch?v=kwyntQNaGn0)
 -
-🥈:[![material complementar aula08]https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ecbe27da469ec69308caf228b1f5a2d0e4b863a3/Capa_aula08.png)](https://www.youtube.com/watch?v=qThJM6UPSqE)
+🥈:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/b29579d6b8583f49c9b1a044288abcb788643119/documentos/Capa_aula08.png)](https://www.youtube.com/watch?v=qThJM6UPSqE)
 -
-🥉:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ecbe27da469ec69308caf228b1f5a2d0e4b863a3/Capa_aula08.png)](https://www.youtube.com/watch?v=qGMNf2p6zrk)
+🥉:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/b29579d6b8583f49c9b1a044288abcb788643119/documentos/Capa_aula08.png)](https://www.youtube.com/watch?v=qGMNf2p6zrk)
 -
-🥉:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/ecbe27da469ec69308caf228b1f5a2d0e4b863a3/Capa_aula08.png)](https://www.youtube.com/watch?v=4qkG2kMqmhc)
+🥉:[![material complementar aula08](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/b29579d6b8583f49c9b1a044288abcb788643119/documentos/Capa_aula08.png)](https://www.youtube.com/watch?v=4qkG2kMqmhc)
 
 
 
