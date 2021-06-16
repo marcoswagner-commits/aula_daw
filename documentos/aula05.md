@@ -34,7 +34,7 @@
 ![Modelo de Arquitetura](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/947bf8022b213bb7fe183c39dae8c607a6d60212/modelo_camadas.png)
 
 - Veja o vídeo abaixo que mostra a execução destes dois primeiros passos
-[![material complementar aula05](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/f12b022c5b71942326118f1ea9881b9ed3f1b471/Capa_aula05_mod1.png)](https://youtu.be/S58DL42UaUw)
+[![material complementar aula05](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/270cd963cbfa4bd6f1da76689bff50957daa9208/documentos/Capa_aula05_mod1.png)](https://youtu.be/S58DL42UaUw)
 
 :shipit: Código 1
 ```
