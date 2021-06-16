@@ -10,22 +10,22 @@
 ## Implementação do Modelo Conceitual
 
 ### Passo 1: Ampliar as regras de negócio relacionadas a classe (entidade) proprietários
-- Incluir no repositório ProprietarioDAO outros tipos de acesso a dados
+- [x]  Incluir no repositório ProprietarioDAO outros tipos de acesso a dados
   - Busca de registros por nome
   - Busca de registros por cpf
   - Busca de registros por e-mail
-- Ajustar os serviços GestaoProprietario para não permitir inclusão de dados incoerentes (dataIntegrity)
+- [x]  Ajustar os serviços GestaoProprietario para não permitir inclusão de dados incoerentes (dataIntegrity)
   - Não permissão de cadastro de cpfs iguais
   - Não permissão de cadastro de e-mails iguais
 - Vide Códigos 1 e 2  (Repositório e Serviço)
 
 ### Passo 2: Ampliar e melhorar o tratamento de mensagens de erros
-- Criar uma classe em seviços/exceptions para regras de negócio - BusinessException
-- Apliar a classe de ExceptionHandler
-- Criar um método dataIntegrity (Integridade de dados) para não permitir repetição de cpfs e e-mails
-- Verificar os retornos de erros
-- Implementar os endpoints de busca por nome e por cpf
-- Vide Códigos 3, 4 e 5 (BusinessException, ExceptionHandler e Controller)
+- [x]  Criar uma classe em seviços/exceptions para regras de negócio - BusinessException
+- [x]  Apliar a classe de ExceptionHandler
+- [x]  Criar um método dataIntegrity (Integridade de dados) para não permitir repetição de cpfs e e-mails
+- [x]  Verificar os retornos de erros
+- [x]  Implementar os endpoints de busca por nome e por cpf
+- [x]  Vide Códigos 3, 4 e 5 (BusinessException, ExceptionHandler e Controller)
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
