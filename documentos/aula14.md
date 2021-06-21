@@ -39,6 +39,34 @@
 -
 🥉:[![material complementar aula14](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/27a04caaa2d7675820eb14a0ec76d0c4a60575d5/documentos/Capa_Aula14.png)](https://www.youtube.com/watch?v=jJCiOM1JigM)
 
+### Bônus
+➕ Como fazer uma relação Many-To-Many
+```
+class Estudante {
+
+    // ...
+
+    @ManyToMany
+    Set<Curso> provas_estudante;
+
+    // ...
+}
+
+class Curso {
+
+    // ...
+
+   	@ManyToMany
+	@JoinTable(
+  	name = "curso_prova", 
+  	joinColumns = @JoinColumn(name = "estudante_id"), 
+  	inverseJoinColumns = @JoinColumn(name = "curso_id"))
+	Set<Estudante> provas_curso;
+
+    // ...
+}
+```
+
 
 :shipit: 
 ### Código 1 - obra proprietario
