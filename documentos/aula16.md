@@ -9,7 +9,7 @@
 
 ## :+1: Implementação do Modelo Conceitual Gestão de Obras - Autenticação com JWT e Spring Security
 
-![Relação entre Lancamento - Usuário e Permissões](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/f99cca49fd5da210b29f6561a20e5a33c65a049d/documentos/modelo-conceitual-completo.png)
+![Relação entre Lancamento - Usuário e Permissões](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/bf5d7c17f9f1096d18524edf67596225abc4e149/documentos/User_Permissions.png)
 
 ### Passo 1: Criar as relações de usuários e permissões
 - [x] Adicionar dependência para o jwt.io (Acessar https://jwt.io e https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt)
