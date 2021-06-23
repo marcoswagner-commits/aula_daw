@@ -14,14 +14,14 @@
 
 ### Exemplos:
 - Diagrama de Classes Conceitual - sem detalhes da tecnologia
-![Modelo Conceitual Gestão de Obras](https://raw.githubusercontent.com/marcoswagner-commits/gestao_obras_aula_daw/Documentos/diagrama_classes_conceitual_2.jpg)
+![Modelo Conceitual Gestão de Obras](https://raw.githubusercontent.com/marcoswagner-commits/gestao_obras_aula_daw/documentos/documentos/diagrama_classes_conceitual_2.jpg)
 
 
 - Diagrama de Classes Lógico - com detalhes do paradigma
-![Modelo Conceitual Gestão de Obras](https://raw.githubusercontent.com/marcoswagner-commits/gestao_obras_aula_daw/Documentos/diagrama_classes_conceitual_1.png)
+![Modelo Conceitual Gestão de Obras](https://raw.githubusercontent.com/marcoswagner-commits/gestao_obras_aula_daw/documentos/documentos/diagrama_classes_conceitual_1.png)
 
 - Diagrama de Entidade-Relacionamento - com detalhes do paradigma
-![Modelo Conceitual Gestão de Obras](https://raw.githubusercontent.com/marcoswagner-commits/gestao_obras_aula_daw/Documentos/diagrama_entidade_relacionamento.png)
+![Modelo Conceitual Gestão de Obras](https://raw.githubusercontent.com/marcoswagner-commits/gestao_obras_aula_daw/documentos/documentos/diagrama_entidade_relacionamento.png)
 
 ### Estudo de Caso - Gestão de Obras
 
@@ -52,7 +52,7 @@ O sistema terá como premissa armazenar/gravar o proprietario de uma obra, regis
     - [ ] Navegabilidade (aspecto que estabelece o direcionamento entre as classes)
     - [ ] Símbolos (retas) que representam o tipo de relacionamento conforme a figura abaixo:
 
-![Relacionamentos](https://raw.githubusercontent.com/marcoswagner-commits/gestao_obras_aula_daw/Documentos/relações_classes.png)
+![Relacionamentos](https://raw.githubusercontent.com/marcoswagner-commits/gestao_obras_aula_daw/documentos/documentos/relações_classes.png)
 
 Um artigo que apresenta com detalhes os conceitos de Diagrama de Classes UML pode ser acessado em:
 https://www.devmedia.com.br/orientacoes-basicas-na-elaboracao-de-um-diagrama-de-classes/37224
