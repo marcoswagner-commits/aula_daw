@@ -53,7 +53,7 @@
 //========================= LancamentoController
 
 ```
-[voltar](#passo-2-criar-a-classe-de-lançamento)
+[voltar](#passo-1-criar-a-classe-de-lançamento)
 
 
 ### Passo 2: Atualizar o github com os códigos atuais (camada com obras)
