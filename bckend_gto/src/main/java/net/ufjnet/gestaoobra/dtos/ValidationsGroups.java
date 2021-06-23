@@ -6,4 +6,15 @@ public interface ValidationsGroups {
 		
 	}
 
+	public interface ObraId {
+		
+	}
+	
+	public interface ItemId {
+		
+	}
+	
+	public interface SubItemId {
+		
+	}
 }

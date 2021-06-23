@@ -31,6 +31,8 @@ public class ObraDTO extends RepresentationModel<ObraDTO> implements Serializabl
 	private static final long serialVersionUID = 1L;
 
 	
+	
+	@NotNull(groups = ValidationsGroups.ObraId.class)
 	@EqualsAndHashCode.Include
 	@JsonProperty("codigo_obra")
 	private Integer codigo;

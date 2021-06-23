@@ -1,8 +1,7 @@
 package net.ufjnet.gestaoobra.models;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -42,7 +41,10 @@ public class Item implements Serializable {
 	
 
 	@OneToMany(mappedBy = "item")
-	private List<SubItem> subitens = new ArrayList<>();
+	private Set<SubItem> subitens;
+	
+	@OneToMany(mappedBy = "item")
+	private Set<Lancamento> lancamentos;
 	
 	
 	public Item(Integer codigo, String descricao, String complemento) {

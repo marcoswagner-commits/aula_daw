@@ -27,20 +27,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import net.ufjnet.gestaoobra.dtos.SubItemDTO;
-import net.ufjnet.gestaoobra.services.GestaoSubItem;
+import net.ufjnet.gestaoobra.dtos.LancamentoDTO;
+import net.ufjnet.gestaoobra.services.GestaoLancamento;
 
 @RestController
-@RequestMapping("/v1/gto/subitens")
-@Tag(name = "Endpoint de subitem")
-public class SubItemController {
+@RequestMapping("/v1/gto/lancamentos")
+@Tag(name = "Endpoint de lancamento")
+public class LancamentoController {
 	
 	@Autowired
-	private GestaoSubItem service;
+	private GestaoLancamento service;
 	
 	@GetMapping
-	@Operation(summary = "Busca todos os subitens")
-	public ResponseEntity<CollectionModel<SubItemDTO>> buscarTodos(
+	@Operation(summary = "Busca todos os lançamentos")
+	public ResponseEntity<CollectionModel<LancamentoDTO>> buscarTodos(
 				@RequestParam(value="page", defaultValue = "0") int page,
 				@RequestParam(value="limit", defaultValue = "12") int limit,
 				@RequestParam(value="direction", defaultValue = "asc") String direction) {
@@ -50,11 +50,11 @@ public class SubItemController {
 			
 			Pageable pageable = PageRequest.of(page, limit, Sort.by(sortDirection, "descricao"));
 			
-			Page<SubItemDTO> pages = service.findAll(pageable);
+			Page<LancamentoDTO> pages = service.findAll(pageable);
 			pages
 				.stream()
 				.forEach(p -> p.add(
-						linkTo(methodOn(SubItemController.class).buscarUm(p.getCodigo())).withSelfRel()
+						linkTo(methodOn(LancamentoController.class).buscarUm(p.getCodigo())).withSelfRel()
 					)
 				);
 		  	
@@ -66,36 +66,36 @@ public class SubItemController {
 	
 	
 	@GetMapping("/{id}")
-	@Operation(summary = "Busca um subitem por id")
-	public ResponseEntity<SubItemDTO> buscarUm(@PathVariable Integer id) {
-			SubItemDTO objDTO = service.findById(id);
-			objDTO.add(linkTo(methodOn(SubItemController.class).buscarUm(id)).withSelfRel());
+	@Operation(summary = "Busca um lançamento por id")
+	public ResponseEntity<LancamentoDTO> buscarUm(@PathVariable Integer id) {
+			LancamentoDTO objDTO = service.findById(id);
+			objDTO.add(linkTo(methodOn(LancamentoController.class).buscarUm(id)).withSelfRel());
 			return ResponseEntity.ok(objDTO);
 		}	
 
 		
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
-	@Operation(summary = "Insere um novo subitem")
-	public ResponseEntity<SubItemDTO> incluir(@Valid @RequestBody SubItemDTO objBody) {
-		SubItemDTO objDTO = service.save(objBody);
-		objDTO.add(linkTo(methodOn(SubItemController.class).buscarUm(objDTO.getCodigo())).withSelfRel());
+	@Operation(summary = "Insere um novo lançamento")
+	public ResponseEntity<LancamentoDTO> incluir(@Valid @RequestBody LancamentoDTO objBody) {
+		LancamentoDTO objDTO = service.save(objBody);
+		objDTO.add(linkTo(methodOn(LancamentoController.class).buscarUm(objDTO.getCodigo())).withSelfRel());
 		return ResponseEntity.ok(objDTO);
 	}
 
 	@PutMapping
-	@Operation(summary = "Atualiza um subitem")
-	public ResponseEntity<SubItemDTO> atualizar(@RequestBody SubItemDTO objBody) {
+	@Operation(summary = "Atualiza um lançamento")
+	public ResponseEntity<LancamentoDTO> atualizar(@RequestBody LancamentoDTO objBody) {
 		
-		SubItemDTO objDTO = service.update(objBody);
-		objDTO.add(linkTo(methodOn(SubItemController.class).buscarUm(objDTO.getCodigo())).withSelfRel());
+		LancamentoDTO objDTO = service.update(objBody);
+		objDTO.add(linkTo(methodOn(LancamentoController.class).buscarUm(objDTO.getCodigo())).withSelfRel());
 		return ResponseEntity.ok(objDTO);
 	}	
 	
 
 
 	@DeleteMapping("/{id}")
-	@Operation(summary = "Exclui um subitem por id")
+	@Operation(summary = "Exclui um lançamento por id")
 	public ResponseEntity<Void> excluir(@PathVariable Integer id) {
 		if (!service.existById(id)) {
 			return ResponseEntity.notFound().build();
