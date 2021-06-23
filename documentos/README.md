@@ -179,4 +179,6 @@ Passos:
 - [Roteiro específico da Aula14 - 08/07/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula14.md)
 - Roteiro específico da Aula de Apresentação de Trabalho  - 13/07/2021 * (Avaliação do Backend - fase 1) *
 - Roteiro específico da Aula de Projeto de Prática - 15/07/2021 * (Projeto de Prática em Desenvolvimento de Aplicações WEB) *
+- [Roteiro específico da Aula15 - 03/08/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula15.md)
+- [Roteiro específico da Aula16 - 05/08/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula16.md)
 
