@@ -9,7 +9,7 @@
 
 ## :+1: Implementação do Modelo Conceitual Gestão de Obras - Vínculos entre Classes/Entidades - Criação do Contexto Lançamento
 
-![Relação entre Lancamento - Obras - Item - SubItem](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/0c6016346d60abc8fc93f74d83e9e4c0d90fcbee/documentos/item_subitem.png)
+![Relação entre Lancamento - Obras - Item - SubItem](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/f99cca49fd5da210b29f6561a20e5a33c65a049d/documentos/modelo-conceitual-completo.png)
 
 ### Passo 1: Criar a classe de lançamento
 - [x] Método de Produtividade BackEnd
