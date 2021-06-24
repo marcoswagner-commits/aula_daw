@@ -9,7 +9,6 @@
 
 ## :+1: Implementação do Modelo Conceitual Gestão de Obras - Testes e Povoamento de Dados; Autenticação com JWT e Spring Security
 
-![Relação entre Lancamento - Usuário e Permissões](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/bf5d7c17f9f1096d18524edf67596225abc4e149/documentos/User_Permissions.png)
 
 ### Passo 1: Testes, povoamento e buscas agrupadas
 - [x] Povoar a tabela de itens
@@ -23,6 +22,8 @@
   - Inserir método no GestaoLancamento
   - Inserir método no LancamentoController
 - [x] Códigos atualizados (métodos inseridos) - [códigos atualizados](#código-atualizado)
+
+![Relação entre Lancamento - Usuário e Permissões](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/bf5d7c17f9f1096d18524edf67596225abc4e149/documentos/User_Permissions.png)
 
 ### Passo 2: Criar as relações de usuários e permissões
 - [x] Adicionar dependência para o jwt.io (Acessar https://jwt.io e https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt)
@@ -49,16 +50,23 @@
 ### Código atualizado
 
 ```
-//========================= Permission - Model
+//========================= TotalItemDTO
 
 
-//========================= User - Model
+//========================= TotalSubItemDTO
 
 
+//========================= LancamentoDAO
+
+
+//========================= GestaoLancamento
+
+
+//========================= LancamentoController
 
 
 ```
-[voltar](#passo-1-criar-a-classe-de-lançamento)
+[voltar](#passo-1-testes-povoamento-e-buscas-agrupadas)
 
 ### Código Final
 
