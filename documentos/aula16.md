@@ -1,6 +1,6 @@
 # Aula 16 - Desenvolvimento de Aplicações WEB
 
-> 
+> Aula 05/08/2021
 > 
 >  * Estudo de caso: Gestão de Obras *
 
@@ -45,6 +45,9 @@
 🥈:[![material complementar aula14](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/453a8d1cfb45bc3b0c35c4df91cbe8e8dc89b540/documentos/Capa_Aula16.png)](https://www.youtube.com/watch?v=omG0xcaolp4)
 -
 🥉:[![material complementar aula14](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/453a8d1cfb45bc3b0c35c4df91cbe8e8dc89b540/documentos/Capa_Aula16.png)](https://www.youtube.com/watch?v=yx7FlCdwapE)
+-
+🥉:[![material complementar aula14](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/453a8d1cfb45bc3b0c35c4df91cbe8e8dc89b540/documentos/Capa_Aula16.png)](https://www.youtube.com/watch?v=rKxBzE0Z83o)
+
 
 
 ### Código atualizado
