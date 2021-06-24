@@ -42,22 +42,10 @@
   - Anotar o atributo chave_secreta com @Value("${security.jwt.token.secret-key:segredo}")
   - Anotar o atributo tempo_validade com @Value("${security.jwt.token.expire-lenght:3600000}")
   - Injetar a classe UserDetailsService
-  - Criar um método init (@PostConstruct)
-- [x] Criar a interface de UserDAO
-  - Criar uma assinatura para busca do username usando uma JPQL   
-- [x] Criar a classe GestaoUsers (services)
-  - Implementar a Interface UserDetailsService
-  - Fazer o vínculo com o UserDAO
-  - Criar um método para busca de userName
-- [x] Criar um pacote Security
-  - Criar uma classe ContaDTO com username e password
-- [x] Criar uma classe AutenticacaoException (similar a BusinessExecption)
-  - Anotar com @ResponseStatus(HttpStatus.BAD_REQUEST)
-  - Incluir herança (extends) para AuthenticationException
-  - Incluir um construtor
-- [x] Atualizar a classe ExceptionHandler com a classe AutenticacaoException
-  - Criar o método AutenticacaoException
- - [ ] [códigos de usuário e permissões](#código-final)
+  - Criar um método init (@PostConstruct) e "encodar" o secretkey
+  - Criar um método "createToken" para fazer a certificação "Claims", vincular as "roles" e estabelecer a duração do token
+  - Criar um método para autenticar o token (Authentication) / Gerar um método getUserName
+  - Acessar a página https://io.jwt
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
