@@ -45,7 +45,7 @@
   - Criar um método init (@PostConstruct) e "encodar" o secretkey
   - Criar um método "createToken" para fazer a certificação "Claims", vincular as "roles" e estabelecer a duração do token
   - Criar um método para autenticar o token (Authentication) / Gerar um método getUserName
-  - Acessar a página https://io.jwt
+  - Acessar a página https://jwt.io
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
