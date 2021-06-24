@@ -3,6 +3,8 @@ package net.ufjnet.gestaoobra.controllers;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +30,7 @@ import org.springframework.web.bind.annotation.RestController;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import net.ufjnet.gestaoobra.dtos.LancamentoDTO;
+import net.ufjnet.gestaoobra.dtos.TotalItemDTO;
 import net.ufjnet.gestaoobra.services.GestaoLancamento;
 
 @RestController
@@ -74,6 +77,13 @@ public class LancamentoController {
 		}	
 
 		
+	@GetMapping("/total-por-item")
+	@Operation(summary = "Busca um total de itens agrupados por valor")
+	public ResponseEntity<List<TotalItemDTO>> totalItem() {
+			List<TotalItemDTO> result = service.totalItem();
+			return ResponseEntity.ok(result);
+		}	
+	
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	@Operation(summary = "Insere um novo lançamento")
