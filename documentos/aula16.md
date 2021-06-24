@@ -83,5 +83,5 @@
 [voltar](#passo-1-criar-a-classe-de-lançamento)
 
 
-### Passo 2: Atualizar o github com os códigos atuais (camada com obras)
+### Passo 3: Atualizar o github com os códigos atuais (camada com obras)
 
