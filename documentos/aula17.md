@@ -67,14 +67,14 @@
 ```
 [voltar](#passo-1-criar-as-relações-de-usuários-e-permissões)
 
-### Código Final
+### Código JwtTokenProvider
 
 ```
 
 
 
 ```
-[voltar](#passo-2-criar-as-relações-de-usuários-e-permissões)
+[voltar](#passo-2-criar-jwt---jwttokenprovider)
 
 
 ### Passo 3: Atualizar o github com os códigos atuais (camada com obras)
