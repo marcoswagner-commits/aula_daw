@@ -25,11 +25,11 @@
   - Criar um método para busca de userName
 - [x] Criar um pacote Security
   - Criar uma classe ContaDTO com username e password
-- [x] Criar uma classe AutenticacaoException (similar a BusinessException)
+- [x] Criar uma classe InvalidAuthenticationException (similar a BusinessException)
   - Anotar com @ResponseStatus(HttpStatus.BAD_REQUEST)
   - Incluir herança (extends) para AuthenticationException
   - Incluir um construtor
-- [x] Atualizar a classe ExceptionHandler com a classe AutenticacaoException
+- [x] Atualizar a classe ExceptionHandler com a classe InvalidAuthenticationException
   - Criar o método AutenticacaoException
  - [ ] [códigos de users e permissions](#código-atualizado)
 
