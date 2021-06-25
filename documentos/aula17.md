@@ -58,7 +58,7 @@
 - [x] Criar no pacote JWT a classe JwtTokenConfigure
   - Criar um construtor
   - Criar um método configure
-- [x] Criar na classe SecurityConfig (pacote Config) dois métodos (passwordEncoder e authenticationManagerBean)
+- [x] Criar na classe SecurityConfig (pacote Config) dois métodos (passwordEncoder e authenticationManagerBean) - [vide códigos](#código-config)
   - Criar os dois métodos
   - Configurar o método existente "configure"
 - [ ] [código do JwtTokenFilter](#código-jwttokenfilter)
@@ -551,6 +551,35 @@ public class JwtConfigurer extends SecurityConfigurerAdapter<DefaultSecurityFilt
 
 [voltar](#passo-3-criar-jwt---jwttokenfilter-e-jwttokenconfigure)
 
+### Código Config
+```
+@Bean
+	public BCryptPasswordEncoder passwordEncoder() {
+		BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
+		return bCryptPasswordEncoder;
+	}
+	
+	@Bean
+	@Override
+	public AuthenticationManager authenticationManagerBean() throws Exception {
+		return super.authenticationManagerBean();
+	}
+	
+	protected void configure(HttpSecurity http) throws Exception {
+		http
+			.httpBasic().disable()
+			.csrf().disable()
+			.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+			.and()
+				.authorizeRequests()
+				.antMatchers("/autentica/assinatura", "/api-docs/**", "/swagger-ui.html**").permitAll()
+				.antMatchers("/v1/gto/**").authenticated()
+				.antMatchers("/users").denyAll()
+			.and()
+			.apply(new JwtConfigurer(tokenProvider));
+	}
+```
+[voltar](#passo-3-criar-jwt---jwttokenfilter-e-jwttokenconfigure)
 
 ### Código AutenticaController
 ```
