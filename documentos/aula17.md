@@ -48,7 +48,7 @@
   - Criar um método resolveToken para retornar um "bearerToken" com "Header" "Authorization"
   - Criar um método para validar o token (validateToken)
   - Acessar a página https://jwt.io
- - [ ] [códigos de users e permissions](#código-jwttokenprovider)
+ - [ ] [código do JwtTokenProvider](#código-jwttokenprovider)
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
