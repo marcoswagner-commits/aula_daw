@@ -517,7 +517,7 @@ public class JwtTokenFilter extends GenericFilterBean {
 
 }
 ```
-[voltar](#passo-2-criar-jwt---jwttokentilter-e-jwttokenconfigure)
+[voltar](#passo-3-criar-jwt---jwttokenfilter-e-jwttokenconfigure)
 
 
 ### Código JwtTokenConfigurer
@@ -546,7 +546,7 @@ public class JwtConfigurer extends SecurityConfigurerAdapter<DefaultSecurityFilt
 }
 ```
 
-[voltar](#passo-2-criar-jwt---jwttokentilter-e-jwttokenconfigure)
+[voltar](#passo-3-criar-jwt---jwttokenfilter-e-jwttokenconfigure)
 
 
 ### Código AutenticaController
