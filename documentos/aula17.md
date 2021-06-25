@@ -45,6 +45,8 @@
   - Criar um método init (@PostConstruct) e "encodar" o secretkey
   - Criar um método "createToken" para fazer a certificação "Claims", vincular as "roles" e estabelecer a duração do token
   - Criar um método para autenticar o token (Authentication) / Gerar um método getUserName
+  - Criar um método resolveToken para retornar um "bearerToken" com "Header" "Authorization"
+  - Criar um método para validar o token (validateToken)
   - Acessar a página https://jwt.io
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
@@ -60,19 +62,6 @@
 ### Código atualizado
 
 ```
-//========================= TotalItemDTO
-
-
-//========================= TotalSubItemDTO
-
-
-//========================= LancamentoDAO
-
-
-//========================= GestaoLancamento
-
-
-//========================= LancamentoController
 
 
 ```
@@ -81,11 +70,6 @@
 ### Código Final
 
 ```
-//========================= Permission - Model
-
-
-//========================= User - Model
-
 
 
 
