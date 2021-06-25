@@ -31,7 +31,7 @@
   - Incluir um construtor
 - [x] Atualizar a classe ExceptionHandler com a classe AutenticacaoException
   - Criar o método AutenticacaoException
- - [ ] [códigos de usuário e permissões](#código-final)
+ - [ ] [códigos de users e permissions](#código-atualizado)
 
 
 ### Passo 2: Criar JWT - JwtTokenProvider
