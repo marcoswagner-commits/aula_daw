@@ -81,7 +81,7 @@
 -
 🥉:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/453a8d1cfb45bc3b0c35c4df91cbe8e8dc89b540/documentos/Capa_Aula16.png)](https://www.youtube.com/watch?v=iFb8IW3WsA0)
 -
-🥉:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/453a8d1cfb45bc3b0c35c4df91cbe8e8dc89b540/documentos/Capa_Aula16.png)](https://www.youtube.com/watch?v=iFb8IW3WsA0)
+🥉:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/453a8d1cfb45bc3b0c35c4df91cbe8e8dc89b540/documentos/Capa_Aula16.png)](https://www.youtube.com/watch?v=ej04SL61UOQ)
 
 
 ### Código atualizado
@@ -583,10 +583,12 @@ public class JwtConfigurer extends SecurityConfigurerAdapter<DefaultSecurityFilt
 
 ### Código AutenticaController
 ```
-import static org.springframework.http.ResponseEntity.ok;
+package net.ufjnet.gestaoobra.controllers;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import static org.springframework.http.ResponseEntity.ok;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -600,17 +602,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.ufj.bcc.data.model.Usuario;
-import br.ufj.bcc.repository.UsuarioRepository;
-import br.ufj.bcc.security.AccountCredentialsVO;
-import br.ufj.bcc.security.jwt.JwtTokenProvider;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import net.ufjnet.gestaoobra.models.User;
+import net.ufjnet.gestaoobra.repositories.UserDAO;
+import net.ufjnet.gestaoobra.security.UserDTO;
+import net.ufjnet.gestaoobra.security.jwt.JwtTokenProvider;
 
 @Tag(name = "Autenticação Endpoint") 
 @RestController
 @RequestMapping("/autentica")
-public class AuthController {
+public class AutenticaController {
 	
 	@Autowired
 	AuthenticationManager authenticationManager;
@@ -623,7 +625,7 @@ public class AuthController {
 	
 	@Operation(summary = "Autentica um usuário e retorna um token")
 	@PostMapping(value = "/assinatura")
-	public ResponseEntity signin(@RequestBody UserDTO objDTO) {
+	public ResponseEntity<?> assina(@RequestBody UserDTO objDTO) {
 		try {
 			
 			String username = objDTO.getUsername();
@@ -633,7 +635,7 @@ public class AuthController {
 			System.out.println(username+" - "+password);
 			System.out.println("/1/");
 			
-			User obj = dao.findByLogin(username);
+			User obj = dao.findByUsername(username);
 			obj.setAccountNonExpired(true);
 			obj.setAccountNonLocked(true);
 			obj.setCredentialsNonExpired(true);
@@ -648,7 +650,7 @@ public class AuthController {
 			}
 			
 			System.out.println("/2/");
-			System.out.println(obj.getAccountNonLocked());
+			System.out.println(obj.isAccountNonLocked());
 			System.out.println("/2/");
 			
 			UsernamePasswordAuthenticationToken tok = new UsernamePasswordAuthenticationToken(username, password);
@@ -670,6 +672,8 @@ public class AuthController {
 		}
 	}
 }
+
+
 ```
 
 [voltar](#passo-4-criar-o-método-autenticacontroller)
