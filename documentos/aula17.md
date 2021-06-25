@@ -62,13 +62,14 @@
   - Criar os dois métodos
   - Configurar o método existente "configure"
 - [ ] [código do JwtTokenFilter](#código-jwttokenfilter)
-- [ ] [código do JwtTokenConfigure](#código-jwttokenconfigure)
+- [ ] [código do JwtTokenConfigure](#código-jwttokenconfigurer)
 
 ### Passo 4: Criar o método AutenticaController
 - [x] Injetar AuthenticationManager
 - [x] Injetar JwtTokenProvider
 - [x] Injetar UserDAO
 - [x] Criar o único método (assinar) com anotação @PostMapping
+- [ ] Criar classe UsernameNotFoundException
 - [ ] [código do AutenticaController](#código-autenticaController)
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
@@ -577,7 +578,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 
 @Tag(name = "Autenticação Endpoint") 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/autentica")
 public class AuthController {
 	
 	@Autowired
@@ -587,23 +588,21 @@ public class AuthController {
 	JwtTokenProvider tokenProvider;
 	
 	@Autowired
-	UsuarioRepository repository;
+	UserDAO dao;
 	
 	@Operation(summary = "Autentica um usuário e retorna um token")
-	@SuppressWarnings("rawtypes")
-	@PostMapping(value = "/signin", produces = { "application/json", "application/xml", "application/x-yaml" }, 
-			consumes = { "application/json", "application/xml", "application/x-yaml" })
-	public ResponseEntity signin(@RequestBody AccountCredentialsVO data) {
+	@PostMapping(value = "/assinatura")
+	public ResponseEntity signin(@RequestBody UserDTO objDTO) {
 		try {
 			
-			String username = data.getUsername();
-			String password = data.getPassword();
+			String username = objDTO.getUsername();
+			String password = objDTO.getPassword();
 			
 			System.out.println("/1/");
 			System.out.println(username+" - "+password);
 			System.out.println("/1/");
 			
-			Usuario obj = repository.findByLogin(username);
+			User obj = dao.findByLogin(username);
 			obj.setAccountNonExpired(true);
 			obj.setAccountNonLocked(true);
 			obj.setCredentialsNonExpired(true);
@@ -642,7 +641,17 @@ public class AuthController {
 }
 ```
 
-[voltar](#passo-3-criar-jwt---jwttokentilter-e-jwttokenconfigure)
+[voltar](#passo-4-criar-jwt---jwttokentilter-e-jwttokenconfigure)
+
+
+- Bônus - gerador de senha criptografada
+```
+BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder(16);
+		String result = bCryptPasswordEncoder.encode("admin123");
+		System.out.println("My hash " + result);
+
+```
+
 
 ### Passo 5: Atualizar o github com os códigos atuais (JwtToken completo)
 
