@@ -19,13 +19,13 @@
 - [x] Verificar a criação das tabelas no Banco de Dados
 - [x] Criar a interface de UserDAO
   - Criar uma assinatura para busca do username usando uma JPQL   
-- [x] Criar a classe GestaoUsers (services)
+- [x] Criar a classe GestaoUser (services)
   - Implementar a Interface UserDetailsService
   - Fazer o vínculo com o UserDAO
   - Criar um método para busca de userName
 - [x] Criar um pacote Security
   - Criar uma classe ContaDTO com username e password
-- [x] Criar uma classe AutenticacaoException (similar a BusinessExecption)
+- [x] Criar uma classe AutenticacaoException (similar a BusinessException)
   - Anotar com @ResponseStatus(HttpStatus.BAD_REQUEST)
   - Incluir herança (extends) para AuthenticationException
   - Incluir um construtor
