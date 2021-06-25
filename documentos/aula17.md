@@ -641,7 +641,7 @@ public class AuthController {
 }
 ```
 
-[voltar](#passo-4-criar-jwt---jwttokentilter-e-jwttokenconfigure)
+[voltar](#passo-4-criar-o-método-autenticacontroller)
 
 
 - Bônus - gerador de senha criptografada
