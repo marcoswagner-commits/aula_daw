@@ -30,7 +30,7 @@
   - Incluir herança (extends) para AuthenticationException
   - Incluir um construtor
 - [x] Atualizar a classe ExceptionHandler com a classe InvalidAuthenticationException
-  - Criar o método AutenticacaoException
+  - Criar o método InvalidAuthenticationException
  - [ ] [códigos de users e permissions](#código-atualizado)
 
 
