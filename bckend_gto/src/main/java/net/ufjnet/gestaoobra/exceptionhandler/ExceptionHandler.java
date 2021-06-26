@@ -20,6 +20,7 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 import net.ufjnet.gestaoobra.services.exceptions.BusinessException;
+import net.ufjnet.gestaoobra.services.exceptions.InvalidAuthenticationException;
 
 @ControllerAdvice
 public class ExceptionHandler extends ResponseEntityExceptionHandler {
@@ -53,7 +54,15 @@ public class ExceptionHandler extends ResponseEntityExceptionHandler {
 		
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(erro);
 	}
-			
+	
+	@org.springframework.web.bind.annotation.ExceptionHandler(InvalidAuthenticationException.class)
+	public ResponseEntity<StandardError> InvalidAuthenticationException (InvalidAuthenticationException ex) {
+		StandardError erro = new StandardError(HttpStatus.BAD_REQUEST.value(),
+			LocalDateTime.now(),ex.getMessage(),null);
+		
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(erro);
+		//return new ResponseEntity<>(StandardError, HttpStatus.BAD_REQUEST);
+	}
 	
 
 }
