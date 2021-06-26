@@ -248,6 +248,6 @@ public ResponseEntity<Void> excluir(@PathVariable Integer id) {
 	
 
 
-
+```
 
 ### Passo 3: Atualizar o github com os códigos atuais (hateoas)
