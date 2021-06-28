@@ -25,15 +25,14 @@ import net.ufjnet.gestaoobra.services.exceptions.InvalidAuthenticationException;
 @Service
 public class JwtTokenProvider {
 	
-	@Value("${security.jwt.token.secret-key:segredo}")
-	private String chaveSecreta = "segredo";
+	@Value("${security.jwt.token.secret-key:gto_obras_sec01}")
+	private String chaveSecreta = "gto_obras_sec01";
 	
-	@Value("${security.jwt.token.expire-lenght:3600000}")
-	private long tempoValidade = 3600000;
-
+	@Value("${security.jwt.token.expire-length:3600000}")
+	private long tempoValidade = 3600000; //1h
 	
 	@Autowired
-	private UserDetailsService userDetaisService;
+	private UserDetailsService userDetailsService;
 	
 	@PostConstruct
 	protected void init() {
@@ -45,7 +44,6 @@ public class JwtTokenProvider {
 		claims.put("roles", roles);
 		
 		Date agora = new Date();
-		 
 		Date validade = new Date(agora.getTime() + tempoValidade);
 		
 		return Jwts.builder()
@@ -56,12 +54,11 @@ public class JwtTokenProvider {
 				.compact();
 	}
 	
-	
 	public Authentication getAuthentication(String token) {
-		UserDetails userDetails = this.userDetaisService.loadUserByUsername(getUsername(token));
-		return new UsernamePasswordAuthenticationToken(userDetails, "",userDetails.getAuthorities());
+		UserDetails userDetails = this.userDetailsService.loadUserByUsername(getUsername(token));
+		return new UsernamePasswordAuthenticationToken(userDetails, "", userDetails.getAuthorities());
 	}
-	
+
 	private String getUsername(String token) {
 		return Jwts.parser().setSigningKey(chaveSecreta).parseClaimsJws(token).getBody().getSubject();
 	}
@@ -70,8 +67,7 @@ public class JwtTokenProvider {
 		String bearerToken = req.getHeader("Authorization");
 		if (bearerToken != null && bearerToken.startsWith("Bearer ")) {
 			return bearerToken.substring(7, bearerToken.length());
-			//Bearer KJDKAJFLKAJFLKAJSLKFJALKSJFKLJASKLJFKJASLKFJKLA
-		}
+		}		
 		return null;
 	}
 	
@@ -81,11 +77,11 @@ public class JwtTokenProvider {
 			if (claims.getBody().getExpiration().before(new Date())) {
 				return false;
 			}
-			
-		  return true;	
-		} catch (JwtException | IllegalArgumentException ex) {
-			throw new InvalidAuthenticationException("Token é inválido ou expirado!");
+			return true;
+		} catch (JwtException | IllegalArgumentException e) {
+			throw new InvalidAuthenticationException("JWT Token expirado ou inválido");
 		}
 	}
-	
+
 }
+

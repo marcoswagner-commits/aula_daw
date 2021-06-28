@@ -21,6 +21,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 import net.ufjnet.gestaoobra.services.exceptions.BusinessException;
 import net.ufjnet.gestaoobra.services.exceptions.InvalidAuthenticationException;
+import net.ufjnet.gestaoobra.services.exceptions.UsernameNotFoundException;
 
 @ControllerAdvice
 public class ExceptionHandler extends ResponseEntityExceptionHandler {
@@ -64,5 +65,13 @@ public class ExceptionHandler extends ResponseEntityExceptionHandler {
 		//return new ResponseEntity<>(StandardError, HttpStatus.BAD_REQUEST);
 	}
 	
+	@org.springframework.web.bind.annotation.ExceptionHandler(UsernameNotFoundException.class)
+	public ResponseEntity<StandardError> UsernameNotFoundException (UsernameNotFoundException ex) {
+		StandardError erro = new StandardError(HttpStatus.BAD_REQUEST.value(),
+			LocalDateTime.now(),ex.getMessage(),null);
+		
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(erro);
+		//return new ResponseEntity<>(StandardError, HttpStatus.BAD_REQUEST);
+	}
 
 }

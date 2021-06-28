@@ -17,6 +17,9 @@ public class GestaoProprietario {
 	
 	private ProprietarioDAO dao;
 	
+	private EnviarMailService email;
+
+	
 	
 	@Transactional(readOnly = true)
 	public Page<ProprietarioDTO> findAll(Pageable pageable) {
@@ -97,6 +100,13 @@ public class GestaoProprietario {
 		
 		if (emailExists) {
 			throw new BusinessException("E-mail já existente!");
+		}
+		
+		try {
+			String textoMail = "Informamos que seus dados foram cadastrados no sistema Gestão de Obras";
+			email.enviar(entity.getEmail(), "Cadastro Efetuado!", textoMail);
+		} catch (Exception e) {
+			throw new BusinessException("Erro no envio do e-mail!");
 		}
 		
 		

@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -29,11 +28,11 @@ public class User implements UserDetails, Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
+	@Column(name = "id_user")
 	private Integer id;
 	
-	@Column(name = "user_name", unique = true)
-	private String userName;
+	@Column(name = "username", unique = true)
+	private String username;
 	
 	private String fullName;
 		
@@ -50,7 +49,7 @@ public class User implements UserDetails, Serializable {
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "user_permission", joinColumns = @JoinColumn (name = "id_user"),
 	                   inverseJoinColumns = @JoinColumn (name = "id_permission"))
-	private Set<Permission> permissions;
+	private List<Permission> permissions = new ArrayList<>(); 
 	
 	public List<String> getRoles() {
 		List<String> roles = new ArrayList<>();
@@ -73,7 +72,7 @@ public class User implements UserDetails, Serializable {
 
 	@Override
 	public String getUsername() {
-		return this.userName;
+		return this.username;
 	}
 	
 	public String getFullName() {
@@ -101,7 +100,7 @@ public class User implements UserDetails, Serializable {
 	}
 
 	
-	public Set<Permission> getPermissions() {
+	public List<Permission> getPermissions() {
 		return permissions;
 	}
 
@@ -111,8 +110,8 @@ public class User implements UserDetails, Serializable {
 	}
 
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUsername(String userName) {
+		this.username = userName;
 	}
 
 
@@ -146,7 +145,7 @@ public class User implements UserDetails, Serializable {
 	}
 
 
-	public void setPermissions(Set<Permission> permissions) {
+	public void setPermissions(List<Permission> permissions) {
 		this.permissions = permissions;
 	}
 
