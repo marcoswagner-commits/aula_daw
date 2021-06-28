@@ -15,7 +15,7 @@
 - [x] Criar a classe PermissionDAO
   - Criar duas permissões (ADMIN e USUARIO)
   - Criar dois usuários
-- [x] Povoar as duas classes/tabelas por meio do CommandLinerRunner
+- [x] Povoar as duas classes/tabelas por meio do CommandLineRunner
 - [x] Colocar o bcript para gerar as senhas
 - [x] Alterar no pacote Config a classe ConfigSecurity para aceitar qualquer acesso
 - [x] Criar um método temporário para consulta de usuários e verificação de senhas no Controller
@@ -33,25 +33,14 @@
 ![JWT](https://user-images.githubusercontent.com/81576640/123691376-ef01d480-d82b-11eb-998c-7507fccddcbf.png)
 
 ### Passo 3: Implementar o envio de e-mails
-- [x] Criar no pacote JWT a classe JwtTokenFilter
-  - Criar um construtor
+- [x] Inserir a dependência spring-boot-starter-mail
+- [x] Inserir a configuração de e-mail no arquivo application.properties
+- [x] Criar uma classe EnviarMailService no pacote Services
+  - Criar um método "enviar" com parâmetros (destinatário, assunto e conteúdo)
   - Criar um método doFilter
-- [x] Criar no pacote JWT a classe JwtTokenConfigure
-  - Criar um construtor
-  - Criar um método configure
-- [x] Criar na classe SecurityConfig (pacote Config) dois métodos (passwordEncoder e authenticationManagerBean) - [vide códigos](#código-config)
-  - Criar os dois métodos
-  - Configurar o método existente "configure"
-- [ ] [código do JwtTokenFilter](#código-jwttokenfilter)
-- [ ] [código do JwtTokenConfigure](#código-jwttokenconfigurer)
 
-### Passo 4: Criar o método AutenticaController
-- [x] Injetar AuthenticationManager
-- [x] Injetar JwtTokenProvider
-- [x] Injetar UserDAO
-- [x] Criar o único método (assinar) com anotação @PostMapping
-- [ ] Criar classe UsernameNotFoundException
-- [ ] [código do AutenticaController](#código-autenticaController)
+- [ ] [código do EnviarMailService](#código-enviarmailservice)
+
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
@@ -63,6 +52,31 @@
 🥉:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/453a8d1cfb45bc3b0c35c4df91cbe8e8dc89b540/documentos/Capa_Aula16.png)](https://www.youtube.com/watch?v=p35mSdb9BaQ)
 -
 🥉:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/453a8d1cfb45bc3b0c35c4df91cbe8e8dc89b540/documentos/Capa_Aula16.png)](https://www.youtube.com/watch?v=ej04SL61UOQ)
+
+
+
+```
+<dependency>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-mail</artifactId>
+</dependency>
+
+```
+
+```
+spring.mail.host=smtps.uhserver.com
+spring.mail.port=993
+spring.mail.protocol=smtp
+spring.mail.username=noreply@ufjnet.net
+spring.mail.password=????
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+spring.mail.properties.mail.smtp.starttls.required=true
+spring.mail.properties.mail.smtp.quitwait=false 
+
+
+```
+
 
 
 ### Código atualizado
