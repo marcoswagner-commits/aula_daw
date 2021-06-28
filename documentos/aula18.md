@@ -17,7 +17,7 @@
   - Criar dois usuários
 - [x] Povoar as duas classes/tabelas por meio do CommandLinerRunner
 - [x] Colocar o bcript para gerar as senhas
-- [x] Alterar no pacote Config a classe ConfigSecurity para aceitar qualquer aceso
+- [x] Alterar no pacote Config a classe ConfigSecurity para aceitar qualquer acesso
 - [x] Criar um método temporário para consulta de usuários e verificação de senhas no Controller
   
  - [ ] [códigos de users e permissions](#código-atualizado)
