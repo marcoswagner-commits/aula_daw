@@ -546,8 +546,6 @@ public class EnviarMailService {
 }
 
 ```
-[voltar](#passo-3-criar-jwt---jwttokenfilter-e-jwttokenconfigure)
-
 
 ### Código GestaoProprietario
 ```
@@ -584,7 +582,7 @@ public class EnviarMailService {
 	}
 ```
 
-[voltar](#passo-3-criar-jwt---jwttokenfilter-e-jwttokenconfigure)
+[voltar](#passo-3-implementar-o-envio-de-e-mails)
 
 
 
