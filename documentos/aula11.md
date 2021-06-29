@@ -9,6 +9,8 @@
 
 ## :+1: Implementação do Modelo Conceitual - Níveis de Maturidade de Richardson - HATEOAS
 
+- [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
+
 ### Passo 1: Analisar e adequar a arquitetura REST
 - [x] Verificar os níveis de maturidade da API em relação ao REST
 - [x] Implantar o modelo (nível 3) HATEOAS
