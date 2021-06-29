@@ -167,6 +167,7 @@ Passos:
 - [Roteiro específico da Aula03 - 25/05/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula03.md)
 - [Roteiro específico da Aula04 - 27/05/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula04.md)
 - Roteiro específico da Aula de Apresentação do Modelo Conceitual  - 13/07/2021 * (Apresentação do Backend - fase 1) *
+-  //////////////////////////// INÍCIO DO BACK-END ///////////////////////////////////////////////////////
 - [Roteiro específico da Aula05 - 08/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula05.md)
 - [Roteiro específico da Aula06 - 10/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula06.md)
 - [Roteiro específico da Aula07 - 15/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula07.md)
@@ -181,4 +182,19 @@ Passos:
 - Roteiro específico da Aula de Projeto de Prática - 15/07/2021 * (Projeto de Prática em Desenvolvimento de Aplicações WEB) *
 - [Roteiro específico da Aula15 - 03/08/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula15.md)
 - [Roteiro específico da Aula16 - 05/08/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula16.md)
+- [Roteiro específico da Aula17 - 10/08/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula17.md)
+- [Roteiro específico da Aula18 - 12/08/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula18.md)
+- [Roteiro específico da Aula19 - 17/08/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula19.md)
+- [Roteiro específico da Aula20 - 19/08/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula20.md)
+- [Roteiro específico da Aula21 - 24/08/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula21.md)
+- Roteiro específico da Aula de Apresentação de Trabalho  - 26/08/2021 * (Avaliação do Backend - fase 2) *
+- //////////////////////////// INÍCIO DO FRONT-END ///////////////////////////////////////////////////////
+- [Roteiro específico da Aula22 - 31/08/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula22.md)
+- [Roteiro específico da Aula23 - 02/09/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula23.md)
+- [Roteiro específico da Aula24 - 09/09/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula24.md)
+- [Roteiro específico da Aula25 - 14/09/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula25.md)
+- [Roteiro específico da Aula26 - 16/09/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula26.md)
+- Roteiro específico da Aula de Apresentação de Trabalho  - 21/09/2021 * (Avaliação do FrontEnd com Integração) *
+- Roteiro específico da Aula de Projeto de Prática - 23/09/2021 * (Projeto de Prática em Desenvolvimento de Aplicações WEB) *
+
 
