@@ -22,10 +22,10 @@
 
 ### Passo 2: Criação de classes de exceções
 - [x] Criar uma classe de exceção chamada FileStorageException no pacote services.exceptions (exceção genérica)
-  - Atribuir como status de erro o INTERNAL_SERVER_ERROR como
+  - Atribuir como status de erro o INTERNAL_SERVER_ERROR
   - Criar um outro construtor padrão do atualmente já usado com o parâmetro Throwable (cause)
 - [x] Criar uma classe de exceção chamada MyFileNotFoundException no pacote services.exceptions (exceção específica)
-  - Atribuir como status de erro o NOT_FOUND como
+  - Atribuir como status de erro o NOT_FOUND 
   - Criar um outro construtor padrão do atualmente já usado com o parâmetro Throwable (cause)
     - Obs.: criar a segunda classe a partir da primeira 
 
