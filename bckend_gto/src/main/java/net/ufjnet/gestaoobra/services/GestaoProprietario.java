@@ -25,8 +25,6 @@ public class GestaoProprietario {
 	public Page<ProprietarioDTO> findAll(Pageable pageable) {
 		Page<Proprietario> result = dao.findAll(pageable);
 		return result.map(obj -> new ProprietarioDTO(obj));
-				
-		
 	}
 	
 	
