@@ -49,7 +49,7 @@ if (responseCode.code >= 200 && responseCode.code <= 299) {
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
 
-🥇:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/db3670d54bce719e7aee041c942fb02283f44c20/documentos/Capa_aula19.png)](https://www.youtube.com/watch?v=qYucvg6Co8c)
+🥇:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/db3670d54bce719e7aee041c942fb02283f44c20/documentos/Capa_aula19.png)](https://www.youtube.com/watch?v=i_riVI00bog)
 -
 🥈:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/db3670d54bce719e7aee041c942fb02283f44c20/documentos/Capa_aula19.png)](https://www.youtube.com/watch?v=KIihqiDyssc)
 -
