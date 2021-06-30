@@ -45,13 +45,13 @@
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
 
-🥇:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/453a8d1cfb45bc3b0c35c4df91cbe8e8dc89b540/documentos/Capa_Aula16.png)](https://www.youtube.com/watch?v=FFVQ0pzuh6c)
+🥇:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/eb9f46d7962f489d95258c05ba8a237a7951f950/documentos/Capa_aula18.png)](https://www.youtube.com/watch?v=FFVQ0pzuh6c)
 -
-🥈:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/453a8d1cfb45bc3b0c35c4df91cbe8e8dc89b540/documentos/Capa_Aula16.png)](https://www.youtube.com/watch?v=inLcdThy9YM)
+🥈:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/eb9f46d7962f489d95258c05ba8a237a7951f950/documentos/Capa_aula18.png)](https://www.youtube.com/watch?v=inLcdThy9YM)
 -
-🥉:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/453a8d1cfb45bc3b0c35c4df91cbe8e8dc89b540/documentos/Capa_Aula16.png)](https://www.youtube.com/watch?v=p35mSdb9BaQ)
+🥉:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/eb9f46d7962f489d95258c05ba8a237a7951f950/documentos/Capa_aula18.png)](https://www.youtube.com/watch?v=p35mSdb9BaQ)
 -
-🥉:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/453a8d1cfb45bc3b0c35c4df91cbe8e8dc89b540/documentos/Capa_Aula16.png)](https://www.youtube.com/watch?v=Gim5AAmYOEE)
+🥉:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/eb9f46d7962f489d95258c05ba8a237a7951f950/documentos/Capa_aula18.png)](https://www.youtube.com/watch?v=Gim5AAmYOEE)
 
 
 
