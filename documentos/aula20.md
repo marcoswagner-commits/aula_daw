@@ -24,34 +24,24 @@
   - Usar o logger para mostrar informações na estrutura de tratamento de erros
   
 
-### Passo 3: Criação de classes de Representação do Modelo e Serviços
-- [x] Criar uma classe de representação (DTO) para upload de arquivos (UploadFileResponseDTO)
-  - Criar os atributos fileName (string), fileDownloadUri (string), fileType (string), size (long)
-  - Usar lombok para Getters/Setters, Construtores, Equals e HashCode
-- [x] Criar uma classe de serviços  para upload de arquivos (FileStorageService)
-  - Anotação @Service
-  - Injetar a classe que foi no pacote config (FileStorageConfig)
-  - criar um atributo que armazenará o caminho o arquivo (private final Path fileStorageLocation) - java.nio.file.Path
-  - Associar o "fileStorageLocation" com o caminho que está no application.properties
-    - Paths.get(fileStorageConfig.getUploadDir()).toAbsolutePath().normalize();
-    - Criar um try-catch com a tentativa de criar o diretório (Files.createDirectories(this.fileStorageLocation) e lançar uma exceção
-      - Mensagem: "não foi possível criar o diretório" - Exception: FileStorageException
-  - Criar um método StoreFile com parâmetro MultiPartFile
-    - Criar um atributo para armazenar o caminho
-    - Usar estrutura try-catch para verificar e validar o arquivo
-    - Gravar o arquivo:
-      - (Path targetLocation = this.fileStorageLocation.resolve(fileName);
-      - Files.copy(file.getInputStream(),targetLocation,StandardCopyOption.REPLACE_EXISTING)
+### Passo 3: Automatização do registro do token no PostMan
+- [x] Criar um environment no PostMan para Armazenar o token (atualizar o existente)
+  - Criar em "tests" um script para automatização do armazenamento do token
+  - Colocar o valor (value) com a variável 
+
+```
+if (responseCode.code >= 200 && responseCode.code <= 299) {
+	var jsonData = JSON.parse(responseBody);
+	postman.setEnvironmentVariable('beare_token',jsonData.token);
+
+```
+
  
- 
- ### Passo 4: Criação de classes de Controladores
-- [x] Criar uma classe FileController
-  - Anotação @RequestMapping("v1/gto/file")
- 
-  - Injeção de FileStorageService
-  - Criar um método uploadFile (@PostMapping("/uploadFile")
-    - Receber como parâmetro (@RequestParam) o arquivo (MultipartFile) 
-    - Criar estrutura do download do arquivo
+ ### Passo 4: Demonstrar o uso do e-mail
+- [x] Verificar o envio do e-mail no cadastro de "Proprietários"
+- [ ] Adicionar o envio do e-mail na atualização de "Proprietários"
+
+
 
 - [ ] [códigos finais](#código-final)
 
@@ -65,20 +55,7 @@
 -
 🥉:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/db3670d54bce719e7aee041c942fb02283f44c20/documentos/Capa_aula19.png)](https://www.youtube.com/watch?v=i5awBWZLCfU)
 
-```
-# habilitar o spring servelet multipart
-spring.servlet.multipart.enabled=true
-# tamanho da memória usada para armazenar o arquivo - a partir o armazenamento é em disco
-spring.servlet.multipart.file-size.threshold=2KB
-# tamanho máximo do arquivo
-spring.servlet.multipart.max-file-size=200MB
-# tamanho máximo da requisição 
-spring.servlet.multipart.max-request-size=215MB
 
-# diretório de armazenamento do arquivo em upload
-file.upload-dir=/arquivos/gestaoobras/uploaddir 
-
-```
 
 
 ### Códigos
