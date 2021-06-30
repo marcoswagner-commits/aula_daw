@@ -51,7 +51,7 @@ if (responseCode.code >= 200 && responseCode.code <= 299) {
 
 🥇:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/db3670d54bce719e7aee041c942fb02283f44c20/documentos/Capa_aula19.png)](https://www.youtube.com/watch?v=i_riVI00bog)
 -
-🥈:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/db3670d54bce719e7aee041c942fb02283f44c20/documentos/Capa_aula19.png)](https://www.youtube.com/watch?v=KIihqiDyssc)
+🥈:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/db3670d54bce719e7aee041c942fb02283f44c20/documentos/Capa_aula19.png)](https://www.youtube.com/watch?v=JtezFJapvx8)
 -
 🥉:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/db3670d54bce719e7aee041c942fb02283f44c20/documentos/Capa_aula19.png)](https://www.youtube.com/watch?v=i5awBWZLCfU)
 
