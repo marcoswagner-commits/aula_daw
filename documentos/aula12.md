@@ -95,6 +95,7 @@ spring.jpa.show-sql= true
 - [x] Criar o arquivo "application-prod.properties"
 - [x] Alterar o arquivo "application.properties" para permitir a adequação de acordo o local da aplicação (local ou remoto)
 - [x] Criar o arquivo system.properties na raiz do projeto
+- [x] Criar o arquivo Procfile
 - [x] Dar um commit de homologação "homolog"
 - [x] Criar app no Heroku (gestao_obras_daw) - Obs.: Criar conta e baixar CLI do Heroku
 - [x] Provisionar o MySQL no Heroku - Opção Resources - ClearDB MySql
@@ -127,6 +128,14 @@ spring.datasource.url=${DATABASE_URL}
 java.runtime.version=11
 
 ```
+
+✏️ Arquivo Procfile
+```
+web: java -Dserver.port=$PORT -Dspring.profiles.active=prod $JAVA_OPTS -jar target/bckend_gto_pll-0.0.1-SNAPSHOT.jar
+
+```
+
+
 
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
