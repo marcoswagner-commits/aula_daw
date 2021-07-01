@@ -34,7 +34,7 @@
 
 ✏️ Anotações necessários para descrição dos endpoints e controladores
 ```
-@Tag(name = "Aluno Endpoint") 
+@Tag(name = "Endpoint de Proprietário") 
 
 @Operation(summary = "Busca todos os proprietários")
 @Operation(summary = "Busca um proprietário por id")
