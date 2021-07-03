@@ -151,6 +151,11 @@ mysql://b7fc9869d3ec93:5bcc7802@us-cdbr-east-04.cleardb.com/heroku_f9275ed471331
 
 mysql --host=us-cdbr-east-04.cleardb.com --user=b7fc9869d3ec93 --password=5bcc7802 heroku_f9275ed4713318c < arquivo-gto.sql
 
+Pode ser necessário fazer as seguintes alterações por conta dos Default Charset e Default Collation:
+trocar: utf8mb4_0900_ai_ci por utf8_general_ci
+trocar: utf8mb4 por utf8
+
+
 ```
 
 
