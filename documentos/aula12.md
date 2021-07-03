@@ -135,6 +135,23 @@ web: java -Dserver.port=$PORT -Dspring.profiles.active=prod $JAVA_OPTS -jar targ
 
 ```
 
+✏️ MySQL no terminal - importando arquivo SQL
+```
+exportar:
+mysqldump -u "username" -p "solicitará senha" "database" > nome_arquivo.sql
+mysqldump -u root -p gestao_obra_pll > arquivo-gto.sql
+
+mysql --host="host" --user="username" --password="password" --reconect "database" < arquivo.sql
+
+Estrutura da url do banco no Heroku:
+mysql://username:password@host/database?reconnect=true
+
+exemplo:
+mysql://b7fc9869d3ec93:5bcc7802@us-cdbr-east-04.cleardb.com/heroku_f9275ed4713318c?reconnect=true
+
+mysql --host=us-cdbr-east-04.cleardb.com --user=b7fc9869d3ec93 --password=5bcc7802 heroku_f9275ed4713318c < arquivo-gto.sql
+
+```
 
 
 
