@@ -131,6 +131,8 @@ java.runtime.version=11
 
 ✏️ Arquivo Procfile
 ```
+# -Dserver.port define que porta padrão será a definida pela "nuvem", neste caso o heroku
+# -Dspring.profiles define o arquivo que terá informação da aplicação, neste caso o application-prod.properties
 web: java -Dserver.port=$PORT -Dspring.profiles.active=prod $JAVA_OPTS -jar target/bckend_gto_pll-0.0.1-SNAPSHOT.jar
 
 ```
