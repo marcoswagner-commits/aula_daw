@@ -156,10 +156,11 @@ web: java -Dserver.port=$PORT -Dspring.profiles.active=prod $JAVA_OPTS -jar targ
 ```
 heroku -v
 heroku login
-heroku git:remote -a gestao_obras_daw
+heroku git:remote -a gestao-obras-daw
 git remote -v
-git branch
-git subtree push --prefix bckend_gto_daw heroku origin
+git add .
+git commit -m "deploy no heroku"
+git subtree push --prefix bckend_gto_daw heroku main
 ```
 
 
