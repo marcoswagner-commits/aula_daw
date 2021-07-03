@@ -126,14 +126,6 @@ trocar: utf8mb4 por utf8
 
 ```
 
-```
-heroku -v
-heroku login
-heroku git:remote -a gestao_obras_daw
-git remote -v
-git branch
-git subtree push --prefix bckend_gto_daw heroku origin
-```
 
 
 ✏️ Arquivos application.properties e application-prod.properties
@@ -160,8 +152,15 @@ java.runtime.version=11
 web: java -Dserver.port=$PORT -Dspring.profiles.active=prod $JAVA_OPTS -jar target/bckend_gto_pll-0.0.1-SNAPSHOT.jar
 
 ```
-
-
+✏️ Subindo a aplicação para o Heroku
+```
+heroku -v
+heroku login
+heroku git:remote -a gestao_obras_daw
+git remote -v
+git branch
+git subtree push --prefix bckend_gto_daw heroku origin
+```
 
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
