@@ -108,7 +108,7 @@ heroku login
 heroku git:remote -a gestao_obras_daw
 git remote -v
 git branch
-git subtree push --prefix bckend_gto heroku codigos
+git subtree push --prefix bckend_gto_daw heroku origin
 ```
 
 
