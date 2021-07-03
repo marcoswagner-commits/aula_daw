@@ -281,6 +281,19 @@ public class MailException extends RuntimeException {
 
 ```
 
+- método "salvar" e "atualizar" em GestaoProprietarios
+
+```
+
+
+```
+
+- método "salvar" em GestaoObras
+
+```
+
+
+```
 
 
 
