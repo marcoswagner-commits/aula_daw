@@ -39,9 +39,26 @@ if (responseCode.code >= 200 && responseCode.code <= 299) {
  
  ### Passo 4: Demonstrar o uso do e-mail
 - [x] Verificar o envio do e-mail no cadastro de "Proprietários"
-- [ ] Adicionar o envio do e-mail na atualização de "Proprietários"
+- [x] Criar uma classe de tratamento de exceção para envio de e-mails
+- [x] Adicionar o envio do e-mail na atualização de "Proprietários"
 
 
+🅰️ - Configurações finais do application.properties
+```
+#configurações de e-mail
+spring.mail.default-encoding= UTF-8
+spring.mail.host= smtp.gmail.com
+spring.mail.port= 465
+spring.mail.username=  
+spring.mail.password= 
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.socketFactory.port= 465
+spring.mail.properties.mail.smtp.socketFactory.clas= javax.net.ssl.SSLSocketFactory
+spring.mail.properties.mail.smtp.socketFactory.fallback= false
+spring.mail.properties.mail.smtp.starttls.enable=true
+spring.mail.properties.mail.smtp.ssl.enable=true
+
+```
 
 - [ ] [códigos finais](#código-final)
 
@@ -59,116 +76,100 @@ if (responseCode.code >= 200 && responseCode.code <= 299) {
 
 
 ### Códigos
-- Atualização da classe principal
+- FileController
 ```
-@EnableAutoConfiguration
-@ComponentScan
-@SpringBootApplication
-@EnableConfigurationProperties({FileStorageConfig.class})
-public class BckendGtoApplication implements CommandLineRunner {
-...
+package net.ufjnet.gestaoobra.controllers;
 
-```
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
--  classe FileStorageConfig (na camada repositories)
-```
-package net.ufjnet.gestaoobra.config;
+import javax.servlet.http.HttpServletRequest;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.core.io.Resource;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
-@ConfigurationProperties(prefix= "file")
-public class FileStorageConfig {
-	
-	private String uploadDir;
-	
-
-}
-
-```
-- Classes de Exceções
-```
-package net.ufjnet.gestaoobra.services.exceptions;
-
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ResponseStatus;
-
-@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-public class FileStorageException extends RuntimeException {
-	private static final long serialVersionUID = 1L;
-	
-	public FileStorageException(String msg) {
-		super(msg);
-	}
-
-	public FileStorageException(String msg, Throwable cause) {
-		super(msg, cause);
-	}
-	
-}
-
-``` 
-
-
-
-```
-package net.ufjnet.gestaoobra.services.exceptions;
-
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ResponseStatus;
-
-@ResponseStatus(HttpStatus.NOT_FOUND)
-public class MyFileNotFoundException extends RuntimeException {
-	private static final long serialVersionUID = 1L;
-	
-	public MyFileNotFoundException(String msg) {
-		super(msg);
-	}
-
-	public MyFileNotFoundException(String msg, Throwable cause) {
-		super(msg, cause);
-	}
-	
-}
-```
-
--  classe UploadFileResponseDTO (na camada DTOs)
-```
-package net.ufjnet.gestaoobra.dtos;
-
-import java.io.Serializable;
-
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import net.ufjnet.gestaoobra.dtos.UploadFileResponseDTO;
+import net.ufjnet.gestaoobra.services.FileStorageService;
 
-@NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
-@EqualsAndHashCode(onlyExplicitlyIncluded = true, callSuper=false)
-public class UploadFileResponseDTO implements Serializable {
-	private static final long serialVersionUID = 1L;
-
+@RestController
+@RequestMapping("/v1/gto/file")
+@Tag(name = "Endpoint de Upload de Arquivos")
+public class FileController {
 	
-	private String fileName;
-	private String fileDownloadUri;
-	private String fileType;
-	private long size;
+	private static final Logger logger = LoggerFactory.getLogger(FileController.class);
 	
+	private FileStorageService fileStorageService;
+	
+	@PostMapping("/uploadfile")
+	public UploadFileResponseDTO uploadFile(@RequestParam("file") MultipartFile file) {
+		String fileName = fileStorageService.storeFile(file);
 		
+		
+		String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
+				.path("/v1/gto/file/downloadFile/")
+				.path(fileName)
+				.toUriString();
+		
+		return new UploadFileResponseDTO(fileName, fileDownloadUri, file.getContentType(), file.getSize() );
+		
+				
+	}
+	
+	@PostMapping("/uploadNfiles")
+	public List<UploadFileResponseDTO> UploadMultipleFiles(@RequestParam("files") MultipartFile[] files) {
+		return Arrays.asList(files)
+				.stream()
+				.map(file -> uploadFile(file))
+				.collect(Collectors.toList());
+		
+	}
+	
+	@GetMapping("/downloadFile/{fileName:.+}")
+	public ResponseEntity<Resource> downloadFile(@PathVariable String fileName, HttpServletRequest request) {
+		
+		Resource resource = fileStorageService.loadFileAsResource(fileName);
+		
+		String contentType = null;
+		
+		try {
+			contentType = request.getServletContext().getMimeType(resource.getFile().getAbsolutePath());
+		} catch (Exception e) {
+			logger.info("Não foi possível determinar o tipo do arquivo!");
+		}
+		
+		if (contentType == null) {
+			contentType = "application/octet-stream";
+		}
+		
+		return ResponseEntity.ok()
+				.contentType(MediaType.parseMediaType(contentType))
+				.header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + resource.getFilename() + "\"")
+				.body(resource);
+		
+	}
+
 }
 
 
 ```
 
--  classe FileStorageService (na camada Services)
+-  classe FileStorageService
 ```
 package net.ufjnet.gestaoobra.services;
 
@@ -178,12 +179,15 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import net.ufjnet.gestaoobra.config.FileStorageConfig;
 import net.ufjnet.gestaoobra.services.exceptions.FileStorageException;
+import net.ufjnet.gestaoobra.services.exceptions.MyFileNotFoundException;
 
 @Service
 public class FileStorageService {
@@ -218,57 +222,67 @@ public class FileStorageService {
 		}
 	}
 	
+	public Resource loadFileAsResource(String fileName) {
+		
+		try {
+			Path filePath = this.fileStorageLocation.resolve(fileName).normalize();
+			Resource resource = new UrlResource(filePath.toUri());
+			if(resource.exists()) {
+				return resource;
+			} else {
+				throw new MyFileNotFoundException("Arquivo não encontrado: "+fileName+"!");
+			}
+		} catch (Exception e) {
+			throw new MyFileNotFoundException("Arquivo não encontrado: "+fileName+"!",e);
+		}
+		
+	}
+	
 }
 
 
-
 ```
-
--  classe FileController (na camada Controller)
+- Classe MailException
 ```
+package net.ufjnet.gestaoobra.services.exceptions;
 
-package net.ufjnet.gestaoobra.controllers;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
-import io.swagger.v3.oas.annotations.tags.Tag;
-import lombok.AllArgsConstructor;
-import net.ufjnet.gestaoobra.dtos.UploadFileResponseDTO;
-import net.ufjnet.gestaoobra.services.FileStorageService;
-
-@AllArgsConstructor
-@RestController
-@RequestMapping("/v1/gto/file")
-@Tag(name = "Endpoint de Upload de Arquivos")
-public class FileController {
+@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+public class MailException extends RuntimeException {
+	private static final long serialVersionUID = 1L;
 	
-	private FileStorageService fileStorageService;
 	
-	@PostMapping("/uploadfile")
-	public UploadFileResponseDTO uploadFile(@RequestParam("file") MultipartFile file) {
-		String fileName = fileStorageService.storeFile(file);
-		
-		
-		String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
-				.path("/v1/gto/file/downloadFile/")
-				.path(fileName)
-				.toUriString();
-		
-		return new UploadFileResponseDTO(fileName, fileDownloadUri, file.getContentType(), file.getSize() );
-		
-				
+	public MailException(String msg) {
+		super(msg);
+	}
+	
+	public MailException(String msg, Throwable cause) {
+		super(msg, cause);
 	}
 
 }
 
+``` 
+
+- método na classe ExceptionHandler
+
+```
+@org.springframework.web.bind.annotation.ExceptionHandler(MailException.class)
+	public ResponseEntity<StandardError> MailExceptionn (MailException ex) {
+		StandardError erro = new StandardError(HttpStatus.INTERNAL_SERVER_ERROR.value(),
+			LocalDateTime.now(),ex.getMessage()+ " - "+ex.getCause().getLocalizedMessage(),null);
+		
+		
+		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(erro);
+		//return new ResponseEntity<>(StandardError, HttpStatus.BAD_REQUEST);
+	}
 
 ```
 
 
-### Passo 5: Atualizar o github com os códigos atuais (Upload de arquivos)
+
+
+### Passo 4: Atualizar o github com os códigos atuais (Download de arquivos)
 
