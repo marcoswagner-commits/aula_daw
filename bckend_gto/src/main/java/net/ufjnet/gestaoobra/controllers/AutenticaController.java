@@ -28,7 +28,7 @@ import net.ufjnet.gestaoobra.security.jwt.JwtTokenProvider;
 
 @Tag(name = "Autenticação Endpoint") 
 @RestController
-@RequestMapping("/autentica")
+@RequestMapping("/auth")
 public class AutenticaController {
 	
 	@Autowired
@@ -48,7 +48,7 @@ public class AutenticaController {
 	}
 	
 	@Operation(summary = "Autentica um usuário e retorna um token")
-	@PostMapping(value = "/assinatura")
+	@PostMapping(value = "/login")
 	public ResponseEntity<?> assina(@RequestBody UserDTO objDTO) {
 		try {
 			

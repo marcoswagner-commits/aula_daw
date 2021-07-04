@@ -16,7 +16,7 @@ public class EnviarMailService {
 	public void enviar(String dest, String subj, String text) {
 		
 		SimpleMailMessage email = new SimpleMailMessage();
-		email.setFrom("noreply@ufjnet.ent");
+		email.setFrom("fabricaswufj@gmail.com");
 		email.setTo(dest);
 		email.setSubject(subj);
 		email.setText(text);

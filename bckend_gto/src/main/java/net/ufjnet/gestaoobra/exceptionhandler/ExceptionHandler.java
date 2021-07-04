@@ -21,6 +21,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 import net.ufjnet.gestaoobra.services.exceptions.BusinessException;
 import net.ufjnet.gestaoobra.services.exceptions.InvalidAuthenticationException;
+import net.ufjnet.gestaoobra.services.exceptions.MailException;
 import net.ufjnet.gestaoobra.services.exceptions.UsernameNotFoundException;
 
 @ControllerAdvice
@@ -49,29 +50,38 @@ public class ExceptionHandler extends ResponseEntityExceptionHandler {
 	}
 	
 	@org.springframework.web.bind.annotation.ExceptionHandler(BusinessException.class)
-	public ResponseEntity<StandardError> dataIntegrity (BusinessException ex) {
+	public ResponseEntity<StandardError> businessException (BusinessException ex) {
 		StandardError erro = new StandardError(HttpStatus.BAD_REQUEST.value(),
-			LocalDateTime.now(),ex.getMessage(),null);
+			LocalDateTime.now(),ex.getMessage()+ " - "+ex.getCause().getLocalizedMessage(),null);
 		
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(erro);
 	}
 	
 	@org.springframework.web.bind.annotation.ExceptionHandler(InvalidAuthenticationException.class)
-	public ResponseEntity<StandardError> InvalidAuthenticationException (InvalidAuthenticationException ex) {
+	public ResponseEntity<StandardError> invalidAuthenticationException (InvalidAuthenticationException ex) {
 		StandardError erro = new StandardError(HttpStatus.BAD_REQUEST.value(),
 			LocalDateTime.now(),ex.getMessage(),null);
 		
-		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(erro);
-		//return new ResponseEntity<>(StandardError, HttpStatus.BAD_REQUEST);
+		return new ResponseEntity<>(erro, HttpStatus.BAD_REQUEST);
 	}
 	
 	@org.springframework.web.bind.annotation.ExceptionHandler(UsernameNotFoundException.class)
-	public ResponseEntity<StandardError> UsernameNotFoundException (UsernameNotFoundException ex) {
+	public ResponseEntity<StandardError> usernameNotFoundException (UsernameNotFoundException ex) {
 		StandardError erro = new StandardError(HttpStatus.BAD_REQUEST.value(),
 			LocalDateTime.now(),ex.getMessage(),null);
 		
-		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(erro);
-		//return new ResponseEntity<>(StandardError, HttpStatus.BAD_REQUEST);
+		
+		return new ResponseEntity<>(erro, HttpStatus.BAD_REQUEST);
 	}
+	
+	@org.springframework.web.bind.annotation.ExceptionHandler(MailException.class)
+	public ResponseEntity<StandardError> mailException (MailException ex) {
+		StandardError erro = new StandardError(HttpStatus.INTERNAL_SERVER_ERROR.value(),
+			LocalDateTime.now(),ex.getMessage(),null);
+		
+		
+		return new ResponseEntity<>(erro, HttpStatus.INTERNAL_SERVER_ERROR);
+	}
+	
 
 }

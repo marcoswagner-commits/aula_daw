@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import net.ufjnet.gestaoobra.config.FileStorageConfig;
 import net.ufjnet.gestaoobra.models.Item;
@@ -68,12 +69,11 @@ public class BckendGtoApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
-		//BCryptPasswordEncoder bCrypt = new BCryptPasswordEncoder(16);
-		r1 = "123"; //bCrypt.encode("admin123");
-		r2 = "456"; //bCrypt.encode("user123");
+		BCryptPasswordEncoder bCrypt = new BCryptPasswordEncoder(16);
+		r1 = bCrypt.encode("admin123");
+		r2 = bCrypt.encode("user123");
 		
-		
-		
+				
 		Proprietario p1 = new Proprietario(1,"Marcos","123","marcoswagner@gmail.com");
 		Proprietario p2 = new Proprietario(2,"Jose","456","jose@gto");
 		Proprietario p3 = new Proprietario(3,"Maria","789","maria@gto");
