@@ -1,6 +1,6 @@
 # Aula 20 - Desenvolvimento de Aplicações WEB
 
-> 
+> Aula 17/08/2021
 > 
 >   Estudo de caso: Gestão de Obras 
 
@@ -32,7 +32,7 @@
 ```
 if (responseCode.code >= 200 && responseCode.code <= 299) {
 	var jsonData = JSON.parse(responseBody);
-	postman.setEnvironmentVariable('beare_token',jsonData.token);
+	postman.setEnvironmentVariable('bearer_token',jsonData.token);
 
 ```
 
@@ -70,7 +70,7 @@ spring.mail.properties.mail.smtp.ssl.enable=true
 -
 🥈:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/4f661048665df1d014740d1baf4eb93dfb66fbe0/documentos/Capa_aula20.png)](https://www.youtube.com/watch?v=JtezFJapvx8)
 -
-🥉:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/4f661048665df1d014740d1baf4eb93dfb66fbe0/documentos/Capa_aula20.png)](https://www.youtube.com/watch?v=i5awBWZLCfU)
+🥉:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/4f661048665df1d014740d1baf4eb93dfb66fbe0/documentos/Capa_aula20.png)](https://www.youtube.com/watch?v=MOn_yvN6D0o)
 
 
 
@@ -284,18 +284,63 @@ public class MailException extends RuntimeException {
 - método "salvar" e "atualizar" em GestaoProprietarios
 
 ```
-
+@Transactional
+	public ProprietarioDTO update(ProprietarioDTO obj) {
+		Proprietario entity = dao.findById(obj.getCodigo())
+				.orElseThrow(() -> new BusinessException("Registros não encontrados!!!"));
+		
+		entity.setNome(obj.getNome());
+		entity.setCpf(obj.getCpf());
+		entity.setEmail(obj.getEmail());
+		
+		try {
+			String textoMail = "Informamos que seus dados foram ATUALIZADOS no sistema Gestão de Obras";
+			email.enviar(entity.getEmail(), "Cadastro ATUALIZADO!", textoMail);
+		} catch (Exception e) {
+			throw new MailException("Erro no envio do e-mail!", e);
+		}
+		
+		return new ProprietarioDTO(dao.save(entity));
+		
+		
+	}	
+	
+	
+	@Transactional
+	public ProprietarioDTO save(ProprietarioDTO obj) {
+		Proprietario entity = new Proprietario(obj.getCodigo(), obj.getNome(), obj.getCpf(), obj.getEmail());
+		
+		boolean cpfExists = dao.findByCpf(entity.getCpf())
+				.stream()
+				.anyMatch(objResult -> !objResult.equals(entity));
+		
+		if (cpfExists) {
+			throw new BusinessException("CPF já existente!");
+		}
+		
+		boolean emailExists = dao.findByEmail(entity.getEmail())
+				.stream()
+				.anyMatch(objResult -> !objResult.equals(entity));
+		
+		if (emailExists) {
+			throw new BusinessException("E-mail já existente!");
+		}
+		
+		try {
+			String textoMail = "Informamos que seus dados foram CADASTRADOS no sistema Gestão de Obras";
+			email.enviar(entity.getEmail(), "Cadastro Efetuado!", textoMail);
+		} catch (Exception e) {
+			throw new MailException("Erro no envio do e-mail!", e);
+		}
+		
+		
+		
+		return new ProprietarioDTO(dao.save(entity));
+	}
 
 ```
 
-- método "salvar" em GestaoObras
-
-```
 
 
-```
-
-
-
-### Passo 4: Atualizar o github com os códigos atuais (Download de arquivos)
+### Passo 5: Atualizar o github com os códigos atuais (Download de arquivos)
 
