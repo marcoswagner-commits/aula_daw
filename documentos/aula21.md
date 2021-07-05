@@ -57,7 +57,7 @@ Containers são os ambientes de execução do Docker, criados a partir de imagen
 🅰️
 ### Código do docker-compose.yml
 ```
-version: '3.4'
+version: '3.8'
 services:
   db:
     image: 18011973/mysql-bckend-gto
