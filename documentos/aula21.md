@@ -25,6 +25,7 @@
 - [x] Instalar o Docker Desktop (Command Line)
 - [ ] Alterar o arquivo application.properties (localhost => db) conforme o arquivo docker-compose.yml
 - [ ] Incluir na linha do url do banco de dados useSSL=false
+- [ ] Alterar senha conforme arquivo docker-compose.yml
   - Comandos: na pasta do arquivo docker-compose.yml 
     - docker-compose build
     - docker-compose up -d
