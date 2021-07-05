@@ -67,7 +67,7 @@ Containers são os ambientes de execução do Docker, criados a partir de imagen
 version: '3.8'
 services:
   db:
-    image: 18011973/mysql-bckend-gto
+    image: 18011973/mysql-bckendgto
     command: mysqld --default-authentication-plugin=mysql_native_password
     restart: always
     build:
@@ -84,15 +84,15 @@ services:
     networks:
       - ufjnet-network
   bckend-gto:
-    image: 18011973/bckend-gto
+    image: 18011973/bckendgto
     restart: always
-    build: ./bckend-gto
-    working_dir: /bckend_gto
+    build: ./bckendgto
+    working_dir: /bckendgto
     environment:
       TZ: America/Sao_Paulo
       SPRING_BOOT_ENVIRONMENT: Production
     volumes:
-      - ./bckend-gto:/bckend_gto
+      - ./bckendgto:/bckendgto
       - ~/.m2:/root/.m2
     ports:
       - "8080:8080"
