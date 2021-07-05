@@ -17,8 +17,8 @@
   - Múltiplos containers (API - BD) - Configurar manualmente ou - Usar o Docker Compose (ferramenta)
 - [x] Adicionando o suporte ao Docker
   - Fazer uma cópia da pasta do projeto (bckend_gto)
-  - Juntamente com a pasta do projeto crie dois arquivos: Dockerfile e docker-compose.yml
-  - Dentro da pasta do projeto crie um arquivo: Dockerfile
+  - Juntamente com a pasta do projeto crie dois arquivos: Dockerfile (opcional - banco de dados) e docker-compose.yml
+  - Dentro da pasta do projeto crie um arquivo: Dockerfile (aplicação)
 - [x] Executando a aplicação no DOCKER
   - Juntamente com a pasta do projeto crie dois arquivos: Dockerfile (para o banco de dados) e docker-compose.yml
   - Dentro da pasta do projeto crie também um arquivo com o mesmo nome: Dockerfile (para a aplicação) - vide conteúdos
@@ -56,7 +56,7 @@ Containers são os ambientes de execução do Docker, criados a partir de imagen
 🅰️
 ### Código do docker-compose.yml
 ```
-version: '3.4'
+version: '1.0'
 services:
   db:
     image: 18011973/mysql-bckend-gto
@@ -70,12 +70,12 @@ services:
       MYSQL_ROOT_PASSWORD: docker
       MYSQL_USER: docker
       MYSQL_PASSWORD: docker
-      MYSQL_DATABASE: bckend_gto
+      MYSQL_DATABASE: gestao_obra
     ports:
       - "3308:3306"
     networks:
       - ufjnet-network
-  rest-with-spring-boot-udemy:
+  bckend-gto:
     image: 18011973/bckend-gto
     restart: always
     build: ./bckend-gto
