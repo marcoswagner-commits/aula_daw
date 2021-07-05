@@ -13,7 +13,7 @@
 ### Passo 1: Definições e Ferramentas 
 - [x] Consumindo uma API com ReactJS
 - [ ] Noções Gerais sobre a arquitetura e o React
-- [ ] Instalação (Windows - Linux - Mac) - [Vide Códigos](#instalação)
+- [ ] Instalação (Linux - Mac) - [Vide Códigos](#instalação)
 - [ ] Criando o Projeto do Front-End juntamente com o Back-End existente em monorepositório
 
 
