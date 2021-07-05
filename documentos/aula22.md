@@ -11,11 +11,12 @@
 
 
 ### Passo 1: Definições e Ferramentas 
-- [x] 
+- [x] Consumindo uma API com ReactJS
+- [ ] Noções Gerais sobre o React
 
 
 
-
+- [](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/c263030eb4d8f6573fe98f64d9a158ea38da6548/documentos/front-end-org.png)
 [Um artigo sobre Docker](https://www.gta.ufrj.br/ensino/eel879/trabalhos_v1_2017_2/docker/containers.html)
 
 🅰️
