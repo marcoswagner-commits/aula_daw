@@ -77,7 +77,7 @@ services:
     networks:
       - ufjnet-network
   bckend-gto:
-    image: 18011973/bckend_gto
+    image: 18011973/bckend-gto
     restart: always
     build: ./bckend-gto
     working_dir: /bckend_gto
@@ -97,7 +97,7 @@ services:
     networks:
       - ufjnet-network
 networks:
-    udemy-network:
+    ufjnet-network:
         driver: bridge
 
 ```
