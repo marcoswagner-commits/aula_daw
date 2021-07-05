@@ -27,6 +27,9 @@
     - docker-compose up -d
     - docker ps
     - docker logs (container)
+    - docker images
+    - docker login docker.io
+    - docker push (nome_da_imagem)
   - Analisando a aplicação
   - Testando no Postman
 - [x] Criando uma conta Docker Hub
@@ -127,8 +130,4 @@ FROM maven:3.8.1-jdk-11
 🥇:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/4f661048665df1d014740d1baf4eb93dfb66fbe0/documentos/Capa_aula21.png)](https://www.youtube.com/watch?v=O4Mm6Pt5hoI)
 -
 🥈:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/4f661048665df1d014740d1baf4eb93dfb66fbe0/documentos/Capa_aula21.png)](https://www.youtube.com/watch?v=JtezFJapvx8)
--
-🥉:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/4f661048665df1d014740d1baf4eb93dfb66fbe0/documentos/Capa_aula21.png)](https://www.youtube.com/watch?v=MOn_yvN6D0o)
-
-
 
