@@ -29,23 +29,23 @@
 - [x] O que é o Docker Hub
 - [x] Enviando imagens para o DockerHub
   
-###Conceito:
-####Docker server e Docker Daemon
+### Conceito:
+#### Docker server e Docker Daemon
 
 A ideia por trás do Docker, como citado acima, é o fornecimento através da nuvem de containers. O Docker possui uma arquitetura de cliente-servidor, e tais containers são armazenados em um servidor, chamado de Docker host ou Docker server. O servidor do Docker é responsável por todas as ações relacionadas aos containers. O Docker daemon recebe comandos do cliente a partir de Command Line Interfaces ou API’s REST. O Docker host pode ser local ou remoto, e tem a capacidade de criar, iniciar, desligar e excluir vários containers, e pode oferecer para cada cliente um ou mais containers.
 
 
-####Imagens
+#### Imagens
 
 Imagens são arquivos que contém todo o conteúdo e estrutura de sistemas operacionais. Elas são a base de construção de containers no Docker. O servidor do Docker utiliza o AuFS, um file system em camadas que permite a separação do espaço do sistema em uma parte read-only e outra parte read/write. Dessa forma, clientes podem construir templates em cima da parte de escrevível, e estes templates terão todas as configurações desejadas do container a ser construído. Ao executar um container de um cliente, o Docker utiliza a imagem de sistema operacional escolhida como base, e numa camada superior executa as configurações escolhidas pelo cliente.
 
 
-####Registros do Docker
+#### Registros do Docker
 
 O Registro do Docker é uma espécie de repositório para imagens. Com esse registro, um usuário pode construir, salvar e distribuir imagens com outros. O site do Docker fornece um sistema de registro chamado Docker Hub, que funciona como um git, permitindo ao usuário que construa localmente suas imagens em sua máquina, e então realize operações de commit e push.
 
 
-####Containers
+#### Containers
 
 Containers são os ambientes de execução do Docker, criados a partir de imagens. De forma simplificada, é uma sandbox para processos. Uma imagem é como um template de classe, e containers seriam instâncias dessas classes(instanciados na uma camada escrevível da imagem).
 
