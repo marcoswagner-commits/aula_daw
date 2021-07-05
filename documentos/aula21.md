@@ -77,15 +77,15 @@ services:
     networks:
       - ufjnet-network
   bckend-gto:
-    image: 18011973/bckend-gto
+    image: 18011973/bckend_gto
     restart: always
     build: ./bckend-gto
-    working_dir: /bckend-gto
+    working_dir: /bckend_gto
     environment:
       TZ: America/Sao_Paulo
       SPRING_BOOT_ENVIRONMENT: Production
     volumes:
-      - ./bckend-gto:/bckend-gto
+      - ./bckend-gto:/bckend_gto
       - ~/.m2:/root/.m2
     ports:
       - "8080:8080"
