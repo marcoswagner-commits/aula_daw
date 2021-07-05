@@ -20,75 +20,147 @@
 
 
 ![Relação entre o Back-End e o Front-End](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cc080a27531053afe5f67f30a904a3789fb61481/documentos/back-front.png)
+
+
 ![Estrutura do Front-End](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/c263030eb4d8f6573fe98f64d9a158ea38da6548/documentos/front-end-org.png)
 
 
 
-
-[Um artigo sobre Docker](https://www.gta.ufrj.br/ensino/eel879/trabalhos_v1_2017_2/docker/containers.html)
-
 🅰️
-### Código do docker-compose.yml
+### Passo 1: criar projetos
+- Criar projeto ReactJS com `create-react-app`:
+```bash
+npx create-react-app frontend --template typescript
 ```
-version: '3.8'
-services:
-  db:
-    image: 18011973/mysql-bckendgto
-    command: mysqld --default-authentication-plugin=mysql_native_password
-    restart: always
-    build:
-      context: .
-      dockerfile: Dockerfile
-    environment:
-      TZ: America/Sao_Paulo
-      MYSQL_ROOT_PASSWORD: docker
-      MYSQL_USER: docker
-      MYSQL_PASSWORD: docker
-      MYSQL_DATABASE: gestao_obra
-    ports:
-      - "3308:3306"
-    networks:
-      - ufjnet-network
-  bckend-gto:
-    image: 18011973/bckendgto
-    restart: always
-    build: ./bckendgto
-    working_dir: /bckendgto
-    environment:
-      TZ: America/Sao_Paulo
-      SPRING_BOOT_ENVIRONMENT: Production
-    volumes:
-      - ./bckendgto:/bckendgto
-      - ~/.m2:/root/.m2
-    ports:
-      - "8080:8080"
-    command: mvn clean spring-boot:run
-    links:
-      - db
-    depends_on:
-      - db
-    networks:
-      - ufjnet-network
-networks:
-    ufjnet-network:
-        driver: bridge
+- *Lembrete: excluir repositório Git do projeto ReactJS*
+- Criar projeto Spring Boot no `Spring Initializr` com as seguintes dependências:
+  - Web
+  - JPA
+  - H2
+  - Postgres
+  - Security
+- Se tiver com erro no pom.xml, tentar:
+  - Botão direito no projeto -> Maven -> Update project (force update)
+  - Menu Project -> Clean
+  - Apagar pasta .m2 e deixar o STS refazer o download
+- **COMMIT: Project created**
 
-```
+- *Lembrete: ver extensões e arquivos ocultos*
+- Salvar o projeto no seu Github
+```bash
+git config --global user.name <seu nome>
+git config --global user.email <seu email>
 
-🅰️
-### Código do Dockerfile (externo - banco de dados)
-```
-FROM mysql:8.0.11
-EXPOSE 3308
-```
+git init
 
-🅰️
-### Código do Dockerfile (interno - aplicação)
-```
-FROM maven:3.8.1-jdk-11
+git add .
 
+git commit -m "Project created"
+
+git remote add origin <seu endereço>
+
+git push -u origin main
 ```
- 
+### Passo 2: "limpar" o projeto ReactJS
+- Limpar projeto ReactJS / tsconfig.json
+- Arquivo _redirects
+```
+/* /index.html 200
+```
+- **COMMIT: Project clean**
+### Passo 3: adicionar Bootstrap e CSS ao projeto
+- Bootstrap
+```
+yarn add bootstrap
+```
+```
+(index.tsx) import 'bootstrap/dist/css/bootstrap.css';
+```
+- Assets e CSS
+```css
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+:root {
+    --color-primary: #FF8400;
+}
+
+html, body {
+    height: 100%;
+    font-family: "Ubuntu", sans-serif;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.bg-primary {
+    background-color: var(--color-primary) !important;
+}
+
+.text-primary {
+    color: var(--color-primary) !important;
+}
+```
+```
+(index.tsx) import 'assets/css/styles.css';
+```
+- **COMMIT: Bootstrap**
+### Passo 4: adicionar componentes estáticos básicos
+- Navbar
+```html
+<div className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-light border-bottom shadow-sm">
+  <div className="container">
+    <nav className="my-2 my-md-0 mr-md-3">
+      <img src={ImgDsDark} alt="DevSuperior" width="120" />
+    </nav>
+  </div>
+</div>
+```
+- Footer
+```html
+<footer className="footer mt-auto py-3 bg-dark">
+  <div className="container">
+    <p className="text-light">App desenvolvido por <a href="https://github.com/acenelio" target="_blank" rel="noreferrer">Nelio Alves</a></p>
+    <p className="text-light"><small><strong>Semana Spring React</strong><br/>
+      Evento promovido pela escola DevSuperior: <a href="https://instagram.com/devsuperior.ig" target="_blank" rel="noreferrer">@devsuperior.ig</a></small></p>
+  </div>
+</footer>
+```
+- DataTable
+```html
+<div className="table-responsive">
+    <table className="table table-striped table-sm">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Vendedor</th>
+                <th>Clientes visitados</th>
+                <th>Negócios fechados</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>22/04/2021</td>
+                <td>Barry Allen</td>
+                <td>34</td>
+                <td>25</td>
+                <td>15017.00</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+```
 
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
