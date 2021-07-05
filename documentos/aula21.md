@@ -1,6 +1,6 @@
 # Aula 21 - Desenvolvimento de Aplicações WEB
 
-> Aula 19/08/2021
+> 
 > 
 >   Estudo de caso: Gestão de Obras 
 
@@ -23,10 +23,16 @@
   - Juntamente com a pasta do projeto crie dois arquivos: Dockerfile (para o banco de dados) e docker-compose.yml
   - Dentro da pasta do projeto crie também um arquivo com o mesmo nome: Dockerfile (para a aplicação) - vide conteúdos
 - [x] Instalar o Docker Desktop (Command Line)
-  - Comandos: na pasta do arquivo docker-compose.yml - docker-compose build
-- [x] Criando uma conta Docker Hub
+- [ ] Alterar o arquivo application.properties (localhost => db) conforme o arquivo docker-compose.yml
+- [ ] Incluir na linha do url do banco de dados useSSL=false
+  - Comandos: na pasta do arquivo docker-compose.yml 
+    - docker-compose build
+    - docker-compose up -d
+    - docker ps
+    - docker logs (container)
   - Analisando a aplicação
   - Testando no Postman
+- [x] Criando uma conta Docker Hub
 - [x] O que é o Docker Hub
 - [x] Enviando imagens para o DockerHub
   
@@ -118,26 +124,6 @@ FROM maven:3.8.1-jdk-11
  
 
 
-🅰️ - Configurações finais do application.properties
-```
-#configurações de e-mail
-spring.mail.default-encoding= UTF-8
-spring.mail.host= smtp.gmail.com
-spring.mail.port= 465
-spring.mail.username=  
-spring.mail.password= 
-spring.mail.properties.mail.smtp.auth=true
-spring.mail.properties.mail.smtp.socketFactory.port= 465
-spring.mail.properties.mail.smtp.socketFactory.clas= javax.net.ssl.SSLSocketFactory
-spring.mail.properties.mail.smtp.socketFactory.fallback= false
-spring.mail.properties.mail.smtp.starttls.enable=true
-spring.mail.properties.mail.smtp.ssl.enable=true
-
-```
-
-- [ ] [códigos finais](#códigos)
-
-
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
 
@@ -148,23 +134,4 @@ spring.mail.properties.mail.smtp.ssl.enable=true
 🥉:[![material complementar aula17](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/4f661048665df1d014740d1baf4eb93dfb66fbe0/documentos/Capa_aula21.png)](https://www.youtube.com/watch?v=MOn_yvN6D0o)
 
 
-
-
-### Códigos
-- FileController
-```
-
-
-```
-
--  classe FileStorageService
-```
-
-
-
-```
-
-
-
-### Passo 2: Atualizar o github com os códigos atuais (Docker)
 
