@@ -22,7 +22,8 @@
 - [x] Executando a aplicação no DOCKER
   - Juntamente com a pasta do projeto crie dois arquivos: Dockerfile (para o banco de dados) e docker-compose.yml
   - Dentro da pasta do projeto crie também um arquivo com o mesmo nome: Dockerfile (para a aplicação) - vide conteúdos
-- [x] Instalar o Docker Desktop (
+- [x] Instalar o Docker Desktop (Command Line)
+  - Comandos: na pasta do arquivo docker-compose.yml - docker-compose build
 - [x] Criando uma conta Docker Hub
   - Analisando a aplicação
   - Testando no Postman
