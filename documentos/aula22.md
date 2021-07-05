@@ -30,6 +30,12 @@
 ### Estrutura de Pastas do Projeto (monorepositório)
 ![Pastas do Projeto](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/fe5c2cc8a99cd618a16d1f43c0a6d133d321c865/pastas_projeto.png)
 
+### Estruturas de Comunicação
+![modelo_spa_front](https://user-images.githubusercontent.com/81576640/124515048-dad25000-ddb4-11eb-87b0-8e1c543e6ff6.png)
+
+![modelo_trad_front](https://user-images.githubusercontent.com/81576640/124515052-ddcd4080-ddb4-11eb-9df9-d2f3cc4d13e6.png)
+
+
 ### Relação entre o Back-End e o Front-End 
 ![Relação entre o Back-End e o Front-End](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cc080a27531053afe5f67f30a904a3789fb61481/documentos/back-front.png)
 
@@ -47,94 +53,7 @@
 ```
 yarn add bootstrap
 ```
-```
-(index.tsx) import 'bootstrap/dist/css/bootstrap.css';
-```
-- Assets e CSS
-```css
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
-:root {
-    --color-primary: #FF8400;
-}
 
-html, body {
-    height: 100%;
-    font-family: "Ubuntu", sans-serif;
-}
-
-#root {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.content {
-    flex: 1 0 auto;
-}
-
-.footer {
-    flex-shrink: 0;
-    text-align: center;
-}
-
-.bg-primary {
-    background-color: var(--color-primary) !important;
-}
-
-.text-primary {
-    color: var(--color-primary) !important;
-}
-```
-```
-(index.tsx) import 'assets/css/styles.css';
-```
-- **COMMIT: Bootstrap**
-### Passo 4: adicionar componentes estáticos básicos
-- Navbar
-```html
-<div className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-light border-bottom shadow-sm">
-  <div className="container">
-    <nav className="my-2 my-md-0 mr-md-3">
-      <img src={ImgDsDark} alt="DevSuperior" width="120" />
-    </nav>
-  </div>
-</div>
-```
-- Footer
-```html
-<footer className="footer mt-auto py-3 bg-dark">
-  <div className="container">
-    <p className="text-light">App desenvolvido por <a href="https://github.com/acenelio" target="_blank" rel="noreferrer">Nelio Alves</a></p>
-    <p className="text-light"><small><strong>Semana Spring React</strong><br/>
-      Evento promovido pela escola DevSuperior: <a href="https://instagram.com/devsuperior.ig" target="_blank" rel="noreferrer">@devsuperior.ig</a></small></p>
-  </div>
-</footer>
-```
-- DataTable
-```html
-<div className="table-responsive">
-    <table className="table table-striped table-sm">
-        <thead>
-            <tr>
-                <th>Data</th>
-                <th>Vendedor</th>
-                <th>Clientes visitados</th>
-                <th>Negócios fechados</th>
-                <th>Valor</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>22/04/2021</td>
-                <td>Barry Allen</td>
-                <td>34</td>
-                <td>25</td>
-                <td>15017.00</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-```
 
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
