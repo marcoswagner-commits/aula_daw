@@ -15,8 +15,18 @@
 - [ ] Noções Gerais sobre a arquitetura e o React
 - [ ] Instalação (Linux - Mac) - [Vide Códigos](#instalação)
 - [ ] Criando o Projeto do Front-End juntamente com o Back-End existente em monorepositório
-
-
+  - Criar projeto ReactJS com `create-react-app`:
+```bash
+npx create-react-app frtend-gto --template typescript
+```
+- *Lembrete: excluir repositório Git do projeto ReactJS*
+### Passo 2: "limpar" o projeto ReactJS
+- Limpar projeto ReactJS / tsconfig.json
+- Arquivo _redirects
+```
+/* /index.html 200
+```
+- **COMMIT: Project clean**
 
 
 ![Relação entre o Back-End e o Front-End](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cc080a27531053afe5f67f30a904a3789fb61481/documentos/back-front.png)
@@ -28,46 +38,8 @@
 
 🅰️
 ### Passo 1: criar projetos
-- Criar projeto ReactJS com `create-react-app`:
-```bash
-npx create-react-app frontend --template typescript
-```
-- *Lembrete: excluir repositório Git do projeto ReactJS*
-- Criar projeto Spring Boot no `Spring Initializr` com as seguintes dependências:
-  - Web
-  - JPA
-  - H2
-  - Postgres
-  - Security
-- Se tiver com erro no pom.xml, tentar:
-  - Botão direito no projeto -> Maven -> Update project (force update)
-  - Menu Project -> Clean
-  - Apagar pasta .m2 e deixar o STS refazer o download
-- **COMMIT: Project created**
 
-- *Lembrete: ver extensões e arquivos ocultos*
-- Salvar o projeto no seu Github
-```bash
-git config --global user.name <seu nome>
-git config --global user.email <seu email>
 
-git init
-
-git add .
-
-git commit -m "Project created"
-
-git remote add origin <seu endereço>
-
-git push -u origin main
-```
-### Passo 2: "limpar" o projeto ReactJS
-- Limpar projeto ReactJS / tsconfig.json
-- Arquivo _redirects
-```
-/* /index.html 200
-```
-- **COMMIT: Project clean**
 ### Passo 3: adicionar Bootstrap e CSS ao projeto
 - Bootstrap
 ```
