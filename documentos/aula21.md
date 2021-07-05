@@ -10,7 +10,7 @@
 ## :+1: Implementação do Modelo Conceitual Gestão de Obras - Suporte ao Docker
 
 
-### Passo 1: Upload de múltiplos arquivos
+### Passo 1: Suporte ao Docker
 - [x] O que é o Docker
   - Docker é um container - Empacotamento de uma aplicação - Configure uma vez = "Na minha máquina funciona" - Escolha a nuvem
 - [x] O que é o Docker Compose
