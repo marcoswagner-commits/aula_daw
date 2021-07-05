@@ -10,22 +10,21 @@
 ## :+1: Implementação do Modelo Conceitual Gestão de Obras - Construção do Front-End - React.Js
 
 
-### Passo 1: Definições e Ferramentas 
+### Passo 1: Definições, Ferramentas e Passos Iniciais 
 - [x] Consumindo uma API com ReactJS
 - [ ] Noções Gerais sobre a arquitetura e o React
 - [ ] Instalação (Linux - Mac) - [Vide Códigos](#instalação)
 - [ ] Criando o Projeto do Front-End juntamente com o Back-End existente em monorepositório
   - Criar projeto ReactJS com `create-react-app`:
-```bash
-npx create-react-app frtend-gto --template typescript
-```
-- *Lembrete: excluir repositório Git do projeto ReactJS*
-### Passo 2: "limpar" o projeto ReactJS
-- Limpar projeto ReactJS / tsconfig.json
-- Arquivo _redirects
-```
-/* /index.html 200
-```
+    ```bash
+    npx create-react-app frtend-gto --template typescript
+    ```
+> Lembrete: excluir repositório Git do projeto ReactJS
+  - Limpar projeto ReactJS / tsconfig.json
+      - Arquivo _redirects
+    ```
+    /* /index.html 200
+    ```
 - **COMMIT: Project clean**
 
 
