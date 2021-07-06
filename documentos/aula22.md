@@ -23,20 +23,21 @@
     ```bash
     npx create-react-app frtend-gto --template typescript
     ```
-> Lembrete: excluir repositório Git do projeto ReactJS
-  - Limpar projeto ReactJS / tsconfig.json
+> Lembrete: excluir repositório Git do projeto frtend-gto
+  - Limpar projeto frtend-gto / tsconfig.json
       - Arquivo _redirects
     ```
     /* /index.html 200
     ```
-- **COMMIT: Project clean**
+    
+### Passo 2: COMMIT: Project com front-end limpo
 
 ### Node.js
 Node.js é uma base (apesar de não ser um framework) de aplicação, pela qual são escritos programas com Javascript que serão compilados, otimizados e interpretados pela máquina virtual V8. Essa VM é a mesma que o Google utiliza para executar Javascript no browser Chrome, e foi a partir dela que o criador do Node.js, Ryan Dahl, criou o projeto. O resultado desse processo híbrido é entregue como código de máquina server-side, tornando o Node.js muito eficiente na sua execução e consumo de recursos.
 [Veja mais sobre Node.js neste artigo...](https://www.luiztools.com.br/post/o-que-e-nodejs-e-outras-5-duvidas-fundamentais/?utm_source=google&utm_medium=cpc&utm_campaign=902557428&utm_content=127000463008&utm_term=o%20que%20node%20js&gclid=CjwKCAjw_o-HBhAsEiwANqYhp34bPP2KF8u1U-UNM9UWWvJ_m5MiCDXAKwjrLeKSHN0EvVvJItXr_BoCVeoQAvD_BwE)
 
 ### NPM
-NPM (Node Package Manager) é um gerenciador de pacotes para JavaScript. É o gerenciador de pacotes padrão para ambiente Node.js do JavaScript. Consiste em um cliente de linha de comando (npm), e um banco de dados online de pacotes públicos e privados -pagos, chamado de registro NPM. O npm gera um arquivo ‘package-lock.json’. Cada dependência terá um número de versão exato associado a ela no arquivo de bloqueio de pacote. O NPM é nativo do Node.Js. Comandos: ``` npm install ???. npm init. npm run [script]. npm list. npm test. npm link. npm login # or logout. npm publish. ```
+NPM (Node Package Manager) é um gerenciador de pacotes para JavaScript. É o gerenciador de pacotes padrão para ambiente Node.js do JavaScript. Consiste em um cliente de linha de comando (npm), e um banco de dados online de pacotes públicos e privados -pagos, chamado de registro NPM. O npm gera um arquivo ‘package-lock.json’. Cada dependência terá um número de versão exato associado a ela no arquivo de bloqueio de pacote. O NPM é nativo do Node.Js. Comandos: ``` npm install ???. npm init. npm run [script]. npm list. npm test. npm link. npm login # or logout. npm publish. ```. Além do NPM também existe o NPX que é um executor de pacotes.
 
 ### YARN
 YARN (Yet Another Resource Negotiator) é um gerenciador de pacotes assim como o npm. Ele foi desenvolvido pelo Facebook e é de código aberto. A intenção do desenvolvimento do yarn era corrigir problemas de desempenho e segurança do npm. O YARN gera um yarn.lock. E possui uma leitura mais amigável. Para instalar o YARN: npm install yarn --global. Comandos: ``` yarn add ???. yarn why. yarn licenses list. yarn init. yarn run [script]. yarn list. yarn test. yarn link. yarn login # or logout. yarn publish```
