@@ -109,6 +109,7 @@ exportar:
 mysqldump -u "username" -p "solicitará senha" "database" > nome_arquivo.sql
 mysqldump -u root -p gestao_obra_pll > arquivo-gto.sql
 
+importar:
 mysql --host="host" --user="username" --password="password" --reconect "database" < arquivo.sql
 
 Estrutura da url do banco no Heroku:
