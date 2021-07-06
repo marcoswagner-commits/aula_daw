@@ -527,7 +527,7 @@ public class SubItemDTO extends RepresentationModel<SubItemDTO> implements Seria
 	
 	@NotNull
 	@Valid
-	@ConvertGroup(from = Default.class, to = ValidationsGroups.ProprietarioId.class)
+	@ConvertGroup(from = Default.class, to = ValidationsGroups.ItemId.class)
 	private ItemDTO item;
 	
 	public SubItemDTO (SubItem obj) {
@@ -859,6 +859,29 @@ public class SubItemController {
 }
 ```
 [voltar](#passo-2-criar-as-classes-de-item-e-subitem)
+
+
+```
+package net.ufjnet.gestaoobra.dtos;
+
+public interface ValidationsGroups {
+	
+	public interface ProprietarioId {
+		
+	}
+
+	public interface ObraId {
+		
+	}
+	
+	public interface ItemId {
+		
+	}
+	
+}
+
+```
+
 
 ### Passo 2: Atualizar o github com os códigos atuais (camada com obras)
 
