@@ -14,6 +14,8 @@
 - [x] Consumindo uma API com ReactJS
 - [ ] Noções Gerais sobre a arquitetura e o React
 - [ ] Instalação (Linux - Mac) - [Vide Códigos](#instalação)
+  - Node.Js (https://nodejs.org) é uma tecnologia assíncrona de requisições que trabalha em uma única thread de execução. [+](#nodejs)
+  - NPM (Node Package Manager - https://www.npmjs.com) é uma ferramentada do Node.Js para gerenciar pacotes. [+](#npm)
 - [ ] Criando o Projeto do Front-End juntamente com o Back-End existente em monorepositório
   - Criar projeto ReactJS com `create-react-app`:
     ```bash
@@ -26,6 +28,15 @@
     /* /index.html 200
     ```
 - **COMMIT: Project clean**
+
+### Node.js
+Node.js é uma base (apesar de não ser um framework) de aplicação, pela qual são escritos programas com Javascript que serão compilados, otimizados e interpretados pela máquina virtual V8. Essa VM é a mesma que o Google utiliza para executar Javascript no browser Chrome, e foi a partir dela que o criador do Node.js, Ryan Dahl, criou o projeto. O resultado desse processo híbrido é entregue como código de máquina server-side, tornando o Node.js muito eficiente na sua execução e consumo de recursos.
+[Veja mais sobre Node.js neste artigo...](https://www.luiztools.com.br/post/o-que-e-nodejs-e-outras-5-duvidas-fundamentais/?utm_source=google&utm_medium=cpc&utm_campaign=902557428&utm_content=127000463008&utm_term=o%20que%20node%20js&gclid=CjwKCAjw_o-HBhAsEiwANqYhp34bPP2KF8u1U-UNM9UWWvJ_m5MiCDXAKwjrLeKSHN0EvVvJItXr_BoCVeoQAvD_BwE)
+
+### NPM
+Node Package Manager é
+
+[Veja mais sobre Node.js neste artigo...](https://www.luiztools.com.br/post/o-que-e-nodejs-e-outras-5-duvidas-fundamentais/?utm_source=google&utm_medium=cpc&utm_campaign=902557428&utm_content=127000463008&utm_term=o%20que%20node%20js&gclid=CjwKCAjw_o-HBhAsEiwANqYhp34bPP2KF8u1U-UNM9UWWvJ_m5MiCDXAKwjrLeKSHN0EvVvJItXr_BoCVeoQAvD_BwE)
 
 ### Estrutura de Pastas do Projeto (monorepositório)
 ![Pastas do Projeto](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/fe5c2cc8a99cd618a16d1f43c0a6d133d321c865/pastas_projeto.png)
