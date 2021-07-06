@@ -16,6 +16,8 @@
 - [ ] Instalação (Linux - Mac) - [Vide Códigos](#instalação)
   - Node.Js (https://nodejs.org) é uma tecnologia assíncrona de requisições que trabalha em uma única thread de execução. [+](#nodejs)
   - NPM (Node Package Manager - https://www.npmjs.com) é uma ferramentada do Node.Js para gerenciar pacotes. [+](#npm)
+  - Yarn (Yet Another Resource Negociator - https://yarnpkg.com) também é um gerenciador de pacotes. [+](#yarn)
+  - Visual Studio Code (https://code.visualstudio.com/download) IDE leve e amplamente usada pela comunidade de programadores. [+](#visual-studio-code)
 - [ ] Criando o Projeto do Front-End juntamente com o Back-End existente em monorepositório
   - Criar projeto ReactJS com `create-react-app`:
     ```bash
@@ -34,11 +36,15 @@ Node.js é uma base (apesar de não ser um framework) de aplicação, pela qual 
 [Veja mais sobre Node.js neste artigo...](https://www.luiztools.com.br/post/o-que-e-nodejs-e-outras-5-duvidas-fundamentais/?utm_source=google&utm_medium=cpc&utm_campaign=902557428&utm_content=127000463008&utm_term=o%20que%20node%20js&gclid=CjwKCAjw_o-HBhAsEiwANqYhp34bPP2KF8u1U-UNM9UWWvJ_m5MiCDXAKwjrLeKSHN0EvVvJItXr_BoCVeoQAvD_BwE)
 
 ### NPM
-NPM (Node Package Manager) é um gerenciador de pacotes para JavaScript. É o gerenciador de pacotes padrão para ambiente Node.js do JavaScript. Consiste em um cliente de linha de comando (npm), e um banco de dados online de pacotes públicos e privados -pagos, chamado de registro NPM.
+NPM (Node Package Manager) é um gerenciador de pacotes para JavaScript. É o gerenciador de pacotes padrão para ambiente Node.js do JavaScript. Consiste em um cliente de linha de comando (npm), e um banco de dados online de pacotes públicos e privados -pagos, chamado de registro NPM. O npm gera um arquivo ‘package-lock.json’. Cada dependência terá um número de versão exato associado a ela no arquivo de bloqueio de pacote. O NPM é nativo do Node.Js. Comandos: ``` npm install ???. npm init. npm run [script]. npm list. npm test. npm link. npm login # or logout. npm publish. ```
 
 ### YARN
-YARN (Yet Another Resource Negotiator) é um gerenciador de pacotes assim como o npm. Ele foi desenvolvido pelo Facebook e é de código aberto. A intenção do desenvolvimento do yarn era corrigir problemas de desempenho e segurança do npm.
+YARN (Yet Another Resource Negotiator) é um gerenciador de pacotes assim como o npm. Ele foi desenvolvido pelo Facebook e é de código aberto. A intenção do desenvolvimento do yarn era corrigir problemas de desempenho e segurança do npm. O YARN gera um yarn.lock. E possui uma leitura mais amigável. Para instalar o YARN: npm install yarn --global. Comandos: ``` yarn add ???. yarn why. yarn licenses list. yarn init. yarn run [script]. yarn list. yarn test. yarn link. yarn login # or logout. yarn publish```
 
+### Visual Studio Code
+VSC (Visual Studio Code) é um editor de código leve, multiplatafoma, gratuito e open source. Mantido pela Microsoft, essa ferramenta conta com suporte a várias linguagens, extensões, integração com Git, debug, terminal integrado, entre outros recursos.
+
+[VOLTAR](#passo-1:-definições,-ferramentas-e-passos-iniciais)
 
 [Veja mais sobre Node.js neste artigo...](https://www.luiztools.com.br/post/o-que-e-nodejs-e-outras-5-duvidas-fundamentais/?utm_source=google&utm_medium=cpc&utm_campaign=902557428&utm_content=127000463008&utm_term=o%20que%20node%20js&gclid=CjwKCAjw_o-HBhAsEiwANqYhp34bPP2KF8u1U-UNM9UWWvJ_m5MiCDXAKwjrLeKSHN0EvVvJItXr_BoCVeoQAvD_BwE)
 
