@@ -44,9 +44,8 @@ YARN (Yet Another Resource Negotiator) é um gerenciador de pacotes assim como o
 ### Visual Studio Code
 VSC (Visual Studio Code) é um editor de código leve, multiplatafoma, gratuito e open source. Mantido pela Microsoft, essa ferramenta conta com suporte a várias linguagens, extensões, integração com Git, debug, terminal integrado, entre outros recursos.
 
-[VOLTAR](#passo-1:-definições,-ferramentas-e-passos-iniciais)
+[VOLTAR](#passo-1-definições-ferramentas-e-passos-iniciais)
 
-[Veja mais sobre Node.js neste artigo...](https://www.luiztools.com.br/post/o-que-e-nodejs-e-outras-5-duvidas-fundamentais/?utm_source=google&utm_medium=cpc&utm_campaign=902557428&utm_content=127000463008&utm_term=o%20que%20node%20js&gclid=CjwKCAjw_o-HBhAsEiwANqYhp34bPP2KF8u1U-UNM9UWWvJ_m5MiCDXAKwjrLeKSHN0EvVvJItXr_BoCVeoQAvD_BwE)
 
 ### Estrutura de Pastas do Projeto (monorepositório)
 ![Pastas do Projeto](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/fe5c2cc8a99cd618a16d1f43c0a6d133d321c865/pastas_projeto.png)
