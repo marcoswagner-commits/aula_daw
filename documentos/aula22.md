@@ -17,6 +17,8 @@
   - Node.Js (https://nodejs.org) é uma tecnologia assíncrona de requisições que trabalha em uma única thread de execução. [+](#nodejs)
   - NPM (Node Package Manager - https://www.npmjs.com) é uma ferramentada do Node.Js para gerenciar pacotes. [+](#npm)
   - Yarn (Yet Another Resource Negociator - https://yarnpkg.com) também é um gerenciador de pacotes. [+](#yarn)
+  - React.Js ("Uma biblioteca JavaScript para criar interfaces de usuário" - https://pt-br.reactjs.org). [+](#react)
+  - Outros conceitos importantes: HTML - CSS - JavaScript - TypeScript. [+](#outros)
   - Visual Studio Code (https://code.visualstudio.com/download) IDE leve e amplamente usada pela comunidade de programadores. [+](#visual-studio-code)
 - [ ] Criando o Projeto do Front-End juntamente com o Back-End existente em monorepositório
   - Criar projeto frtend-gto com `create-react-app`:
@@ -44,6 +46,12 @@ YARN (Yet Another Resource Negotiator) é um gerenciador de pacotes assim como o
 
 ### Visual Studio Code
 VSC (Visual Studio Code) é um editor de código leve, multiplatafoma, gratuito e open source. Mantido pela Microsoft, essa ferramenta conta com suporte a várias linguagens, extensões, integração com Git, debug, terminal integrado, entre outros recursos.
+
+### React
+O React é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web. É mantido pelo Facebook, Instagram, outras empresas e uma comunidade de desenvolvedores individuais.
+
+### Outros
+HTML (HyperText Markup Language - Linguagem de Marcação de Hipertextos) - CSS (Cascading Style Sheets - Folhas de Estilos em Cascata) - JS (JavaScript) são considerados a "santíssima trindade" da Internet. HTML não é uma linguagem de programação e sim uma linguagem de formatação de conteúdos. CSS é um aplicador de design (cores, sombras, posicionamento). JS é uma linguagem que permite interações, criação de animações, ou seja, um agregador de funcionalidades. Ainda existe o TypeScript que é um superset JavaScript, uma linguagem código aberto construida em cima do Javascript, adicionando definições de tipagem estáticas.
 
 [VOLTAR](#passo-1-definições-ferramentas-e-passos-iniciais)
 
