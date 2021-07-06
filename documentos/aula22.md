@@ -34,7 +34,11 @@ Node.js é uma base (apesar de não ser um framework) de aplicação, pela qual 
 [Veja mais sobre Node.js neste artigo...](https://www.luiztools.com.br/post/o-que-e-nodejs-e-outras-5-duvidas-fundamentais/?utm_source=google&utm_medium=cpc&utm_campaign=902557428&utm_content=127000463008&utm_term=o%20que%20node%20js&gclid=CjwKCAjw_o-HBhAsEiwANqYhp34bPP2KF8u1U-UNM9UWWvJ_m5MiCDXAKwjrLeKSHN0EvVvJItXr_BoCVeoQAvD_BwE)
 
 ### NPM
-Node Package Manager é
+NPM (Node Package Manager) é um gerenciador de pacotes para JavaScript. É o gerenciador de pacotes padrão para ambiente Node.js do JavaScript. Consiste em um cliente de linha de comando (npm), e um banco de dados online de pacotes públicos e privados -pagos, chamado de registro NPM.
+
+### YARN
+YARN (Yet Another Resource Negotiator) é um gerenciador de pacotes assim como o npm. Ele foi desenvolvido pelo Facebook e é de código aberto. A intenção do desenvolvimento do yarn era corrigir problemas de desempenho e segurança do npm.
+
 
 [Veja mais sobre Node.js neste artigo...](https://www.luiztools.com.br/post/o-que-e-nodejs-e-outras-5-duvidas-fundamentais/?utm_source=google&utm_medium=cpc&utm_campaign=902557428&utm_content=127000463008&utm_term=o%20que%20node%20js&gclid=CjwKCAjw_o-HBhAsEiwANqYhp34bPP2KF8u1U-UNM9UWWvJ_m5MiCDXAKwjrLeKSHN0EvVvJItXr_BoCVeoQAvD_BwE)
 
