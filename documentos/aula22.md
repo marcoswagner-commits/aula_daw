@@ -19,7 +19,7 @@
   - Yarn (Yet Another Resource Negociator - https://yarnpkg.com) também é um gerenciador de pacotes. [+](#yarn)
   - Visual Studio Code (https://code.visualstudio.com/download) IDE leve e amplamente usada pela comunidade de programadores. [+](#visual-studio-code)
 - [ ] Criando o Projeto do Front-End juntamente com o Back-End existente em monorepositório
-  - Criar projeto ReactJS com `create-react-app`:
+  - Criar projeto frtend-gto com `create-react-app`:
     ```bash
     npx create-react-app frtend-gto --template typescript
     ```
