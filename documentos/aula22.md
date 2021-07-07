@@ -25,13 +25,17 @@
     ```bash
     npx create-react-app frtend-gto --template typescript
     ```
+  - Iniciar o projeto (página padrão React.Js 
+  - Analisar o projeto (Pastas Public e Src)
+    - Conceitos de SPA (Single Page Aplication) 
+  - Limpar todo o projeto
+    - Criar uma primeira estrutura
+
 > Lembrete: excluir repositório Git do projeto frtend-gto
-  - Limpar projeto frtend-gto / tsconfig.json
-      - Arquivo _redirects
-    ```
-    /* /index.html 200
-    ```
-    
+
+  - Commit - "projeto com front-end inicial"
+
+
 ### Passo 2: COMMIT: Project com front-end limpo
 
 ### Node.js
@@ -48,7 +52,7 @@ YARN (Yet Another Resource Negotiator) é um gerenciador de pacotes assim como o
 VSC (Visual Studio Code) é um editor de código leve, multiplatafoma, gratuito e open source. Mantido pela Microsoft, essa ferramenta conta com suporte a várias linguagens, extensões, integração com Git, debug, terminal integrado, entre outros recursos.
 
 ### React
-O React é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web. É mantido pelo Facebook, Instagram, outras empresas e uma comunidade de desenvolvedores individuais.
+O React é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web. É mantido pelo Facebook, Instagram, outras empresas e uma comunidade de desenvolvedores individuais. 
 
 ### Outros
 HTML (HyperText Markup Language - Linguagem de Marcação de Hipertextos) - CSS (Cascading Style Sheets - Folhas de Estilos em Cascata) - JS (JavaScript) são considerados a "santíssima trindade" da Internet. HTML não é uma linguagem de programação e sim uma linguagem de formatação de conteúdos. CSS é um aplicador de design (cores, sombras, posicionamento). JS é uma linguagem que permite interações, criação de animações, ou seja, um agregador de funcionalidades. Ainda existe o TypeScript que é um superset JavaScript, uma linguagem código aberto construida em cima do Javascript, adicionando definições de tipagem estáticas.
