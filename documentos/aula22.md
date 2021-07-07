@@ -29,7 +29,9 @@
   - Analisar o projeto (Pastas Public e Src)
     - Conceitos de SPA (Single Page Aplication) 
   - Limpar todo o projeto
-    - Criar uma primeira estrutura
+    - Criar uma primeira estrutura (título, descrição, frases em inglês)
+    - Alterar o arquivo tsconfig.json - em compilerOptions inserir "baseUrl": "./src"
+    - Criar um arquivo _redirects na pasta Publics e colocar em seu conteúdo /* /index.html 200 (Netlyfy)
 
 > Lembrete: excluir repositório Git do projeto frtend-gto
 
