@@ -38,7 +38,10 @@
   - Commit - "projeto com front-end inicial"
 
 
-### Passo 2: COMMIT: Project com front-end limpo
+### Passo 2: Projeto inicial com front-end limpo
+- [x] Criar uma aplicação simples com o título "Gestão de Obras"
+- [x] Configuração o VSCode
+- [x] Instalar o BootStrap (https://getbootstrap.com)
 
 ### Node.js
 Node.js é uma base (apesar de não ser um framework) de aplicação, pela qual são escritos programas com Javascript que serão compilados, otimizados e interpretados pela máquina virtual V8. Essa VM é a mesma que o Google utiliza para executar Javascript no browser Chrome, e foi a partir dela que o criador do Node.js, Ryan Dahl, criou o projeto. O resultado desse processo híbrido é entregue como código de máquina server-side, tornando o Node.js muito eficiente na sua execução e consumo de recursos.
