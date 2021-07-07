@@ -25,7 +25,7 @@
     ```bash
     npx create-react-app frtend-gto --template typescript
     ```
-  - Iniciar o projeto (página padrão React.Js 
+  - Iniciar o projeto (página padrão React.Js)
   - Analisar o projeto (Pastas Public e Src)
     - Conceitos de SPA (Single Page Aplication) 
   - Limpar todo o projeto
