@@ -27,7 +27,7 @@
     ```
   - Iniciar o projeto (página padrão React.Js)
   - Analisar o projeto (Pastas Public e Src)
-    - Conceitos de SPA (Single Page Aplication) 
+    - Conceitos de SPA (Single Page Application) 
   - Limpar todo o projeto
     - Criar uma primeira estrutura (título, descrição, frases em inglês)
     - Alterar o arquivo tsconfig.json - em compilerOptions inserir "baseUrl": "./src"
