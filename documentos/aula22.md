@@ -1,6 +1,6 @@
 # Aula 22 - Desenvolvimento de Aplicações WEB
 
-> 
+> Aula 31/08/2021
 > 
 >   Estudo de caso: Gestão de Obras - Front-End
 
@@ -92,7 +92,7 @@ HTML (HyperText Markup Language - Linguagem de Marcação de Hipertextos) - CSS 
 🥈:[![material complementar aula22](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/91eb8207965740a8e341b626b250e6869e4d43ad/documentos/Capa_aula_front.png)](https://www.youtube.com/watch?v=OjABhgBOGIk)
 
 -
-🥉:[![material complementar aula22](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/91eb8207965740a8e341b626b250e6869e4d43ad/documentos/Capa_aula_front.png)](https://www.youtube.com/watch?v=OjABhgBOGIk)
+🥉:[![material complementar aula22](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/91eb8207965740a8e341b626b250e6869e4d43ad/documentos/Capa_aula_front.png)](https://www.youtube.com/watch?v=u8NF8fVtodA)
 
 
 
