@@ -14,7 +14,4 @@ public interface ValidationsGroups {
 		
 	}
 	
-	public interface SubItemId {
-		
-	}
 }
