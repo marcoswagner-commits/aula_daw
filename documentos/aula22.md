@@ -15,7 +15,7 @@
 - [ ] Noções Gerais sobre a arquitetura e o React
 - [ ] Instalação (Linux - Mac) - [Vide Códigos](#instalação)
   - Node.Js (https://nodejs.org) é uma tecnologia assíncrona de requisições que trabalha em uma única thread de execução. [+](#nodejs)
-  - NPM (Node Package Manager - https://www.npmjs.com) é uma ferramentada do Node.Js para gerenciar pacotes. [+](#npm)
+  - NPM (Node Package Manager - https://www.npmjs.com) é uma ferramenta do Node.Js para gerenciar pacotes. [+](#npm)
   - Yarn (Yet Another Resource Negociator - https://yarnpkg.com) também é um gerenciador de pacotes. [+](#yarn)
   - React.Js ("Uma biblioteca JavaScript para criar interfaces de usuário" - https://pt-br.reactjs.org). [+](#react)
   - Outros conceitos importantes: HTML - CSS - JavaScript - TypeScript. [+](#outros)
