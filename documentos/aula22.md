@@ -30,6 +30,7 @@
     - Conceitos de SPA (Single Page Application) 
   - Limpar todo o projeto
     - Criar uma primeira estrutura (título, descrição, frases em inglês)
+    - Manter apenas em public (favicon.ico e index.html) e em src (Apps.tsx e index.tsx) 
     - Alterar o arquivo tsconfig.json - em compilerOptions inserir "baseUrl": "./src"
     - Criar um arquivo _redirects na pasta Publics e colocar em seu conteúdo /* /index.html 200 (Netlyfy)
 
