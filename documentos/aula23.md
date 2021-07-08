@@ -57,7 +57,7 @@ export default function Primeiro() {
   function Primeiro() { return "Primeiro componente" } export default Primeiro();
   ```
   - Importando o componente... 
-  - Incluindo o JSX no componente 
+
   
 
 - [ ] Noções Gerais sobre a arquitetura e o React
