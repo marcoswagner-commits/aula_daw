@@ -54,6 +54,9 @@ export default function Primeiro() {
   - Criando uma função baseada em TypeScript
   - Apresentando o conceito de Fragments
   - Passando parâmetros para a função (propriedades)
+  - Incluindo o uso de FunctionComponent
+  - Propriedade Children?
+
 ```
   
 const Segundo = () => {
@@ -64,11 +67,8 @@ const Segundo = () => {
 export default Segundo;
   
 ```
-
-  
-
-
-### Passo 2: Cards, Componentes Filhos
+ 
+### Passo 2: Estado e Imutabilidade
 - [x] Criar uma aplicação simples com o título "Gestão de Obras"
 - [x] Configuração o VSCode
 
