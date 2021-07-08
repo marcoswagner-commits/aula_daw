@@ -1,6 +1,6 @@
 # Aula 23 - Desenvolvimento de Aplicações WEB
 
-> 
+> Aula 02/09/2021
 > 
 >   Estudo de caso: Gestão de Obras - Front-End
 
@@ -102,64 +102,122 @@ export default Body;
 🥈:[![material complementar aula22](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/91eb8207965740a8e341b626b250e6869e4d43ad/documentos/Capa_aula_front.png)](https://www.youtube.com/watch?v=3376NU3r-aE)
 
 -
-🥉:[![material complementar aula22](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/91eb8207965740a8e341b626b250e6869e4d43ad/documentos/Capa_aula_front.png)](https://www.youtube.com/watch?v=u8NF8fVtodA)
+🥉:[![material complementar aula22](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/91eb8207965740a8e341b626b250e6869e4d43ad/documentos/Capa_aula_front.png)](https://www.youtube.com/watch?v=t4N0atc8xi0)
 
 
 
-# Instalação
-## Linux
-### Node & NPM
+## Códigos finais
+### Body.tsx
+```
+import { useState } from "react";
+
+
+interface BodyProps {
+  msg: string;
+  msg_esp?: string;
+}
+
+const Body: React.FC<BodyProps> = (props) => {
+  const [contador, setContador] = useState(1);
+  const [nome, setNome] = useState('');
+  
+  function buttonClick1() {
+    setContador(contador + 1)
+    console.log(contador)
+  }
+
+  function buttonClick2() {
+    setNome("Fulano de Tal")
+    console.log(contador)
+  }
+  
+  return (
+    <>
+    <h1>{ props.msg} </h1>
+    <h2>{ contador }</h2>
+    <button onClick={buttonClick1}>ATUALIZAR</button>
+    <button onClick={buttonClick2}>NOMEAR</button>
+    <h3> {nome} </h3>
+    
+    </>
+  )
+}
+export default Body;
 
 ```
-sudo apt update
-
-curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-
-sudo apt-get install nodejs
+  
+### Header.tsx
 ```
+export default function Header() {
+  const msg = 'Seja bem vindo!'
+  return (
+  <div>
+    <header>Proprietário da Obra -  { msg } </header>
+  </div>
+  )
+}
 
-### YARN (Caso queira usar o YARN ao invés do NPM)
-No Debian e no Ubuntu:
-```
- curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
- 
- echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
- 
- sudo apt-get update && sudo apt-get install yarn
 
 ```
-Caso tenha problemas de instalação a própria DOC do Yarn é muito útil: https://classic.yarnpkg.com/pt-BR/docs/install/#debian-stable
+  
+### Menu.tsx
+```
+interface BodyProps {
+}
 
-### VS Code
+const Menu: React.FC<BodyProps> = (props) => {
+  return (
+    <h1>{ props.children} </h1>
+  )
+}
+export default Menu;
+
 
 ```
-https://code.visualstudio.com/download
+  
+  
+### App.tsx
+```
+export default function App() {
+  return (
+    <div className="App">
+      <h1>Gestão de Obras - Projeto Inicial do Front-End</h1>
+    </div>
+  );
+}
 
-sudo snap install code --classic
 ```
 
-## Mac
-### Node & NPM 
-```
-$ brew install node
+### Index.tsx
 ```
 
-### YARN (Caso queira usar o YARN ao invés do NPM)
+import * as ReactDOM from 'react-dom'
+import './index.css'
+import './components/basics/Header'
+import Header from './components/basics/Header'
+import Body from './components/basics/Body'
+import Menu from './components/basics/Menu'
+
+
+
+const tag = <h1>Gestão de Obras</h1>
+ReactDOM.render(
+  <>
+    { tag }
+    <Header />
+    <Body msg="Você possui duas obras em andamento" />
+    <Menu>
+      <ul>
+        <li>Proprietario</li>
+        <li>Obra</li>
+        <li>Orçamento</li>
+      </ul>
+    </Menu>
+    
+  </>,
+  document.getElementById('root')
+)
 
 ```
-$ brew install yarn
-```
 
-### VS Code
-
-1. Download Visual Studio Code for macOS. https://go.microsoft.com/fwlink/?LinkID=534106
-2. No Finder abrir a pasta de downloads e localizar o arquivo baixado. 
-3. Arrastar o Visual Studio Code.app para a pasta Applications , para que ele fique disponível no macOS Launchpad.
-5. Adicionar VS Code na Dock clicando com o botão direito no icone e no menu de contexto selecionar: Options, Keep in Dock.
-
-### Git
-```
-$ brew install git
-```
-[VOLTAR](#passo-1-definições-ferramentas-e-passos-iniciais)
 
