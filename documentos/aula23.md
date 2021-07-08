@@ -51,7 +51,7 @@ export default function Primeiro() {
   - Importando o componente... 
   - Incluindo o JSX no componente 
 - [x] Criando componentes com parâmetros
-  - Criando uma função baseada em TypeScritp
+  - Criando uma função baseada em TypeScript
   - Apresentando o conceito de Fragments
   - Passando parâmetros para a função (propriedades)
 ```
