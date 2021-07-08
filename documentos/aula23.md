@@ -1,6 +1,6 @@
 # Aula 23 - Desenvolvimento de Aplicações WEB
 
-> Aula 02/09/2021
+> 
 > 
 >   Estudo de caso: Gestão de Obras - Front-End
 
@@ -11,7 +11,33 @@
 
 
 ### Passo 1: Explorando a aplicação
-- [x] Alterando componentes
+- [x] Interagindo com o React.DOM
+  - Render
+  - documento.getElementById
+- [x] Interagindo com o React
+  - Incluindo uma tag <div>
+  - Apresentando a sintaxe JSX/TSX
+  - Incluindo uma constante com uma tag <strong>
+  ```React.createElement ('div') ```
+- [x] Carregando um CSS (index.css)
+  - Criando o arquivo
+  - Mudando a aparência da página
+  ```body { background-color: #222, color: #fff } ```
+  - Importando o css...
+- [x] Criando outros componentes
+  - Criando uma pasta "components" - com subpasta "basics"
+  - Criando um componente "Primeiro.tsx"
+  ```function Primeiro() { return "Primeiro componente" } export default Primeiro();
+  - Importando o componente... 
+  - Incluindo o JSX no componente 
+- [x] Criando componentes com parâmetros
+  - Criando uma função anônima
+  - Passando parâmetros para a função (propriedades)
+  ```function Primeiro() { return "Primeiro componente" } export default Primeiro();
+  - Importando o componente... 
+  - Incluindo o JSX no componente 
+  
+
 - [ ] Noções Gerais sobre a arquitetura e o React
 - [ ] Instalação (Linux - Mac) - [Vide Códigos](#instalação)
   - Node.Js (https://nodejs.org) é uma tecnologia assíncrona de requisições que trabalha em uma única thread de execução. [+](#nodejs)
