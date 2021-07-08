@@ -67,6 +67,23 @@ const Segundo = () => {
 export default Segundo;
   
 ```
+
+  ```
+  interface BodyProps {
+  msg: string;
+  msg_esp?: string;
+}
+
+const Body: React.FC<BodyProps> = (props) => {
+  return (
+    <h1>{ props.msg} </h1>
+  )
+}
+export default Body;
+
+```
+
+
  
 ### Passo 2: Estado e Imutabilidade
 - [x] Implementando um contador para demonstrar estado/imutabilidade
