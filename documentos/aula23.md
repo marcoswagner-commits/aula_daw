@@ -51,26 +51,24 @@ export default function Primeiro() {
   - Importando o componente... 
   - Incluindo o JSX no componente 
 - [x] Criando componentes com parâmetros
-  - Criando uma função anônima
+  - Criando uma função baseada em TypeScritp
+  - Apresentando o conceito de Fragments
   - Passando parâmetros para a função (propriedades)
 ```
   
-  export default function (props) {
-  const valor > 100 ? 'Valor Alto' : 'Valor Baixo'
+const Segundo = () => {
   return (
-  <div>
-    <h3>Proprietário da Obra</h3>
-    <h4>{ valor }</h4>
-  </div>
+    <h1>Olá proprietário</h1>
   )
 }
+export default Segundo;
   
 ```
 
   
 
 
-### Passo 2: Fragments, Cards, Componentes Filhos
+### Passo 2: Cards, Componentes Filhos
 - [x] Criar uma aplicação simples com o título "Gestão de Obras"
 - [x] Configuração o VSCode
 
