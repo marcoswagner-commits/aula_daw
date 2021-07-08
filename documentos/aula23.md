@@ -18,24 +18,24 @@
   - Incluindo uma tag <div>
   - Apresentando a sintaxe JSX/TSX
   - Incluindo uma constante com uma tag <strong>
-  ```
-  React.createElement ('div')
-  ```
+```
+React.createElement ('div')
+```
   
 - [x] Carregando um CSS (index.css)
   - Criando o arquivo
   - Mudando a aparência da página
-  ```
-  body { background-color: #222, color: #fff } 
-  ```
+```
+body { background-color: #222, color: #fff } 
+```
   
   - Importando o css...
 - [x] Criando outros componentes
   - Criando uma pasta "components" - com subpasta "basics"
   - Criando um componente "Primeiro.tsx"
-  ```
-  function Primeiro() { return "Primeiro componente" } export default Primeiro();
-  ```
+```
+function Primeiro() { return "Primeiro componente" } export default Primeiro();
+```
   
   - Importando o componente... 
   - Incluindo o JSX no componente 
