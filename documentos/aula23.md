@@ -53,46 +53,27 @@ export default function Primeiro() {
 - [x] Criando componentes com parâmetros
   - Criando uma função anônima
   - Passando parâmetros para a função (propriedades)
-  ```
-  function Primeiro() { return "Primeiro componente" } export default Primeiro();
-  ```
-  - Importando o componente... 
+```
+  
+  export default function (props) {
+  const valor > 100 ? 'Valor Alto' : 'Valor Baixo'
+  return (
+  <div>
+    <h3>Proprietário da Obra</h3>
+    <h4>{ valor }</h4>
+  </div>
+  )
+}
+  
+```
 
   
 
-- [ ] Noções Gerais sobre a arquitetura e o React
-- [ ] Instalação (Linux - Mac) - [Vide Códigos](#instalação)
-  - Node.Js (https://nodejs.org) é uma tecnologia assíncrona de requisições que trabalha em uma única thread de execução. [+](#nodejs)
-  - NPM (Node Package Manager - https://www.npmjs.com) é uma ferramenta do Node.Js para gerenciar pacotes. [+](#npm)
-  - Yarn (Yet Another Resource Negociator - https://yarnpkg.com) também é um gerenciador de pacotes. [+](#yarn)
-  - React.Js ("Uma biblioteca JavaScript para criar interfaces de usuário" - https://pt-br.reactjs.org). [+](#react)
-  - Outros conceitos importantes: HTML - CSS - JavaScript - TypeScript. [+](#outros)
-  - Visual Studio Code (https://code.visualstudio.com/download) IDE leve e amplamente usada pela comunidade de programadores. [+](#visual-studio-code)
-- [ ] Criando o Projeto do Front-End juntamente com o Back-End existente em monorepositório
-  - Criar projeto frtend-gto com `create-react-app`:
-    ```bash
-    npx create-react-app frtend-gto --template typescript
-    ```
-  - Iniciar o projeto (página padrão React.Js)
-  - Analisar o projeto (Pastas Public e Src)
-    - Conceitos de SPA (Single Page Application) 
-  - Limpar todo o projeto
-    - Criar uma primeira estrutura (título, descrição, frases em inglês)
-    - Manter apenas em public (favicon.ico e index.html) e em src (Apps.tsx e index.tsx) 
-    - Alterar o arquivo tsconfig.json - em compilerOptions inserir "baseUrl": "./src"
-    - Criar um arquivo _redirects na pasta Public e colocar em seu conteúdo /* /index.html 200 (Netlyfy)
 
-> Lembrete: excluir repositório Git do projeto frtend-gto
-
-  - Commit - "projeto com front-end inicial"
-
-
-### Passo 2: Projeto inicial com front-end limpo
+### Passo 2: Fragments, Cards, Componentes Filhos
 - [x] Criar uma aplicação simples com o título "Gestão de Obras"
 - [x] Configuração o VSCode
-- [x] Instalar o BootStrap (https://getbootstrap.com)
-  - yarn add bootstrap
-  - (index.tsx) import 'bootstrap/dist/css/bootstrap.css';
+
 
 
 
