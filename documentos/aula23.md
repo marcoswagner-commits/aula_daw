@@ -25,6 +25,7 @@ React.createElement ('div')
 - [x] Carregando um CSS (index.css)
   - Criando o arquivo
   - Mudando a aparência da página
+
 ```
 body { background-color: #222, color: #fff } 
 ```
@@ -33,8 +34,18 @@ body { background-color: #222, color: #fff }
 - [x] Criando outros componentes
   - Criando uma pasta "components" - com subpasta "basics"
   - Criando um componente "Primeiro.tsx"
+
+  
 ```
-function Primeiro() { return "Primeiro componente" } export default Primeiro();
+export default function Primeiro() {
+  const msg = 'Proprietário seja bem vindo!'
+  return (
+  <div>
+    <h3>Proprietário da Obra</h3>
+    <h4>{ msg }</h4>
+  </div>
+  )
+}
 ```
   
   - Importando o componente... 
@@ -83,48 +94,13 @@ function Primeiro() { return "Primeiro componente" } export default Primeiro();
   - yarn add bootstrap
   - (index.tsx) import 'bootstrap/dist/css/bootstrap.css';
 
-### Node.js
-Node.js é uma base (apesar de não ser um framework) de aplicação, pela qual são escritos programas com Javascript que serão compilados, otimizados e interpretados pela máquina virtual V8. Essa VM é a mesma que o Google utiliza para executar Javascript no browser Chrome, e foi a partir dela que o criador do Node.js, Ryan Dahl, criou o projeto. O resultado desse processo híbrido é entregue como código de máquina server-side, tornando o Node.js muito eficiente na sua execução e consumo de recursos.
-[Veja mais sobre Node.js neste artigo...](https://www.luiztools.com.br/post/o-que-e-nodejs-e-outras-5-duvidas-fundamentais/?utm_source=google&utm_medium=cpc&utm_campaign=902557428&utm_content=127000463008&utm_term=o%20que%20node%20js&gclid=CjwKCAjw_o-HBhAsEiwANqYhp34bPP2KF8u1U-UNM9UWWvJ_m5MiCDXAKwjrLeKSHN0EvVvJItXr_BoCVeoQAvD_BwE)
 
-### NPM
-NPM (Node Package Manager) é um gerenciador de pacotes para JavaScript. É o gerenciador de pacotes padrão para ambiente Node.js do JavaScript. Consiste em um cliente de linha de comando (npm), e um banco de dados online de pacotes públicos e privados -pagos, chamado de registro NPM. O npm gera um arquivo ‘package-lock.json’. Cada dependência terá um número de versão exato associado a ela no arquivo de bloqueio de pacote. O NPM é nativo do Node.Js. Comandos: ``` npm install ???. npm init. npm run [script]. npm list. npm test. npm link. npm login # or logout. npm publish. ```. Além do NPM também existe o NPX que é um executor de pacotes.
-
-### YARN
-YARN (Yet Another Resource Negotiator) é um gerenciador de pacotes assim como o npm. Ele foi desenvolvido pelo Facebook e é de código aberto. A intenção do desenvolvimento do yarn era corrigir problemas de desempenho e segurança do npm. O YARN gera um yarn.lock. E possui uma leitura mais amigável. Para instalar o YARN: npm install yarn --global. Comandos: ``` yarn add ???. yarn why. yarn licenses list. yarn init. yarn run [script]. yarn list. yarn test. yarn link. yarn login # or logout. yarn publish```
-
-### Visual Studio Code
-VSC (Visual Studio Code) é um editor de código leve, multiplatafoma, gratuito e open source. Mantido pela Microsoft, essa ferramenta conta com suporte a várias linguagens, extensões, integração com Git, debug, terminal integrado, entre outros recursos.
-
-### React
-O React é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web. É mantido pelo Facebook, Instagram, outras empresas e uma comunidade de desenvolvedores individuais. 
-
-### Outros
-HTML (HyperText Markup Language - Linguagem de Marcação de Hipertextos) - CSS (Cascading Style Sheets - Folhas de Estilos em Cascata) - JS (JavaScript) são considerados a "santíssima trindade" da Internet. HTML não é uma linguagem de programação e sim uma linguagem de formatação de conteúdos. CSS é um aplicador de design (cores, sombras, posicionamento). JS é uma linguagem que permite interações, criação de animações, ou seja, um agregador de funcionalidades. Ainda existe o TypeScript que é um superset JavaScript, uma linguagem código aberto construida em cima do Javascript, adicionando definições de tipagem estáticas.
-
-[VOLTAR](#passo-1-definições-ferramentas-e-passos-iniciais)
-
-
-### Estrutura de Pastas do Projeto (monorepositório)
-![Pastas do Projeto](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/fe5c2cc8a99cd618a16d1f43c0a6d133d321c865/pastas_projeto.png)
-
-### Estruturas de Comunicação
-![modelo_spa_front](https://user-images.githubusercontent.com/81576640/124515048-dad25000-ddb4-11eb-87b0-8e1c543e6ff6.png)
-
-![modelo_trad_front](https://user-images.githubusercontent.com/81576640/124515052-ddcd4080-ddb4-11eb-9df9-d2f3cc4d13e6.png)
-
-
-### Relação entre o Back-End e o Front-End 
-![Relação entre o Back-End e o Front-End](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cc080a27531053afe5f67f30a904a3789fb61481/documentos/back-front.png)
-
-### Estrtura do Front-End
-![Estrutura do Front-End](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/c263030eb4d8f6573fe98f64d9a158ea38da6548/documentos/front-end-org.png)
 
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
 
-🥇:[![material complementar aula22](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/91eb8207965740a8e341b626b250e6869e4d43ad/documentos/Capa_aula_front.png)](https://www.youtube.com/watch?v=pEqD8L-uaCU)
+🥇:[![material complementar aula22](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/91eb8207965740a8e341b626b250e6869e4d43ad/documentos/Capa_aula_front.png)](https://www.youtube.com/watch?v=SoEGwrvXuPg)
 -
 🥈:[![material complementar aula22](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/91eb8207965740a8e341b626b250e6869e4d43ad/documentos/Capa_aula_front.png)](https://www.youtube.com/watch?v=OjABhgBOGIk)
 
