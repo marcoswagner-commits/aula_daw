@@ -27,13 +27,13 @@
 - [x] Criando outros componentes
   - Criando uma pasta "components" - com subpasta "basics"
   - Criando um componente "Primeiro.tsx"
-  ```function Primeiro() { return "Primeiro componente" } export default Primeiro();
+  ```function Primeiro() { return "Primeiro componente" } export default Primeiro();```
   - Importando o componente... 
   - Incluindo o JSX no componente 
 - [x] Criando componentes com parâmetros
   - Criando uma função anônima
   - Passando parâmetros para a função (propriedades)
-  ```function Primeiro() { return "Primeiro componente" } export default Primeiro();
+  ```function Primeiro() { return "Primeiro componente" } export default Primeiro();```
   - Importando o componente... 
   - Incluindo o JSX no componente 
   
