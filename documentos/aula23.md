@@ -21,12 +21,14 @@
   ```
   React.createElement ('div')
   ```
+  
 - [x] Carregando um CSS (index.css)
   - Criando o arquivo
   - Mudando a aparência da página
   ```
   body { background-color: #222, color: #fff } 
   ```
+  
   - Importando o css...
 - [x] Criando outros componentes
   - Criando uma pasta "components" - com subpasta "basics"
@@ -34,6 +36,7 @@
   ```
   function Primeiro() { return "Primeiro componente" } export default Primeiro();
   ```
+  
   - Importando o componente... 
   - Incluindo o JSX no componente 
 - [x] Criando componentes com parâmetros
