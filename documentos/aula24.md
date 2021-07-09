@@ -70,14 +70,17 @@ html, body {
 ```
 
 ### Passo 2: Criando página inicial (home)
-- [x] Criar a pasta pages em src
-- [x] Criar a pasta home em pages
 - [x] Criar o primeiro componente do projeto
-    - Criar o arquivo NavBar.tsx 
-    - Colocar um item de texte em NavBar e inserir o componente em App
+    - Criar a pasta NavBar em Components/Basics
+    - Criar o arquivo Index.tsx em Components/Basics/NavBar 
+    - Colocar um item de texte em NavBar/Index.tsx e inserir o componente em App
     - Inserir o código NavBar (código abaixo) no componente
     - Inseri o arquivo (imagem) em assets/images (arquivo no github)
-  
+- [x] Criar o segundo primeiro componente do projeto para Footer
+    - Seguir os mesmos procedimentos para Footer relaizados em NavBar
+- [x] Criar um container para o Body da página principal
+- [x] Criar a pasta pages em src
+- [x] Criar a pasta home em pages  
 
 Exemplos retirados do site do BootStrap (https://getbootstrap.com)
 
@@ -86,7 +89,7 @@ Exemplos retirados do site do BootStrap (https://getbootstrap.com)
 <div className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-light border-bottom shadow-sm">
   <div className="container">
     <nav className="my-2 my-md-0 mr-md-3">
-      <img src={ImgGto} alt="Gestão de Obras" width="120" />
+      <img src={logo_gto_vf} alt="Gestão de Obras" width="120" />
     </nav>
   </div>
 </div>
