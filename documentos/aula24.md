@@ -23,10 +23,6 @@
 - [ ] Escolher as fontes (ubumtu e roboto) em Google Fonts (https://fonts.google.com)
   - Mostrar as opções link e import
   - Verificar as mudanças na aplicação
-- [ ] Criar a pasta pages em src
-- [ ] Criar a pasta home em pages
-- [ ] Criar a pasta login em pages
-
 
 
 Extensões:
@@ -72,33 +68,46 @@ html, body {
 }
 
 ```
-  
-- [x] Carregando um CSS (index.css)
-  - Criando o arquivo
-  - Mudando a aparência da página
 
-```
-body { background-color: #222, color: #fff } 
-```
+### Passo 2: Criando página inicial (home)
+- [x] Criar a pasta pages em src
+- [x] Criar a pasta home em pages
+- [x] Criar o primeiro componente do projeto
+    - Criar o arquivo NavBar.tsx 
+    - Colocar um item de texte em NavBar e inserir o componente em App
+    - Inserir o código NavBar (código abaixo) no componente
+    - Inseri o arquivo (imagem) em assets/images (arquivo no github)
   
-  - Importando o css...
-- [x] Criando outros componentes
-  - Criando uma pasta "components" - com subpasta "basics"
-  - Criando um componente "Primeiro.tsx"
 
-  
+Exemplos retirados do site do BootStrap (https://getbootstrap.com)
+
+- NavBar  
 ```
-export default function Primeiro() {
-  const msg = 'Proprietário seja bem vindo!'
-  return (
-  <div>
-    <h3>Proprietário da Obra</h3>
-    <h4>{ msg }</h4>
+<div className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-light border-bottom shadow-sm">
+  <div className="container">
+    <nav className="my-2 my-md-0 mr-md-3">
+      <img src={ImgGto} alt="Gestão de Obras" width="120" />
+    </nav>
   </div>
-  )
-}
+</div>
+
 ```
-  
+
+- Footer  
+```
+<footer className="footer mt-auto py-3 bg-dark">
+  <div className="container">
+    <p className="text-light">App desenvolvido por <a href="https://github.com/marcoswagner-commits" target="_blank" rel="noreferrer">Prof. Marcos Wagner</a></p>
+    <p className="text-light"><small><strong>Desenvolvimento de Aplicações WEB - BCC - UFJ</strong><br/>
+      Disciplina de Desenvolvimento de Aplicações WEB: <a href="https://github.com/marcoswagner-commits/gestao_obras_aula_daw" target="_blank" rel="noreferrer"></a></small></p>
+  </div>
+</footer>
+
+
+```
+
+
+
   - Importando o componente... 
   - Incluindo o JSX no componente 
 - [x] Criando componentes com parâmetros
