@@ -87,7 +87,7 @@ export default Body;
  
 ### Passo 2: Estado e Imutabilidade
 - [x] Implementando um contador para demonstrar estado/imutabilidade
-- [x] Concluindo os conceitos e Componentes/Propriedades/Estado
+- [x] Concluindo os conceitos de Componentes/Propriedades/Estado
 
 
 
