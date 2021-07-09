@@ -166,7 +166,7 @@ export default Home;
 #page-home {
     height: 100vh;
   
-    background: url('../../assets/background.svg') no-repeat;
+    background: url('../../assets/images/constructor-hand-drawn-worker.svg') no-repeat;
   }
   
   #page-home .content {
