@@ -7,7 +7,7 @@
 
 ## Atividades da aula - roteiro
 
-## :+1: Implementação do Modelo Conceitual Gestão de Obras - Construção do Front-End - React.Js (Páginas Home e Deploy no Netlify e Página de Login)
+## :+1: Implementação do Modelo Conceitual Gestão de Obras - Construção do Front-End - React.Js (Páginas Home e Deploy no Netlify, Página de Login e Routers)
 
 [Projeto do Front-End](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/5d19019b2d7f1c8e8bf26b6a55df8f575392101c/documentos/frontend_projeto.png)
 
@@ -70,7 +70,7 @@ html, body {
 
 ```
 
-### Passo 2: Criando página inicial (home)
+### Passo 2: Criando a página inicial (Página de Acesso)
 - [x] Criar o primeiro componente do projeto
     - Criar a pasta NavBar em Components/Basics
     - Criar o arquivo Index.tsx em Components/Basics/NavBar 
@@ -81,7 +81,8 @@ html, body {
     - Seguir os mesmos procedimentos para Footer relaizados em NavBar
 - [x] Criar um container para o Body da página principal
 - [x] Criar a pasta pages em src
-- [x] Criar a pasta home em pages  
+- [x] Criar a pasta home em pages
+
 
 Exemplos retirados do site do BootStrap (https://getbootstrap.com)
 
@@ -122,6 +123,11 @@ Exemplos retirados do site do BootStrap (https://getbootstrap.com)
     - Site settings -> Build & Deploy: Build settings: Base Directory: (frtend-gto)
     - Site settings -> Domain Management: (colocar o nome que você quiser)
     - Deploys -> Trigger deploy
+
+
+### Passo 4: Criando a página de Login (Autenticação)
+- [x] Criar a pasta login em pages
+
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
@@ -284,8 +290,187 @@ export default Home;
 
 ```
   
-### Menu.tsx
+### Login.tsx
 ```
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+import * as Yup from 'yup';
+import { Formik } from 'formik';
+import {
+  Grid,
+  Box,
+  Button,
+  Container,
+  Link,
+  TextField,
+  Typography
+} from '@material-ui/core';
+
+const Login = () => {
+  const navigate = useNavigate();
+
+  return (
+    <>
+      <Helmet>
+        <title>Entrada | GESTÃO:OBRAS</title>
+      </Helmet>
+      <Box
+        sx={{
+          backgroundColor: 'background.default',
+          display: 'flex',
+          flexDirection: 'column',
+          height: '100%',
+          justifyContent: 'center'
+        }}
+      >
+        <Container maxWidth="sm">
+          <Formik
+            initialValues={{
+              email: 'usario@ufj.edu.br',
+              password: 'Senha123'
+            }}
+            validationSchema={Yup.object().shape({
+              email: Yup.string().email('É preciso ter um usuário válido').max(255).required('É necessário um usuário'),
+              password: Yup.string().max(255).required('Senha é necessária')
+            })}
+            onSubmit={() => {
+              navigate('/app/dashboard', { replace: true });
+            }}
+          >
+            {({
+              errors,
+              handleBlur,
+              handleChange,
+              handleSubmit,
+              isSubmitting,
+              touched,
+              values
+            }) => (
+              <form onSubmit={handleSubmit}>
+                <Box align="center">
+                  <Grid>
+                    <Link
+                      component={RouterLink}
+                      to="/register"
+                      variant="h6"
+                    >
+                      <Button
+                        align="left"
+                        color="primary"
+                        disabled={isSubmitting}
+                        size="medium"
+                      >
+                        ORÇAMENTOS
+                      </Button>
+                    </Link>
+                    <Link
+                      component={RouterLink}
+                      to="/register"
+                      variant="h6"
+                    >
+                      <Button
+                        align="center"
+                        color="primary"
+                        disabled={isSubmitting}
+                        size="medium"
+                      >
+                        FORNECEDORES
+                      </Button>
+                    </Link>
+                    <Link
+                      component={RouterLink}
+                      to="/register"
+                      variant="h6"
+                    >
+                      <Button
+                        align="rigth"
+                        color="primary"
+                        disabled={isSubmitting}
+                        size="medium"
+                      >
+                        DOCUMENTOS
+                      </Button>
+                    </Link>
+                  </Grid>
+                </Box>
+                <Box align="center" sx={{ mb: 1 }}>
+                  <Typography
+                    color="textPrimary"
+                    variant="h1"
+                  >
+                    Entrada
+                  </Typography>
+                </Box>
+                <Box align="center"><img alt="GTO" src="/static/images/GTO_LOGO.png" /></Box>
+                <Typography
+                  align="center"
+                  color="textSecondary"
+                  variant="body1"
+                >
+                  Entre com seu usuário!
+                </Typography>
+                <TextField
+                  error={Boolean(touched.email && errors.email)}
+                  fullWidth
+                  helperText={touched.email && errors.email}
+                  label="Email Address"
+                  margin="normal"
+                  name="email"
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  type="email"
+                  value={values.email}
+                  variant="outlined"
+                />
+                <TextField
+                  error={Boolean(touched.password && errors.password)}
+                  fullWidth
+                  helperText={touched.password && errors.password}
+                  label="Password"
+                  margin="normal"
+                  name="password"
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  type="password"
+                  value={values.password}
+                  variant="outlined"
+                />
+                <Box sx={{ py: 2 }}>
+                  <Button
+                    color="primary"
+                    disabled={isSubmitting}
+                    fullWidth
+                    size="large"
+                    type="submit"
+                    variant="contained"
+                  >
+                    ENTRAR
+                  </Button>
+                </Box>
+                <Typography
+                  color="textSecondary"
+                  variant="body1"
+                >
+                  Não tem uma conta no GTO?
+                  {' '}
+                  <Link
+                    component={RouterLink}
+                    to="/register"
+                    variant="h6"
+                  >
+                    Faça o registro!
+                  </Link>
+                </Typography>
+              </form>
+            )}
+          </Formik>
+        </Container>
+      </Box>
+    </>
+  );
+};
+
+export default Login;
 
 
 ```
