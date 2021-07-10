@@ -76,12 +76,12 @@ html, body {
 ### Passo 2: Criando a página inicial (Página de Acesso)
 - [x] Criar o primeiro componente do projeto
     - Criar a pasta NavBar em Components/Basics
-    - Criar o arquivo Index.tsx em Components/Basics/NavBar 
-    - Colocar um item de texte em NavBar/Index.tsx e inserir o componente em App
-    - Inserir o código NavBar (código abaixo) no componente
+    - Criar o arquivo Index.tsx em Components/Basics/NavBar  
+    - Colocar um item de "teste" em NavBar/Index.tsx e inserir o componente em App
+    - Inserir o código NavBar (código abaixo) no componente [==>](#componentsbasicsnavbarindextsx)
     - Inseri o arquivo (imagem) em assets/images (arquivo no github)
 - [x] Criar o segundo primeiro componente do projeto para Footer
-    - Seguir os mesmos procedimentos para Footer relaizados em NavBar
+    - Seguir os mesmos procedimentos para Footer relaizados em NavBar [==>](#componentsbasicsfooterindextsx)
 - [x] Criar um container para o Body da página principal
 - [x] Criar a pasta pages em src
 - [x] Criar a pasta home em pages
@@ -112,7 +112,7 @@ Exemplos retirados do site do BootStrap (https://getbootstrap.com)
 </footer>
 
 ```
-
+[Voltar](#passo-2-preparando-a-aplicação)
 
 ### Passo 3: Implantação no Netlify
 - Publicação no Netlify
