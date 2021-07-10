@@ -20,7 +20,7 @@
 - [ ] Criar a pasta assets em src
 - [ ] Criar a pasta css em assets
 - [ ] Criar o arquivo styles.css em css (copiar código abaixo)
-- [ ] (index.tsx) => import 'assets/css/styles.css'
+- [ ] (index.tsx) => import 'assets/css/styles.css' [==>](#assets-css-styles-css)
 - [ ] Escolher as fontes (ubumtu e roboto) em Google Fonts (https://fonts.google.com)
   - Mostrar as opções link e import
   - Verificar as mudanças na aplicação
@@ -34,6 +34,7 @@ Extensões:
 - ColorHighLight
 - SVG Preview (obs.: https://www.flaticon.com/ repositório de ícones)
 
+#### assets/css/styles.css
 ```
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 :root {
@@ -86,7 +87,7 @@ html, body {
 
 Exemplos retirados do site do BootStrap (https://getbootstrap.com)
 
-- NavBar  
+#### Components/Basics/NavBar/index.tsx
 ```
 <div className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-light border-bottom shadow-sm">
   <div className="container">
@@ -98,7 +99,7 @@ Exemplos retirados do site do BootStrap (https://getbootstrap.com)
 
 ```
 
-- Footer  
+#### Components/Basics/Footer/index.tsx
 ```
 <footer className="footer mt-auto py-3 bg-dark">
   <div className="container">
@@ -107,7 +108,6 @@ Exemplos retirados do site do BootStrap (https://getbootstrap.com)
       Disciplina de Desenvolvimento de Aplicações WEB: <a href="https://github.com/marcoswagner-commits/gestao_obras_aula_daw" target="_blank" rel="noreferrer"></a></small></p>
   </div>
 </footer>
-
 
 ```
 
