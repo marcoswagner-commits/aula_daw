@@ -12,7 +12,9 @@
 [Projeto do Front-End](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/5d19019b2d7f1c8e8bf26b6a55df8f575392101c/documentos/frontend_projeto.png)
 
 ### Passo 1: Preparando a aplicação
-- [x] Limpando novamente o projeto - instalando outras extensões
+- [x] Limpando novamente o projeto - instalando outras extensões (react-icon, react-router-dom)
+  - {yarn add react-icons; https://react-icons.github.io/react-icons}
+  - {yarn add react-router-dom; obs.: instalar as tipagens separadas - yarn add @types/react-router-dom -D}
 - [x] Importando o bootstrap
 - [ ] (index.tsx) => import 'bootstrap/dist/css/bootstrap.css'
   - Verificar no node_modules a existência do bootstrap
