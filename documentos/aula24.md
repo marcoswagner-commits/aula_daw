@@ -92,11 +92,12 @@ html, body {
 Exemplos retirados do site do BootStrap (https://getbootstrap.com)
 
 #### Components/Basics/NavBar/index.tsx
+- apenas o conteúdo do componente
 ```
 <div className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-light border-bottom shadow-sm">
   <div className="container">
     <nav className="my-2 my-md-0 mr-md-3">
-      <img src={logo_gto_vf} alt="Gestão de Obras" width="120" />
+      <img src={logo_gto_vf} alt="Gestão de Obras" width="220" />
     </nav>
   </div>
 </div>
@@ -104,6 +105,7 @@ Exemplos retirados do site do BootStrap (https://getbootstrap.com)
 ```
 
 #### Components/Basics/Footer/index.tsx
+- apenas o conteúdo do componente
 ```
 <footer className="footer mt-auto py-3 bg-dark">
   <div className="container">
