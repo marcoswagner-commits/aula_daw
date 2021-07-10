@@ -126,7 +126,10 @@ Exemplos retirados do site do BootStrap (https://getbootstrap.com)
 
 
 ### Passo 4: Criando a página de Login (Autenticação)
+- [x] Criar em componentes pastas styles
+  - Criar na pasta styles os componentes (Logo.tsx e GlobalStyles.tsx)
 - [x] Criar a pasta login em pages
+- [x] Criar o arquivo routes.tsx na raiz scr
 
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
@@ -478,14 +481,121 @@ export default Login;
   
 ### App.tsx
 ```
+import 'react-perfect-scrollbar/dist/css/styles.css';
+import { useRoutes } from 'react-router-dom';
+import { ThemeProvider } from '@material-ui/core';
+import GlobalStyles from 'src/components/GlobalStyles';
+import 'src/mixins/chartjs';
+import theme from 'src/theme';
+import routes from 'src/routes';
+
+const App = () => {
+  const routing = useRoutes(routes);
+
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      {routing}
+    </ThemeProvider>
+  );
+};
+
+export default App;
+```
+
+### GlobalStyles.tsx
+```
+
+import { createStyles, makeStyles } from '@material-ui/core';
+
+const useStyles = makeStyles(() => createStyles({
+  '@global': {
+    '*': {
+      boxSizing: 'border-box',
+      margin: 0,
+      padding: 0,
+    },
+    html: {
+      '-webkit-font-smoothing': 'antialiased',
+      '-moz-osx-font-smoothing': 'grayscale',
+      height: '100%',
+      width: '100%'
+    },
+    body: {
+      backgroundColor: '#f4f6f8',
+      height: '100%',
+      width: '100%'
+    },
+    a: {
+      textDecoration: 'none'
+    },
+    '#root': {
+      height: '100%',
+      width: '100%'
+    }
+  }
+}));
+
+const GlobalStyles = () => {
+  useStyles();
+
+  return null;
+};
+
+export default GlobalStyles;
+
 
 ```
 
-### Index.tsx
+### Logo.tsx
 ```
 
+const Logo = (props) => (
+  <img
+    alt="Logo"
+    width="50%"
+    src="/static/images/SISPFC_LOGO_BW.png"
+    {...props}
+  />
+);
 
+export default Logo;
 
 ```
 
+### routes.tsx
+```
+
+import { Navigate } from 'react-router-dom';
+import Login from 'src/pages/Login';
+
+const routes = [
+  {
+    path: 'app',
+    element: <DashboardLayout />,
+    children: [
+      { path: 'proprietarios', element: <AlunoLista /> },
+      { path: 'dashboard', element: <Dashboard /> },
+      { path: 'products', element: <ProductList /> },
+      { path: 'settings', element: <Settings /> },
+      { path: '*', element: <Navigate to="/404" /> }
+    ]
+  },
+  {
+    path: '/',
+    element: <MainLayout />,
+    children: [
+      { path: 'login', element: <Login /> },
+      { path: 'register', element: <Register /> },
+      { path: '404', element: <NotFound /> },
+      { path: '/', element: <Navigate to="/app/dashboard" /> },
+      { path: '*', element: <Navigate to="/404" /> }
+    ]
+  }
+];
+
+export default routes;
+
+
+```
 
