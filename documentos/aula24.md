@@ -10,6 +10,7 @@
 ## :+1: Implementação do Modelo Conceitual Gestão de Obras - Construção do Front-End - React.Js (Páginas Home e Login)
 
 
+
 ### Passo 1: Preparando a aplicação
 - [x] Limpando novamente o projeto - instalando outras extensões
 - [x] Importando o bootstrap
@@ -110,7 +111,17 @@ Exemplos retirados do site do BootStrap (https://getbootstrap.com)
 ```
 
 
-
+### Passo 3: Implantação no Netlify
+- Publicação no Netlify
+  - Criar conta/acessar (https://netlify.com)
+  - "New Site From Git" 
+    - Escolher Projeto / Definir Branch (codigos)   
+  - Comando: yarn build
+  - Diretório: build
+  - Deploy! (por ser um monorepositório o deploy irá falhar por não encontrar a pasta específica)
+    - Site settings -> Build & Deploy: Build settings: Base Directory: (frtend-gto)
+    - Site settings -> Domain Management: (colocar o nome que você quiser)
+    - Deploys -> Trigger deploy
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
