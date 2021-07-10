@@ -81,7 +81,7 @@ html, body {
     - Inserir o código NavBar (código abaixo) no componente [🏴](#componentsbasicsnavbarindextsx)
     - Inseri o arquivo (imagem) em assets/images (arquivo no github)
 - [x] Criar o segundo primeiro componente do projeto para Footer
-    - Seguir os mesmos procedimentos para Footer relaizados em NavBar [🏴](#componentsbasicsfooterindextsx)
+    - Seguir os mesmos procedimentos para Footer realizados em NavBar [🏴](#componentsbasicsfooterindextsx)
 - [x] Criar um container para o Body da página principal
 - [x] Criar a pasta pages em src
 - [x] Criar a pasta home em pages
