@@ -1,6 +1,6 @@
 # Aula 24 - Desenvolvimento de Aplicações WEB
 
-> Aula 09/09/2021
+> 
 > 
 >   Estudo de caso: Gestão de Obras - Front-End
 
@@ -86,6 +86,7 @@ html, body {
 - [x] Criar a pasta pages em src
 - [x] Criar a pasta home em pages
 - [ ] Criar o arquivo Index.tsx em home [🏴](#homeindextsx)
+- [ ] Criar o arquivo Styles.css em home [🏴](#homestylescss)
 
 
 Exemplos retirados do site do BootStrap (https://getbootstrap.com)
@@ -298,7 +299,8 @@ export default Home;
   }
 
 ```
-  
+[Voltar](#passo-2-criando-a-página-inicial-página-de-acesso)
+
 ### Login.tsx
 ```
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
