@@ -7,7 +7,7 @@
 
 ## Atividades da aula - roteiro
 
-## :+1: Implementação do Modelo Conceitual Gestão de Obras - Construção do Front-End - React.Js (Páginas Home e Login)
+## :+1: Implementação do Modelo Conceitual Gestão de Obras - Construção do Front-End - React.Js (Páginas Home e Deploy no Netlify)
 
 
 
