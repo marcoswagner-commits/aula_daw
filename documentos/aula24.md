@@ -112,7 +112,7 @@ Exemplos retirados do site do BootStrap (https://getbootstrap.com)
 </footer>
 
 ```
-[Voltar](#passo-2-preparando-a-aplicação)
+[Voltar](#passo-2-criando-a-página-inicial-página-de-acesso)
 
 ### Passo 3: Implantação no Netlify
 - Publicação no Netlify
