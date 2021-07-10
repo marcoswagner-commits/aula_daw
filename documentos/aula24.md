@@ -9,7 +9,7 @@
 
 ## :+1: Implementação do Modelo Conceitual Gestão de Obras - Construção do Front-End - React.Js (Páginas Home e Deploy no Netlify)
 
-
+[Projeto do Front-End](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/5d19019b2d7f1c8e8bf26b6a55df8f575392101c/documentos/frontend_projeto.png)
 
 ### Passo 1: Preparando a aplicação
 - [x] Limpando novamente o projeto - instalando outras extensões
