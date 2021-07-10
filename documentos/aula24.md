@@ -126,10 +126,12 @@ Exemplos retirados do site do BootStrap (https://getbootstrap.com)
 
 
 ### Passo 4: Criando a página de Login (Autenticação)
-- [x] Criar em componentes pastas styles
+- [x] Criar em componentes a pasta styles
   - Criar na pasta styles os componentes (Logo.tsx e GlobalStyles.tsx)
 - [x] Criar a pasta login em pages
 - [x] Criar o arquivo routes.tsx na raiz scr
+- [x] Criar em componentes a pasta layouts 
+  - Criar na pasta layouts os componentes (MainLayout.tsx e DashboardLayout.tsx)
 
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
