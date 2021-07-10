@@ -70,6 +70,8 @@ html, body {
 }
 
 ```
+[Voltar](#passo-1-preparando-a-aplicação)
+
 
 ### Passo 2: Criando a página inicial (Página de Acesso)
 - [x] Criar o primeiro componente do projeto
