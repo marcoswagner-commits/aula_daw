@@ -21,7 +21,7 @@
 - [ ] Criar a pasta css em assets
 - [ ] Criar o arquivo styles.css em css (copiar código abaixo)
 - [ ] (index.tsx) => import 'assets/css/styles.css' [🏴](#assetscssstylescss)
-- [ ] Escolher as fontes (ubumtu e roboto) em Google Fonts (https://fonts.google.com)
+- [ ] Escolher as fontes (Ubuntu e roboto) em Google Fonts (https://fonts.google.com)
   - Mostrar as opções link e import
   - Verificar as mudanças na aplicação
 
