@@ -20,11 +20,11 @@
 - [ ] Criar a pasta assets em src
 - [ ] Criar a pasta css em assets
 - [ ] Criar o arquivo styles.css em css (copiar código abaixo)
-- [ ] (index.tsx) => import 'assets/css/styles.css' [==>](#assetscssstylescss)
+- [ ] (index.tsx) => import 'assets/css/styles.css' [🏴==>](#assetscssstylescss)
 - [ ] Escolher as fontes (ubumtu e roboto) em Google Fonts (https://fonts.google.com)
   - Mostrar as opções link e import
   - Verificar as mudanças na aplicação
-
+🏴
 
 Extensões:
 - Dracula
@@ -78,13 +78,14 @@ html, body {
     - Criar a pasta NavBar em Components/Basics
     - Criar o arquivo Index.tsx em Components/Basics/NavBar  
     - Colocar um item de "teste" em NavBar/Index.tsx e inserir o componente em App
-    - Inserir o código NavBar (código abaixo) no componente [==>](#componentsbasicsnavbarindextsx)
+    - Inserir o código NavBar (código abaixo) no componente [🏴==>](#componentsbasicsnavbarindextsx)
     - Inseri o arquivo (imagem) em assets/images (arquivo no github)
 - [x] Criar o segundo primeiro componente do projeto para Footer
-    - Seguir os mesmos procedimentos para Footer relaizados em NavBar [==>](#componentsbasicsfooterindextsx)
+    - Seguir os mesmos procedimentos para Footer relaizados em NavBar [🏴==>](#componentsbasicsfooterindextsx)
 - [x] Criar um container para o Body da página principal
 - [x] Criar a pasta pages em src
 - [x] Criar a pasta home em pages
+- [ ] Criar o arquivo Index.tsx em home [🏴==>](#homeindextsx)
 
 
 Exemplos retirados do site do BootStrap (https://getbootstrap.com)
@@ -184,6 +185,7 @@ const Home: React.FC = () => {
 
 export default Home;
 ```
+[Voltar](#passo-2-criando-a-página-inicial-página-de-acesso)
   
 ### Home/Styles.css
 ```
