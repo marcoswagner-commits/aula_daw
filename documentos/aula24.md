@@ -13,7 +13,7 @@
 
 ### Passo 1: Preparando a aplicação
 - [x] Limpando novamente o projeto - instalando outras extensões (react-icon, react-router-dom)
-  - {yarn add react-icons; https://react-icons.github.io/react-icons}
+  - {yarn add react-icons; https://react-icons.github.io/react-icons/ }
   - {yarn add react-router-dom; obs.: instalar as tipagens separadas - yarn add @types/react-router-dom -D}
 - [x] Importando o bootstrap
 - [ ] (index.tsx) => import 'bootstrap/dist/css/bootstrap.css'
