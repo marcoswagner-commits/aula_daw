@@ -137,8 +137,14 @@ Exemplos retirados do site do BootStrap (https://getbootstrap.com)
 
 
 ### Passo 4: Criando a página de Login (Autenticação)
+- [x] Criar o arquivo routes.tsx
+  - [ ] Detalhar seu uso
+  - [ ] Criar a página provisória de login para teste
+  - [ ] Relatar uso do "exact" e "link"
+
 - [x] Apresentando o Material-UI
   - Apresentando tema escolhido
+  - 
 - [x] Criar a estrutura de pastas do projeto:
   - [ ] _mocks_ em "src"
   - [ ] conta; dashboard; proprietario; obra; item; subitem; lancamento; settings em "components"
@@ -147,9 +153,6 @@ Exemplos retirados do site do BootStrap (https://getbootstrap.com)
 - [x] Criar a estrutura de arquivos do projeto (todos tsx):
   - [ ] Conta; Login; Dashboard; Proprietario; Obra; Item; Subitem; Lancamento; Settings em "pages"
   - [ ] DashboardLayout; DashBoardNavbar; DashBoardSidebar; GlobalStyles; Logo; MainLayout; MainNavbar; MainItem em "components/basics"
-- [x] Criar o arquivo routes.tsx
-  - [ ] Detalhar seu uso
-  - [ ] Criar a página provisória de login para teste
 
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
