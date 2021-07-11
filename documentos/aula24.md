@@ -128,9 +128,10 @@ Exemplos retirados do site do BootStrap (https://getbootstrap.com)
   - Criar conta/acessar (https://netlify.com)
   - "New Site From Git" 
     - Escolher Projeto / Definir Branch (codigos)   
+  - Base Url: frtend-gto
   - Comando: yarn build
-  - Diretório: build
-  - Deploy! (por ser um monorepositório o deploy irá falhar por não encontrar a pasta específica)
+  - Diretório: frtend-gto
+  - Deploy! (Caso exista algum erro por não encontrar a pasta específica)
     - Site settings -> Build & Deploy: Build settings: Base Directory: (frtend-gto)
     - Site settings -> Domain Management: (colocar o nome que você quiser)
     - Deploys -> Trigger deploy
