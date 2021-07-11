@@ -158,149 +158,136 @@ Exemplos retirados do site do BootStrap (https://getbootstrap.com)
 ## Códigos finais
 ### Home/Index.tsx
 ```
+import NavBar from 'components/basics/navbar';
+import Footer from 'components/basics/footer';
 import { FiLogIn } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
+
 
 import './styles.css';
 import logo from '../../assets/images/builder.svg';
 
 const Home: React.FC = () => {
-    return (
-        <div id="page-home">
-            <div className="content">
-                <header>
-                    <img src={logo} alt="Gestão de Obras"/>
-                </header>
-
-                <main>
-                    <h1>Sistema de Gestão de Obras</h1>
-                    <p>Controle de gastos de obras de construção civil com classificação de lançamentos e filtros.</p>
-
-                    <Link to="/autentica">
-                        <span>
-                        <FiLogIn />
-                        </span>
-                        <strong>Acessar o sistema!</strong>
-                    </Link>
-                </main>
-            </div>
+  return (
+    <>
+      <div id="header">
+        <NavBar />
+      </div>
+      <div id="conteudo">
+        <div id="contentl">
+          <h1>Sistema de Gestão de Obras</h1>
+          <p>Controle de gastos de obras de construção civil com classificação de lançamentos e filtros.</p>
+          <a href="/autentica">
+            <span>
+              <FiLogIn />
+            </span>
+            <strong>Acessar o sistema!</strong>
+          </a>
         </div>
-    );
+        <div id="contentr">
+          <img src={logo} alt="Gestão de Obras" />
+        </div>
+      </div>
+      <div id="footer">
+        <Footer />
+      </div>
+    </>
+  );
 }
 
 export default Home;
+
 ```
 [Voltar](#passo-2-criando-a-página-inicial-página-de-acesso)
   
 ### Home/Styles.css
 ```
-#page-home {
-    height: 100vh;
-  
-    background: url('../../assets/images/constructor-hand-drawn-worker.svg') no-repeat;
-  }
-  
-  #page-home .content {
-    width: 100%;
-    height: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 30px;
-  
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  #page-home .content header {
-    margin: 48px 0 0;
-  }
-  
-  #page-home .content main {
-    flex: 1;
-    max-width: 660px;
-  
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  #page-home .content main h1 {
-    font-size: 64px;
-    color: #333;
-  }
-  
-  #page-home .content main p {
-    font-size: 24px;
-    margin-top: 24px;
-    line-height: 38px;
-  }
-  
-  #page-home .content main a {
-    width: 100%;
-    max-width: 360px;
-    height: 72px;
-    background: #79ab7f;
-    border-radius: 8px;
-    text-decoration: none;
-  
-    display: flex;
+#conteudo {
+  width: 90%;
+  height: 65%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 0px;
+  display: flex;
+  align-items: flex-start;
+ }
+
+#conteudo .contentl {
+  max-width: 650px;
+  float:left;
+}
+
+#contentr {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  float:left;
+}
+
+#contentl h1 {
+  font-size: 64px;
+  color: rgb(61, 23, 23);
+}
+
+#contentl p {
+  font-size: 24px;
+  margin-top: 18px;
+  line-height: 34px;
+  color: rgb(61, 23, 23);
+}
+
+#contentl a {
+  width: 100%;
+  max-width: 360px;
+  height: 72px;
+  background: #093d0f;
+  border-radius: 8px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+#contentl a span {
+  display: block;
+  background: rgba(206, 202, 202, 0.08);
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+#contentl a span svg {
+  color: #FFF;
+  width: 20px;
+  height: 20px;
+}
+
+#contentl main a strong {
+  flex: 1;
+  text-align: center;
+  color: #FFF;
+}
+
+#contentl main a:hover {
+  background: #79ab7f;
+}
+
+@media(max-width: 1000px) {
+  #conteudo .contentl {
     align-items: center;
-    overflow: hidden;
-  
-    margin-top: 40px;
-  }
-  
-  #page-home .content main a span {
-    display: block;
-    background: rgba(0, 0, 0, 0.08);
-    width: 72px;
-    height: 72px;
-  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.2s;
-  }
-  
-  #page-home .content main a span svg {
-    color: #FFF;
-    width: 20px;
-    height: 20px;
-  }
-  
-  #page-home .content main a strong {
-    flex: 1;
     text-align: center;
-    color: #FFF;
   }
-  
-  #page-home .content main a:hover {
-    background: #79ab7f;
+
+  #contentl main h1 {
+    font-size: 42px;
   }
-  
-  @media(max-width: 900px) {
-    #page-home .content {
-      align-items: center;
-      text-align: center;
-    }
-  
-    #page-home .content header {
-      margin: 48px auto 0;
-    }
-  
-    #page-home .content main {
-      align-items: center;
-    }
-  
-    #page-home .content main h1 {
-      font-size: 42px;
-    }
-  
-    #page-home .content main p {
-      font-size: 24px;
-    }
-  }
+
+}
+
+
 
 ```
 [Voltar](#passo-2-criando-a-página-inicial-página-de-acesso)
