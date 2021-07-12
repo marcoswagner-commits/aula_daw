@@ -1,5 +1,6 @@
 import NavBar from 'components/basics/navbar';
 import Footer from 'components/basics/footer';
+import { Link } from 'react-router-dom';
 import { FiLogIn } from 'react-icons/fi';
 
 
@@ -16,12 +17,12 @@ const Home: React.FC = () => {
         <div id="contentl">
           <h1>Sistema de Gestão de Obras</h1>
           <p>Controle de gastos de obras de construção civil com classificação de lançamentos e filtros.</p>
-          <a href="/autentica">
+          <Link to="/login">
             <span>
               <FiLogIn />
             </span>
             <strong>Acessar o sistema!</strong>
-          </a>
+          </Link>
         </div>
         <div id="contentr">
           <img src={logo} alt="Gestão de Obras" />
