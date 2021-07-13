@@ -17,6 +17,8 @@
   - O NavBar terá as seguintes opções: Home - Cadastro - Consulta
   - Criar em components/basics a pasta content
   - Criar na pasta content os arquivos: Card.tsx e Navbar.tsx
+  - Criar em pages a pasta proprietario
+    - Criar na pasta proprietário os arquivos: consulta.tsx, cadastro.tsx, lista.tsx 
 
 
 
