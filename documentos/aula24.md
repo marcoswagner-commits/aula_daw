@@ -144,16 +144,17 @@ Exemplos retirados do site do BootStrap (https://getbootstrap.com)
   - [ ] Relatar uso do "exact" e "link"
 
 - [x] Apresentando o Material-UI
-  - Apresentando tema escolhido
-  - 
-- [x] Criar a estrutura de pastas do projeto:
-  - [ ] _mocks_ em "src"
-  - [ ] conta; dashboard; proprietario; obra; item; subitem; lancamento; settings em "components"
-  - [ ] theme em "src"
-  - [ ] utils em "src"
-- [x] Criar a estrutura de arquivos do projeto (todos tsx):
-  - [ ] Conta; Login; Dashboard; Proprietario; Obra; Item; Subitem; Lancamento; Settings em "pages"
-  - [ ] DashboardLayout; DashBoardNavbar; DashBoardSidebar; GlobalStyles; Logo; MainLayout; MainNavbar; MainItem em "components/basics"
+
+- [x] Criando a página de login
+  - [ ] Usando uma estrutura pronta "vazia"
+  - [ ] Importando o framework "axios"
+  - [ ] Criar uma pasta services em src
+  - [ ] Criar um componente API.tsx
+  
+  
+  - [ ] Importar em login o componente API
+  - [ ] Fazer os imports de useState e history
+
 
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
@@ -162,7 +163,7 @@ Exemplos retirados do site do BootStrap (https://getbootstrap.com)
 🥇:[![material complementar aula24](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/91eb8207965740a8e341b626b250e6869e4d43ad/documentos/Capa_aula_front.png)](https://www.youtube.com/watch?v=yckK1zONYCw)
 
 -
-🥈:[![material complementar aula24](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/91eb8207965740a8e341b626b250e6869e4d43ad/documentos/Capa_aula_front.png)](https://www.youtube.com/watch?v=TtQiyX13PYE)
+🥈:[![material complementar aula24](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/91eb8207965740a8e341b626b250e6869e4d43ad/documentos/Capa_aula_front.png)](https://www.youtube.com/watch?v=y8zYNCPAMUc)
 
 -
 🥉:[![material complementar aula24](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/91eb8207965740a8e341b626b250e6869e4d43ad/documentos/Capa_aula_front.png)](https://www.youtube.com/watch?v=t4N0atc8xi0)
