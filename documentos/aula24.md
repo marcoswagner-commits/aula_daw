@@ -146,7 +146,7 @@ Exemplos retirados do site do BootStrap (https://getbootstrap.com)
 - [x] Apresentando o Material-UI
 
 - [x] Criando a página de login
-  - [ ] Usando uma estrutura pronta "vazia"
+  - [ ] Usando uma estrutura pronta "vazia" [🏴](#pagesloginindextsx)
   - [ ] Importando o framework "axios"
   - [ ] Criar uma pasta services em src
   - [ ] Criar um componente API.tsx
@@ -155,6 +155,220 @@ Exemplos retirados do site do BootStrap (https://getbootstrap.com)
   - [ ] Importar em login o componente API
   - [ ] Fazer os imports de useState e history
 
+#### Pages/Login/index.tsx
+```
+import { useState } from 'react'
+import NavBar from 'components/basics/navbar';
+import '../login/styles.css'
+import Lock from '../../assets/images/padlock.png'
+
+
+import { MdLock, MdForum } from "react-icons/md"
+import { HiEye, HiEyeOff } from "react-icons/hi"
+
+function Login() {
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
+  const [show, setShow] = useState(false)
+
+  const handleClick = (e: any) => {
+    e.preventDefault()
+    setShow(!show);
+  }
+
+  return (
+    <>
+      <div className="header">
+        <NavBar />
+      </div>
+      <div className="login">
+        <div className="login-logo">
+          <img
+            src={Lock}
+            alt="MdLockLogin App"
+          />
+        </div>
+
+        <div className="login-right">
+          <h1>A U T E N T I C A Ç Ã O</h1>
+
+          <div className="login-loginInputEmail">
+            <MdForum />
+            <input
+              type="user"
+              placeholder="Digite um usuário"
+              value={username}
+              onChange={e => setUsername(e.target.value)}
+            />
+          </div>
+
+          <div className="login-loginInputPassword">
+            <MdLock />
+            <input
+              placeholder="Digite sua senha"
+              type={show ? "text" : "password"}
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+            />
+            <div className="login-eye">
+              {show ? (
+                <HiEye
+                  size={20}
+                  onClick={handleClick}
+                />
+              ) : (
+                <HiEyeOff
+                  size={20}
+                  onClick={handleClick}
+                />
+              )}
+            </div>
+          </div>
+
+          <button type="submit">
+            E N T R A R
+          </button>
+
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default Login
+```
+
+#### Pages/Login/sytles.tsx
+```
+.login {
+  width: 1100px;
+  height: 65%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 0px;
+  display: flex;
+  align-items: flex-start;
+  background-color: #ffffff;
+  color: white;
+ }
+
+.login-logo img {
+  width: 350px;
+  height: 350px;
+}
+
+.login-right { 
+  background-color: #e6e6f0;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+  padding: 20px;
+  width: 500px;
+  height: 400px;
+}
+
+.login-right h1 {
+  font-family: 'Roboto';
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.login-right h4 {
+  font-family: 'Roboto Slab';
+  font-weight: 300;
+  margin-top: 40px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333349;
+}
+
+.login-loginInputEmail {
+  display: flex;
+  align-items: center;
+  color: gray;
+  background-color: #1A1A1D;
+  border-radius: 5px;
+  padding: 3px;
+  width: 98%;
+  height: 50px;
+}
+
+.login-loginInputEmail svg {
+  margin-left: 10px;
+  font-size: 25px;
+}
+
+.login-loginInputEmail input {
+  background: transparent;
+  width: 100%;
+  outline-width: 0;
+  color: #E1E1E6;
+  border: none;
+  font-size: 17px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.login-loginInputPassword {
+  display: flex;
+  align-items: center;
+  color: rgb(189, 181, 181);
+  background-color: #1e1e20;
+  border-radius: 3px;
+  padding: 3px;
+  margin: 5px;
+  width: 98%;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.login-loginInputPassword svg {
+  margin-left: 10px;
+  font-size: 25px;
+}
+
+.login-loginInputPassword input {
+  background: transparent;
+  width: 100%;
+  outline-width: 0;
+  color:  #101011;
+  border: none;
+  font-size: 17px;
+  margin-left: 12px;
+  margin-right: 10px;
+}
+
+.login-right button {
+  width: 98%;
+  background-color: #4c4c79;
+  color: #131414;
+  font-weight: 800;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-top: 5px;
+  border: none;
+
+  outline-width: 0;
+}
+
+.login-right button:hover {
+  background-color: #4c4c50;
+  color: #161718;
+  cursor: pointer;
+}
+
+.login-eye {
+  align-items: center;
+  justify-content: center;
+  font-size: 30;
+  cursor: pointer;
+  margin-right: 10px;
+}
+```
 
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
@@ -307,187 +521,9 @@ export default Home;
 ```
 [Voltar](#passo-2-criando-a-página-inicial-página-de-acesso)
 
-### Login.tsx
+### Pages/Login/Index.tsx
 ```
-import { Link as RouterLink, useNavigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
-import * as Yup from 'yup';
-import { Formik } from 'formik';
-import {
-  Grid,
-  Box,
-  Button,
-  Container,
-  Link,
-  TextField,
-  Typography
-} from '@material-ui/core';
 
-const Login = () => {
-  const navigate = useNavigate();
-
-  return (
-    <>
-      <Helmet>
-        <title>Entrada | GESTÃO:OBRAS</title>
-      </Helmet>
-      <Box
-        sx={{
-          backgroundColor: 'background.default',
-          display: 'flex',
-          flexDirection: 'column',
-          height: '100%',
-          justifyContent: 'center'
-        }}
-      >
-        <Container maxWidth="sm">
-          <Formik
-            initialValues={{
-              email: 'usario@ufj.edu.br',
-              password: 'Senha123'
-            }}
-            validationSchema={Yup.object().shape({
-              email: Yup.string().email('É preciso ter um usuário válido').max(255).required('É necessário um usuário'),
-              password: Yup.string().max(255).required('Senha é necessária')
-            })}
-            onSubmit={() => {
-              navigate('/app/dashboard', { replace: true });
-            }}
-          >
-            {({
-              errors,
-              handleBlur,
-              handleChange,
-              handleSubmit,
-              isSubmitting,
-              touched,
-              values
-            }) => (
-              <form onSubmit={handleSubmit}>
-                <Box align="center">
-                  <Grid>
-                    <Link
-                      component={RouterLink}
-                      to="/register"
-                      variant="h6"
-                    >
-                      <Button
-                        align="left"
-                        color="primary"
-                        disabled={isSubmitting}
-                        size="medium"
-                      >
-                        ORÇAMENTOS
-                      </Button>
-                    </Link>
-                    <Link
-                      component={RouterLink}
-                      to="/register"
-                      variant="h6"
-                    >
-                      <Button
-                        align="center"
-                        color="primary"
-                        disabled={isSubmitting}
-                        size="medium"
-                      >
-                        FORNECEDORES
-                      </Button>
-                    </Link>
-                    <Link
-                      component={RouterLink}
-                      to="/register"
-                      variant="h6"
-                    >
-                      <Button
-                        align="rigth"
-                        color="primary"
-                        disabled={isSubmitting}
-                        size="medium"
-                      >
-                        DOCUMENTOS
-                      </Button>
-                    </Link>
-                  </Grid>
-                </Box>
-                <Box align="center" sx={{ mb: 1 }}>
-                  <Typography
-                    color="textPrimary"
-                    variant="h1"
-                  >
-                    Entrada
-                  </Typography>
-                </Box>
-                <Box align="center"><img alt="GTO" src="/static/images/GTO_LOGO.png" /></Box>
-                <Typography
-                  align="center"
-                  color="textSecondary"
-                  variant="body1"
-                >
-                  Entre com seu usuário!
-                </Typography>
-                <TextField
-                  error={Boolean(touched.email && errors.email)}
-                  fullWidth
-                  helperText={touched.email && errors.email}
-                  label="Email Address"
-                  margin="normal"
-                  name="email"
-                  onBlur={handleBlur}
-                  onChange={handleChange}
-                  type="email"
-                  value={values.email}
-                  variant="outlined"
-                />
-                <TextField
-                  error={Boolean(touched.password && errors.password)}
-                  fullWidth
-                  helperText={touched.password && errors.password}
-                  label="Password"
-                  margin="normal"
-                  name="password"
-                  onBlur={handleBlur}
-                  onChange={handleChange}
-                  type="password"
-                  value={values.password}
-                  variant="outlined"
-                />
-                <Box sx={{ py: 2 }}>
-                  <Button
-                    color="primary"
-                    disabled={isSubmitting}
-                    fullWidth
-                    size="large"
-                    type="submit"
-                    variant="contained"
-                  >
-                    ENTRAR
-                  </Button>
-                </Box>
-                <Typography
-                  color="textSecondary"
-                  variant="body1"
-                >
-                  Não tem uma conta no GTO?
-                  {' '}
-                  <Link
-                    component={RouterLink}
-                    to="/register"
-                    variant="h6"
-                  >
-                    Faça o registro!
-                  </Link>
-                </Typography>
-              </form>
-            )}
-          </Formik>
-        </Container>
-      </Box>
-    </>
-  );
-};
-
-export default Login;
 
 
 ```
