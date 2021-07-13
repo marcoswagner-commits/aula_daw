@@ -15,7 +15,8 @@
 - [x] Criando um NavBar para proprietários
   - Escolhendo o NavBar no BootStrap
   - O NavBar terá as seguintes opções: Home - Cadastro - Consulta
-  - 
+  - Criar em components/basics a pasta content
+  - Criar na pasta content os arquivos: Card.tsx e Navbar.tsx
 
 
 
