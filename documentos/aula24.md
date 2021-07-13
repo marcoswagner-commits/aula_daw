@@ -155,6 +155,16 @@ Exemplos retirados do site do BootStrap (https://getbootstrap.com)
   - [ ] Importar em login o componente API
   - [ ] Fazer os imports de useState e history
 
+```
+import axios from 'axios'
+
+const API = axios.create( {
+  baseURL: 'http://localhost/8080'
+});
+export default API;
+
+```
+
 #### Pages/Login/index.tsx
 ```
 import { useState } from 'react'
