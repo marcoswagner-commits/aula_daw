@@ -162,11 +162,11 @@ Passos:
 - [Trabalho2 - BackEnd Fase 1](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/67b0b65e99e64c0752acd8a4a4f000cb3e244fb6/documentos/Trabalho2%20-%20DAW.pdf)
 
 ### Aulas
-- Roteiro específico da Aula Inaugural  - 13/07/2021 * (Apresentação do Planejamento - Plano de Ensino - Metodologias) *
+- Roteiro específico da Aula Inaugural  - 18/05/2021 * (Apresentação do Planejamento - Plano de Ensino - Metodologias) *
 - [Roteiro específico da Aula02 - 20/05/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula02.md)
 - [Roteiro específico da Aula03 - 25/05/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula03.md)
 - [Roteiro específico da Aula04 - 27/05/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula04.md)
-- Roteiro específico da Aula de Apresentação do Modelo Conceitual  - 13/07/2021 * (Apresentação do Backend - fase 1) *
+- Roteiro específico da Aula de Apresentação do Modelo Conceitual  - 03/06/2021 * (Apresentação do Backend - fase 1) *
 -  //////////////////////////// INÍCIO DO BACK-END ///////////////////////////////////////////////////////
 - [Roteiro específico da Aula05 - 08/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula05.md)
 - [Roteiro específico da Aula06 - 10/06/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula06.md)
