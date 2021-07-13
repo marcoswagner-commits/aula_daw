@@ -531,121 +531,32 @@ export default Home;
   
 ### App.tsx
 ```
-import 'react-perfect-scrollbar/dist/css/styles.css';
-import { useRoutes } from 'react-router-dom';
-import { ThemeProvider } from '@material-ui/core';
-import GlobalStyles from 'src/components/GlobalStyles';
-import 'src/mixins/chartjs';
-import theme from 'src/theme';
-import routes from 'src/routes';
+import Routes from "routes";
 
-const App = () => {
-  const routing = useRoutes(routes);
-
+export default function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      {routing}
-    </ThemeProvider>
+    <Routes />
   );
-};
-
-export default App;
-```
-
-### GlobalStyles.tsx
-```
-
-import { createStyles, makeStyles } from '@material-ui/core';
-
-const useStyles = makeStyles(() => createStyles({
-  '@global': {
-    '*': {
-      boxSizing: 'border-box',
-      margin: 0,
-      padding: 0,
-    },
-    html: {
-      '-webkit-font-smoothing': 'antialiased',
-      '-moz-osx-font-smoothing': 'grayscale',
-      height: '100%',
-      width: '100%'
-    },
-    body: {
-      backgroundColor: '#f4f6f8',
-      height: '100%',
-      width: '100%'
-    },
-    a: {
-      textDecoration: 'none'
-    },
-    '#root': {
-      height: '100%',
-      width: '100%'
-    }
-  }
-}));
-
-const GlobalStyles = () => {
-  useStyles();
-
-  return null;
-};
-
-export default GlobalStyles;
-
-
-```
-
-### Logo.tsx
-```
-
-const Logo = (props) => (
-  <img
-    alt="Logo"
-    width="50%"
-    src="/static/images/SISPFC_LOGO_BW.png"
-    {...props}
-  />
-);
-
-export default Logo;
+}
 
 ```
 
 ### routes.tsx
 ```
 
-import { Navigate } from 'react-router-dom';
-import Login from 'src/pages/Login';
+import { Route, BrowserRouter } from 'react-router-dom';
+import Home from 'pages/home';
+import Login from 'pages/login';
 
-const routes = [
-  {
-    path: 'app',
-    element: <DashboardLayout />,
-    children: [
-      { path: 'proprietarios', element: <AlunoLista /> },
-      { path: 'dashboard', element: <Dashboard /> },
-      { path: 'products', element: <ProductList /> },
-      { path: 'settings', element: <Settings /> },
-      { path: '*', element: <Navigate to="/404" /> }
-    ]
-  },
-  {
-    path: '/',
-    element: <MainLayout />,
-    children: [
-      { path: 'login', element: <Login /> },
-      { path: 'register', element: <Register /> },
-      { path: '404', element: <NotFound /> },
-      { path: '/', element: <Navigate to="/app/dashboard" /> },
-      { path: '*', element: <Navigate to="/404" /> }
-    ]
-  }
-];
-
-export default routes;
-
+const Routes = () => {
+  return (
+    <BrowserRouter>
+      <Route component={Home} path="/" exact />
+      <Route component={Login} path="/login" />
+    </BrowserRouter>
+  );
+}
+export default Routes;
 
 ```
 
