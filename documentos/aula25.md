@@ -7,68 +7,18 @@
 
 ## Atividades da aula - roteiro
 
-## :+1: Implementação do Modelo Conceitual Gestão de Obras - Construção do Front-End - React.Js (Conceitos de Roteamento (router) e Página Login)
+## :+1: Implementação do Modelo Conceitual Gestão de Obras - Construção do Front-End - React.Js (Criando o contexto de proprietários)
 
 [Projeto do Front-End](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/5d19019b2d7f1c8e8bf26b6a55df8f575392101c/documentos/frontend_projeto.png)
 
-### Passo 1: Preparando a aplicação
-- [x] Limpando novamente o projeto - instalando outras extensões
-- [x] Importando o bootstrap
-- [ ] (index.tsx) => import 'bootstrap/dist/css/bootstrap.css'
-  - Verificar no node_modules a existência do bootstrap
-- [x] Criação de pastas e arquivos
-- [ ] Criar a pasta assets em src
-- [ ] Criar a pasta css em assets
-- [ ] Criar o arquivo styles.css em css (copiar código abaixo)
-- [ ] (index.tsx) => import 'assets/css/styles.css'
-- [ ] Escolher as fontes (ubumtu e roboto) em Google Fonts (https://fonts.google.com)
-  - Mostrar as opções link e import
-  - Verificar as mudanças na aplicação
+### Passo 1: Preparando o contexto Proprietários
+- [x] Criando um NavBar para proprietários
+  - Escolhendo o NavBar no BootStrap
+  - O NavBar terá as seguintes opções: Home - Cadastro - Consulta
+  - 
 
 
-Extensões:
-- Dracula
-- Material Icon
-- Fira Code (https://github.com/tonsky/FiraCode)
-- AutoRenameTag
-- ColorHighLight
-- SVG Preview (obs.: https://www.flaticon.com/ repositório de ícones)
 
-```
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
-:root {
-    --color-primary: #FF8400;
-}
-
-html, body {
-    height: 100%;
-    font-family: "Ubuntu", sans-serif;
-}
-
-#root {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.content {
-    flex: 1 0 auto;
-}
-
-.footer {
-    flex-shrink: 0;
-    text-align: center;
-}
-
-.bg-primary {
-    background-color: var(--color-primary) !important;
-}
-
-.text-primary {
-    color: var(--color-primary) !important;
-}
-
-```
 
 ### Passo 2: Criando página inicial (home)
 - [x] Criar o primeiro componente do projeto
