@@ -155,6 +155,9 @@ Exemplos retirados do site do BootStrap (https://getbootstrap.com)
   - [ ] Importar em login o componente API
   - [ ] Fazer os imports de useState e history
 
+![Pagina_Login](https://user-images.githubusercontent.com/81576640/125451047-81eb8645-62d6-4a86-9acc-f325c5d58470.png)
+
+
 ```
 import axios from 'axios'
 
@@ -390,7 +393,7 @@ export default Login
 🥈:[![material complementar aula24](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/91eb8207965740a8e341b626b250e6869e4d43ad/documentos/Capa_aula_front.png)](https://www.youtube.com/watch?v=y8zYNCPAMUc)
 
 -
-🥉:[![material complementar aula24](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/91eb8207965740a8e341b626b250e6869e4d43ad/documentos/Capa_aula_front.png)](https://www.youtube.com/watch?v=t4N0atc8xi0)
+🥉:[![material complementar aula24](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/91eb8207965740a8e341b626b250e6869e4d43ad/documentos/Capa_aula_front.png)](https://www.youtube.com/watch?v=P_i7frdrq80)
 
 
 
