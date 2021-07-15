@@ -1,6 +1,6 @@
 # Aula 25 - Desenvolvimento de Aplicações WEB
 
-> Aula 15/09/2021
+> 
 > 
 >   Estudo de caso: Gestão de Obras - Front-End
 
