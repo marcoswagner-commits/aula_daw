@@ -428,10 +428,239 @@ form input {
     filter: brightness(80%);
 }
 
-
 ```
   
+### Pages/Login/styles.css
+```
+.login {
+  width: 800px;
+  height: 75%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 0px;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  color: white;
+ }
+
+.login-logo img {
+  width: 250px;
+  height: 250px;
   
+}
+
+.login-right { 
+  background-color: #beb8b8;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+  padding: 30px;
+  width: 500px;
+  height: 400px;
+}
+
+.login-right h1 {
+  font-family: 'Roboto';
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.login-right h4 {
+  font-family: 'Roboto Slab';
+  font-weight: 300;
+  margin-top: 40px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #49494d;
+}
+
+.login-loginInputUser {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  color: gray;
+  background-color: #1A1A1D;
+  border-radius: 5px;
+  padding: 3px;
+  width: 98%;
+  height: 50px;
+}
+
+.login-loginInputUser svg {
+  margin-left: 10px;
+  font-size: 25px;
+}
+
+.login-loginInputUser input {
+  background: transparent;
+  width: 100%;
+  outline-width: 0;
+  color: #E1E1E6;
+  border: none;
+  font-size: 18px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.login-loginInputPassword {
+  display: flex;
+  align-items: center;
+  color: gray;
+  background-color: #1e1e20;
+  border-radius: 3px;
+  padding: 3px;
+  margin: 5px;
+  width: 98%;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.login-loginInputPassword svg {
+  margin-left: 10px;
+  font-size: 25px;
+}
+
+.login-loginInputPassword input {
+  background: transparent;
+  width: 100%;
+  outline-width: 0;
+  color: #E1E1E6;
+  border: none;
+  font-size: 18px;
+  margin-left: 12px;
+  margin-right: 10px;
+   
+}
+
+.login-right button {
+  width: 98%;
+  background-color: #a0a0aa;
+  color: #131414;
+  font-weight: 800;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-top: 5px;
+  border: none;
+
+  outline-width: 0;
+}
+
+.login-right button:hover {
+  background-color: #4c4c50;
+  color: #161718;
+  cursor: pointer;
+}
+
+.login-eye {
+  align-items: center;
+  justify-content: center;
+  font-size: 30;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+
+```
+
+### Pages/Home/styles.css
+```
+.conteudo {
+  width: 1100px;
+  height: 65%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 0px;
+  display: flex;
+  align-items: flex-start;
+ }
+
+.contentl {
+  max-width: 700px;
+  float:left;
+}
+
+.contentr {
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  float:left;
+}
+
+.contentl h1 {
+  font-size: 60px;
+  color: rgb(61, 23, 23);
+}
+
+.contentl p {
+  font-size: 24px;
+  margin-top: 18px;
+  line-height: 34px;
+  color: rgb(61, 23, 23);
+}
+
+.contentl a {
+  width: 100%;
+  max-width: 360px;
+  height: 72px;
+  background: #0f0f0f;
+  border-radius: 8px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+
+.acesso {
+  display: block;
+  color: #FFF;
+  width: 300px;
+  height: 20px;
+  flex: 1;
+  text-align: center;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.acesso a span {
+  color: #FFF;
+}
+
+.acesso  span {
+  align-items: stretch;
+  margin-left: 10px;
+}
+.acesso  a strong {
+  flex: 1;
+  text-align: center;
+  color: #FFF;
+  font-size: 25px;
+}
+
+.acesso a:hover {
+  background: #575858;
+}
+
+@media(max-width: 1000px) {
+  #conteudo .contentl {
+    align-items: center;
+    text-align: center;
+  }
+
+.contentl main h1 {
+    font-size: 42px;
+  }
+
+}
+
+
+```
 
 
 
