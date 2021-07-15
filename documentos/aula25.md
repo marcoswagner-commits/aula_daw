@@ -11,70 +11,24 @@
 
 [Projeto do Front-End](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/5d19019b2d7f1c8e8bf26b6a55df8f575392101c/documentos/frontend_projeto.png)
 
-### Passo 1: Preparando o contexto Proprietários
-- [x] Criando um NavBar para proprietários
-  - Escolhendo o NavBar no BootStrap
-  - O NavBar terá as seguintes opções: Home - Cadastro - Consulta
-  - Criar em components/basics a pasta content
-  - Criar na pasta content os arquivos: Card.tsx e Navbar.tsx
-  - Criar em pages a pasta proprietario
-    - Criar na pasta proprietário os arquivos: consulta.tsx, cadastro.tsx, lista.tsx 
+### Passo 1: Preparando o contexto Proprietários (Consulta/Listagem)
+- [x] Criando uma pasta proprietarios (para listagem) em src
+  - Criar os arquivos index.tsx e styles.css - vide códigos abaixo
+- [x] Criando uma pasta proprietario (para inclusão/atualização) em src 
+  - Criar os arquivos index.tsx e styles.css - vide códigos abaixo
+- [x] Criando uma lista de proprietarios para ser usada com o Hook useState
+  - Usar o conceito de interface em TypeScript para configurar a variável de estado 
+- [x] Criando constantes para armazenar o "username" e "token"
+- [x] Criando um Hook useHistory (acesso de outras instâncias de navegação)
+- [ ] Relatando o conceitos de "promises", especialmente async, await, .then()
+- [x] Criando a função principal loadProprietarios
+- [ ] Criando um Hook useEffect
+- [x] Criando a função editProprietario()
+- [x] Criando a função deleteProprietario()
+- [x] Ajustando tabela de proprietarios e outras opções
 
 
 
-
-### Passo 2: Criando página inicial (home)
-- [x] Criar o primeiro componente do projeto
-    - Criar a pasta NavBar em Components/Basics
-    - Criar o arquivo Index.tsx em Components/Basics/NavBar 
-    - Colocar um item de texte em NavBar/Index.tsx e inserir o componente em App
-    - Inserir o código NavBar (código abaixo) no componente
-    - Inseri o arquivo (imagem) em assets/images (arquivo no github)
-- [x] Criar o segundo primeiro componente do projeto para Footer
-    - Seguir os mesmos procedimentos para Footer relaizados em NavBar
-- [x] Criar um container para o Body da página principal
-- [x] Criar a pasta pages em src
-- [x] Criar a pasta home em pages  
-
-Exemplos retirados do site do BootStrap (https://getbootstrap.com)
-
-- NavBar  
-```
-<div className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-light border-bottom shadow-sm">
-  <div className="container">
-    <nav className="my-2 my-md-0 mr-md-3">
-      <img src={logo_gto_vf} alt="Gestão de Obras" width="120" />
-    </nav>
-  </div>
-</div>
-
-```
-
-- Footer  
-```
-<footer className="footer mt-auto py-3 bg-dark">
-  <div className="container">
-    <p className="text-light">App desenvolvido por <a href="https://github.com/marcoswagner-commits" target="_blank" rel="noreferrer">Prof. Marcos Wagner</a></p>
-    <p className="text-light"><small><strong>Desenvolvimento de Aplicações WEB - BCC - UFJ</strong><br/>
-      Disciplina de Desenvolvimento de Aplicações WEB: <a href="https://github.com/marcoswagner-commits/gestao_obras_aula_daw" target="_blank" rel="noreferrer"></a></small></p>
-  </div>
-</footer>
-
-
-```
-
-
-### Passo 3: Implantação no Netlify
-- Publicação no Netlify
-  - Criar conta/acessar (https://netlify.com)
-  - "New Site From Git" 
-    - Escolher Projeto / Definir Branch (codigos)   
-  - Comando: yarn build
-  - Diretório: build
-  - Deploy! (por ser um monorepositório o deploy irá falhar por não encontrar a pasta específica)
-    - Site settings -> Build & Deploy: Build settings: Base Directory: (frtend-gto)
-    - Site settings -> Domain Management: (colocar o nome que você quiser)
-    - Deploys -> Trigger deploy
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
