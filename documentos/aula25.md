@@ -355,6 +355,82 @@ export default Proprietario;
 
 
 ```
+
+### Assets/css/styles.css
+```
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+html, body {
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.footer {
+    flex-shrink: 0;
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 400 14px Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+input, button, textarea {
+    font: 400 18px Roboto, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+form input {
+    width: 100%;
+    height: 60px;
+    color: #333333;
+    border: 1px solid #DCDCE6;
+    border-radius: 8px;
+    padding: 0 24px;
+    margin-top: 16px;
+}
+
+.button {
+    width: 100%;
+    height: 60px;
+    background: #0a0a0a;
+    border: 0;
+    border-radius: 8px;
+    color: #FFF;
+    font-weight: 700;
+    margin-top: 16px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    transition: filter 0.2s;
+}
+
+.button:hover {
+    filter: brightness(80%);
+}
+
+
+```
+  
   
 
 
