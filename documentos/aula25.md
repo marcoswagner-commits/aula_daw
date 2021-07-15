@@ -14,8 +14,6 @@
 ### Passo 1: Preparando o contexto Proprietários (Consulta/Listagem)
 - [x] Criando uma pasta proprietarios (para listagem) em src
   - Criar os arquivos index.tsx e styles.css - vide códigos abaixo
-- [x] Criando uma pasta proprietario (para inclusão/atualização) em src 
-  - Criar os arquivos index.tsx e styles.css - vide códigos abaixo
 - [x] Criando uma lista de proprietarios para ser usada com o Hook useState
   - Usar o conceito de interface em TypeScript para configurar a variável de estado 
 - [x] Criando constantes para armazenar o "username" e "token"
@@ -28,6 +26,19 @@
 - [x] Ajustando tabela de proprietarios e outras opções
 
 
+### Passo 2: Preparando o contexto Proprietários (Cadastro/Atualização)
+- [x] Criando uma pasta proprietario (para inclusão/atualização) em src 
+  - Criar os arquivos index.tsx e styles.css - vide códigos abaixo
+- [x] Criando o conjunto de variáveis que normalmente estão no corpo (body) de inserção (post) com Hook useState
+- [x] Criando uma variável (propID) com o Hook useParams que virá de outra página
+- [x] Criando constantes para armazenar o "username" e "token"
+- [x] Criando um Hook useHistory (acesso de outras instâncias de navegação)
+- [ ] Relatando o conceitos de "promises", especialmente async, await, .then()
+- [x] Criando a função principal saveOrUpdate
+- [ ] Criando um Hook useEffect
+- [x] Criando a função editProprietario()
+- [x] Criando a função deleteProprietario()
+- [x] Ajustando tabela de proprietarios e outras opções
 
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
