@@ -230,7 +230,7 @@ export default Proprietarios;
 ```
 
 
-### Proprietario/Styles.css
+### Proprietario/Index.tsx
 ```
 
 import { Link } from 'react-router-dom';
