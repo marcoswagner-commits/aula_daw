@@ -18,7 +18,7 @@
   - Usar o conceito de interface em TypeScript para configurar a variável de estado 
 - [x] Criando constantes para armazenar o "username" e "token"
 - [x] Criando um Hook useHistory (acesso de outras instâncias de navegação)
-- [ ] Relatando o conceitos de "promises", especialmente async, await, .then()
+- [ ] Relatando o conceito de "promises", especialmente async, await, .then()
 - [x] Criando a função principal loadProprietarios
 - [ ] Criando um Hook useEffect
 - [x] Criando a função editProprietario()
