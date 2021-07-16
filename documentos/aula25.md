@@ -48,15 +48,48 @@
   - Criar o arquivo index.tsx na pasta - vide códigos abaixo
 - [x] Criando uma pasta dashboard em pages
   - Criar os arquivos index.tsx, styles.css - vide códigos abaixo
-- [x] Criando uma variável (propID) com o Hook useParams que virá de outra página
-- [x] Criando constantes para armazenar o "username" e "token"
-- [x] Criando um Hook useHistory (acesso de outras instâncias de navegação)
-- [ ] Relatando o conceitos de "promises", especialmente async, await, .then()
-- [x] Criando a função principal saveOrUpdate
-- [ ] Criando um Hook useEffect
-- [x] Criando a função editProprietario()
-- [x] Criando a função deleteProprietario()
-- [x] Ajustando tabela de proprietarios e outras opções
+- [x] Adicionando dependências para gráficos (yarn add apexcharts  // yarn add react-apexcharts)
+- [ ] 
+
+
+#### Gráfico de Barras
+```
+const options = {
+    plotOptions: {
+        bar: {
+            horizontal: true,
+        }
+    },
+};
+
+const mockData = {
+    labels: {
+        categories: ['Material de Acabamento', 'Material de Pintura', 'Mão-de-Obra', 'Material Básico']
+    },
+    series: [
+        {
+            name: "% Sucesso",
+            data: [43.6, 67.1, 67.7, 45.6, 71.1]                   
+        }
+    ]
+};
+```
+
+#### Gráfico de "Pizza"
+```
+const mockData = {
+    series: [477138, 499928, 444867, 220426, 473088],
+    labels: ['Material de Acabamento', 'Material de Pintura', 'Mão-de-Obra', 'Material Básico']
+}
+
+const options = {
+    legend: {
+        show: true
+    }
+}
+
+```
+
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
@@ -404,9 +437,185 @@ export default Proprietario;
 
 
 
-### Assets/css/styles.css
+### Components/Basics/index.tsx
 
 ```
+import { useState } from 'react';
+import * as FaIcons from 'react-icons/fa';
+import * as AiIcons from 'react-icons/ai';
+import { Link } from 'react-router-dom';
+import { SidebarData } from './table';
+
+import { IconContext } from 'react-icons';
+
+import './styles.css';
+
+function Sidebar() {
+  const [sidebar, setSidebar] = useState(false);
+
+  const showSidebar = () => setSidebar(!sidebar);
+
+  return (
+    <>
+      <IconContext.Provider value={{ color: '#fff' }}>
+        <div className='navbar'>
+          <Link to='#' className='menu-bars'>
+            <FaIcons.FaBars onClick={showSidebar} />
+          </Link>
+        </div>
+        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+          <ul className='nav-menu-items' onClick={showSidebar}>
+            <li className='navbar-toggle'>
+              <Link to='#' className='menu-bars'>
+                <AiIcons.AiOutlineClose />
+              </Link>
+            </li>
+            {SidebarData.map((item, index) => {
+              return (
+                <li key={index} className={item.cName}>
+                  <Link to={item.path}>
+                    {item.icon}
+                    <span>{item.title}</span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+      </IconContext.Provider>
+    </>
+  );
+}
+
+export default Sidebar;
+
+```
+
+### Components/Basics/table.tsx
+
+```
+import * as FaIcons from 'react-icons/fa';
+import * as AiIcons from 'react-icons/ai';
+import * as IoIcons from 'react-icons/io';
+
+export const SidebarData = [
+  {
+    title: 'Home',
+    path: '/',
+    icon: <AiIcons.AiFillHome />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'DashBoard',
+    path: '/dashboard',
+    icon: <IoIcons.IoIosPaper />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Proprietários',
+    path: '/proprietarios',
+    icon: <FaIcons.FaCartPlus />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Obras',
+    path: '/obras',
+    icon: <IoIcons.IoMdPeople />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Itens',
+    path: '/itens',
+    icon: <FaIcons.FaEnvelopeOpenText />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Subitens',
+    path: '/subitens',
+    icon: <IoIcons.IoMdHelpCircle />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Lançamentos',
+    path: '/lancamentos',
+    icon: <IoIcons.IoMdHelpCircle />,
+    cName: 'nav-text'
+  }
+];
+
+```
+### Components/Basics/stles.css
+
+```
+.navbar {
+  background-color: #060b26;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-bars {
+  margin-left: 2rem;
+  font-size: 2rem;
+  background: none;
+}
+
+.nav-menu {
+  background-color: #060b26;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+}
+
+.nav-menu.active {
+  left: 0;
+  transition: 350ms;
+}
+
+.nav-text {
+  justify-content: start;
+  align-items: center;
+  padding: 8px 0px 8px 16px;
+  list-style: none;
+  height: 60px;
+}
+
+.nav-text a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-size: 18px;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
+}
+
+.nav-text a:hover {
+  background-color: #1a83ff;
+}
+
+.nav-menu-items {
+  width: 100%;
+}
+
+.navbar-toggle {
+  background-color: #060b26;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+span {
+  margin-left: 16px;
+}
 
 ```
 
