@@ -41,6 +41,23 @@
 - [x] Ajustando tabela de proprietarios e outras opções
 
 
+### Passo 3: Criando uma SideBar e um Dashboard
+- [x] Criando uma pasta Sidebar em components/basics
+  - Criar os arquivos index.tsx, styles.css e table.tsx na pasta - vide códigos abaixo
+- [x] Criando uma pasta DashTable em components/basics
+  - Criar o arquivo index.tsx na pasta - vide códigos abaixo
+- [x] Criando uma pasta dashboard em pages
+  - Criar os arquivos index.tsx, styles.css - vide códigos abaixo
+- [x] Criando uma variável (propID) com o Hook useParams que virá de outra página
+- [x] Criando constantes para armazenar o "username" e "token"
+- [x] Criando um Hook useHistory (acesso de outras instâncias de navegação)
+- [ ] Relatando o conceitos de "promises", especialmente async, await, .then()
+- [x] Criando a função principal saveOrUpdate
+- [ ] Criando um Hook useEffect
+- [x] Criando a função editProprietario()
+- [x] Criando a função deleteProprietario()
+- [x] Ajustando tabela de proprietarios e outras opções
+
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
 
@@ -355,6 +372,46 @@ export default Proprietario;
 
 
 ```
+
+### Components/Basics/DashTable/index.tsx
+```
+<div className="table-responsive">
+    <table className="table table-striped table-sm">
+        <thead>
+            <tr>
+                <th>Descrição do Item</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mão de Obra</td>
+                <td>1500.00</td>
+            </tr>
+            <tr>
+                <td>Material de Acabamento</td>
+                <td>2500.00</td>
+            </tr>
+            <tr>
+                <td>Material Básico</td>
+                <td>3500.00</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+```
+
+
+
+### Assets/css/styles.css
+
+```
+
+```
+
+
+
 
 ### Assets/css/styles.css
 ```
