@@ -28,7 +28,7 @@ function Login() {
       localStorage.setItem('username', username);
       localStorage.setItem('token', response.data.token)
 
-      history.push('/proprietario')
+      history.push('/dashboard')
 
     } catch (error) {
       alert('Autenticação sem sucesso, tente novamente!');

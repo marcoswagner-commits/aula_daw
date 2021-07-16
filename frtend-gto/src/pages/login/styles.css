@@ -1,29 +1,30 @@
 .login {
-  width: 1100px;
-  height: 65%;
+  width: 800px;
+  height: 75%;
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 0px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   background-color: #ffffff;
   color: white;
  }
 
 .login-logo img {
-  width: 350px;
-  height: 350px;
+  width: 250px;
+  height: 250px;
+  
 }
 
 .login-right { 
-  background-color: #e6e6f0;
+  background-color: #beb8b8;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-left: 50px;
-  padding: 20px;
+  padding: 30px;
   width: 500px;
   height: 400px;
 }
@@ -40,11 +41,12 @@
   margin-top: 40px;
   font-size: 15px;
   font-weight: 500;
-  color: #333349;
+  color: #49494d;
 }
 
 .login-loginInputUser {
   display: flex;
+  text-align: center;
   align-items: center;
   color: gray;
   background-color: #1A1A1D;
@@ -65,7 +67,7 @@
   outline-width: 0;
   color: #E1E1E6;
   border: none;
-  font-size: 17px;
+  font-size: 18px;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -74,7 +76,7 @@
   display: flex;
   align-items: center;
   color: gray;
-  background-color: #1A1A1D;
+  background-color: #1e1e20;
   border-radius: 3px;
   padding: 3px;
   margin: 5px;
@@ -94,14 +96,15 @@
   outline-width: 0;
   color: #E1E1E6;
   border: none;
-  font-size: 17px;
+  font-size: 18px;
   margin-left: 12px;
   margin-right: 10px;
+   
 }
 
 .login-right button {
   width: 98%;
-  background-color: #4c4c79;
+  background-color: #a0a0aa;
   color: #131414;
   font-weight: 800;
   height: 50px;

@@ -1,0 +1,95 @@
+.proprietario-container {
+  width: 100%;
+  max-width: 1180px;
+  padding: 0 30px;
+  margin: 32px auto;
+}
+
+.proprietario-container  header{
+  display: flex;
+  align-items: center;
+}
+
+.subheader  {
+    margin-left: 260px;
+}
+
+.proprietario-container header span{
+  font-size: 20px;
+  margin-left: 18px;
+}
+
+.proprietario-container header span strong{
+  color: #251FC5;
+}
+
+.proprietario-container header img{
+  height: 64px;
+}
+
+.proprietario-container header a{
+  width: 260px;
+  margin-left: 18px;
+  margin-top: 0;
+}
+
+.proprietario-container header button{
+  height: 60px;
+  width: 60px;
+  border-radius: 4px;
+  border: 1px solid #DCDCE6;
+  background: transparent;
+  margin-left: 16px;
+  transition: border-color 0.5s;
+}
+
+.proprietario-container header button:hover{
+  border-color: #251FC5;
+}
+
+.proprietario-container h1 {
+  margin-top: 80px;
+  margin-bottom: 24px;
+}
+
+
+
+.proprietario-container tr td{
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.proprietario-container tr td button {
+  right: 24px;
+  top: 24px;
+  border: 0;
+  background: transparent;  
+}
+
+.proprietario-container tr td button + button{
+  top: 50px;  
+}
+
+.proprietario-container tr td button:hover{
+  opacity: 0.8;  
+}
+
+.proprietario-container tr td strong{
+  display: block;
+  margin-bottom: 16px;
+  color: #41414D;
+}
+
+.proprietario-container  p + strong{
+  margin-top: 32px;
+
+}
+
+.proprietario-container   p {
+  color: #737380;
+  line-height: 21px;
+  font-size: 16px;
+}
+

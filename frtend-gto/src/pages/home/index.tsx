@@ -5,30 +5,33 @@ import { FiLogIn } from 'react-icons/fi';
 
 
 import './styles.css';
+
 import logo from '../../assets/images/builder.png';
 
 const Home: React.FC = () => {
   return (
     <>
-      <div id="header">
+      <div className="header">
         <NavBar />
       </div>
-      <div id="conteudo">
-        <div id="contentl">
+      <div className="conteudo">
+        <div className="contentl">
           <h1>Sistema de Gestão de Obras</h1>
           <p>Controle de gastos de obras de construção civil com classificação de lançamentos e filtros.</p>
+          <div className="acesso">
           <Link to="/login">
             <span>
-              <FiLogIn />
+            <FiLogIn size={32} color="#111111" />
             </span>
             <strong>Acessar o sistema!</strong>
           </Link>
+          </div>
         </div>
-        <div id="contentr">
+        <div className="contentr">
           <img src={logo} alt="Gestão de Obras" />
         </div>
       </div>
-      <div id="footer">
+      <div className="footer">
         <Footer />
       </div>
     </>

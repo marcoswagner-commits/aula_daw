@@ -1,4 +1,4 @@
-#conteudo {
+.conteudo {
   width: 1100px;
   height: 65%;
   max-width: 1100px;
@@ -8,35 +8,35 @@
   align-items: flex-start;
  }
 
-#conteudo .contentl {
+.contentl {
   max-width: 700px;
   float:left;
 }
 
-#contentr {
+.contentr {
   max-width: 450px;
   display: flex;
   flex-direction: column;
   float:left;
 }
 
-#contentl h1 {
+.contentl h1 {
   font-size: 60px;
   color: rgb(61, 23, 23);
 }
 
-#contentl p {
+.contentl p {
   font-size: 24px;
   margin-top: 18px;
   line-height: 34px;
   color: rgb(61, 23, 23);
 }
 
-#contentl a {
+.contentl a {
   width: 100%;
   max-width: 360px;
   height: 72px;
-  background: #093d0f;
+  background: #0f0f0f;
   border-radius: 8px;
   text-decoration: none;
   display: flex;
@@ -45,31 +45,35 @@
   margin-top: 40px;
 }
 
-#contentl a span {
+
+.acesso {
   display: block;
-  background: rgba(206, 202, 202, 0.08);
-  width: 72px;
-  height: 72px;
-  display: flex;
+  color: #FFF;
+  width: 300px;
+  height: 20px;
+  flex: 1;
+  text-align: center;
   align-items: center;
-  justify-content: center;
   transition: background-color 0.2s;
 }
 
-#contentl a span svg {
+.acesso a span {
   color: #FFF;
-  width: 20px;
-  height: 20px;
 }
 
-#contentl main a strong {
+.acesso  span {
+  align-items: stretch;
+  margin-left: 10px;
+}
+.acesso  a strong {
   flex: 1;
   text-align: center;
   color: #FFF;
+  font-size: 25px;
 }
 
-#contentl main a:hover {
-  background: #79ab7f;
+.acesso a:hover {
+  background: #575858;
 }
 
 @media(max-width: 1000px) {
@@ -78,7 +82,7 @@
     text-align: center;
   }
 
-  #contentl main h1 {
+.contentl main h1 {
     font-size: 42px;
   }
 

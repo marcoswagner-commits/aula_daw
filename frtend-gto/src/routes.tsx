@@ -1,15 +1,22 @@
-import { Route, BrowserRouter } from 'react-router-dom';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import Home from 'pages/home';
 import Login from 'pages/login';
-import Proprietario from 'pages/proprietario'
+import Props from 'pages/proprietarios'
+import Prop from 'pages/proprietario';
+import Dashboard from 'pages/dashboard';
 
 const Routes = () => {
   return (
     <BrowserRouter>
-      <Route component={Home} path="/" exact />
-      <Route component={Login} path="/login" />
-      <Route component={Proprietario} path="/proprietario" />
+      <Switch>
+        <Route component={Dashboard} path="/" exact />
+        <Route component={Login} path="/login" />
+        <Route component={Dashboard} path="/login" />
+        <Route component={Props} path="/proprietarios" />
+        <Route component={Prop} path="/proprietario/:propId" />
+      </Switch>
     </BrowserRouter>
   );
 }
 export default Routes;
+
