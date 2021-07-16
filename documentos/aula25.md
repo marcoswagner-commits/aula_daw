@@ -46,10 +46,14 @@
   - Criar os arquivos index.tsx, styles.css e table.tsx na pasta - vide códigos abaixo
 - [x] Criando uma pasta DashTable em components/basics
   - Criar o arquivo index.tsx na pasta - vide códigos abaixo
+- [x] Adicionando dependências para gráficos (yarn add apexcharts  // yarn add react-apexcharts)
+- [x] Criando uma pasta BarChart em components/basics
+  - Criar o arquivo index.tsx na pasta - vide código (conteúdo) abaixo
+- [x] Criando uma pasta DonutChart em components/basics
+  - Criar o arquivo index.tsx na pasta - vide código (conteúdo) abaixo
 - [x] Criando uma pasta dashboard em pages
   - Criar os arquivos index.tsx, styles.css - vide códigos abaixo
-- [x] Adicionando dependências para gráficos (yarn add apexcharts  // yarn add react-apexcharts)
-- [ ] 
+  - Compor página com SideBar, Gráficos e DashTable
 
 
 #### Gráfico de Barras
@@ -75,7 +79,7 @@ const mockData = {
 };
 ```
 
-#### Gráfico de "Pizza"
+#### Gráfico de "Rosca"
 ```
 const mockData = {
     series: [477138, 499928, 444867, 220426, 473088],
