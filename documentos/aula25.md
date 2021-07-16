@@ -1,6 +1,6 @@
 # Aula 25 - Desenvolvimento de Aplicações WEB
 
-> 
+> Aula 14/09/2021
 > 
 >   Estudo de caso: Gestão de Obras - Front-End
 
@@ -100,7 +100,7 @@ const options = {
 🥈:[![material complementar aula22](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/91eb8207965740a8e341b626b250e6869e4d43ad/documentos/Capa_aula_front.png)](https://www.youtube.com/watch?v=PSej1NZCw1g)
 
 -
-🥉:[![material complementar aula22](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/91eb8207965740a8e341b626b250e6869e4d43ad/documentos/Capa_aula_front.png)](https://www.youtube.com/watch?v=t4N0atc8xi0)
+🥉:[![material complementar aula22](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/91eb8207965740a8e341b626b250e6869e4d43ad/documentos/Capa_aula_front.png)](https://www.youtube.com/watch?v=pnqApucu714)
 
 
 
