@@ -35,10 +35,6 @@
 - [x] Criando um Hook useHistory (acesso de outras instâncias de navegação)
 - [ ] Relatando o conceitos de "promises", especialmente async, await, .then()
 - [x] Criando a função principal saveOrUpdate
-- [ ] Criando um Hook useEffect
-- [x] Criando a função editProprietario()
-- [x] Criando a função deleteProprietario()
-- [x] Ajustando tabela de proprietarios e outras opções
 
 
 ### Passo 3: Criando uma SideBar e um Dashboard
