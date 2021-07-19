@@ -13,6 +13,11 @@
 
 ### Passo 1: Vinculando o Dashboard à API
 - [x] Vinculando o Gráfico de Barras
+  - Criar uma interface para total de itens (itemDescricao e total) - vide Json Postman
+  - Criar um useState para totalitens
+    - const [totalitens, setTotalItens] = useState<ItotalItens[]>([]);
+  - Criar um vínculo com o token para validar a consulta
+  - Criar um useEffect para busca de itens 
 - [x] Vinculando o Gráfico de Rosca
 - [x] Vinculando a Tabela de Dados
 
