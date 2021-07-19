@@ -491,7 +491,7 @@ export default Sidebar;
 
 ```
 
-### Components/Basics/table.tsx
+### Components/Basics/SideBar/Table.tsx
 
 ```
 import * as FaIcons from 'react-icons/fa';
@@ -544,7 +544,7 @@ export const SidebarData = [
 ];
 
 ```
-### Components/Basics/stles.css
+### Components/Basics/SideBar/styles.css
 
 ```
 .navbar {
@@ -619,80 +619,57 @@ span {
 
 ```
 
-
-
-
-### Assets/css/styles.css
+### Components/Basics/SideBar/index.tsx
 ```
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+import { useState } from 'react';
+import * as FaIcons from 'react-icons/fa';
+import * as AiIcons from 'react-icons/ai';
+import { Link } from 'react-router-dom';
+import { SidebarData } from './table';
 
-html, body {
-    height: 100%;
-    font-family: "Roboto", sans-serif;
+import { IconContext } from 'react-icons';
+
+import './styles.css';
+
+function Sidebar() {
+  const [sidebar, setSidebar] = useState(false);
+
+  const showSidebar = () => setSidebar(!sidebar);
+
+  return (
+    <>
+      <IconContext.Provider value={{ color: '#fff' }}>
+        <div className='navbar'>
+          <Link to='#' className='menu-bars'>
+            <FaIcons.FaBars onClick={showSidebar} />
+          </Link>
+        </div>
+        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+          <ul className='nav-menu-items' onClick={showSidebar}>
+            <li className='navbar-toggle'>
+              <Link to='#' className='menu-bars'>
+                <AiIcons.AiOutlineClose />
+              </Link>
+            </li>
+            {SidebarData.map((item, index) => {
+              return (
+                <li key={index} className={item.cName}>
+                  <Link to={item.path}>
+                    {item.icon}
+                    <span>{item.title}</span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+      </IconContext.Provider>
+    </>
+  );
 }
 
-#root {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
+export default Sidebar;
 
-.footer {
-    flex-shrink: 0;
-    text-align: center;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font: 400 14px Roboto, sans-serif;
-    -webkit-font-smoothing: antialiased;
-}
-
-input, button, textarea {
-    font: 400 18px Roboto, sans-serif;
-}
-
-button {
-    cursor: pointer;
-}
-
-form input {
-    width: 100%;
-    height: 60px;
-    color: #333333;
-    border: 1px solid #DCDCE6;
-    border-radius: 8px;
-    padding: 0 24px;
-    margin-top: 16px;
-}
-
-.button {
-    width: 100%;
-    height: 60px;
-    background: #0a0a0a;
-    border: 0;
-    border-radius: 8px;
-    color: #FFF;
-    font-weight: 700;
-    margin-top: 16px;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
-    transition: filter 0.2s;
-}
-
-.button:hover {
-    filter: brightness(80%);
-}
 
 ```
   
