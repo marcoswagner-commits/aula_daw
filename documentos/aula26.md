@@ -15,11 +15,14 @@
 - [x] Vinculando o Gráfico de Barras
   - Criar uma interface para total de itens (itemDescricao e total) - vide Json Postman
   - Criar um useState para totalitens
-    - const [totalitens, setTotalItens] = useState<ItotalItens[]>([]);
+  - Criar um useState para ChartData
   - Criar um vínculo com o token para validar a consulta
-  - Criar um useEffect para busca de itens 
+  - Criar um useEffect para busca de itens
+  - Vincular o gráfico com os dados retornados
 - [x] Vinculando o Gráfico de Rosca
+  - Repetir os passos do Gráfico de Barras
 - [x] Vinculando a Tabela de Dados
+  - Repetir os passos dos gráficos, alterando o vínculo para a tabela 
 
 ### Passo 2: Ajustes e melhorias
 - [x] Criando mensagens nos cadastros/listagens
