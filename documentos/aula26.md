@@ -1,6 +1,6 @@
 # Aula 26 - Desenvolvimento de Aplicações WEB
 
-> Aula 16/09/2021
+> 
 > 
 >   Estudo de caso: Gestão de Obras - Front-End
 
@@ -27,6 +27,30 @@
 ### Passo 2: Ajustes e melhorias
 - [x] Criando mensagens nos cadastros/listagens
 - [ ] Usando imagens para carregamentos de páginas login/cadastros/listagens
+
+#### loading index.tsx
+```
+<div className="load">
+    Loading...
+</div>
+```
+
+#### loading styles.css
+```
+.load {
+  position:absolute;
+  top:35%;
+  left:20%;
+  color:blue;
+  
+}
+
+.load img {
+  width:200px;
+  height:200px;
+}
+```
+
 
 
 ### Passo 3: Criando o contexto de Obras
