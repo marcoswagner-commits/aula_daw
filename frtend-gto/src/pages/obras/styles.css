@@ -1,11 +1,11 @@
-.proprietario-container {
+.Obra-container {
   width: 100%;
   max-width: 1180px;
   padding: 0 30px;
   margin: 32px auto;
 }
 
-.proprietario-container  header{
+.Obra-container  header{
   display: flex;
   align-items: center;
 }
@@ -14,26 +14,26 @@
     margin-left: 200px;
 }
 
-.proprietario-container header span{
+.Obra-container header span{
   font-size: 20px;
   margin-left: 18px;
 }
 
-.proprietario-container header span strong{
+.Obra-container header span strong{
   color: #251FC5;
 }
 
-.proprietario-container header img{
+.Obra-container header img{
   height: 64px;
 }
 
-.proprietario-container header a{
+.Obra-container header a{
   width: 260px;
   margin-left: 18px;
   margin-top: 0;
 }
 
-.proprietario-container header button{
+.Obra-container header button{
   height: 60px;
   width: 60px;
   border-radius: 4px;
@@ -43,51 +43,51 @@
   transition: border-color 0.5s;
 }
 
-.proprietario-container header button:hover{
+.Obra-container header button:hover{
   border-color: #251FC5;
 }
 
-.proprietario-container h1 {
+.Obra-container h1 {
   margin-top: 80px;
   margin-bottom: 24px;
 }
 
 
 
-.proprietario-container tr td{
+.Obra-container tr td{
   background: #ffffff;
   padding: 12px;
   border-radius: 8px;
   position: relative;
 }
 
-.proprietario-container tr td button {
+.Obra-container tr td button {
   right: 24px;
   top: 24px;
   border: 0;
   background: transparent;  
 }
 
-.proprietario-container tr td button + button{
+.Obra-container tr td button + button{
   top: 50px;  
 }
 
-.proprietario-container tr td button:hover{
+.Obra-container tr td button:hover{
   opacity: 0.8;  
 }
 
-.proprietario-container tr td strong{
+.Obra-container tr td strong{
   display: block;
   margin-bottom: 16px;
   color: #41414D;
 }
 
-.proprietario-container  p + strong{
+.Obra-container  p + strong{
   margin-top: 32px;
 
 }
 
-.proprietario-container   p {
+.Obra-container   p {
   color: #737380;
   line-height: 21px;
   font-size: 16px;

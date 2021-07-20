@@ -1,6 +1,27 @@
+import { useEffect, useState } from 'react'
+import API from 'services/api';
 
-
+interface ITotalItens {
+  itemDescricao: string;
+  total: number;
+}
 const DashTable: React.FC = () => {
+
+  const [totalitens, setTotalItens] = useState<ITotalItens[]>([]);
+
+
+  const token = localStorage.getItem('token')
+
+  useEffect(() => {
+    API.get('v1/gto/lancamentos/total-por-item', {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    }).then(response => {
+      setTotalItens(response.data)
+    })
+  }, [token, totalitens]);
+
   return (
     <div className="table-responsive">
       <table className="table table-striped table-sm">
@@ -11,18 +32,15 @@ const DashTable: React.FC = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Mão de Obra</td>
-            <td>1500.00</td>
-          </tr>
-          <tr>
-            <td>Material de Acabamento</td>
-            <td>2500.00</td>
-          </tr>
-          <tr>
-            <td>Material Básico</td>
-            <td>3500.00</td>
-          </tr>
+          {
+            totalitens.map(obj => (
+              <tr key={obj.itemDescricao}>
+                <td>{obj.itemDescricao}</td>
+                <td>{obj.total}</td>
+              </tr>
+            ))
+          }
+
         </tbody>
       </table>
     </div>

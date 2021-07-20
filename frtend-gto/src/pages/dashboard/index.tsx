@@ -1,10 +1,11 @@
+import DashTable from "components/basics/DashTable"
 import Sidebar from "components/basics/sidebar"
 import BarChart from "../../components/basics/BarChart"
 import DonutChart from "../../components/basics/DonutChart"
 
 const dashboard: React.FC = () => {
   return (
-    <>
+    <div className="container">
       <Sidebar />
       <div className="container">
         <h1 className="text-primary py-3"> Dashboard de Obras</h1>
@@ -21,10 +22,11 @@ const dashboard: React.FC = () => {
           </div>
           <div className="py-3">
             <h2 className="text-primary">Todos os lançamentos</h2>
+            <DashTable />
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

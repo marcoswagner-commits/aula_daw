@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import NavBar from 'components/basics/navbar';
 import '../login/styles.css'
 import Lock from '../../assets/images/padlock.png'
+import Load from '../../assets/images/loading4.gif'
 import api from 'services/api';
 
 import { MdLock, MdForum } from "react-icons/md"
@@ -11,6 +12,7 @@ import { HiEye, HiEyeOff } from "react-icons/hi"
 function Login() {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
+  const [load, setLoad] = useState(false)
 
   const history = useHistory();
 
@@ -23,6 +25,7 @@ function Login() {
     }
 
     try {
+      setLoad(true)
       const response = await api.post('auth/login', data);
 
       localStorage.setItem('username', username);
@@ -32,6 +35,7 @@ function Login() {
 
     } catch (error) {
       alert('Autenticação sem sucesso, tente novamente!');
+      setLoad(false)
     }
 
   }
@@ -45,10 +49,18 @@ function Login() {
 
   return (
     <>
+
+
       <div className="header">
         <NavBar />
-
       </div>
+      {load &&
+        <div className="load">
+          <img alt="Loading" src={Load}/>
+        </div>
+      }
+
+
       <div className="login">
         <div className="login-logo">
           <img

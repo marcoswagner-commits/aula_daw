@@ -1,11 +1,43 @@
+import { useEffect, useState } from 'react';
 import Chart from 'react-apexcharts'
-const DonutChart: React.FC = () => {
-  const mockData = {
-    series: [477138, 499928, 444867, 220426, 473088],
-    labels: ['Material de Acabamento', 'Material de Pintura', 'Mão-de-Obra', 'Material Básico']
-  }
+import API from 'services/api';
 
-  const options = {
+interface ITotalItens {
+  itemDescricao: string;
+  total: number;
+}
+
+type ChartData = {
+  series: number[];
+  labels: string[];
+  
+}
+
+const DonutChart: React.FC = () => {
+  
+  const [totalitens, setTotalItens] = useState<ITotalItens[]>([]);
+  const [chartdata, setChartData] = useState<ChartData>({series: [], labels: []})
+
+  const token = localStorage.getItem('token')
+
+  useEffect(() => {
+    API.get('v1/gto/lancamentos/total-por-item', {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    }).then(response => {
+      setTotalItens(response.data)
+      const mlabels = totalitens.map(obj => obj.itemDescricao)
+      const mseries = totalitens.map(obj => obj.total)
+      setChartData({
+        series: mseries,
+        labels: mlabels
+      })
+    })
+  },[token, totalitens]);
+
+  
+    const options = {
     legend: {
       show: true
     }
@@ -15,8 +47,8 @@ const DonutChart: React.FC = () => {
 
   return (
     <Chart
-      options={{ ...options, labels: mockData.labels }}
-      series={mockData.series}
+      options={{ ...options, labels: chartdata.labels }}
+      series={chartdata.series}
       type="donut"
       height="220" />
   );
