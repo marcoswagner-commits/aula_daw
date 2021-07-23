@@ -12,5 +12,9 @@ public class InvalidAuthenticationException extends AuthenticationException {
 	public InvalidAuthenticationException(String msg) {
 		super(msg);
 	}
+	
+	public InvalidAuthenticationException(String msg, Throwable cause) {
+		super(msg, cause);
+	}
 
 }

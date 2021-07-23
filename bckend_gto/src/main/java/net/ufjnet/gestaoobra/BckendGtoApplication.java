@@ -69,6 +69,13 @@ public class BckendGtoApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
+		//executaCommandLine();
+	}
+	
+	@SuppressWarnings("unused")
+	private void executaCommandLine() {
+		
+	
 		BCryptPasswordEncoder bCrypt = new BCryptPasswordEncoder(16);
 		r1 = bCrypt.encode("admin123");
 		r2 = bCrypt.encode("user123");
@@ -104,14 +111,14 @@ public class BckendGtoApplication implements CommandLineRunner {
 		
 		Lancamento l1 = new Lancamento(1,o1,i1,si1,150.50,"Parte Elétrica","","");
 		Lancamento l2 = new Lancamento(2,o1,i1,si2,250.00,"Contra-Piso","","");
-		Lancamento l3 = new Lancamento(3,o1,i2,si4,250.00,"Piso","","");
-		Lancamento l4 = new Lancamento(4,o2,i2,si5,250.00,"Piso","","");
-		Lancamento l5 = new Lancamento(5,o2,i3,si6,250.00,"Contra-Piso","","");
-		Lancamento l6 = new Lancamento(6,o3,i4,si8,250.00,"Contra-Piso","","");
-		Lancamento l7 = new Lancamento(7,o3,i4,si8,250.00,"Contra-Piso","","");
-		Lancamento l8 = new Lancamento(8,o4,i3,si7,250.00,"Contra-Piso","","");
-		Lancamento l9 = new Lancamento(9,o4,i4,si2,250.00,"Contra-Piso","","");
-		Lancamento l10 = new Lancamento(10,o4,i4,si8,250.00,"Contra-Piso","","");
+		Lancamento l3 = new Lancamento(3,o1,i2,si4,280.00,"Piso","","");
+		Lancamento l4 = new Lancamento(4,o2,i2,si5,290.00,"Piso","","");
+		Lancamento l5 = new Lancamento(5,o2,i3,si6,350.00,"Contra-Piso","","");
+		Lancamento l6 = new Lancamento(6,o3,i4,si8,150.00,"Contra-Piso","","");
+		Lancamento l7 = new Lancamento(7,o3,i4,si8,50.00,"Contra-Piso","","");
+		Lancamento l8 = new Lancamento(8,o4,i3,si7,1250.00,"Contra-Piso","","");
+		Lancamento l9 = new Lancamento(9,o4,i4,si2,2500.00,"Contra-Piso","","");
+		Lancamento l10 = new Lancamento(10,o4,i4,si8,25.00,"Contra-Piso","","");
 		
 		User u1 = new User();
 		u1.setUsername("marcos_admin");
@@ -154,10 +161,7 @@ public class BckendGtoApplication implements CommandLineRunner {
 		pmDAO.saveAll(Arrays.asList(pm1,pm2));
 		
 		userDAO.saveAll(Arrays.asList(u1,u2));
-		
-		
-		
-		
+			
 	}
 
 }

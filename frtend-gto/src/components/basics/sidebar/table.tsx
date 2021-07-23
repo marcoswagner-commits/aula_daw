@@ -1,6 +1,9 @@
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
+import * as FiIcons from 'react-icons/fi';
+import * as BsIcons from 'react-icons/bs';
+import * as BiIcons from 'react-icons/bi';
 
 export const SidebarData = [
   {
@@ -18,31 +21,31 @@ export const SidebarData = [
   {
     title: 'Proprietários',
     path: '/proprietarios',
-    icon: <FaIcons.FaCartPlus />,
+    icon: <FiIcons.FiUsers />,
     cName: 'nav-text'
   },
   {
     title: 'Obras',
     path: '/obras',
-    icon: <IoIcons.IoMdPeople />,
+    icon: <BsIcons.BsBuilding />,
     cName: 'nav-text'
   },
   {
     title: 'Itens',
     path: '/itens',
-    icon: <FaIcons.FaEnvelopeOpenText />,
+    icon: <BiIcons.BiSitemap />,
     cName: 'nav-text'
   },
   {
     title: 'Subitens',
     path: '/subitens',
-    icon: <IoIcons.IoMdHelpCircle />,
+    icon: <FaIcons.FaSitemap />,
     cName: 'nav-text'
   },
   {
     title: 'Lançamentos',
     path: '/lancamentos',
-    icon: <IoIcons.IoMdHelpCircle />,
+    icon: <FaIcons.FaStackOverflow />,
     cName: 'nav-text'
   }
 ];
