@@ -1,4 +1,4 @@
-package net.ufjnet.gestaoobra.services;
+package net.ufjnet.gestaoobra.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;

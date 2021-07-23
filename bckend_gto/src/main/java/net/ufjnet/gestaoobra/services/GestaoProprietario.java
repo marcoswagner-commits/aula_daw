@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import lombok.AllArgsConstructor;
+import net.ufjnet.gestaoobra.config.EnviarMailService;
 import net.ufjnet.gestaoobra.dtos.ProprietarioDTO;
 import net.ufjnet.gestaoobra.models.Proprietario;
 import net.ufjnet.gestaoobra.repositories.ProprietarioDAO;
