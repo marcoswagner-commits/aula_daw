@@ -7,11 +7,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import net.ufjnet.gestaoobra.config.FileStorageConfig;
 import net.ufjnet.gestaoobra.models.Item;
 import net.ufjnet.gestaoobra.models.Lancamento;
 import net.ufjnet.gestaoobra.models.Obra;
@@ -30,7 +28,7 @@ import net.ufjnet.gestaoobra.repositories.UserDAO;
 @EnableAutoConfiguration
 @ComponentScan
 @SpringBootApplication
-@EnableConfigurationProperties({FileStorageConfig.class})
+//@EnableConfigurationProperties({FileStorageConfig.class})
 public class BckendGtoApplication implements CommandLineRunner {
 
 	@Autowired
