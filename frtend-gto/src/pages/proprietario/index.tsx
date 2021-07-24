@@ -45,6 +45,7 @@ const Proprietario: React.FC = () => {
   useEffect(() => {
     if (propId === '0') return;
     else getProprietario()
+    // eslint-disable-next-line
   }, [propId])
 
   async function saveOrUpdate(e: any) {
@@ -88,7 +89,7 @@ const Proprietario: React.FC = () => {
       <Sidebar />
       {load &&
         <div className="load-prop">
-          <img src={Load}/>
+          <img alt="loading..." src={Load}/>
         </div>
       }
       <div className="new-prop-container">

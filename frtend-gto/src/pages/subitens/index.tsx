@@ -79,6 +79,7 @@ const Subitens: React.FC = () => {
 
   useEffect(() => {
     loadSubitens()
+    // eslint-disable-next-line
   }, [page]);
 
 

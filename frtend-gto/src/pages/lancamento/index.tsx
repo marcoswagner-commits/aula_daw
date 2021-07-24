@@ -136,6 +136,7 @@ const Lancamento: React.FC = () => {
     getSubitens();
     if (lancId === '0') return;
     else getLancamento()
+    // eslint-disable-next-line
   }, [lancId])
 
   async function saveOrUpdate(e: any) {

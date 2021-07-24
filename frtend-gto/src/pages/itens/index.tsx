@@ -73,6 +73,7 @@ const Itens: React.FC = () => {
 
   useEffect(() => {
     loadItens()
+    // eslint-disable-next-line
   }, [page]);
 
 
@@ -84,11 +85,11 @@ const Itens: React.FC = () => {
           <img src={logoImage} alt="Gestão de Obras" />
           <span>Bem-vindo, <strong>{username?.toUpperCase()}</strong>!</span>
           <div className="subheader">
-            <button onClick={() => { setPage(page - 1); loadItens() }} type="button">
+            <button onClick={() => { setPage(page - 1);}} type="button">
               <FiArrowLeftCircle size={18} color="#251FC5" />
             </button>
             <Link className="button" to="/item/0">Novo Item!</Link>
-            <button onClick={() => { setPage(page + 1); loadItens() }} type="button">
+            <button onClick={() => { setPage(page + 1);}} type="button">
               <FiArrowRightCircle size={18} color="#251FC5" />
             </button>
             <button onClick={logout} type="button">
@@ -133,7 +134,7 @@ const Itens: React.FC = () => {
           </tbody>
         </Table>
       </div>
-      </div>
-      );
+    </div>
+  );
 }
-      export default Itens;
+export default Itens;

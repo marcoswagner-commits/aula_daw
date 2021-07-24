@@ -71,6 +71,7 @@ const Subitem: React.FC = () => {
     getItens();
     if (subitemId === '0') return;
     else getSubitem();
+    // eslint-disable-next-line
   }, [subitemId])
 
   async function saveOrUpdate(e: any) {
@@ -114,7 +115,7 @@ const Subitem: React.FC = () => {
       <Sidebar />
       {load &&
         <div className="load-prop">
-          <img src={Load}/>
+          <img alt="loading..." src={Load}/>
         </div>
       }
       <div className="new-prop-container">

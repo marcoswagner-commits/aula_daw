@@ -99,6 +99,7 @@ const Lancamentos: React.FC = () => {
 
   useEffect(() => {
     loadLancamentos()
+    // eslint-disable-next-line
   }, [page]);
 
 

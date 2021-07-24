@@ -74,6 +74,7 @@ const Obra: React.FC = () => {
     getProprietarios()
     if (obraId === '0') return;
     else getObra()
+    // eslint-disable-next-line
   }, [obraId])
 
   async function saveOrUpdate(e: any) {

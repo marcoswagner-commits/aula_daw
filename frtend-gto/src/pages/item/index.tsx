@@ -20,7 +20,7 @@ const Item: React.FC = () => {
 
   const history = useHistory();
 
-  async function getItem() {
+  async function buscaItem() {
     try {
       const response = await API.get(`v1/gto/itens/${itemId}`,
         {
@@ -43,7 +43,8 @@ const Item: React.FC = () => {
 
   useEffect(() => {
     if (itemId === '0') return;
-    else getItem()
+    else buscaItem()
+    // eslint-disable-next-line
   }, [itemId])
 
   async function saveOrUpdate(e: any) {
@@ -86,7 +87,7 @@ const Item: React.FC = () => {
       <Sidebar />
       {load &&
         <div className="load-prop">
-          <img src={Load}/>
+          <img alt="loading..." src={Load}/>
         </div>
       }
       <div className="new-prop-container">

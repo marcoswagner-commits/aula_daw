@@ -20,8 +20,7 @@ const Proprietarios: React.FC = () => {
 
   const [proprietarios, setProprietarios] = useState<iProprietarios[]>([]);
   const [page, setPage] = useState(0);
-  const [load, setLoad] = useState(false)
-
+  
   const username = localStorage.getItem('username')
   const token = localStorage.getItem('token')
 
@@ -75,6 +74,7 @@ const Proprietarios: React.FC = () => {
 
   useEffect(() => {
     loadProprietarios()
+    // eslint-disable-next-line
   }, [page]);
 
 

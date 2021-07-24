@@ -81,6 +81,7 @@ const Obras: React.FC = () => {
 
   useEffect(() => {
     loadObras()
+    // eslint-disable-next-line
   }, [page]);
 
 
