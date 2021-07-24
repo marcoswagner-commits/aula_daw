@@ -38,7 +38,7 @@ const Obra: React.FC = () => {
           Authorization: `Bearer ${token}`
         }
       })
-      setProprietarios(response.data._embedded.proprietarioDTOList)
+      setProprietarios([proprietarios, ...response.data._embedded.proprietarioDTOList])
     } catch (error) {
       alert('Erro na busca do proprietário. Tente novamente')
       history.push('/obras');

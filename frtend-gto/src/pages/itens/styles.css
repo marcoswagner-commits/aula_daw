@@ -1,11 +1,11 @@
-.Obra-container {
+.item-container {
   width: 100%;
   max-width: 1180px;
   padding: 0 30px;
   margin: 32px auto;
 }
 
-.Obra-container  header{
+.item-container  header{
   display: flex;
   align-items: center;
 }
@@ -14,26 +14,26 @@
     margin-left: 200px;
 }
 
-.Obra-container header span{
+.item-container header span{
   font-size: 20px;
   margin-left: 18px;
 }
 
-.Obra-container header span strong{
+.item-container header span strong{
   color: #251FC5;
 }
 
-.Obra-container header img{
+.item-container header img{
   height: 64px;
 }
 
-.Obra-container header a{
+.item-container header a{
   width: 260px;
   margin-left: 18px;
   margin-top: 0;
 }
 
-.Obra-container header button{
+.item-container header button{
   height: 60px;
   width: 60px;
   border-radius: 4px;
@@ -43,51 +43,51 @@
   transition: border-color 0.5s;
 }
 
-.Obra-container header button:hover{
+.item-container header button:hover{
   border-color: #251FC5;
 }
 
-.Obra-container h1 {
+.item-container h1 {
   margin-top: 80px;
   margin-bottom: 24px;
 }
 
 
 
-.Obra-container tr td{
+.item-container tr td{
   background: #ffffff;
   padding: 12px;
   border-radius: 8px;
   position:static;
 }
 
-.Obra-container tr td button {
+.item-container tr td button {
   right: 24px;
   top: 24px;
   border: 0;
   background: transparent;  
 }
 
-.Obra-container tr td button + button{
+.item-container tr td button + button{
   top: 50px;  
 }
 
-.Obra-container tr td button:hover{
+.item-container tr td button:hover{
   opacity: 0.8;  
 }
 
-.Obra-container tr td strong{
+.item-container tr td strong{
   display: block;
   margin-bottom: 16px;
   color: #41414D;
 }
 
-.Obra-container  p + strong{
+.item-container  p + strong{
   margin-top: 32px;
 
 }
 
-.Obra-container   p {
+.item-container   p {
   color: #737380;
   line-height: 21px;
   font-size: 16px;

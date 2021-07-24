@@ -9,18 +9,22 @@ import './styles.css'
 import API from 'services/api';
 import Sidebar from 'components/basics/sidebar';
 
-interface iProprietarios {
-  codigo_prop: number;
-  nome_prop: string;
-  email_prop: string;
-  cpf_prop: string;
+type titem = {
+  codigo_item: number;
+  descricao_item: string;
 }
 
-const Proprietarios: React.FC = () => {
+interface iSubitens {
+  codigo_subitem: number;
+  item: titem;
+  descricao_subitem: string;
+  complemento_subitem: string;
+}
 
-  const [proprietarios, setProprietarios] = useState<iProprietarios[]>([]);
+const Subitens: React.FC = () => {
+
+  const [itens, setSubitens] = useState<iSubitens[]>([]);
   const [page, setPage] = useState(0);
-  const [load, setLoad] = useState(false)
 
   const username = localStorage.getItem('username')
   const token = localStorage.getItem('token')
@@ -32,34 +36,34 @@ const Proprietarios: React.FC = () => {
     history.push('/')
   }
 
-  async function editProprietario(id: any) {
+  async function editSubitem(id: any) {
     try {
-      history.push(`proprietario/${id}`)
+      history.push(`subitem/${id}`)
     } catch (error) {
       const { data } = error.response;
-      alert('Erro na edição do proprietário. ' + data.message + 'Tente novamente')
+      alert('Erro na edição do subitem. ' + data.message + 'Tente novamente')
     }
 
   }
 
-  async function deleteProprietario(id: any) {
+  async function deleteSubitem(id: any) {
     try {
-      await API.delete(`v1/gto/proprietarios/${id}`, {
+      await API.delete(`v1/gto/subitens/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
       }
       )
       alert('Exclusão com sucesso')
-      loadProprietarios();
+      loadSubitens();
     } catch (error) {
       const { data } = error.response;
-      alert('Erro na exclusão do proprietário. ' + data.message + 'Tente novamente')
+      alert('Erro na exclusão do subitem. ' + data.message + 'Tente novamente')
     }
   }
 
-  async function loadProprietarios() {
-    const response = await API.get('v1/gto/proprietarios', {
+  async function loadSubitens() {
+    const response = await API.get('v1/gto/subitens', {
       headers: {
         Authorization: `Bearer ${token}`
       },
@@ -70,27 +74,27 @@ const Proprietarios: React.FC = () => {
       }
     });
 
-    setProprietarios(response.data._embedded.proprietarioDTOList)
+    setSubitens(response.data._embedded.subItemDTOList)
   }
 
   useEffect(() => {
-    loadProprietarios()
+    loadSubitens()
   }, [page]);
 
 
   return (
     <div className="container">
       <Sidebar />
-      <div className="proprietario-container">
+      <div className="subitem-container">
         <header>
           <img src={logoImage} alt="Gestão de Obras" />
           <span>Bem-vindo, <strong>{username?.toUpperCase()}</strong>!</span>
           <div className="subheader">
-            <button onClick={() => { setPage(page - 1); loadProprietarios() }} type="button">
+            <button onClick={() => { setPage(page - 1); loadSubitens() }} type="button">
               <FiArrowLeftCircle size={18} color="#251FC5" />
             </button>
-            <Link className="button" to="/proprietario/0">Novo Proprietario!</Link>
-            <button onClick={() => { setPage(page + 1); loadProprietarios() }} type="button">
+            <Link className="button" to="/subitem/0">Novo Subitem!</Link>
+            <button onClick={() => { setPage(page + 1); loadSubitens() }} type="button">
               <FiArrowRightCircle size={18} color="#251FC5" />
             </button>
             <button onClick={logout} type="button">
@@ -101,32 +105,32 @@ const Proprietarios: React.FC = () => {
 
 
 
-        <h1>Proprietários Cadastrados</h1>
+        <h1>Subitens Cadastrados</h1>
 
-        <Table striped bordered hover size="sm" className="text-center">
+        <Table striped bordered hover className="text-center">
           <thead>
             <tr>
               <th>ID</th>
-              <th>Nome</th>
-              <th>E-mail</th>
-              <th>CPF</th>
+              <th>Descrição</th>
+              <th>Item</th>
+              <th>Complemento</th>
               <th>Ações</th>
             </tr>
           </thead>
           <tbody>
             {
-              proprietarios.map(p => (
-                <tr key={p.codigo_prop}>
-                  <td>{p.codigo_prop}</td>
-                  <td>{p.nome_prop}</td>
-                  <td>{p.email_prop}</td>
-                  <td>{p.cpf_prop}</td>
+              itens.map(p => (
+                <tr key={p.codigo_subitem}>
+                  <td>{p.codigo_subitem}</td>
+                  <td>{p.descricao_subitem}</td>
+                  <td>{p.item.codigo_item}-{p.item.descricao_item}</td>
+                  <td>{p.complemento_subitem}</td>
                   <td>
-                    <button onClick={() => editProprietario(p.codigo_prop)} type="button">
+                    <button onClick={() => editSubitem(p.codigo_subitem)} type="button">
                       <FiEdit size={20} color="#251FC5" />
                     </button>
 
-                    <button onClick={() => deleteProprietario(p.codigo_prop)} type="button">
+                    <button onClick={() => deleteSubitem(p.codigo_subitem)} type="button">
                       <FiTrash2 size={20} color="#251FC5" />
                     </button>
                   </td>
@@ -137,8 +141,7 @@ const Proprietarios: React.FC = () => {
           </tbody>
         </Table>
       </div>
-    </div>
-
-  );
+      </div>
+      );
 }
-export default Proprietarios;
+      export default Subitens;

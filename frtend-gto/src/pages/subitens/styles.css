@@ -1,39 +1,39 @@
-.Obra-container {
+.subitem-container {
   width: 100%;
   max-width: 1180px;
   padding: 0 30px;
   margin: 32px auto;
 }
 
-.Obra-container  header{
+.subitem-container  header{
   display: flex;
-  align-items: center;
+  align-subitems: center;
 }
 
 .subheader  {
     margin-left: 200px;
 }
 
-.Obra-container header span{
+.subitem-container header span{
   font-size: 20px;
   margin-left: 18px;
 }
 
-.Obra-container header span strong{
+.subitem-container header span strong{
   color: #251FC5;
 }
 
-.Obra-container header img{
+.subitem-container header img{
   height: 64px;
 }
 
-.Obra-container header a{
+.subitem-container header a{
   width: 260px;
   margin-left: 18px;
   margin-top: 0;
 }
 
-.Obra-container header button{
+.subitem-container header button{
   height: 60px;
   width: 60px;
   border-radius: 4px;
@@ -43,51 +43,51 @@
   transition: border-color 0.5s;
 }
 
-.Obra-container header button:hover{
+.subitem-container header button:hover{
   border-color: #251FC5;
 }
 
-.Obra-container h1 {
+.subitem-container h1 {
   margin-top: 80px;
   margin-bottom: 24px;
 }
 
 
 
-.Obra-container tr td{
+.subitem-container tr td{
   background: #ffffff;
   padding: 12px;
   border-radius: 8px;
   position:static;
 }
 
-.Obra-container tr td button {
+.subitem-container tr td button {
   right: 24px;
   top: 24px;
   border: 0;
   background: transparent;  
 }
 
-.Obra-container tr td button + button{
+.subitem-container tr td button + button{
   top: 50px;  
 }
 
-.Obra-container tr td button:hover{
+.subitem-container tr td button:hover{
   opacity: 0.8;  
 }
 
-.Obra-container tr td strong{
+.subitem-container tr td strong{
   display: block;
   margin-bottom: 16px;
   color: #41414D;
 }
 
-.Obra-container  p + strong{
+.subitem-container  p + strong{
   margin-top: 32px;
 
 }
 
-.Obra-container   p {
+.subitem-container   p {
   color: #737380;
   line-height: 21px;
   font-size: 16px;

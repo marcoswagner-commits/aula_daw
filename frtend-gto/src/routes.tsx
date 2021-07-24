@@ -6,6 +6,12 @@ import Prop from 'pages/proprietario';
 import Dashboard from 'pages/dashboard';
 import Obras from 'pages/obras';
 import Obra from 'pages/obra';
+import Itens from 'pages/itens';
+import Item from 'pages/item';
+import Subitens from 'pages/subitens';
+import Subitem from 'pages/subitem';
+import Lancamentos from 'pages/lancamentos';
+import Lancamento from 'pages/lancamento';
 
 
 const Routes = () => {
@@ -19,6 +25,12 @@ const Routes = () => {
         <Route component={Prop} path="/proprietario/:propId" />
         <Route component={Obras} path="/obras" />
         <Route component={Obra} path="/obra/:obraId" />
+        <Route component={Itens} path="/itens" />
+        <Route component={Item} path="/item/:itemId" />
+        <Route component={Subitens} path="/subitens" />
+        <Route component={Subitem} path="/subitem/:subitemId" />
+        <Route component={Lancamentos} path="/lancamentos" />
+        <Route component={Lancamento} path="/lancamento/:lancId" />
       </Switch>
     </BrowserRouter>
   );
