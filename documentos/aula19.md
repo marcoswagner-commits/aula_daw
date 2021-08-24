@@ -74,7 +74,7 @@
 # habilitar o spring servelet multipart
 spring.servlet.multipart.enabled=true
 # tamanho da memória usada para armazenar o arquivo - a partir o armazenamento é em disco
-spring.servlet.multipart.file-size.threshold=2KB
+spring.servlet.multipart.file-size-threshold=2KB
 # tamanho máximo do arquivo
 spring.servlet.multipart.max-file-size=200MB
 # tamanho máximo da requisição 
