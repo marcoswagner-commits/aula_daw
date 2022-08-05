@@ -1,9 +1,10 @@
 # Aula 10 - Desenvolvimento de Aplicações WEB
 
-> Aula 24/06/2021
+> Aula 14/09/2022
 > 
 >  *Estudo de caso: Gestão de Obras*
-
+> 
+>  *Implementação de outras camadas  - Data Transfer Object(DTO)*
 
 ## Atividades da aula - roteiro
 
