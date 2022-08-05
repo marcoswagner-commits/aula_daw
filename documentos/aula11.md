@@ -1,9 +1,10 @@
 # Aula 11 - Desenvolvimento de Aplicações WEB
 
-> Aula 29/06/2021
+> Aula 20/09/2022
 > 
 >  *Estudo de caso: Gestão de Obras* 
-
+> 
+>  *Níveis de Maturidade - HATEOAS* 
 
 ## Atividades da aula - roteiro
 
