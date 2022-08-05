@@ -1,9 +1,10 @@
 # Aula 20 - Desenvolvimento de Aplicações WEB
 
-> Aula 19/10/2022
+> Aula 26/10/2022
 > 
->   Estudo de caso: Gestão de Obras 
-
+>   *Estudo de caso: Gestão de Obras* 
+> 
+>   *Múltiplos arquivos - token e E-mails* 
 
 ## Atividades da aula - roteiro
 
