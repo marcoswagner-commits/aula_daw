@@ -1,6 +1,6 @@
 # Aula 26 - Desenvolvimento de Aplicações WEB
 
-> Aula 16/09/2021 
+> Aula 29/11/2022 
 > 
 >   Estudo de caso: Gestão de Obras - Front-End
 
