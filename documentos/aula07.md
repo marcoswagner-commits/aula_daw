@@ -1,8 +1,11 @@
 # Aula 07 - Desenvolvimento de Aplicações WEB
 
-> Aula 15/06/2021
+> Aula 31/08/2022
 > 
 >  *Estudo de caso: Gestão de Obras*
+>  
+>  *Estudo de Caso – Gestão de Obras – Criando as primeiras classes de serviço e implementando o CRUD  de proprietários*
+
 
 ## Atividades da aula - roteiro
 
