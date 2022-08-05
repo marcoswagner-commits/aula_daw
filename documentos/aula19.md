@@ -1,6 +1,6 @@
 # Aula 19 - Desenvolvimento de Aplicações WEB
 
-> Aula 26/10/2022
+> Aula 25/10/2022
 > 
 >   *Estudo de caso: Gestão de Obras* 
 > 
