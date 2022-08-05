@@ -4,7 +4,7 @@
 > 
 >  *Estudo de caso: Gestão de Obras* 
 >  
->  *Criando as primeiras classes de repositório e controladores: Proprietário* 
+>  *Criando as primeiras classes (repositórios e controladores): Proprietário* 
 
 
 
