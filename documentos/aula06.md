@@ -4,7 +4,7 @@
 > 
 >  *Estudo de caso: Gestão de Obras* 
 >  
->  *Criando as primeiras classes de domínio (modelos): Proprietário* 
+>  *Criando as primeiras classes de repositório e controladores: Proprietário* 
 
 
 
