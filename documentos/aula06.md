@@ -1,8 +1,12 @@
 # Aula 06 - Desenvolvimento de Aplicações WEB
 
-> Aula 10/06/2021
+> Aula 30/08/2022
 > 
 >  *Estudo de caso: Gestão de Obras* 
+>  
+>  *Criando as primeiras classes de domínio (modelos): Proprietário* 
+
+
 
 ## Atividades da aula - roteiro
 
