@@ -1,14 +1,11 @@
 # Aula 03 - Desenvolvimento de Aplicações WEB
 
-> Aula 25/05/2021
+> Aula 16/08/2022
 > 
 >  *Estudo de caso: Gestão de Obras*
+>  
+>  *MVC – Estrutura de Arquivos Spring – Build Maven – Controladores – EndPoints – JSON e ORM*
 
-# Aula 03 - Desenvolvimento de Aplicações WEB
-
-> Aula 24/06/2021
-> 
->  *Estudo de caso: Gestão de Obras*
 
 ## Atividades da aula - roteiro
 
