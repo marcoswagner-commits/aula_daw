@@ -187,14 +187,12 @@ Passos:
 - Roteiro específico da Aula de Apresentação de Trabalho  - 04/12/2022 * (Avaliação do Backend - fase 1) *
 - [Roteiro específico da Aula15 - 05/10/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula15.md)
 - [Roteiro específico da Aula16 - 11/10/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula16.md)
-- [Roteiro específico da Aula - 18/10/2022](aula20.md) - [CONEPE](https://conepe.ufj.edu.br)
-- [Roteiro específico da Aula - 19/10/2022](aula20.md) - [CONEPE](https://conepe.ufj.edu.br)
-- [Roteiro específico da Aula17 - 25/10/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula17.md)
-- [Roteiro específico da Aula18 - 26/10/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula18.md)
+- [Roteiro específico da Aula - 18/10/2022](aula17.md) - [CONEPE](https://conepe.ufj.edu.br)
+- [Roteiro específico da Aula - 19/10/2022](aula18.md) - [CONEPE](https://conepe.ufj.edu.br)
+- [Roteiro específico da Aula17 - 25/10/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula19.md)
+- [Roteiro específico da Aula18 - 26/10/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula20.md)
 
 - << NOVEMBRO >>
-- [Roteiro específico da Aula19 - 17/08/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula19.md)
-- [Roteiro específico da Aula20 - 19/08/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula20.md)
 - [Roteiro específico da Aula21 - 24/08/2021](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula21.md)
 - Roteiro específico da Aula de Apresentação de Trabalho  - 26/08/2021 * (Avaliação do Backend - fase 2) *
 - //////////////////////////// INÍCIO DO FRONT-END ///////////////////////////////////////////////////////
