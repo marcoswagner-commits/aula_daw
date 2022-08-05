@@ -4,7 +4,7 @@
 > 
 >  *Estudo de caso: Gestão de Obras*
 >  
->  *Criação e Estruturação do Projeto*
+>  *Criação do Projeto no Spring e Monorepositório no GIT – Primeiros passos*
 
 
 ## Atividades da aula - roteiro
