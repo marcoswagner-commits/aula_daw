@@ -1,8 +1,11 @@
 # Aula 08 - Desenvolvimento de Aplicações WEB
 
-> Aula 17/06/2021
+> Aula 06/09/2022
 > 
 >  *Estudo de caso: Gestão de Obras*
+> 
+>  *Tratamento de Erros e Mensagens*
+
 
 ## Atividades da aula - roteiro
 
