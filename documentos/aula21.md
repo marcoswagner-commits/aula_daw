@@ -1,9 +1,10 @@
 # Aula 21 - Desenvolvimento de Aplicações WEB
 
-> Aula 17/08/2021
+> Aula 01/11/2022
 > 
->   Estudo de caso: Gestão de Obras 
-
+>   *Estudo de caso: Gestão de Obras* 
+> 
+>   *Suporte ao Docker*
 
 ## Atividades da aula - roteiro
 
