@@ -1,8 +1,10 @@
 # Aula 04 - Desenvolvimento de Aplicações WEB
 
-> Aula 27/05/2021
+> Aula 17/08/2022
 > 
 >  *Estudo de caso: Gestão de Obras*
+>  
+>  *Construção do Modelo de Domínio Conceitual*
 
 ## Atividades da aula - roteiro
 
