@@ -1,5 +1,5 @@
 # Aula de Desenvolvimento de Aplicações WEB 
-# Roteiro – Desenvolvimento de Aplicações para WEB – 2020/2 (2021)
+# Roteiro – Desenvolvimento de Aplicações para WEB – 2022/1
 
 ## 1 - Apresentação da disciplina: Plano de Ensino – Conteúdos – Metodologia – Avaliações
 	* Vide Plano de Ensino; Planejamento da Disciplina; documento Conteúdos
