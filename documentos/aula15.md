@@ -1,9 +1,10 @@
 # Aula 15 - Desenvolvimento de Aplicações WEB
 
-> Aula 03/08/2021
+> Aula 05/10/2022
 > 
 >  * Estudo de caso: Gestão de Obras *
-
+> 
+>  *Vínculos entre Classes/Entidades - Criação do Contexto Lançamento*
 
 ## Atividades da aula - roteiro
 
