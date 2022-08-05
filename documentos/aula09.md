@@ -1,9 +1,10 @@
 # Aula 09 - Desenvolvimento de Aplicações WEB
 
-> Aula 22/06/2021
+> Aula 13/09/2022
 > 
 >  *Estudo de caso: Gestão de Obras*
-
+> 
+>  *Regras de Negócio e Ampliação do Tratamento de Erros*
 
 ## Atividades da aula - roteiro
 
