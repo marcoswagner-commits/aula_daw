@@ -1,8 +1,10 @@
 # Aula 13 - Desenvolvimento de Aplicações WEB
 
-> Aula 06/07/2021
+> Aula 27/09/2022
 > 
 >  * Estudo de caso: Gestão de Obras *
+> 
+>  *Implementação completa do Recurso Obras*
 
 
 ## Atividades da aula - roteiro
