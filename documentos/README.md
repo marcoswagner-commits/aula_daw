@@ -195,7 +195,6 @@ Passos:
 - << NOVEMBRO >>
 - [Roteiro específico da Aula21 - 01/11/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula21.md)
 - Roteiro específico da Aula de Apresentação de Trabalho  - 08/11/2022 * (Avaliação do Backend - fase 2) *
--
 - //////////////////////////// INÍCIO DO FRONT-END ///////////////////////////////////////////////////////
 - [Roteiro específico da Aula22 - 09/11/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula22.md)
 - [Roteiro específico da Aula23 - 16/11/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula23.md)
