@@ -3,6 +3,7 @@
 > Aula 09/08/2022
 > 
 >  *Estudo de caso: Gestão de Obras*
+>  
 >  *Ferramentas e recursos – Java – STS – Spring Boot – Ecossistema Spring – H2 – MySQL – Postman – Swagger - JWT*
 
 ## Atividades da aula - roteiro
