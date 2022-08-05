@@ -1,9 +1,10 @@
 # Aula 14 - Desenvolvimento de Aplicações WEB
 
-> Aula 08/07/2021
+> Aula 28/09/2022
 > 
 >  * Estudo de caso: Gestão de Obras *
-
+> 
+>  *Vínculos entre Classes/Entidades - Criação do Contexto Item/SubItem*
 
 ## Atividades da aula - roteiro
 
