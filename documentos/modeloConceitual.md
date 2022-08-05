@@ -1,6 +1,6 @@
 
 # Aula de Desenvolvimento de Aplicações WEB 
-# Desenvolvimento de Aplicações para WEB – 2020/2 (2021)
+# Desenvolvimento de Aplicações para WEB – 2022/1
 
 ## 1 - Modelagem de domínio em nível conceitual
 - Domínio: área de negócio com seus contextos, regras e especificidades
