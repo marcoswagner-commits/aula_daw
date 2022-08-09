@@ -72,6 +72,17 @@ Netlify – http://www.netlify.com
 
 Draw.IO - https://app.diagrams.net 
 
+### Recursos:
+- Stack OverFlow - https://stackoverflow.com
+
+- Developer Survey - https://insights.stackoverflow.com/survey/2021#overview
+
+- Ecossistema Spring - https://spring.io
+
+- Alura - https://wwww.alura.com.br
+
+- Baeldung - https://www.baeldung.com
+
 ## 3 - Modelo Conceitual:
 Descrição: O sistema (mini sistema com poucas classes) terá como premissa permitir que seja cadastrado históricos relacionados a obras de engenharia civil. Tendo resumidamente o seguinte contexto: Um proprietário possui uma obra que possui uma descrição e localização. Para esta obra vários lançamentos são efetuados, separando estes fluxos em dois níveis de históricos. O objetivo do sistema é permitir depois de vários lançamentos conhecer o gasto com obra de acordo com cada um dos tipos de lançamento.
 
