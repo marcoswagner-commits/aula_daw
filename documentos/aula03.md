@@ -40,7 +40,10 @@
 - [x] Adicionar a dependência Lombok
 - [x] Ver o resultado apenas do "objeto" Aluno
 - [x] Usar o Postman para ver o resultado no formato JSON
-- [x] Analisar os códigos de resposta HTTP [Códigos Http](https://iana.org/assignments/http-status-codes/http-status-codes.xhtml)
+- [x] Analisar os códigos de resposta HTTP 
+	- [ ] [Códigos Http](https://iana.org/assignments/http-status-codes/http-status-codes.xhtml)
+	- [ ] [Códigos Http](https://httpstatuses.com)
+	- [ ] [Códigos Http](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status)
 - [x] Conceituar endpoint e JSON [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
 
 
