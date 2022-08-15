@@ -30,20 +30,23 @@
 - [x] Criar um pacote Controller
 - [x] Criar uma classe AlunoController
 - [x] Criar dois endpoints (geral e específico)
-- [x] Conceituar endpoint e JSON [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
 - [x] Testar a aplicação
 
 
 ### Modificação do código (modelo) - código 2
-- [x] Configurar o banco de dados em memória H2
 - [X] Criar um pacote model
-- [x] Criar uma classe Alunos (código, nome e e-mail)
+- [x] Criar uma classe Aluno (código, nome e e-mail)
+- [x] Ver o resultado apenas do "objeto" Aluno
+- [x] Usar o Postman para ver o resultado no formato JSON
+- [x] Conceituar endpoint e JSON [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
+
+
+### Modificação do código (repositório) - código 3
+- [x] Configurar o banco de dados em memória H2
 - [x] Acessar a tabela criada 
 - [x] Conceituar ORM/JAKARTA - [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
 - [x] Acessar site:[JAKARTA Persistence] (https://jakarta.ee/specifications/persistence/3.0/)
 
-
-### Modificação do código (repositório) - código 3
 - [X] Criar um pacote repository
 - [x] Criar uma interface AlunoRepository
 - [x] Conceituar Injeção de Dependências/Inversão de Controle - [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
