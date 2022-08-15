@@ -44,10 +44,12 @@
 
 
 ### Modificação do código (repositório) - código 3
-- [x] Configurar o banco de dados em memória H2
-- [x] Acessar a tabela criada 
+- [x] Gerar a entidade no banco de dados
 - [x] Conceituar ORM/JAKARTA - [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
 - [x] Acessar site:[JAKARTA Persistence] (https://jakarta.ee/specifications/persistence/3.0/)
+- [x] Configurar o banco de dados em memória H2 (adicionar a dependência H2)
+- [x] Acessar a tabela criada 
+
 
 - [X] Criar um pacote repository
 - [x] Criar uma interface AlunoRepository
