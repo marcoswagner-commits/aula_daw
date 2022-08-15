@@ -11,6 +11,7 @@
 
 - Acessar o site Spring.io :+1: (https://spring.io) e demonstrar a geração da estrutura de códigos usando a página: https://start.spring.io
 - Conceituar MVC [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
+- Gerar o projeto apenas com o "starter" Spring WEB
 - Explorar um pouco mais o arquivo POM (Project Object Model) - NÃO é um arquivo SPRING e sim um arquivo MAVEN...
 - - Verificar "parents"
 - - Hierarquias transitivas 
@@ -29,13 +30,14 @@
 ### Modificação do código (controle) - código 1
 - [x] Criar um pacote Controller
 - [x] Criar uma classe AlunoController
-- [x] Criar dois endpoints (geral e específico)
+- [x] Criar um EndPoint com uma mensagem inicial
 - [x] Testar a aplicação
 
 
 ### Modificação do código (modelo) - código 2
 - [X] Criar um pacote model
 - [x] Criar uma classe Aluno (código, nome e e-mail)
+- [x] Adicionar a dependência Lombok
 - [x] Ver o resultado apenas do "objeto" Aluno
 - [x] Usar o Postman para ver o resultado no formato JSON
 - [x] Conceituar endpoint e JSON [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
