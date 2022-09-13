@@ -22,7 +22,7 @@
 
 ### Passo 2: Ampliar e melhorar o tratamento de mensagens de erros
 - [x]  Criar uma classe em seviços/exceptions para regras de negócio - BusinessException
-- [x]  Apliar a classe de ExceptionHandler
+- [x]  Ampliar a classe de ExceptionHandler
 - [x]  Criar um método dataIntegrity (Integridade de dados) para não permitir repetição de cpfs e e-mails
 - [x]  Verificar os retornos de erros
 - [x]  Implementar os endpoints de busca por nome e por cpf
