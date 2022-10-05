@@ -175,6 +175,9 @@ git subtree push --prefix bckend_gto_daw heroku main
 🥈:[![material complementar aula12](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/a6abcb3f4f5a4132faba06078d302a5a48252630/documentos/Capa_Aula12.png)](https://www.youtube.com/watch?v=rh_-R9-H_2M)
 -
 🥉:[![material complementar aula12](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/a6abcb3f4f5a4132faba06078d302a5a48252630/documentos/Capa_Aula12.png)](https://www.youtube.com/watch?v=j6_zfqsSkDo)
+-
+🥉:[![material complementar aula12](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/a6abcb3f4f5a4132faba06078d302a5a48252630/documentos/Capa_Aula12.png)](https://youtu.be/R6qMBuJtw7Y)
+
 
 
 :shipit: 
