@@ -1,5 +1,5 @@
 # Aula de Desenvolvimento de Aplicações WEB 
-# Curso de Ciências da Computação - Universidade Federal de Jataí
+# Curso de Ciência da Computação - Universidade Federal de Jataí
 
 - [Roteiro](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/README.md)
 - [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
