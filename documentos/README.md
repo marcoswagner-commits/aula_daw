@@ -172,21 +172,21 @@ Passos:
 - [Trabalho2 - BackEnd Fase 1](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/67b0b65e99e64c0752acd8a4a4f000cb3e244fb6/documentos/Trabalho2%20-%20DAW.pdf)
 
 ### Aulas
-- << AGOSTO >>
-- Roteiro específico da Aula Inaugural  - 09/08/2022 * (Apresentação do Planejamento - Plano de Ensino - Metodologias) *
-- [Roteiro específico da Aula02 - 10/08/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula02.md)
-- [Roteiro específico da Aula03 - 16/08/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula03.md)
-- [Roteiro específico da Aula04 - 17/08/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula04.md)
-- Roteiro específico da Aula de Apresentação do Modelo Conceitual  - 23/08/2022 *
+#### - << JUNHO >>
+- Roteiro específico da Aula Inaugural  - 06/06/2023 * (Recepção Alunado) *
+- Roteiro específico da Aula Introdutória  - 13/06/2023 * (Apresentação do Planejamento - Plano de Ensino - Metodologias) 
+- [Roteiro específico da Aula02 - 13/06/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula02.md)
+- [Roteiro específico da Aula03 - 20/06/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula03.md)
+- [Roteiro específico da Aula04 - 20/06/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula04.md)
+- Roteiro específico da Aula de Apresentação do Modelo Conceitual  - 27/06/2023 *
+
 -  //////////////////////////// INÍCIO DO BACK-END ///////////////////////////////////////////////////////
-- [Roteiro específico da Aula05 - 24/08/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula05.md)
-- [Roteiro específico da Aula06 - 30/08/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula06.md)
-- [Roteiro específico da Aula07 - 31/08/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula07.md)
-
-
-- << SETEMBRO >>
-- [Roteiro específico da Aula08 - 06/09/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula08.md)
-- [Roteiro específico da Aula09 - 13/09/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula09.md)
+- [Roteiro específico da Aula05 - 27/06/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula05.md)
+#### - << JULHO >>
+- [Roteiro específico da Aula06 - 04/07/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula06.md)
+- [Roteiro específico da Aula07 - 04/07/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula07.md)
+- [Roteiro específico da Aula08 - 11/07/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula08.md)
+- [Roteiro específico da Aula09 - 11/07/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula09.md)
 - [Roteiro específico da Aula10 - 14/09/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula10.md)
 - [Roteiro específico da Aula11 - 20/09/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula11.md)
 - [Roteiro específico da Aula12 - 21/09/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula12.md)
