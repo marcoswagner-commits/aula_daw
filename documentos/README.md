@@ -5,6 +5,8 @@
 	* Vide Plano de Ensino; Planejamento da Disciplina; documento Conteúdos
 
 - [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
+- [Plano de Ensino]()
+- [Planejamento do Semestre]()
 
 ### 1.1 Conteúdos
 
