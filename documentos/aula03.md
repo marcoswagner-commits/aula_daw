@@ -1,6 +1,6 @@
 # Aula 03 - Desenvolvimento de Aplicações WEB
 
-> Aula 16/08/2022
+> Aula 20/06/2023
 > 
 >  *Estudo de caso: Gestão de Obras*
 >  
@@ -115,7 +115,7 @@ public class AlunoController {
 }
 ```
 
-- Verificar se o H2 está nas dependências MAVEVN, caso afirmativo é necessário configurar o H2 adicionando as seguintes propriedades no arquivo de configurações application.properties.
+- Verificar se o H2 está nas dependências MAVEN, caso afirmativo é necessário configurar o H2 adicionando as seguintes propriedades no arquivo de configurações application.properties.
 
 :shipit: - Configurações no arquivo application.properties
 ```
