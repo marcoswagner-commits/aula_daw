@@ -1,6 +1,6 @@
 # Aula 24 - Desenvolvimento de Aplicações WEB
 
-> Aula 22/11/2022
+> Aula 19/09/2023
 > 
 >   Estudo de caso: Gestão de Obras - Front-End
 
