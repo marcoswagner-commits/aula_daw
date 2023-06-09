@@ -6,7 +6,7 @@
 
 - [Conteúdo do Curso](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/Conteúdo_Aula_DSW_Módulo_I.pdf)
 - [Plano de Ensino]()
-- [Planejamento do Semestre]()
+- [Planejamento do Semestre](https://github.com/marcoswagner-commits/aula_daw/blob/9c0be753581e6b9fd54d5f95b2ac9f2ede23d81d/documentos/Planejamento%20do%20Semestre_2023_1_DAW.pdf)
 
 ### 1.1 Conteúdos
 
