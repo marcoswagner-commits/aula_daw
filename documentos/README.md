@@ -185,13 +185,15 @@ Passos:
 #### - << JULHO >>
 - [Roteiro específico da Aula06 - 04/07/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula06.md)
 - [Roteiro específico da Aula07 - 04/07/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula07.md)
-- [Roteiro específico da Aula08 - 11/07/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula08.md)
-- [Roteiro específico da Aula09 - 11/07/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula09.md)
-- [Roteiro específico da Aula10 - 14/09/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula10.md)
-- [Roteiro específico da Aula11 - 20/09/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula11.md)
-- [Roteiro específico da Aula12 - 21/09/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula12.md)
-- [Roteiro específico da Aula13 - 27/09/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula13.md)
-- [Roteiro específico da Aula14 - 28/09/2022](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula14.md)
+- [Roteiro específico da Aula08 - 11/07/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula08.md)
+- [Roteiro específico da Aula09 - 11/07/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula09.md)
+#### - << AGOSTO >>
+- [Roteiro específico da Aula10 - 01/08/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula10.md)
+- [Roteiro específico da Aula11 - 01/08/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula11.md)
+- [Roteiro específico da Aula12 - 08/08/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula12.md)
+- [Roteiro específico da Aula13 - 08/08/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula13.md)
+- [Roteiro específico da Aula14 - 22/08/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula14.md)
+-
 
 - << OUTUBRO >>
 - Roteiro específico da Aula de Apresentação de Trabalho  - 04/12/2022 * (Avaliação do Backend - fase 1) *
