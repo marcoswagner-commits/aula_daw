@@ -196,11 +196,11 @@ Passos:
 - [Roteiro específico da Aula13 - 08/08/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula13.md)
 - [Roteiro específico da Aula14 - 08/08/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula14.md)
 - [Roteiro específico da Aula15 - 08/08/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula15.md)
-- [Roteiro específico da Aula16 - 22/08/2023(https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula16.md)
-- [Roteiro específico da Aula - 22/08/2023](aula17.md) 
-- [Roteiro específico da Aula - 22/08/2023](aula18.md) 
-- [Roteiro específico da Aula17 - 29/08/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula19.md)
-- [Roteiro específico da Aula18 - 29/08/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula20.md)
+- [Roteiro específico da Aula16 - 22/08/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula16.md)
+- [Roteiro específico da Aula17 - 22/08/2023](aula17.md) 
+- [Roteiro específico da Aula18 - 22/08/2023](aula18.md) 
+- [Roteiro específico da Aula19 - 29/08/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula19.md)
+- [Roteiro específico da Aula20 - 29/08/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula20.md)
 - [Roteiro específico da Aula21 - 29/08/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula21.md)
 
 #### - << SETEMBRO >>
