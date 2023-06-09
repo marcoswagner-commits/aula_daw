@@ -169,8 +169,8 @@ Passos:
 
 ### Trabalhos
 - [Trabalho1 - Modelo Conceitual](documentos/Trabalho1 - DAW.pdf)
-- [Trabalho2 - BackEnd ](documentos/Trabalho2 - DAW.pdf)
-- [Trabalho2 - BackEnd e FrontEnd](documentos/Trabalho3 - DAW.pdf)
+- [Trabalho2 - BackEnd](documentos/Trabalho2 - DAW.pdf)
+- [Trabalho3 - BackEnd e FrontEnd](documentos/Trabalho3 - DAW.pdf)
 
 ### Aulas
 #### - << JUNHO >>
