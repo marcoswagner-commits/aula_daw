@@ -168,9 +168,9 @@ Passos:
 
 
 ### Trabalhos
-- [Trabalho1 - Modelo Conceitual](documentos/Trabalho1 - DAW.pdf)
-- [Trabalho2 - BackEnd](documentos/Trabalho2 - DAW.pdf)
-- [Trabalho3 - BackEnd e FrontEnd](documentos/Trabalho3 - DAW.pdf)
+- [Trabalho1 - Modelo Conceitual](https://github.com/marcoswagner-commits/aula_daw/blob/287bf9300b2b4a1a1898d3dc8b4013c058d64594/documentos/Trabalho1%20-%20DAW.pdf)
+- [Trabalho2 - BackEnd](https://github.com/marcoswagner-commits/aula_daw/blob/287bf9300b2b4a1a1898d3dc8b4013c058d64594/documentos/Trabalho2%20-%20DAW.pdf)
+- [Trabalho3 - BackEnd e FrontEnd]([documentos/Trabalho3 - DAW.pdf](https://github.com/marcoswagner-commits/aula_daw/blob/287bf9300b2b4a1a1898d3dc8b4013c058d64594/documentos/Trabalho3%20-%20DAW.pdf))
 
 ### Aulas
 #### - << JUNHO >>
