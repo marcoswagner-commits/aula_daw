@@ -209,7 +209,7 @@ Passos:
 - [Roteiro específico da Aula22 - 12/09/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula22.md)
 - [Roteiro específico da Aula23 - 12/09/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula23.md)
 - [Roteiro específico da Aula24 - 19/09/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula24.md)
-- [Roteiro específico da Aula25 - 19/09/2023]](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula25.md)
+- [Roteiro específico da Aula25 - 19/09/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula25.md)
 - [Roteiro específico da Aula26 - 26/09/2023](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/tree/documentos/documentos/aula26.md)
 
 #### - << OUTUBRO >>
