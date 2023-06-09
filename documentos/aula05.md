@@ -1,6 +1,6 @@
 # Aula 05 - Desenvolvimento de Aplicações WEB
 
-> Aula 24/08/2022
+> Aula 27/06/2023
 > 
 >  *Estudo de caso: Gestão de Obras*
 >  
