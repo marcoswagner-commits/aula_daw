@@ -20,6 +20,74 @@
 - [x] Criar a classe "services" GestaoLancamento
 - [x] Criar a classe "Controllers" LancamentoController - [códigos de Lancamento](#código-final)
 
+### Passo 2: Uma abordagem ManytoMany com BelongingPK
+- [x] Relação de duas tabelas com BelongingPK
+- [ ] Suposição com Proprietarios x Obras
+- [ ] Vide Código Abaixo
+
+```
+package model;
+
+@Embeddable
+public class BelongingPK {
+
+    @ManyToOne
+    @JoinColumn(name = "obra_id")
+    private Obra obra;
+
+    @ManyToOne
+    @JoinColumn(name = "proprietario_id")
+    private Proprietario proprietario;
+
+	// setters/getters e outros
+=================================================================
+package model;
+
+@Entity
+@Table(name = "tb_belonging")
+public class Belonging {
+
+	@EmbeddedId
+	private BelongingPK id = new BelongingPK();
+
+	private Integer valor; // atributo extra da relação
+
+	public void setObra(Obra obra) {
+		id.setObra(obra);
+	}
+
+	public Obra getObra() {
+		return id.getObra();
+	}
+
+	public void set(Proprietario proprietario) {
+		id.setProprietario(proprietario);
+	}
+
+	public Proprietario getProprietario() {
+		return id.getProprietario();
+	}
+	
+	// setters/getters e outros
+=====================================================
+
+package repositories;
+
+public interface ObraRepository extends JpaRepository<Obra, Integer> {
+
+	@Query(nativeQuery = true, value = """
+			SELECT tb_obra.id, tb_obra.descricao, tb_belonging.valor
+			FROM tb_obra
+			INNER JOIN tb_belonging ON tb_obra.id = tb_belonging.obra_id
+			WHERE tb_belonging.proprietario_id = :propId
+			ORDER BY tb_belonging.valor
+				""")
+	List<Obra> searchByList(Integer propId);
+}
+
+```
+
+
 
 [![Aulas no Youtube](https://github.com/marcoswagner-commits/gestao_obras_aula_daw/blob/cb3e2ea9547f9ddc831277f07919c3e78451eb92/yt-icon.png)](https://www.youtube.com/channel/UCfO-aJxKLqau0TnL0AfNAvA)
 ####  Os vídeos abaixo mostram a execução destes dois primeiros passos
