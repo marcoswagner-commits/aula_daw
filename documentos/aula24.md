@@ -82,7 +82,7 @@ html, body {
     - Colocar um item de "teste" em NavBar/Index.tsx e inserir o componente em App
     - Inserir o código NavBar (código abaixo) no componente [🏴](#componentsbasicsnavbarindextsx)
     - Inseri o arquivo (imagem) em assets/images (arquivo no github)
-- [x] Criar o segundo primeiro componente do projeto para Footer
+- [x] Criar o segundo componente do projeto para Footer
     - Seguir os mesmos procedimentos para Footer realizados em NavBar [🏴](#componentsbasicsfooterindextsx)
 - [x] Criar um container para o Body da página principal
 - [x] Criar a pasta pages em src
