@@ -663,19 +663,21 @@ export default function App() {
 ### routes.tsx
 ```
 
-import { Route, BrowserRouter } from 'react-router-dom';
-import Home from 'pages/home';
-import Login from 'pages/login';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './components/basics/Primeiro';
+import Login from './components/basics/Segundo';
 
-const Routes = () => {
+const Rotas = () => {
   return (
-    <BrowserRouter>
-      <Route component={Home} path="/" exact />
-      <Route component={Login} path="/login" />
-    </BrowserRouter>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path='/login' element={<Login/>} />
+      </Routes>
+    </Router>
   );
 }
-export default Routes;
+export default Rotas;
 
 ```
 
